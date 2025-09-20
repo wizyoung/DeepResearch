@@ -1,0 +1,75 @@
+Planning statistics
+Writing statistics
+# Search
+step
+# Outline
+token
+# Outline
+optimization
+# Saved
+page
+# Search
+query
+# Evidence
+token
+# Summary
+token
+# Output
+token
+# Writing
+step
+WebWeaver-SFT
+14.67
+4148.57
+2.18
+106.65
+18.8
+62637
+14155
+22637
+22.76
+Table 4: The planning and writing statistics of training data on WebWeaver-SFT.
+of over 62,000 evidence tokens. By fine-tuning our base model on this data, we explicitly imbued it with
+the requisite long-sequence reasoning and tool-use capabilities to master our framework.
+The efficacy of our SFT strategy is quantitatively demonstrated by the significant performance gains
+across all benchmarks on Fig. 12, which directly reflect the model’s acquisition of our framework’s core
+competencies. The most dramatic validation is the leap in citation accuracy from a nearly unusable
+25% to a reliable 85.90%. This provides direct, empirical evidence that the model has mastered the
+intricate mechanics of our Writer agent, learning to execute precise tool calls for evidence retrieval
+and faithfully write according to the source-grounded outline. Furthermore, the substantial increase
+in overall report quality, evidenced by the score on DeepConsult (4.57 →6.09) and the massive jump
+on DeepResearchGym (77.27 →90.89), reflects the successful acquisition of the planner’s more abstract
+abilities. These holistic improvements indicate that the model has learned the core loop of thinking
+(iteratively optimizing the outline) and searching (adaptively acquiring evidence), which is a prerequisite
+for generating a comprehensive and insightful final report. Ultimately, these results offer a powerful
+dual validation: they prove that our WebWeaver framework is a potent data generation engine, capable
+of deconstructing the formidable OEDR task into learnable demonstrations of thinking, searching, and
+writing, thereby enabling a smaller model to achieve expert-level performance.
+5
+Related Work
+Deep Research.
+Deep Research Agents have garnered significant attention for their powerful capa-
+bilities in information seeking, integration, and reasoning. Proprietary systems, such as DeepResearch
+(OpenAI, 2025a), Gemini Deep Research (google, 2025), and Claude Research (anthropic, 2025), have
+demonstrated performance comparable to human experts in domains like fact-checking and report
+writing. However, their opaque internal architectures and workflows hinder broader research and
+development. In the open-source community, many studies (Li et al., 2025b; Tao et al., 2025; Su et al.,
+2025; Qiao et al., 2025; Fang et al., 2025; Li et al., 2025a; Wu et al., 2025b;a) have been developed to tackle
+complex research benchmarks such as BrowseComp and GAIA by exploring methods like synthetic
+uncertain Question-Answering (QA) and formalized QA synthesis. Nevertheless, these solutions are
+primarily tailored for short-answer research queries and lack the capability to generate comprehensive,
+long-form reports on open-domain topics. Other open-source systems like OpenDeepResearch (Research,
+2025e), GPT Researcher (Research, 2025c), and TTD-DR (Han et al., 2025) address long-form generation
+by first drafting a static framework, then retrieving content, and finally composing the report. This
+approach, characterized by a fixed structure and one-step generation, often leads to textual incoherence
+and hallucinations. In contrast, our method emphasizes the outline optimization and hierarchical writing
+processes to ensure the report’s fluency and factual accuracy.
+Long Writing.
+Ensuring the coherence and accuracy of LLM-generated long-form text is a persistent
+challenge. Previous work has explored methods like recursive prompting for story extension (Yang et al.,
+2022) and structured task decomposition to improve consistency (Yang et al., 2023; Wang et al., 2025).
+More recently, agent-based frameworks have become a mainstream solution. Systems like LongWriter
+(Bai et al., 2025) and CogWriter (Wan et al., 2025) employ a "plan-then-write" strategy, where a Planner
+Agent first creates an outline, and a Generation Agent then conditions on this plan to produce the full
+text. However, these methods rely on a static initial plan and a brute-force writing strategy by feeding
+12

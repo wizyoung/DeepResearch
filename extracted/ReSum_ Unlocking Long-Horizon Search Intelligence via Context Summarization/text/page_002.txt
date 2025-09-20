@@ -1,0 +1,49 @@
+1
+Introduction
+Recent advances in Large Language Model (LLM)-based agents have demonstrated strong performance
+on complex, knowledge-intensive tasks (Yao et al., 2023; Wang et al., 2024; Jin et al., 2025; Xi et al., 2025;
+Gao et al., 2025). Among these, web agents are particularly critical: they actively search and browse
+the open web, extract and ground facts from diverse sources, and synthesize answers that are both
+user-specific and up-to-date (Wu et al., 2025a; Li et al., 2025a; Tao et al., 2025).
+Achieving reliable and comprehensive answers for complex queries is nontrivial. Consider this example:
+“A painter, whose father died of heart disease, had an elder sister and five children with his wife. Later, his marriage
+broke down and he had three more relationships. What is the name of the literary work based on this person?”
+This query exemplifies the challenges of complex web search: it involves multiple entities, intertwined
+relationships, and fragmentary information with high uncertainty. Such questions cannot be resolved
+with a few search calls. Instead, they require extended cycles of targeted querying, browsing, extraction,
+and cross-verification to progressively reduce uncertainty and assemble a complete and grounded
+evidence chain (Gao et al., 2025).
+However, such long-horizon exploration faces a fundamental barrier: context constraints. Most LLMs
+have limited context windows, e.g., 32k tokens (Yang et al., 2024; Team, 2025b), and the popular ReAct
+paradigm (Yao et al., 2023), which appends every observation, thought, and action to the dialogue history,
+quickly exhausts this budget before answers are found (illustrated in Figure 1). As trajectories lengthen,
+accumulated context forces premature termination, blocking solutions that require extensive exploration.
+To address this challenge, we introduce ReSum, a novel paradigm enabling indefinite exploration
+through context summarization. The core insight is to convert growing interaction histories into compact
+reasoning states before context limits are exceeded. Rather than appending every interaction, ReSum
+periodically compresses conversations into structured summaries and resumes exploration from these
+states, allowing agents to maintain awareness of prior discoveries without context constraints. By doing
+so, ReSum achieves long-horizon reasoning with minimal modifications to ReAct, avoiding architectural
+complexity while ensuring simplicity, efficiency, and seamless compatibility with existing agents.
+ReSum utilizes an off-the-shelf LLM as the summary tool, but generic LLMs, particularly smaller
+models, often struggle with effectively summarizing conversations in web search contexts. Therefore,
+we specialize the summarization capability by fine-tuning Qwen3-30B-A3B-Thinking (Team, 2025b)
+using ⟨Conversation, Summary⟩pairs collected from powerful open-source models (Guo et al., 2025;
+OpenAI, 2025a), resulting in ReSumTool-30B. Unlike conventional summarization tools, ReSumTool-30B
+is specifically trained to extract key clues and evidence from lengthy interactions, identify information
+gaps, and highlight next-step directions. This specialization makes it uniquely suited for web search tasks,
+combining lightweight deployment with task-specific enhancements. Extensive evaluations demonstrate
+that ReSumTool-30B outperforms larger models like as Qwen3-235B (Team, 2025b) and DeepSeek-R1-
+671B (Guo et al., 2025) in summarization quality.
+Finally, to enable agents to master the ReSum paradigm, we employ reinforcement learning (RL) through
+our tailored ReSum-GRPO algorithm. Unlike supervised fine-tuning, which demands costly expert-level
+ReSum trajectory data and risks overwriting an agent’s existing skills, RL allows agents to adapt to
+the paradigm through self-evolution without compromising their inherent reasoning capabilities (Qin
+et al., 2025). Specifically, ReSum-GRPO follows standard GRPO procedures (Shao et al., 2024) with
+modifications for long trajectories: when approaching context limits, agents invoke ReSumTool-30B to
+compress the conversation and continue from the summary state, naturally segmenting the complete
+trajectory into multiple parts. Each segment becomes an individual training episode, and we broadcast the
+trajectory-level advantage to all segments within the same trajectory. This mechanism encourages agents
+to both reason effectively from compressed states and collect information that produces high-quality
+summaries. Our main contributions are summarized as follows:
+2

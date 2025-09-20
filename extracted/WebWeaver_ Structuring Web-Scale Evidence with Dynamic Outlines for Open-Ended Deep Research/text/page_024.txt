@@ -1,0 +1,58 @@
+1. Hoehn and Yahr Scale Classifications <citation>id_2, id_6, id_9, id_12, id_13, id_14, id_15,
+id_17, id_20, id_21</citation>
+a. Stage 0: No detectable disease
+b. Stage 1.0: Unilateral motor symptoms with minimal functional impact
+c. Stage 1.5: Unilateral involvement with axial symptoms
+d. Stage 2.0: Bilateral symptoms with preserved balance
+e. Stage 2.5: Mild bilateral disease with normal pull-test recovery
+f. Stage 3.0: Bilateral disease with postural instability but retained independence
+g. Stage 4.0: Severe disability requiring assistance but can still walk/stand
+h. Stage 5.0: Wheelchair-bound or bedridden without assistance
+2.
+Movement
+Disorder
+Society-Unified
+Parkinson’s
+Disease
+Rating
+Scale
+(MDS-
+UPDRS)<citation>id_3</citation>
+a. Four-domain assessment approach
+b. Motor and non-motor impact evaluation
+c. Replacement for older staging systems
+3. Disease Progression Timeline and Transition Indicators <citation>id_16, id_17, id_19</citation>
+a. Median transition times between stages (20-26 months)
+b. HY > 3 as critical threshold for advanced disease
+c. Shift from dopaminergic to cortical pathology involvement
+B. Early Stage Warning Signs (Stages 1-2)
+1. Motor Symptoms <citation>id_2, id_5, id_7, id_18, id_22</citation>
+a. Subtle unilateral tremor (often starting in finger)
+b. Micrographia (small handwriting)
+c. Bradykinesia (slowed movements)
+d. Mild rigidity and stiffness
+e. Reduced arm swing
+f. Facial masking (reduced expression)
+g. Shuffling gait with irregular stride
+2. Non-Motor Early Indicators <citation>id_3, id_5, id_7, id_18</citation>
+a. Hyposmia (loss of smell)
+b. Constipation
+c. Sleep disturbances and REM sleep behavior disorder
+d. Depression and anxiety
+e. Subtle cognitive changes
+f. Autonomic dysfunction (blood pressure fluctuations)
+g. Unexplained weight loss
+3. Diagnostic Challenges and Recognition <citation>id_4</citation>
+a. Non-motor signs can appear decades before motor symptoms
+b. Overlap with other disorders complicates diagnosis
+c. Need for asymmetric symptoms or medication response for confirmation
+C. Progressive Stage Warning Signs (Stages 2-3)
+1. Advancing Motor Symptoms <citation>id_5, id_6, id_18, id_22</citation>
+a. Bilateral tremor and rigidity
+b. Postural deterioration and stooped posture
+c. Balance problems and impaired reflexes
+d. Speech changes (soft, monotone voice)
+e. Swallowing difficulties
+f. Freezing episodes
+2. Emerging Complications <citation>id_16, id_18, id_22</citation>
+24

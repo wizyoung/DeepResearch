@@ -1,0 +1,72 @@
+search sources, diverse webpage parsers (readpage tools), and a code execution sandbox. The reliability of
+this composite system is paramount, as the inherent volatility of external APIs—including issues of latency,
+outright failure, or inconsistent returns—can contaminate the trajectories. This data contamination
+obscures the true source of performance issues, making it difficult to discern whether a suboptimal policy
+stems from algorithmic deficiencies or from the instability of the environment itself. To mitigate these
+challenges, we architect a unified tool execution interface. At its core lies a scheduling and management
+layer that orchestrates tool execution. For each tool, we have engineered robust concurrency handling and
+fault-tolerance strategies, such as QPS constraints, result caching, automated timeout-and-retry protocols,
+service degradation for non-critical failures, and seamless switching to backup data sources. This multi-
+layered design ensures that from the agent’s perspective, the tool invocation process is abstracted into a
+deterministic and stable interface, thereby insulating the training loop from real-world stochasticity and
+significantly reducing operational costs.
+Data curation.
+Data is the core driver of model capability enhancement; its importance even surpasses
+that of the algorithm. The quality of the data directly determines the upper bound on the model’s ability
+to generalize to out-of-distribution scenarios through self-exploration. To address this challenge, we
+optimize data in real time, guided by training dynamics. This optimization is achieved through a fully
+automated data synthesis and filtering pipeline that dynamically adjusts the training set. By closing the
+loop between data generation and model training, this approach not only ensures training stability but
+also delivers substantial performance gains.
+RL algorithm.
+Our RL algorithm is a tailored adaptation of GRPO (Shao et al., 2024):
+J (θ) =
+E(q,y)∼D,{oi}G
+i=1∼πθold(·|context)
+"
+1
+∑G
+i=1 |oi|
+G
+∑
+i=1
+|oi|
+∑
+t=1
+min
+
+ri,t(θ) ˆAi,t, clip
+
+ri,t(θ), 1 −εlow, 1 + εhigh
+
+ˆAi,t
+#
+,
+(2)
+where (q, y) is the question-answer pair, ri,t(θ) is the importance sampling ratio, and ˆAi,t is an estimator
+of the advantage at time step t:
+ri,t(θ) =
+πθ(oi,t | context)
+πθold(oi,t | context),
+ˆAi,t = Ri −mean({Ri}G
+i=1).
+(3)
+We employ a strictly on-policy training regimen, where trajectories are continuously sampled using
+the most up-to-date policy, ensuring that the learning signal is always relevant to the model’s current
+capabilities. Following DeepSwe (Luo et al., 2025) and DAPO (Yu et al., 2025b), the training objective is
+optimized using a token-level policy gradient loss. Second, to further reduce variance in the advantage
+estimation, we adopt a leave-one-out strategy (Chen et al., 2025). Furthermore, we employ a conservative
+strategy for negative samples, having observed that an unfiltered set of negative trajectories significantly
+degrades training stability. This can manifest as a "format collapse" phenomenon after extended training.
+To mitigate this, we selectively exclude certain negative samples from the loss calculation, for instance,
+those that do not yield a final answer because they exceed a length limit. For the sake of efficiency, we
+do not employ dynamic sampling. We instead leverage larger batch and group sizes, which serve to
+maintain smaller variance and provide adequate supervision.
+However, we consider that the algorithm is important but not the only decisive factor in the success of
+Agentic RL. We have experimented with many different algorithms and tricks, and find that data and
+stability of the training environment are likely the more critical components in determining whether
+the RL works. Interestingly, we have tested to train the model directly on the BrowseComp testing
+set, but the results are substantially poorer than when using our synthetic data. We hypothesize that
+this disparity arises because the synthetic data offers a more consistent distribution, which allows the
+model to be more effectively tailored. Conversely, the human-annotated data (such as BrowseComp)
+6

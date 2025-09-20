@@ -1,0 +1,61 @@
+3. **Logical and Complex**: The constructed query should be as complex and specific as possible,
+challenging, and can leverage time, sequence, or commonly mentioned topics to construct a naturally
+coherent reasoning process. Avoid questions about browsing history, browsing paths, etc., which have no
+practical value.
+4. **Accuracy of the Answer**: Ensure the answer is accurate, concise, and closely connected to the logical
+chain constructed in the query.
+Please return in JSON format, structured as follows:
+{
+"sublink_reason": "Describe why these specific sublinks were chosen and how they are interrelated.",
+"sublinks": ["Selected sublink URL", "Selected sublink URL"],
+"reason": "Explain the reason for designing this query and how it encourages the user to engage in
+multi−step reasoning.",
+"query": "Your query statement",
+"answer": "The answer to the query"
+}
+(*@\textcolor{blue}{
+Sublink 1 URL; Sublink 1 INFO \\
+Sublink 2 URL; Sublink 2 INFO \\
+... \\
+Sublink n URL; Sublink n INFO
+}@*)
+Question-Answer Verify
+You will act as a strict judge. You need to evaluate whether the given query can be accurately answered
+only by combining the information from two documents (doc1 and doc2) and the provided answer.
+Additionally, check if the answer is concise (as an entity or a judgment) and correct.
+If the answer is incorrect, can be answered using only one document, or is not concise enough, you should
+return false.
+If any document (doc1 or doc2) does not contain the necessary key information for the answer and only
+provides context for the query, you should return false.
+If any document merely provides query background information unrelated to the answer and does not
+require combining information from both documents, you should return false.
+If the answer is a long answer and not of an entity type, you should return false.
+If the query is unnatural, doesn't appear as a complete query, or has a harsh tone, you should return false.
+Each question should require combining information from both documents, meaning the answer results
+from multi−hop reasoning or multi−step reasoning, and it is concise for you to return true.
+You are very strict, and any case failing to meet the above criteria should result in a false. Please return
+your result in JSON format as follows:
+{
+"reason": "Consider each of the conditions above in sequence to assess whether the query and answer
+meet the criteria. If they do meet the criteria, list the helpful parts from each doc for answering the
+question.",
+"decision": "true/false"
+}
+(*@\textcolor{blue}{\{Doc1 INFO\}; \{Doc2 INFO\}
+}@*)
+Prompts for Single-source Data Annotation
+Question Generate
+Question-Answer Verify
+You will act as a strict judge. You need to assess whether current knowledge from doc2 is required to
+accurately answer the given query based on the two provided documents (doc1 and doc2) and the given
+answer. Doc1 represents known knowledge, while doc2 represents current knowledge. Your task is to
+determine if the answer relies on doc2 to be accurately provided. Additionally, evaluate whether the
+answer is short (an entity or judgment) and correct.
+If the answer is incorrect or not concise, return false.
+If the necessary key information is found in the known knowledge doc1, also return false.
+If the answer is a long answer and not of entity type, return false.
+If the query is unnatural, not a complete query, or awkwardly phrased, return false.
+The answer should result from multi−hop reasoning or multi−step reasoning, where multi−step reasoning
+indicates that the generated query is challenging and requires reasoning or calculation to answer, and
+only if the answer is concise should you return true.
+18

@@ -1,0 +1,66 @@
+breadth and generality, ensuring that the agent builds a versatile foundation of agentic behaviors before
+domain-specific specialization. In the second phase, the agent undergoes fine-grained training in vertical
+domains, where tasks, tools, and user intents exhibit domain-specific characteristics. By grounding the
+learning process in realistic scenarios within a target domain, the agent refines its ability to select tools,
+parameterize calls, and produce responses that are accurate, contextually appropriate, and aligned with
+domain-specific goals. This specialization ensures a smoother adaptation of agentic capabilities, enabling
+the agent to operate effectively in real-world, task-oriented environments.
+4
+Experiments
+4.1
+Setup
+Benchmarks We evaluate our methods on three established agentic benchmarks: τ-bench, τ2-Bench, and
+ACEBench-en. For τ-Bench (covering the retail and airline domains) and τ2-Bench (spanning the
+retail, airline, and telecom domains), we adopt the passˆ 1 metric for evaluation and additionally
+analyze the trend of passˆ k, following the protocols in Yao et al. (2024); Barres et al. (2025). For
+ACEBench-en, we report results across the Normal, Special, and Agent categories, as well as the Overall
+performance, using the accuracy metric.
+Baselines We compare our trained series models against the following types: closed-sourced large language
+model, including Gemini-2.5-pro (Comanici et al., 2025), Claude-Sonnet-4 (Anthropic, 2025), GPT-o3,
+GPT-o4-mini (OpenAI, 2025b), and GPT-5 (with thinking) (OpenAI, 2025a); open-sourced large language
+model: GPT-OSS-120B-A5B (Agarwal et al., 2025), Deepseek-V3.1-671B-A37B (DeepSeek-AI, 2024), Kimi-
+K2-1T-A32B (Team et al., 2025), Qwen3-Thinking-235B-A22B (Team, 2025b), Seed-OSS-36B (Team, 2025a),
+Qwen-Coder-30B-A3B (Hui et al., 2024), and xLAM-2 model series (Prabhakar et al., 2025a).
+Backbones We train the AgentScaler model series by training on Qwen3 models (Team, 2025b) of varying
+scales. Specifically, AgentScaler-4B and AgentScaler-30B-A3B are trained on Qwen3-Thinking-4B-2507
+and Qwen3-Thinking-30B-A3B-2507, respectively, while AgentScaler-8B is trained on Qwen3-8B.
+4.2
+Experimental Results
+Main Results
+From Table 1, we observe that closed-source large language models (LLMs) still maintain
+a clear performance advantage, consistently achieving the highest scores across most domains and
+benchmarks. This demonstrates the strength of industrial-scale training pipelines and proprietary opti-
+mization strategies. Nevertheless, our proposed AgentScaler achieves a remarkable level of performance
+given its lightweight parameter scale. Specifically, it surpasses most open-source baselines with fewer
+than 1T parameters, establishing a new state-of-the-art across τ-bench, τ2-Bench, and ACEBench-en.
+Normal
+Agent
+Overall
+40
+50
+60
+70
+80
+90
+Score
+Qwen3-Thinking-30B-A3B
+Stage 1
+Stage 2
+Figure 3: Performance comparison on the Normal,
+Agent, and Overall subsets of ACEBench-en for two-
+stage training models.
+Notably, AgentScaler-4B achieves performance on
+par with 30B-parameter models despite using the
+fewest parameters, highlighting the agentic poten-
+tial of compact LLMs. Moreover, AgentScaler-30B-
+A3B delivers results that are comparable to trillion-
+parameter open-source models and, in several do-
+mains, approach those of closed-source counter-
+parts. These findings highlight the efficiency of our
+approach: agentic capabilities can be effectively
+learned and deployed even in relatively compact
+models, enabling competitive performance with-
+out relying on massive parameter counts. This
+advantage makes AgentScaler particularly well-
+suited for practical deployment in resource-constrained or latency-sensitive scenarios.
+6

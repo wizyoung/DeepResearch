@@ -1,0 +1,46 @@
+References
+Anthropic. Claude 3.7 sonnet and claude code, 2025. URL https://www.anthropic.com/news/claud
+e-3-7-sonnet/.
+Shuai Bai, Keqin Chen, Xuejing Liu, Jialin Wang, Wenbin Ge, Sibo Song, Kai Dang, Peng Wang, Shijie
+Wang, Jun Tang, et al. Qwen2. 5-vl technical report. arXiv preprint arXiv:2502.13923, 2025.
+Jing Bi, Susan Liang, Xiaofei Zhou, Pinxin Liu, Junjia Guo, Yunlong Tang, Luchuan Song, Chao Huang,
+Guangyu Sun, Jinxi He, et al. Why reasoning matters? a survey of advancements in multimodal
+reasoning (v1). arXiv preprint arXiv:2504.03151, 2025.
+James Burgess, Jeffrey J Nirschl, Laura Bravo-Sánchez, Alejandro Lozano, Sanket Rajan Gupte, Jesus G
+Galaz-Montoya, Yuhui Zhang, Yuchang Su, Disha Bhowmik, Zachary Coman, et al. Microvqa: A
+multimodal reasoning benchmark for microscopy-based scientific research.
+In Proceedings of the
+Computer Vision and Pattern Recognition Conference, pp. 19552–19564, 2025.
+Mark Chen, Jerry Tworek, Heewoo Jun, Qiming Yuan, Henrique Ponde De Oliveira Pinto, Jared Kaplan,
+Harri Edwards, Yuri Burda, Nicholas Joseph, Greg Brockman, et al. Evaluating large language models
+trained on code. arXiv preprint arXiv:2107.03374, 2021.
+Qiguang Chen, Libo Qin, Jin Zhang, Zhi Chen, Xiao Xu, and Wanxiang Che. m3 cot: A novel benchmark
+for multi-domain multi-step multi-modal chain-of-thought. arXiv preprint arXiv:2405.16473, 2024.
+Yang Chen, Hexiang Hu, Yi Luan, Haitian Sun, Soravit Changpinyo, Alan Ritter, and Ming-Wei Chang.
+Can pre-trained vision and language models answer visual information-seeking questions? arXiv
+preprint arXiv:2302.11713, 2023.
+Zhuo Chen, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinyu Geng, Pengjun Xie, Fei Huang, and Kewei Tu.
+Detecting knowledge boundary of vision large language models by sampling-based inference. arXiv
+preprint arXiv:2502.18023, 2025.
+Xianfu Cheng, Wei Zhang, Shiwei Zhang, Jian Yang, Xiangyuan Guan, Xianjie Wu, Xiang Li, Ge Zhang,
+Jiaheng Liu, Yuying Mai, et al. Simplevqa: Multimodal factuality evaluation for multimodal large
+language models. arXiv preprint arXiv:2502.13059, 2025.
+Yao Cheng, Jianfeng Chen, Jie Chen, Li Chen, Liyu Chen, Wentao Chen, Zhengyu Chen, Shijie Geng,
+Aoyan Li, Bo Li, et al.
+Fullstack bench: Evaluating llms as full stack coders.
+arXiv preprint
+arXiv:2412.00535, 2024.
+Google DeepMind. Gemini 2.5, 2025. URL https://blog.google/technology/google-deepmind/gemi
+ni-model-thinking-updates-march-2025/.
+Yuhao Dong, Zuyan Liu, Hai-Long Sun, Jingkang Yang, Winston Hu, Yongming Rao, and Ziwei Liu.
+Insight-v: Exploring long-chain visual reasoning with multimodal large language models. In Proceedings
+of the Computer Vision and Pattern Recognition Conference, pp. 9062–9072, 2025.
+Mingyang Fu, Yuyang Peng, Benlin Liu, Yao Wan, and Dongping Chen. Livevqa: Live visual knowledge
+seeking. arXiv preprint arXiv:2504.05288, 2025.
+Google. Try deep research and our new experimental model in gemini, your ai assistant, 2024. URL
+https://blog.google/products/gemini/google-gemini-deep-research/.
+Google. Serpapi, 2025. URL https://serpapi.com/.
+Yash Goyal, Tejas Khot, Douglas Summers-Stay, Dhruv Batra, and Devi Parikh. Making the v in vqa
+matter: Elevating the role of image understanding in visual question answering. In Proceedings of the
+IEEE conference on computer vision and pattern recognition, pp. 6904–6913, 2017.
+23

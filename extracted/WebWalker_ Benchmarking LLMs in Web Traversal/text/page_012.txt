@@ -1,0 +1,45 @@
+Wenyi Hong, Weihan Wang, Qingsong Lv, Jiazheng Xu, Wenmeng Yu, Junhui Ji, Yan Wang, Zihan Wang,
+Yuxiao Dong, Ming Ding, et al. Cogagent: A visual language model for gui agents. In Proceedings of the
+IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 14281–14290, 2024.
+Peter C Humphreys, David Raposo, Tobias Pohlen, Gregory Thornton, Rachita Chhaparia, Alistair Muldal,
+Josh Abramson, Petko Georgiev, Adam Santoro, and Timothy Lillicrap. A data-driven approach for
+learning to control computers. In International Conference on Machine Learning, pp. 9466–9482. PMLR,
+2022.
+Iat Long Iong, Xiao Liu, Yuxuan Chen, Hanyu Lai, Shuntian Yao, Pengbo Shen, Hao Yu, Yuxiao Dong,
+and Jie Tang. Openwebagent: An open toolkit to enable web agents on large language models. In
+Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 3: System
+Demonstrations), pp. 72–81, 2024.
+Geunwoo Kim, Pierre Baldi, and Stephen McAleer. Language models can solve computer tasks. Advances
+in Neural Information Processing Systems, 36, 2024.
+Jing Yu Koh, Robert Lo, Lawrence Jang, Vikram Duvvur, Ming Chong Lim, Po-Yu Huang, Graham Neubig,
+Shuyan Zhou, Ruslan Salakhutdinov, and Daniel Fried. Visualwebarena: Evaluating multimodal agents
+on realistic visual web tasks. In ICLR 2024 Workshop on Large Language Model (LLM) Agents, 2024a.
+Jing Yu Koh, Stephen McAleer, Daniel Fried, and Ruslan Salakhutdinov. Tree search for language model
+agents. arXiv preprint arXiv:2407.01476, 2024b.
+Hanyu Lai, Xiao Liu, Iat Long Iong, Shuntian Yao, Yuxuan Chen, Pengbo Shen, Hao Yu, Hanchen Zhang,
+Xiaohan Zhang, Yuxiao Dong, et al. Autowebglm: A large language model-based web navigating
+agent. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, pp.
+5295–5306, 2024.
+Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal,
+Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, et al. Retrieval-augmented generation for
+knowledge-intensive nlp tasks. Advances in Neural Information Processing Systems, 33:9459–9474, 2020.
+Evan Zheran Liu, Kelvin Guu, Panupong Pasupat, Tianlin Shi, and Percy Liang. Reinforcement learning
+on web interfaces using workflow-guided exploration. arXiv preprint arXiv:1802.08802, 2018.
+Xiao Liu, Hanyu Lai, Hao Yu, Yifan Xu, Aohan Zeng, Zhengxiao Du, Peng Zhang, Yuxiao Dong, and
+Jie Tang. Webglm: Towards an efficient web-enhanced question answering system with human
+preferences. In Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining,
+pp. 4549–4560, 2023.
+Xiao Liu, Hao Yu, Hanchen Zhang, Yifan Xu, Xuanyu Lei, Hanyu Lai, Yu Gu, Hangliang Ding, Kaiwen
+Men, Kejuan Yang, Shudan Zhang, Xiang Deng, Aohan Zeng, Zhengxiao Du, Chenhui Zhang, Sheng
+Shen, Tianjun Zhang, Yu Su, Huan Sun, Minlie Huang, Yuxiao Dong, and Jie Tang. Agentbench:
+Evaluating LLMs as agents. In The Twelfth International Conference on Learning Representations, 2024.
+URL https://openreview.net/forum?id=zAdUB0aCTQ.
+Vaibhav Mavi, Anubhav Jangra, and Adam Jatowt. Multi-hop question answering, 2024. URL https:
+//arxiv.org/abs/2204.09140.
+Grégoire Mialon, Clémentine Fourrier, Thomas Wolf, Yann LeCun, and Thomas Scialom. GAIA: a
+benchmark for general AI assistants. In The Twelfth International Conference on Learning Representations,
+2024. URL https://openreview.net/forum?id=fibxvahvs3.
+Reiichiro Nakano, Jacob Hilton, Suchir Balaji, Jeff Wu, Long Ouyang, Christina Kim, Christopher Hesse,
+Shantanu Jain, Vineet Kosaraju, William Saunders, et al. Webgpt: Browser-assisted question-answering
+with human feedback. arXiv preprint arXiv:2112.09332, 2021.
+12

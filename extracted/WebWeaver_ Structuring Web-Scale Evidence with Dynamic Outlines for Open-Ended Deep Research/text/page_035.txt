@@ -1,0 +1,58 @@
+id="id_16">REM sleep behavior disorder can also happen in people who don’t have Parkinson’s.
+However, if this isn’t something you’ve dealt with before, it’s likely related to your disease</cite>.
+Family members sharing a bed are often the first to notice these changes.
+**Neuropsychiatric
+symptoms
+deserve
+particular
+attention**
+from
+families.
+<cite
+id="id_3">Depression or anxiety</cite> can appear years before motor symptoms, and
+<cite id="id_16">anxiety and depression have been linked to Parkinson’s.
+In addition to
+movement problems, the disease can also have an impact on your mental health</cite>. These
+mood changes may be subtle initially but can significantly impact quality of life and relationships.
+</write>
+Step 5
+<think>
+Now I need to continue with information about progressive stage warning signs and advanced
+stage warning signs. Let me retrieve more specific information about these later stages and their
+complications.
+</think>
+<tool_call>
+{"name": "retrieve", "arguments": {"url_id": ["id_5", "id_6", "id_18", "id_22"], "goal": "Gather
+detailed information about progressive and advanced stage warning signs, including motor and
+non-motor complications"}}
+</tool_call>
+<tool_response>
+The page content for the previous section has been masked for saving the space.
+</tool_response>
+Step 6
+<think>
+The tool response provides excellent detailed information about progressive and advanced stage
+warning signs. I can see clear patterns in the progression from mild to moderate to advanced
+stages, with specific motor and non-motor symptoms at each stage. The information shows how
+symptoms evolve from unilateral to bilateral, how functional independence is progressively lost,
+and how non-motor symptoms become increasingly prominent and disabling. I should organize
+this information to show the progression clearly and highlight the key warning signs families
+need to recognize.
+</think>
+<write>
+C. Progressive Stage Warning Signs (Stages 2-3)
+As Parkinson’s disease advances beyond the early stage, families observe more pronounced
+symptoms that begin to significantly impact daily functioning. This progressive phase represents
+a critical period where proactive intervention can substantially influence quality of life outcomes.
+1. Advancing Motor Symptoms
+**The bilateral spread of symptoms marks a fundamental shift** in disease progression. <cite
+id="id_18">As the disease progresses, it eventually affects both sides. However, the symptoms
+may still be more severe on one side than on the other</cite>. This bilateral involvement signals
+that families must adapt their support strategies to address more comprehensive functional
+limitations.
+<cite id="id_22">Often within 3 to 7 years, you’ll see more changes. Early on, you might have a
+little trouble with something like buttoning a shirt. At this point, you may not be able to do it at
+all</cite>. **This progression from mild difficulty to complete inability** represents a pattern
+families will observe across multiple daily activities, requiring gradual assumption of caregiving
+responsibilities.
+35

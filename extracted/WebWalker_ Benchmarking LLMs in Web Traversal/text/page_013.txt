@@ -1,0 +1,43 @@
+Dang Nguyen, Jian Chen, Yu Wang, Gang Wu, Namyong Park, Zhengmian Hu, Hanjia Lyu, Junda Wu,
+Ryan Aponte, Yu Xia, et al. Gui agents: A survey. arXiv preprint arXiv:2412.13501, 2024.
+Fariba Noori and Mohammad Kazemifard. Simulation of pair programming using multi-agent and mbti
+personality model. In 2015 Sixth International Conference of Cognitive Science (ICCS), pp. 29–36. IEEE,
+2015.
+OpenAI. Introducing ChatGPT, 2022a. URL https://openai.com/blog/chatgpt.
+OpenAI. Gpt-4 system card, 2022b. URL https://cdn.openai.com/papers/gpt-4-system-card.pdf.
+OpenAI. Introducing openai o1, 2024. URL https://openai.com/o1/.
+Long Ouyang, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong Zhang,
+Sandhini Agarwal, Katarina Slama, Alex Ray, et al. Training language models to follow instructions
+with human feedback. Advances in neural information processing systems, 35:27730–27744, 2022.
+Shuofei Qiao, Ningyu Zhang, Runnan Fang, Yujie Luo, Wangchunshu Zhou, Yuchen Jiang, Chengfei
+Lv, and Huajun Chen. AutoAct: Automatic agent learning from scratch for QA via self-planning. In
+Lun-Wei Ku, Andre Martins, and Vivek Srikumar (eds.), Proceedings of the 62nd Annual Meeting of the
+Association for Computational Linguistics (Volume 1: Long Papers), pp. 3003–3021, Bangkok, Thailand,
+August 2024. Association for Computational Linguistics. doi: 10.18653/v1/2024.acl-long.165. URL
+https://aclanthology.org/2024.acl-long.165.
+Revanth Gangi Reddy, Sagnik Mukherjee, Jeonghwan Kim, Zhenhailong Wang, Dilek Hakkani-Tur,
+and Heng Ji. Infogent: An agent-based framework for web information aggregation. arXiv preprint
+arXiv:2410.19054, 2024.
+Noah Shinn, Federico Cassano, Ashwin Gopinath, Karthik Narasimhan, and Shunyu Yao. Reflexion:
+Language agents with verbal reinforcement learning. Advances in Neural Information Processing Systems,
+36, 2024.
+Yueqi Song, Frank Xu, Shuyan Zhou, and Graham Neubig. Beyond browsing: Api-based web agents.
+arXiv preprint arXiv:2410.16464, 2024.
+Jiejun Tan, Zhicheng Dou, Wen Wang, Mang Wang, Weipeng Chen, and Ji-Rong Wen. Htmlrag: Html is
+better than plain text for modeling retrieved knowledge in rag systems. arXiv preprint arXiv:2411.02959,
+2024.
+Qwen Team. Qwen2.5: A party of foundation models, September 2024. URL https://qwenlm.github.
+io/blog/qwen2.5/.
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Fei Xia, Ed Chi, Quoc V Le, Denny Zhou,
+et al. Chain-of-thought prompting elicits reasoning in large language models. Advances in neural
+information processing systems, 35:24824–24837, 2022.
+Laurie Williams, Robert R Kessler, Ward Cunningham, and Ron Jeffries. Strengthening the case for pair
+programming. IEEE software, 17(4):19–25, 2000.
+Kevin Xu, Yeganeh Kordi, Tanay Nayak, Ado Asija, Yizhong Wang, Kate Sanders, Adam Byerly, Jingyu
+Zhang, Benjamin Van Durme, and Daniel Khashabi. Tur[k]ingbench: A challenge benchmark for web
+agents, 2024. URL https://arxiv.org/abs/2403.11905.
+Nancy Xu, Sam Masling, Michael Du, Giovanni Campagna, Larry Heck, James Landay, and Monica Lam.
+Grounding open-domain instructions to automate web support tasks. In Kristina Toutanova, Anna
+Rumshisky, Luke Zettlemoyer, Dilek Hakkani-Tur, Iz Beltagy, Steven Bethard, Ryan Cotterell, Tanmoy
+Chakraborty, and Yichao Zhou (eds.), Proceedings of the 2021 Conference of the North American Chapter
+13

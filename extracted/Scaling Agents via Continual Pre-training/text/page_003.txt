@@ -1,0 +1,45 @@
+Figure 2: Agentic Training Pipeline.
+trajectories as a multi-step decision-making process by expanding potential exploration paths at each step,
+including reasoning and tool invocation. We then merge trajectories with newly generated exploration
+paths into multi-step decision-making text data. This approach allows models to explore various feasible
+behavioral patterns, enhancing their exploration and decision-making capabilities. Importantly, both
+synthesis approaches operate without external tool invocations, enabling large-scale data generation in
+offline environments without API costs.
+To efficiently absorb these two types of synthesis agentic data, we propose a progressive two-stage
+training strategy. The first stage primarily utilizes FAS data and short HAS data within a 32K context
+window, while the second stage focuses on high-quality HAS data with an extended 128K context length.
+Then, we evaluate AgentFoudner-30B against state-of-the-art (SOTA) models including general LLMs
+with tools, commercial and open-source deep research agents across 10 benchmarks. AgentFoudner-30B
+achieves superior performance, obtaining 39.9% on BrowseComp-en, 43.3% on BrowseComp-zh, 72.8%
+on GAIA, 31.5% on HLE, and 73.0% on xbench-DeepSearch, achieving new SOTA results. Remarkably,
+scaling AgentFounder’s training data yields steady performance average gains across all benchmarks,
+exhibiting promising scaling law behaviors. Besides, we find that AgentFounder still maintains strong
+general tool-use capabilities, suggesting potential for general-purpose agents in the future.
+2
+AgentFounder: Agentic Foundation Model
+This section introduces AgentFounder, our proposed deep research agent that leverages agentic continual
+pre-training to create pre-aligned agentic foundation models for downstream fine-tuning. We focus on
+detailing how AgentFounder implements Agentic CPT, specifically covering our systematic and scalable
+training data synthesis methods and progressive training strategies that prepare foundation models for
+effective downstream fine-tuning.
+2.1
+Overview of Agentic Training Pipeline
+Contemporary large language model development follows a well-established two-stage paradigm con-
+sisting of pre-training and post-training. During pre-training, models acquire broad knowledge from
+diverse data sources including web-crawled text, code repositories, academic literature, books, and news
+articles, following the fundamental next-token prediction paradigm with cross-entropy loss:
+L = −
+T
+∑
+t=1
+log P(xt+1|x1, x2, ..., xt)
+(1)
+where P(xt+1|x1, x2, ..., xt) = softmax(Woht), ht represents the hidden state at position t, and Wo is the
+output projection matrix.
+Post-training typically encompasses SFT and RL, enabling LLMs to follow instructions and align with
+human preferences. For agentic capabilities, post-training teaches LLMs to utilize tools effectively
+and perform multi-step reasoning for complex tasks. To build AgentFounder, we conduct supervised
+fine-tuning using a strategically proportioned mixture of general instruction data and agent trajectory
+demonstrations to ensure the LLM develops both general-purpose capabilities and specialized agentic
+abilities for deep research agents.
+3

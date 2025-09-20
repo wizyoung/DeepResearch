@@ -1,0 +1,71 @@
+4.2
+Main Results
+We compare WebShaper with cutting-edge baselines. The results are shown in Table 1. WebShaper achieves
+best performances on open-sourced methods on both GAIA and WebWalkerQA. Among all GAIA re-
+sults, WebShaper-on Qwen-2.5-72B excels second-best method WebSailor 4.7 score. On WebWalkerQA
+WebShaper obtains the highest 52.2 score.
+WebShaper performs the best on each backbone setting. These results indicate the generalizability of the
+synthesized data on different models. WebShaper is currently the only open source method with a score
+of more than 60 points, which is close to the SOTA OpenAI DR system. WebShaper is implemented fully
+under open-sourced LLMs, demonstrating that high-quality IS data can deeply stimulate the ability of
+DR Agents.
+4.3
+Discussions
+4.3.1
+Data Statistics
+Sports
+21%
+Academic
+17%
+Politics
+15%
+Entertainment
+13%
+Literature
+12%
+Culture
+8%
+3%
+2%
+2% 2%
+Other
+5%
+Economic
+Technology
+History
+Medical
+Figure 5: Domain distribution.
+We analyze the domain distributions of our dataset. The
+domain distribution of our dataset demonstrates rather
+comprehensive coverage across multiple thematic areas,
+as visualized in Figure 5. Our construction of seed tasks
+leads to questions about various topics and entities.
+Our agentic expansion further strengthens these bene-
+fits. The dataset achieves significant diversity through
+its balanced representation of major domains such as
+Sports, Politics, and Entertainment.
+This deliberate design ensures our dataset not only
+avoids over-reliance on any single domain but also
+maintains sufficient sample density across diverse
+topics. The empirical balance between breadth and
+depth enables robust training of a domain-agnostic
+information-seeking agent.
+Such characteristics po-
+sition our dataset as particularly suitable for train
+multi-domain IS tasks and fostering interdisciplinary
+research.
+4.3.2
+Data Comparison
+In this section, we compare WebShaper with baseline datasets. We sample 5,000 data from each dataset.
+Then we supervised fine-tune Qwen2.5-32B, Qwen2.5-72B (Yang et al., 2024), and QwQ (Team, 2025) on
+each dataset. The GAIA results are shown in Table 2.
+The comparative results presented in Table 2 demonstrate the superior performance of WebShaper across
+all backbone architectures on the GAIA benchmarks. Notably, WebShaper achieves the highest average
+scores for Qwen-2.5-32B, Qwen-2.5-72B, and QwQ-32B, respectively, significantly outperforming baseline
+datasets like WebWalkerQA and MHQA.
+Even when comparing models with similar parameter counts (e.g., Qwen-2.5-32B), WebShaper-enabled
+models show substantial improvements. The consistency of WebShaper’s performance improvement
+suggests its effectiveness in enhancing model capabilities regardless of architectural design. These
+findings validate the effectiveness of formalization-driven data synthesis, making it a superior training
+data solution for information-seeking tasks.
+11

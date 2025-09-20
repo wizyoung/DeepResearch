@@ -1,0 +1,52 @@
+is inherently noisier. Given its limited scale, it is difficult to approximate a learnable underlying
+distribution, which consequently hinders the model to learn and generalize from it.
+5
+Experiments
+5.1
+Setup
+Models and Benchmarks
+We perform SFT and RL training on Qwen3-30B-A3B-2507 (Yang et al., 2025).
+We mainly evaluate our method on six representative and challenging benchmarks:
+• BrowseComp-EN (Wei et al., 2025): One of the most challenging benchmarks introduced by OpenAI to
+evaluate the proficiency of AI agents in locating hard-to-find, often multi-faceted, information across
+the internet, which demands sophisticated browsing strategies and reasoning capabilities.
+• BrowseComp-ZH (Zhou et al., 2025a): Similar to BrowseComp-EN, but the QAs are in Chinese.
+• GAIA (Mialon et al., 2023): A benchmark that requires multi-modality and tool-use abilities. We only
+use a subset of 103 cases from the text-only validation subset (Li et al., 2025c; Wu et al., 2025a).
+• xbench-DeepSearch (Xbench Team, 2025): A new, dynamic, professionally-aligned benchmark that
+focuses on evaluating AI agents’ tool usage capabilities, specifically in deep information retrieval and
+complex search tasks.
+• Humanity’s Last Exam (HLE) (Phan et al., 2025): HLE is a global collaborative effort, with questions
+from nearly 1,000 subject expert contributors affiliated with over 500 institutions across 50 countries –
+comprised mostly of professors, researchers, and graduate degree holders.
+• DeepResearch Bench (Du et al., 2025): This benchmark is comprised of numerous PhD-level research
+tasks designed to evaluate the performance of deep-research agents, specifically focusing on the quality
+of their generated research reports and their proficiency in information retrieval and collection.
+Baselines
+We compare our method with the following paradigms:
+• Proprietary Browsing Agents: We test Gemini-2.5-pro-DeepResearch (Gemini Team, 2025), Claude-
+Research (Claude Team, 2025), Doubao-Deepresearch (Doubao, 2025), Perplexity-Research (Perplexity
+Team, 2025), Grok-Deeper-Search (Grok Team, 2025), Claude-4-Sonnet (anthropic), OpenAI-o3 (OpenAI,
+2025b), OpenAI DeepResearch (OpenAI, 2025a); however, as not all of them are fully accessible via
+API, they were not tested across all benchmarks and experiments.
+• Open-Source Agents: We compare our method with recent open-source web/search agents, including
+ASearcher-Web-QwQ (Gao et al.), MiroThinker-32B-DPO-v0.2 (MiroMind AI Team, 2025), WebSailor-
+72B, WebExplorer-8B, DeepDiver-V2-38B (OpenPangu Team, 2025), DeepDive-32B (Lu et al., 2025),
+Kimi-K2-Instruct (Team et al., 2025), GLM-4.5 (Zeng et al., 2025), DeepSeek-V3.1 (DeepSeek Team,
+2025).
+Training Data
+Our training data is primarily composed of SailorFog-QA (Li et al., 2025b) and SailorFog-
+QA-V2. In addition, we supplement this data with IterBench (authors, 2025) to bolster the model’s
+proficiency in mathematical and academic reasoning.
+Metric and Hyper-parameters
+We default to pass@k evaluation (Chen et al., 2021) and report pass@1
+using non-zero temperature, and temperature and top-p are set to 0.85 and 0.95. For accuracy, we use
+LLM as a judge (Liu et al., 2024; Wang et al., 2024). The pass@1 is computed as:
+pass@1 = 1
+n
+n
+∑
+i=1
+pi,
+(4)
+7

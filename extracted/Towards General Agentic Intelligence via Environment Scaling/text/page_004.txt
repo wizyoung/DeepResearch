@@ -1,0 +1,59 @@
+parameter information, the overall inter-tool dependencies may be difficult to capture. Therefore, for
+tools within a given domain, we further employ an LLM to systematically examine the dependencies
+between each pair of tools, thereby further improving the accuracy of edges in the tool graph. In total, we
+obtained M domains (exceeding 1,000).
+Function Schema Programmatic Materialization We first leverage the parameters of all tools within a
+domain to generate a domain-specific database structure, which serves as the underlying state for subse-
+quent tool operations. After obtaining the domain-specific tool set and the corresponding database schema
+in the previous stage, we can formalize each tool in python code, enabling it to perform read–write
+operations over the database schema. Interestingly, when generating database structures and formalizing
+code within specific domains of τ-bench, we observe through manual inspection that our outputs exhibit
+a high degree of consistency with the official implementations provided by τ-bench (Yao et al., 2024).
+2.2
+Agentic Task Construction
+We construct trajectories via forward simulated agent–human interplay, which allows us to fully simulate
+the environment, the user, and the agent. The critical step is to synthesize agentic tasks that elicit human
+tool usage while ensuring that the resulting trajectories remain verifiable. Concretely, we first initialize an
+environment state based on the domain-specific database schema, while encouraging as much diversity
+as possible in the initial state. Next, we sample logically coherent tool sequences from the domain’s tool
+graph, specifically by constructing a directed dependency graph over APIs and traversing it to obtain
+valid sequences. Starting from a randomly selected initial node, we conduct a directed walk until either
+the maximum execution steps are reached or a node with no outgoing edges is encountered. This process
+yields a logically coherent tool sequence. For each step, we generate the corresponding arguments and
+perform the actual tool call, grounding the operations directly on the database and continuously tracking
+the evolving database state. This procedure enables verifiability at two complementary granularities: (i)
+database-level state consistency and (ii) exact matching of tool sequences.
+3
+Agent Experience Learning
+We leverage user intent to drive interactions that yield agent experiences, and train the model through a
+two-phase process.
+🧑💻
+User Intent
+🧑💻
+Gold Action Seq
+Interaction Traces
+Compare
+Environment State
+Gold Env State
+Compare
+… More Interaction Turns
+Simulated User
+Task Agent
+Environment
+Can you return my order?
+Sure, but I would need your email 
+to authenticate you and order info.
+My email is … and the order is about …
+Your order id is …, would like to proceed?
+get_user_info(…)
+get_order_info(…)
+get_..._info(…)
+Obtain 
+User Info
+Obtain 
+Order Info
+Obtain 
+More Info
+Figure 2: The agent interacts with the simulated user and changes the environment state through the
+generated functions.
+4

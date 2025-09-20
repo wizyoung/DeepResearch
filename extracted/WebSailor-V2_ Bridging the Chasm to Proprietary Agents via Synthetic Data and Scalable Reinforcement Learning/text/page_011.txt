@@ -1,0 +1,26 @@
+Context scaling of WebSailor-V2.
+In contrast to WebSailor-V1, we increase the context length from 32k
+to 128k and raising the maximum number of ReAct iterations to 100. Figure 5 illustrates the relationship
+between accuracy, context length, and the number of tool calls on the BrowseComp-EN. The results show
+a clear positive correlation: as the available context length increases, the agent’s accuracy progressively
+rises before gradually converging. We observe that nearly 90% of the correctly solved instances are
+completed within a context of 64k. Notably, at a 32k context limit, WebSailor-V2 achieves an accuracy of
+around 16 on BrowseComp-EN. This marks a significant improvement over its predecessor, WebSailor-V1.
+The advancement is particularly compelling given that WebSailor-V1 is built on a 72B dense model, which,
+in principle, possesses greater intrinsic capacity than the 30B MoE model used here. This highlights the
+profound impact of our improved data and training pipeline on the agent’s fundamental reasoning and
+tool-use capabilities, allowing a smaller model to achieve superior performance.
+6
+Conclusion
+In this work, we propose WebSailor-V2, a comprehensive solution featuring a novel data construction
+scheme, SailorFog-QA-V2, and a refined training strategy. By building upon the Qwen3-30B-A3B model,
+our agent has achieved a level of performance that rivals the most advanced proprietary Deep Research
+agents, while significantly surpassing previous open-source solutions, especially those also trained on
+Qwen families. We believe that constructing a high-quality agent is a complex system engineering
+challenge; if this entire development process is viewed as a "reinforcement learning" loop, any instability
+or lack of robustness in its components can lead to erroneous "reward" signals. Therefore, we argue that
+high-quality data and a stable training environment are more critical than the specific algorithm itself. It
+is based on this conviction that we construct SailorFog-QA-V2 and a suite of simulated environments.
+Through the successful development of WebSailor-V2, we hope this work provides valuable insights that
+can inspire future endeavors in this field.
+11

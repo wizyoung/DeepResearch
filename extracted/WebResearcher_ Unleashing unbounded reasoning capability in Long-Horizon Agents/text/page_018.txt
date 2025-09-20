@@ -1,0 +1,43 @@
+Xiaoxi Li, Jiajie Jin, Guanting Dong, Hongjin Qian, Yutao Zhu, Yongkang Wu, Ji-Rong Wen, and
+Zhicheng Dou. Webthinker: Empowering large reasoning models with deep research capability.
+CoRR, abs/2504.21776, 2025c. doi: 10.48550/ARXIV.2504.21776. URL https://doi.org/10.48550/a
+rXiv.2504.21776.
+Junteng Liu, Yunji Li, Chi Zhang, Jingyang Li, Aili Chen, Ke Ji, Weiyu Cheng, Zijia Wu, Chengyu Du,
+Qidi Xu, et al. Webexplorer: Explore and evolve for training long-horizon web agents. arXiv preprint
+arXiv:2509.06501, 2025.
+Yuxuan Liu, Tianchi Yang, Shaohan Huang, Zihan Zhang, Haizhen Huang, Furu Wei, Weiwei Deng,
+Feng Sun, and Qi Zhang. Calibrating llm-based evaluator. In Nicoletta Calzolari, Min-Yen Kan,
+Véronique Hoste, Alessandro Lenci, Sakriani Sakti, and Nianwen Xue (eds.), Proceedings of the 2024 Joint
+International Conference on Computational Linguistics, Language Resources and Evaluation, LREC/COLING
+2024, 20-25 May, 2024, Torino, Italy, pp. 2638–2656. ELRA and ICCL, 2024. URL https://aclanthology
+.org/2024.lrec-main.237.
+Team Meta. The llama 4 herd: The beginning of a new era of natively multimodal ai innovation.
+https://ai.meta.com/blog/llama-4-multimodal-intelligence/, April 2025.
+Grégoire Mialon, Clémentine Fourrier, Thomas Wolf, Yann LeCun, and Thomas Scialom. Gaia: a
+benchmark for general ai assistants. In The Twelfth International Conference on Learning Representations,
+2023.
+MiroMindAI. Mirothinker, 2025. URL https://github.com/MiroMindAI/MiroThinker.
+MoonshotAI. Kimi-researcher, 2025. URL https://moonshotai.github.io/Kimi-Researcher/.
+OpenAI. Deep research system card, 2025a. URL https://cdn.openai.com/deep-research-system-c
+ard.pdf.
+OpenAI. Introducing openai o3 and o4-mini, 2025b. URL https://openai.com/index/introducing-o
+3-and-o4-mini/.
+OpenAI. Introducing openai o3 and o4-mini. https://openai.com/index/introducing-o3-and-o4-m
+ini/, April 2025c.
+Perplexity. Introducing perplexity deep research, 2025. URL https://www.perplexity.ai/hub/blog/i
+ntroducing-perplexity-deep-research.
+Long Phan, Alice Gatti, Ziwen Han, Nathaniel Li, Josephina Hu, Hugh Zhang, Chen Bo Calvin Zhang,
+Mohamed Shaaban, John Ling, Sean Shi, et al. Humanity’s last exam. arXiv preprint arXiv:2501.14249,
+2025.
+Martin L Puterman. Markov decision processes. Handbooks in operations research and management science, 2:
+331–434, 1990.
+Liangcai Su, Zhen Zhang, Guangyu Li, Zhuo Chen, Chenxi Wang, Maojia Song, Xinyu Wang, Kuan Li,
+Jialong Wu, Xuanzhong Chen, Zile Qiao, Zhongwang Zhang, Huifeng Yin, Shihao Cai, Runnan Fang,
+Zhengwei Tao, Wenbiao Yin, et al. Scaling agents via continual pre-training, 2025.
+Zhengwei Tao, Jialong Wu, Wenbiao Yin, Junkai Zhang, Baixuan Li, Haiyang Shen, Kuan Li, Liwen Zhang,
+Xinyu Wang, Yong Jiang, et al. Webshaper: Agentically data synthesizing via information-seeking
+formalization. arXiv preprint arXiv:2507.15061, 2025.
+Kimi Team, Yifan Bai, Yiping Bao, Guanduo Chen, Jiahao Chen, Ningxin Chen, Ruijue Chen, Yanru Chen,
+Yuankun Chen, Yutian Chen, et al. Kimi k2: Open agentic intelligence. arXiv preprint arXiv:2507.20534,
+2025.
+18

@@ -1,0 +1,143 @@
+Table 2: Results on Scenario-Targeted Web Search Benchmarks. † indicates results reported in official
+sources or prior work.
+Backbone
+HLE
+DeepResearch Bench
+Frames
+SEAL-0
+AcademicBrowse
+Pass@1
+RACE Overall
+Pass@1
+Pass@1
+Pass@1
+General LLMs with tools
+Qwen3-30B-A3B
+13.2
+40.2
+56.4
+9.9
+41.3
+Qwen3-235B-A22B
+20.0
+44.8
+-
+14.4
+50.7
+DeepSeek-R1
+24.8†
+-
+82.0†
+29.7†
+-
+Claude-4-Sonnet
+20.3†
+-
+80.7†
+-
+-
+Commercial Deep Research Agents
+Grok Deeper Search
+-
+38.2†
+-
+-
+-
+Perplexity Deep Research
+21.1†
+40.5†
+-
+-
+-
+Gemini Deep Research
+26.9†
+49.7†
+-
+-
+-
+Kimi-Researcher
+26.9†
+44.6†
+78.8†
+36.0†
+-
+OpenAI-o3
+20.2†
+-
+84.0†
+-
+-
+OpenAI Deep Research
+26.6†
+46.5†
+-
+-
+-
+Open-source Deep Research Agents
+ASearcher-Web-QwQ
+12.5†
+-
+70.9†
+-
+-
+DeepDive-32B
+-
+-
+76.1†
+29.3†
+-
+MiroThinker-32B-DPOv0.2
+17.8†
+-
+74.8†
+-
+-
+WebExplorer-8B
+17.3†
+-
+75.7 †
+-
+-
+Kimi-K2
+18.1†
+25.4
+72.0†
+25.2
+47.3
+GLM-4.5
+21.2†
+39.2
+78.9†
+34.2
+55.6
+DeepSeek-V3.1
+29.8†
+35.4
+83.7†
+42.6†
+65.0
+Ours
+AgentFounder-30B
+31.5
+47.9
+89.6
+43.9
+75.3
+is limited to GAIA’s text subset, it nevertheless demonstrates that AgentFounder’s capabilities extend
+beyond retrieval reasoning itself and can transfer to broader task categories, revealing its potential as a
+general-purpose agent in the future.
+Observations on Scenario-Targeted Web Search Benchmarks. AgentFounder-30B demonstrates im-
+pressive performance across specialized evaluation tasks. On the highly challenging HLE benchmark,
+AgentFounder-30B becomes the first open-source model to surpass the 30-point threshold, achieving
+31.5%. This result significantly exceeds all reported closed-source deep research products, including
+Gemini-2.5-Pro Deep Research, Kimi-Researcher, and OpenAI Deep Research. Similarly, for academic
+capability assessment, AgentFounder-30B scores 75.3% on Academic Browse, substantially outperforming
+all existing open-source models and demonstrating its value as an academic assistant. On the Frames
+benchmark, AgentFounder-30B substantially outperforms all open-source and closed-source models,
+demonstrating its superior capacity for multi-perspective reasoning and consistent information synthesis.
+In terms of robustness, AgentFounder-30B comprehensively outperforms open-source deep research
+agents on Seal-0, indicating strong resistance to information interference. Finally, on the DeepResearch
+Bench, AgentFounder-30B achieves 47.9% on RACE Overall, surpassing both OpenAI Deep Research
+and all open-source deep research agents, confirming the comprehensiveness, readability, and depth of
+AgentFounder-30B’s generated reports.
+12

@@ -1,0 +1,41 @@
+References
+ScraperAPI: Scale data collection with a simple web scraping api, 2025. URL https://www.scraperapi
+.com/.
+Anthropic. Introducing the claude 4 model family, 2025. URL https://www.anthropic.com/news/cla
+ude-4. Accessed: 2025-09-11.
+Sören Auer, Christian Bizer, Georgi Kobilarov, Jens Lehmann, Richard Cyganiak, and Zachary Ives.
+Dbpedia: A nucleus for a web of open data. In international semantic web conference, pp. 722–735.
+Springer, 2007.
+Satanjeev Banerjee and Alon Lavie. Meteor: An automatic metric for mt evaluation with improved
+correlation with human judgments. In Proceedings of the acl workshop on intrinsic and extrinsic evaluation
+measures for machine translation and/or summarization, pp. 65–72, 2005.
+ByteDance. Deerflow: A community-driven deep research framework combining language models with
+tools like web search, crawling, and python execution. https://github.com/bytedance/deer-flow,
+2025. MIT License; accessed YYYY-MM-DD.
+Chen Chen, Xinlong Hao, Weiwen Liu, Xu Huang, Xingshan Zeng, Shuai Yu, Dexun Li, Shuai Wang,
+Weinan Gan, Yuefeng Huang, Wulong Liu, Xinzhi Wang, Defu Lian, Baoqun Yin, Yasheng Wang, and
+Wu Liu. Acebench: Who wins the match point in tool usage?, 2025. URL https://arxiv.org/abs/25
+01.12851.
+Hyung Won Chung, Le Hou, Shayne Longpre, Barret Zoph, Yi Tay, William Fedus, Eric Li, Xuezhi Wang,
+Mostafa Dehghani, Siddhartha Brahma, et al. Scaling instruction-finetuned language models. CoRR,
+abs/2210.11416, 2022.
+Common Crawl. Common crawl dataset, 2025. URL https://commoncrawl.org.
+DeepSeek-AI. DeepSeek-V3.1 Model Card. https://huggingface.co/deepseek-ai/DeepSeek-V3.1,
+2025.
+Mingxuan Du, Benfeng Xu, Chiwei Zhu, Xiaorui Wang, and Zhendong Mao. Deepresearch bench: A
+comprehensive benchmark for deep research agents. arXiv preprint arXiv:2506.11763, 2025.
+Runnan Fang, Shihao Cai, Baixuan Li, Jialong Wu, Guangyu Li, Wenbiao Yin, Xinyu Wang, Xiaobin Wang,
+Liangcai Su, Zhen Zhang, Shibin Wu, Zhengwei Tao, Yong Jiang, Pengjun Xie, Fei Huang, and Jingren
+Zhou. Towards general agentic intelligence via environment scaling, 2025a.
+Tianqing Fang, Zhisong Zhang, Xiaoyang Wang, Rui Wang, Can Qin, Yuxuan Wan, Jun-Yu Ma, Ce Zhang,
+Jiaqi Chen, Xiyun Li, et al. Cognitive kernel-pro: A framework for deep research agents and agent
+foundation models training. arXiv preprint arXiv:2508.00414, 2025b.
+Jiaxuan Gao, Wei Fu, Minyang Xie, Shusheng Xu, Chuyi He, Zhiyu Mei, Banghua Zhu, and Yi Wu.
+Beyond ten turns: Unlocking long-horizon agentic search with large-scale asynchronous rl. arXiv
+preprint arXiv:2508.07976, 2025.
+Xinyu Geng, Peng Xia, Zhen Zhang, Xinyu Wang, Qiuchen Wang, Ruixue Ding, Chenxi Wang, Jialong
+Wu, Yida Zhao, Kuan Li, et al. Webwatcher: Breaking new frontiers of vision-language deep research
+agent. arXiv preprint arXiv:2508.05748, 2025.
+Google. Gemini deep research — your personal research assistant. https://gemini.google/overview
+/deep-research/, 2025. Accessed: 2025-09-10.
+28

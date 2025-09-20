@@ -1,0 +1,43 @@
+Shuofei Qiao, Ningyu Zhang, Runnan Fang, Yujie Luo, Wangchunshu Zhou, Yuchen Jiang, Chengfei
+Lv, and Huajun Chen. Autoact: Automatic agent learning from scratch for qa via self-planning. In
+Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long
+Papers), pp. 3003–3021, 2024.
+Rafael Rafailov, Archit Sharma, Eric Mitchell, Christopher D Manning, Stefano Ermon, and Chelsea Finn.
+Direct preference optimization: Your language model is secretly a reward model. Advances in Neural
+Information Processing Systems, 36:53728–53741, 2023.
+ByteDance Seed, Yufeng Yuan, Yu Yue, Mingxuan Wang, Xiaochen Zuo, Jiaze Chen, Lin Yan, Wenyuan Xu,
+Chi Zhang, Xin Liu, et al. Seed-thinking-v1. 5: Advancing superb reasoning models with reinforcement
+learning. arXiv preprint arXiv:2504.13914, 2025.
+Priyanka Sen, Alham Fikri Aji, and Amir Saffari. Mintaka: A complex, natural, and multilingual dataset
+for end-to-end question answering. In Nicoletta Calzolari, Chu-Ren Huang, Hansaem Kim, James
+Pustejovsky, Leo Wanner, Key-Sun Choi, Pum-Mo Ryu, Hsin-Hsi Chen, Lucia Donatelli, Heng Ji,
+Sadao Kurohashi, Patrizia Paggio, Nianwen Xue, Seokhwan Kim, Younggyun Hahm, Zhong He,
+Tony Kyungil Lee, Enrico Santus, Francis Bond, and Seung-Hoon Na (eds.), Proceedings of the 29th
+International Conference on Computational Linguistics, pp. 1604–1619, Gyeongju, Republic of Korea,
+October 2022. International Committee on Computational Linguistics. URL https://aclanthology.o
+rg/2022.coling-1.138/.
+Yijia Shao, Yucheng Jiang, Theodore A Kanell, Peter Xu, Omar Khattab, and Monica S Lam. Assisting in
+writing wikipedia-like articles from scratch with large language models. In NAACL-HLT, 2024.
+Guangming Sheng, Chi Zhang, Zilingfeng Ye, Xibin Wu, Wang Zhang, Ru Zhang, Yanghua Peng, Haibin
+Lin, and Chuan Wu. Hybridflow: A flexible and efficient rlhf framework. arXiv preprint arXiv:
+2409.19256, 2024.
+Huatong Song, Jinhao Jiang, Yingqian Min, Jie Chen, Zhipeng Chen, Wayne Xin Zhao, Lei Fang, and
+Ji-Rong Wen. R1-searcher: Incentivizing the search capability in llms via reinforcement learning. arXiv
+preprint arXiv:2503.05592, 2025.
+Shuang Sun, Huatong Song, Yuhao Wang, Ruiyang Ren, Jinhao Jiang, Junjie Zhang, Lei Fang, Zhongyuan
+Wang, Wayne Xin Zhao, and Ji-Rong Wen. Simpledeepsearcher: Deep information seeking via web-
+powered reasoning trajectory synthesis. 2025. URL https://github.com/RUCAIBox/SimpleDeepSear
+cher.
+Gokul Swamy, Sanjiban Choudhury, Wen Sun, Zhiwei Steven Wu, and J. Andrew Bagnell. All roads lead
+to likelihood: The value of reinforcement learning in fine-tuning, 2025. URL https://arxiv.org/abs/
+2503.01067.
+QwQ Team. Qwq-32b: Embracing the power of reinforcement learning, 2025a. URL https://qwenlm.g
+ithub.io/blog/qwq-32b/.
+WebThinker Team. Webthinker: Empowering large reasoning models with deep research capability,
+2025b. URL https://github.com/RUC-NLPIR/WebThinker. Github.
+Harsh Trivedi, Niranjan Balasubramanian, Tushar Khot, and Ashish Sabharwal. Musique: Multihop
+questions via single-hop question composition, 2022. URL https://arxiv.org/abs/2108.00573.
+Jason Wei, Zhiqing Sun, Spencer Papay, Scott McKinney, Jeffrey Han, Isa Fulford, Hyung Won Chung,
+Alex Tachard Passos, William Fedus, and Ame lia Glaese. Browsecomp: A simple yet challenging
+benchmark for browsing agents.
+14

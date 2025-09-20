@@ -1,0 +1,33 @@
+7
+Related Work
+Deep Research
+The development of autonomous deep-research agents has witnessed significant
+progress from both proprietary and open-source efforts. These proprietary systems (OpenAI, 2025a;
+Google, 2025b; xAI, 2025; Anthropic, 2025; Perplexity, 2025; MoonshotAI, 2025) have established bench-
+marks for deep-research capabilities but remain opaque. In contrast, open-source efforts (Chen et al.,
+2025; Jin et al., 2025; Li et al., 2025b;c; Tao et al., 2025; Li et al., 2025a; Fang et al., 2025; Su et al., 2025)
+have advanced the field through transparent architectures and training methodologies. However, these
+works predominantly adopt the mono-contextual paradigm, accumulating all retrieved information into
+a single, ever-expanding context. While this linear approach has shown initial success, it fundamentally
+constrains reasoning capacity as contexts bloat and allows noise contamination to persist throughout
+the research process. WebResearcher departs from this prevalent paradigm by introducing an iterative
+synthesis framework that maintains focused cognitive workspaces through periodic consolidation and re-
+construction. Our approach draws inspiration from human research workflows (Bellman, 1957; Puterman,
+1990), where researchers iteratively refine their understanding through cycles of exploration, synthesis,
+and focused investigation. Unlike mono-contextual systems that suffer from irreversible degradation,
+WebResearcher sustains high-quality reasoning at arbitrary research depths through its Markov Decision
+Process formulation, enabling complex multi-hop reasoning and cross-domain synthesis that existing
+architectures struggle to achieve.
+8
+Conclusion
+In this paper, we presented WebResearcher, a novel framework that fundamentally rethinks deep-research
+agents through three key contributions: (1) IterResearch, an iterative paradigm that reformulates deep
+research as a Markov Decision Process with periodic consolidation, overcoming the context suffocation
+and noise contamination of mono-contextual approaches; (2) WebFrontier, a scalable data synthesis
+engine that addresses training data scarcity through tool-augmented complexity escalation; and (3)
+a Research-Synthesis Framework that enables effective test-time scaling through parallel multi-agent
+exploration. Extensive experiments across 6 challenging benchmarks demonstrate that WebResearcher
+achieves state-of-the-art performance, surpassing even frontier proprietary systems. These results validate
+our core insight that effective deep research requires structured iteration with periodic synthesis rather
+than unbounded accumulation.
+16

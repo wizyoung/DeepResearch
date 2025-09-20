@@ -1,0 +1,47 @@
+Actions. For the planner, the action space consists of search, write outline, and terminate. Given the
+search queries, the search engine returns titles, snippets, and corresponding URLs. To save context space,
+we further execute the actions of the URL selection, parsing the page via URL, summarizing relevant
+contents, and extracting evidence with LLMs following the searching queries. The search tool finally
+returns the selected URLs and their corresponding summaries. The action of “write outline” is to generate
+and optimize the outline, and the “terminate” action is to terminate the planning process.
+For the writer, the action space consists of retrieve, write, and terminate. Besides the terminate action, the
+retrieve action is to retrieve evidence from the memory bank by providing the grounded citations in the
+outline. The write action is provided to write the section of the report.
+Memory bank. Answering an open-ended question requires long-context input of the collected informa-
+tion and long-context output of the final report. To search sufficient materials, the planner often searches
+and parses more than 100 web pages, with more than 100k tokens. The writer often outputs more than
+20k tokens to produce a comprehensive report. Prior open-sourced deep research agents (Roucher et al.,
+2025; Research, 2025e;c) include all the raw materials (e.g., web pages and PDF files) in the LLM context,
+leading to quality degradation due to attentional failures like the “lost in the middle” problem, poor
+coherence, and increased hallucinations (Liu et al., 2023; Li et al., 2024; Bai et al., 2024; Wu et al., 2025c).
+To this end, we introduce a memory to achieve context management for both planner and writer. Only a
+short summary of the web page or PDF file is included in the search context, and only necessary raw
+pages will be retrieved from the memory to write the corresponding sections.
+3
+Method
+Our methodology is embodied in a dual-agent framework, comprising a planner and a writer. The
+planner is responsible for the dynamic cycle of evidence acquisition and outline optimization, while the
+writer performs focused, section-by-section synthesis to construct the final report. This division of labor
+directly mirrors the cognitive workflow of a human researcher.
+3.1
+Overview of WebWeaver
+The entire workflow is visualized in Fig. 3. Tasked with evidence acquisition and outline optimization,
+the planner operates in a dynamic research cycle. It iteratively interleaves evidence acquisition from
+web searches with the continuous refinement and optimization of a report outline. The output of this
+exploratory phase is not just a collection of sources but a comprehensive, well-structured outline where
+each section is explicitly linked via citations to a curated memory bank of source evidence.
+Subsequently, the writer takes over for the synthesis phase. To circumvent the pitfalls of one-shot
+generation and long-context issues, the writer adopts a section-wise and memory-grounded synthesis
+approach. For each section of the outline, it performs targeted retrieval of only the pertinent evidence
+from the memory bank and composes the content. This division of labor ensures that the final report is
+not only coherent and well-organized but also deeply source-grounded, faithfully mirroring the rigor of
+human-led deep research.
+3.2
+Research Cycle: Iterative Evidence Acquisition and Outline Optimization
+Recent deep research agents often follow an "outline-guided search" paradigm (Han et al., 2025; Research,
+2025e;c). By generating a static outline before any evidence is gathered, they create a rigid research path
+that is blind to emergent insights. This fundamental decoupling of planning from discovery limits the
+depth and breadth of the research. We address this by proposing a dynamic research cycle where the
+outline and search strategy co-evolve, allowing the agent to adapt and explore new findings.
+The core of our planner’s operation is a dynamic research cycle that iteratively interleaves evidence
+4

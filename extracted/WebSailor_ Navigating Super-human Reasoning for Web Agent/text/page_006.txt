@@ -1,0 +1,50 @@
+The process is as follows: first, we prompt an expert open-source LRM to generate a complete solution
+trajectory, including its native thoughts. From this full trajectory, we selectively discard the LRM’s
+original, verbose thoughts, retaining only the successful action-observation sequence (a0, o0, a1, o1, . . . ).
+This trace represents the "what" and "how" of the solution path, but not the "why".
+Next, we reconstruct the missing "why". For each step t in the action trace, we possess the history up
+to the previous step, Ht−1 = ( ˆτ0, a0, o0, . . . , ˆτt−1, at−1, ot−1), along with the expert’s chosen action at and
+the subsequent observation ot. We then prompt a separate, powerful instruction-following model, π∗, to
+generate a new thought ˆτt that serves as a concise, logical justification for taking action at:
+ˆτt ∼π∗(τ|Ht−1, at, ot).
+(2)
+By iteratively applying this for every step, we synthesize a complete, high-quality reasoning trajectory
+ˆHT = ( ˆτ0, a0, o0, . . . , ˆτT, aT, oT) where the reasoning is clean and goal-oriented. For this reconstruction,
+we use another LLM and enforce a "short-CoT" style. This is a critical design choice, ensuring the final
+reasoning chain is compact enough for long-horizon tasks. This method allows us to scalably generate
+supervision data that instills complex reasoning patterns without the negative side effects of direct
+imitation.
+4
+Reinforcement Learning with Cold Start
+Our training methodology is a two-stage process. Inspired by recent advancements in post-training (Chu
+et al., 2025; Swamy et al., 2025; Ye et al., 2025) which highlight the efficacy of targeted fine-tuning before
+more complex learning, we first employ a modest RFT phase as a "cold start". This initial phase aims to
+equip the model with fundamental tool-use capabilities and adherence to the long-horizon reasoning
+skeleton. Subsequently, we leverage RL to further refine the agent’s reasoning abilities, enhance its
+sample efficiency (Yue et al., 2025), and enable fuller utilization of our high-quality, complex training
+data.
+4.1
+Rejection Sampling Fine-Tuning
+Setup
+Within a complete trajectory HT, the agent’s thoughts (τi) are enclosed by <think> and </think>
+tags. Actions (ai) are demarcated by <tool_call> and </tool_call> for function calls, or <answer> and </answer>
+for final responses. The environment’s observations (oi) resulting from tool calls are wrapped with
+<tool_response> and </tool_response> tags. Different segments are separated by these special tokens.
+Filtering
+We apply a three-stage filtering process to the expert-generated trajectories. Firstly, to guarantee
+the correctness of the supervisory signal, we conduct rejection sampling that only trajectories culminating
+in a correct final answer are retained. Secondly, acknowledging that the expert models possess superior
+long-context processing capabilities compared to our policy model, we discard any trajectory exceeding
+32k tokens in length. Thirdly, we filter for task complexity by retaining those trajectories with more than
+5 tool calls, as intricate reasoning patterns and effective planning strategies typically manifest through a
+more extended sequence of decision-making steps.
+Training objective
+The training objective is to specifically enhance the agent’s decision-making capabil-
+ity—that is, its ability to generate effective thoughts and actions. Consequently, the tokens corresponding
+to the environment’s observations (oi) are masked out from the loss calculation (Chen et al., 2023).
+4.2
+Duplicating Sampling Policy Optimization
+Following the RFT cold-start phase, which equips the model with fundamental tool-use capabilities and
+adherence to a reasoning skeleton, we propose Duplicating Sampling Policy Optimization (DUPO) to
+further refine the reasoning abilities, enhance the sample efficiency (Yue et al., 2025) and ultimately elicit
+6

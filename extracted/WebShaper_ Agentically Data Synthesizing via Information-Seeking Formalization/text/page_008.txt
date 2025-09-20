@@ -1,0 +1,48 @@
+constants. In this condition, such a sentence as "Dynamo Berlin is a football club based in Berlin"
+would exist in the question. However, it doesn’t increase the reasoning chain of the task-solving.
+• Reasoning Shortcut As shown in the Sequential structure in Figure 4, there exists an FP which
+connects constants directly to the target. If this happens, models may guess the answer by only
+reasoning on the closer constants and neglecting the deeper sequence.
+To mitigate these limitations, we introduce the Layer-wise Expansion Strategy. We layer-wisely traverse
+the graph to find all leaf constants. When we obtain all the leaf constants of the current graph, an
+Expander takes each constant once a time to construct this constant into new FPs. These FPs can form a
+sub-question that regards the constant as the answer. The expander then merges the sub-question to the
+current one to form a new one:
+qn+1(T) = Expander(C, qn(T)).
+(11)
+Note that the qn+1(T) always has the same answer as qn(T). As illustrated in the Figure 4, in each
+expansion, the Expander takes a leaf constant node, turns it into a variable node connected with new
+nodes. The resulting structure would not have the Redundant and Reasoning Shortcut problems. The
+number of expanding layers l is a hyperparameter for controlling the task coverage and difficulty.
+3.2.3
+Expander Agent
+We now introduce the Expander, an autonomous agent designed to enhance question generation through
+iterative refinement. Given an input constant, the Expander first retrieves relevant contextual information,
+then formulates a semantically coherent sub-question. This sub-question is subsequently integrated with
+the original query to construct an enriched, context-aware question that better aligns with the underlying
+information-seeking objective.
+The Expander builds upon ReAct (Yao et al., 2023), a widely-adopted framework for language agents.
+A ReAct trajectory comprises multiple Thought-Action-Observation interaction cycles. In each cycle,
+the language model generates free-form Thought for strategic planning, executes structured Action to
+interface with external tools, and receives Observation feedback from the environment. Formally, the
+agent execution loop at time t can be represented as (τt, αt, ot), where τ denotes Thought, α signifies
+Action, and o represents Observation. Each Action α decomposes into (τ, ϕ): τ specifies the action type
+(using one of the tools or answer), while ϕ contains required parameters. We equip the Expander with
+the following tools:
+• Search This action enables Expander to conduct Google search by severl queries about a constant
+c and obtains search results. The parameters of this tool are ϕ = {queries of c, filter_year}, enabling
+temporal filtering of search results. This tool would return top relevant URLs and their snippets
+as Observation.
+• Summarize This is the key to R-Union oepration. This action allows Expander to visit multiple
+URLs searched for the constant c and summarize the content. The summarization would integrate
+the retrieved information to obtain a union constant set as stated in Eq.(9). The parameters of
+this tool are ϕ = {urls, goal}. This tool would return the summarization of knowledge about c
+from the given urls as Observation.
+• Validate When Expander completes retrieving and summarizing the KPs of constant C, it
+derives a sub-question and uses this tool to validate the results based on our formalization. The
+validation purposes are to determine: 1) whether the derived sub-question are consistent with C
+based on the formalization. 2) whether it is too simple that can be directly answered by an LLM.
+We call QwQ once time per each purpose. In the first consistency validation, we don’t check
+whether C is strictly the answer to the sub-question. Instead, it checks if the type of C satisfies
+the sub-question. For the second validation, we require QwQ to answer the sub-question. If the
+8

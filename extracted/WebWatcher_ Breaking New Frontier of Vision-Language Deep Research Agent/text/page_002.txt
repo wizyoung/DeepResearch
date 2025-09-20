@@ -1,0 +1,50 @@
+1
+Introduction
+Deep research agents represents a new frontier in Artificial Intelligence (AI), where Large Language
+Models (LLMs) go beyond static prompts to plan multi-step tasks: issuing search queries, reading
+documents, browsing the web, and refining answers through iterative reasoning (OpenAI, 2025a; Google,
+2024; Perplexity, 2025). Many open-source, text-only web agents for deep research (Li et al., 2025b;a;
+Wu et al., 2025a; Zheng et al., 2025) have demonstrated superhuman abilities to interact with intricate
+information environments, achieving remarkable performance on high-difficulty benchmarks such as
+BrowseComp (Wei et al., 2025a) and Humanity’s Last Exam (HLE) (Phan et al., 2025). However, most
+advances to date remain primarily text-centric, neglecting the rich visual information omnipresent in real-
+world scenarios. Many research-centric and everyday tasks such as interpreting scientific diagrams (Hu
+et al., 2024), analyzing graphics (Wang et al., 2024b), or navigating visually rich web interfaces (Hong
+et al., 2024), demand integrated vision-language reasoning (Dong et al., 2025). While proprietary agents
+have made strides in this area, multimodal deep research remains largely unexplored, with few agents
+tackling high-difficulty Vision-Language (VL) tasks (Xu & Peng, 2025; Hu et al., 2025).
+The key challenge lies that current multimodal deep research agents rely on rigid, template-driven
+pipelines limited to specific scenarios, lacking the flexible reasoning required for real research challenges.
+On the one hand, many existing VL Agents rely mainly on visual tools to perform image-based reasoning,
+such as optical character recognition (OCR), bounding box extraction, image cropping, visual annotation
+and so on (Zhao et al., 2025; Su et al., 2025a;b). While visual tools assist agents in handling perceptual
+tasks, they struggle to integrate visual reasoning with deep textual understanding and cross-modal
+inference, falling short in tackling high-difficulty tasks that require complex reasoning. As shown in
+Fig. 2, when faced with a high-difficulty case from GAIA (Mialon et al., 2023), visual-only analysis
+fails to yield a solution, highlighting that VL Agents remain confined to perception tasks. On the other
+hand, only use search tools restricts Search Agents to retrieval tasks and prevents them from solving
+complex real-world tasks (Wu et al., 2025b). Although retrieval-augmented reasoning can handle many
+knowledge-based questions, it often fails when answers are implicit, require structured interactions, or
+demand additional computation (Shen et al., 2024; Gu et al., 2025). For example, some problems require
+executing code to interpret charts, performing step-by-step calculations, or browsing dynamic webpages
+to extract up-to-date or structured content. As illustrated in Fig. 2, solving this case requires not only
+searching, but also tools to click through relevant links and browse the resulting webpage to gather
+necessary information.
+To address this gap, agents for VL deep research require not only strong reasoning abilities across both
+textual and visual information, but also effective use of multiple external tools. Thus, we introduce
+WebWatcher, a VL web agent with deep research capability.
+In order to achieve strong reasoning abilities across both textual and visual information, it is essential to
+construct data that combine high-quality visual content with complex reasoning. However, most current
+visual question answering (VQA) data primarily focus on visual perception with single-step inference,
+lacking planning complexity and reasoning depth needed to support advanced agent capabilities (Chen
+et al., 2024; Li et al., 2025c). Thus, we introduce a pipeline to generate training data that benefits in-depth,
+multi-step reasoning and strategic planning, encouraging agents to synthesize information across both
+modalities. Importantly, we begin by harvesting real-world knowledge via random walks over diverse
+web sources to build high-difficulty question answering (QA) examples with unpredictable, multi-hop
+reasoning chains (Wu et al., 2025a; Li et al., 2025a), closely resembling the information-seeking and
+compositional nature of BrowseComp tasks (Wei et al., 2025b). To further raise the complexity, we
+mask key entities in questions, replacing specific terms with generic description, forcing models to infer
+relationships from context. Next, we convert this enriched QA pairs into multimodal VQA items using an
+adaptable QA-to-VQA pipeline compatible with most existing QA datasets, enabling substantial scaling
+of multimodal datasets. Finally, a multi-stage filtering process ensures the quality and clarity of the
+2

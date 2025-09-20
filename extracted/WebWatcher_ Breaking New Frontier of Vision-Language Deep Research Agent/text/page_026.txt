@@ -1,0 +1,46 @@
+Language Processing, EMNLP 2024, Miami, FL, USA, November 12-16, 2024, pp. 5627–5646. Association
+for Computational Linguistics, 2024a. URL https://aclanthology.org/2024.emnlp-main.322.
+Zirui Wang, Mengzhou Xia, Luxi He, Howard Chen, Yitao Liu, Richard Zhu, Kaiqu Liang, Xindi Wu,
+Haotian Liu, Sadhika Malladi, et al. Charxiv: Charting gaps in realistic chart understanding in
+multimodal llms. Advances in Neural Information Processing Systems, 37:113569–113697, 2024b.
+Jason Wei, Zhiqing Sun, Spencer Papay, Scott McKinney, Jeffrey Han, Isa Fulford, Hyung Won Chung,
+Alex Tachard Passos, William Fedus, and Amelia Glaese. Browsecomp: A simple yet challenging
+benchmark for browsing agents. arXiv preprint arXiv:2504.12516, 2025a.
+Jason Wei, Zhiqing Sun, Spencer Papay, Scott McKinney, Jeffrey Han, Isa Fulford, Hyung Won Chung,
+Alex Tachard Passos, William Fedus, and Amelia Glaese. Browsecomp: A simple yet challenging
+benchmark for browsing agents. arXiv preprint arXiv:2504.12516, 2025b.
+Jialong Wu, Baixuan Li, Runnan Fang, Wenbiao Yin, Liwen Zhang, Zhengwei Tao, Dingchu Zhang, Zekun
+Xi, Gang Fu, Yong Jiang, et al. Webdancer: Towards autonomous information seeking agency. arXiv
+preprint arXiv:2505.22648, 2025a.
+Jinming Wu, Zihao Deng, Wei Li, Yiding Liu, Bo You, Bo Li, Zejun Ma, and Ziwei Liu. Mmsearch-r1:
+Incentivizing lmms to search. arXiv preprint arXiv:2506.20670, 2025b.
+Yijia Xiao, Edward Sun, Tianyu Liu, and Wei Wang. Logicvista: Multimodal llm logical reasoning
+benchmark in visual contexts. arXiv preprint arXiv:2407.04973, 2024.
+Renjun Xu and Jingwen Peng. A comprehensive survey of deep research: Systems, methodologies, and
+applications. arXiv preprint arXiv:2506.12594, 2025.
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, and Yuan Cao. Re-
+act: Synergizing reasoning and acting in language models. In International Conference on Learning
+Representations (ICLR), 2023.
+Kaining Ying, Fanqing Meng, Jin Wang, Zhiqian Li, Han Lin, Yue Yang, Hao Zhang, Wenbo Zhang,
+Yuqi Lin, Shuo Liu, et al. Mmt-bench: A comprehensive multimodal benchmark for evaluating large
+vision-language models towards multitask agi. arXiv preprint arXiv:2404.16006, 2024.
+Xiang Yue, Yuansheng Ni, Kai Zhang, Tianyu Zheng, Ruoqi Liu, Ge Zhang, Samuel Stevens, Dongfu
+Jiang, Weiming Ren, Yuxuan Sun, et al. Mmmu: A massive multi-discipline multimodal understanding
+and reasoning benchmark for expert agi. In Proceedings of the IEEE/CVF Conference on Computer Vision
+and Pattern Recognition, pp. 9556–9567, 2024a.
+Xiang Yue, Tianyu Zheng, Yuansheng Ni, Yubo Wang, Kai Zhang, Shengbang Tong, Yuxuan Sun, Botao
+Yu, Ge Zhang, Huan Sun, et al. Mmmu-pro: A more robust multi-discipline multimodal understanding
+benchmark. arXiv preprint arXiv:2409.02813, 2024b.
+Weichen Zhang, Zile Zhou, Zhiheng Zheng, Chen Gao, Jinqiang Cui, Yong Li, Xinlei Chen, and Xiao-
+Ping Zhang. Open3dvqa: A benchmark for comprehensive spatial reasoning with multimodal large
+language model in open space. arXiv preprint arXiv:2503.11094, 2025.
+Shitian Zhao, Haoquan Zhang, Shaoheng Lin, Ming Li, Qilong Wu, Kaipeng Zhang, and Chen Wei.
+Pyvision: Agentic vision with dynamic tooling. arXiv preprint arXiv:2507.07998, 2025.
+Yaowei Zheng, Richong Zhang, Junhao Zhang, Yanhan Ye, Zheyan Luo, Zhangchi Feng, and Yongqiang
+Ma.
+Llamafactory: Unified efficient fine-tuning of 100+ language models.
+In Proceedings of the
+62nd Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations),
+Bangkok, Thailand, 2024. Association for Computational Linguistics. URL http://arxiv.org/abs/24
+03.13372.
+26

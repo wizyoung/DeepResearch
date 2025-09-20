@@ -1,0 +1,98 @@
+database schema Sk. Consequently, the design problem reduces to defining a partition of the tool space
+into domains {T1 . . . , TM}, and assigning to each domain a database schema Sk, where Sk specifies the
+environment for that domain.
+1
+Gold Env State
+Env
+Tool Doc
+Grounding Functions
+State Structure
+Parameters
+Matching
+Tool Graph
+Env Domains
+Domains 
+Detection
+2
+4
+3
+GetProjectTimeline
+GetConstructionScheduling
+ProjectSchedulecreate
+DiyProjecttaskScheduler
+class ProjectSchedulecreate(Tool):
+@staticmethod
+def __call__(
+data: Dict[str, Any],
+projectDetails: Dict[str, Any]
+) -> str:
+projects = data["projects"]
+        ...
+        return ...
+"projects": {
+"project_id_placeholder": {
+"project_id": ...
+"project_name": ...
+...
+"last_updated": }
+},
+"tasks": ...
+"milestones": ...
+User Intent
+Tool Seq
+Name: ProjectSchedulecreate
+Description: Create and 
+schedule a construction-type 
+project ...
+Parameters: ...
+Init Env State
+Tasks
+You want to start by retrieving the current 
+project timeline and construction scheduling 
+details to understand the existing plan. Then, 
+you intend to … After that, you plan to 
+generate your own DIY task-level…
+"projects": {
+  "project_id_placeholder": {
+"project_id”: project_1
+"last_updated":"2024-03-01T10:00:00Z"}
+}
+"tasks": []
+"projects": {
+"project_id_placeholder": {
+"project_id": project_1
+"last_updated": "2024-03-01T11:30:00Z"}
+},
+"tasks": [
+Site Preparation, Foundation Work,...
+]
+Figure 1: The overview of the environment automatic build, and agentic task construction.
+2.1
+Environment Automatic Build
+Building upon this design principle, we propose a systematic pipeline for leveraging a diverse set of
+tools as shown in Figure 1. We begin with scenario collection, which gathers a large corpus of real-world
+tools; proceed to tool dependency graph modeling, which induces well-structured domain partitions
+and distributions; and finally employ function schema programmatic materialization, which maps tool
+operations onto database interactions, thereby enabling the construction of the overall environment.
+Scenario Collection We collected more than 30,000 APIs from ToolBench (Qin et al., 2023; Guo et al.,
+2024), API-Gen (Prabhakar et al., 2025b) and our internal tool repository. After applying rigorous filtering,
+including the removal of low-quality APIs and subsequent refinement, we rewrite some API descriptions
+to incorporate explicit input–output specifications (Fang et al., 2025). Building on this, we further
+constructed tool compositions by systematically exploiting the input–output relationships among APIs.
+This process ultimately resulted in API pools ΘF whose size = N (over 30,000), providing a reliable
+foundation for subsequent experiments and analysis.
+Tool Dependency Graph Modeling We construct a tool graph in which nodes are tools and edges encode
+compositional compatibility induced by function parameters. A tool f unc consists of a description Pf unc
+and a list of parameters Pf unc. For a pair of tools, we can extract their respective parameter lists and
+convert them into vector representations ϕ to compute their cos-similarity. If the similarity exceeds
+a predefined threshold τ, we consider there to be a dependency relationship between the two tools.
+Accordingly, we insert an edge E between them in our graph.
+E =
+n
+(i, j) | sim(ϕ(Pf unci), ϕ(Pf uncj)) > τ, i ̸= j
+o
+(1)
+Domain partitioning then reduces to a graph clustering problem. We employ Louvain community
+detection (Blondel et al., 2008) to identify coherent tool communities that serve as domains. For a
+segmented tool set, since parameter matching relies solely on vectorization and considers only individual
+3

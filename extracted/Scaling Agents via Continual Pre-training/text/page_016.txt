@@ -1,0 +1,71 @@
+0
+200
+400
+600
+800
+1000
+1200
+Training Steps
+0.8
+0.9
+1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+LM Cross-Entropy Loss
+Comparative Loss Convergence on Identical SFT Corpus
+Baseline
+AgentFounder-30B-A3B (FAS)
+AgentFounder-30BA3B (FAS_HAS_MIX)
+AgentFounder-30BA3B (FAS+HAS (2stage))
+AgentFounder-30BA3B (210B)
+AgentFounder-30BA3B (315B)
+1240
+1260
+1280
+1300
+1320
+1340
+Steps
+0.80
+0.82
+0.84
+0.86
+Loss
+Last 100 Steps (Zoomed)
+Figure 7: Training loss evolution showing superior convergence of AgentFounder models compared to
+baseline.
+indicating that long-context training effectively enhances complex reasoning capabilities even when the
+base scaling curve approaches saturation.
+(3) Sustained improvements at scale demonstrate robustness. AgentFounder maintains consistent
+performance improvements throughout the entire 315B token budget, achieving a total gain of 8.0%
+(from 54.2% to 62.2%), validating our training methodology’s effectiveness in preventing premature
+convergence.
+3.6
+Comprehensive Analyses
+3.6.1
+Training Process
+We validate whether agentic continual pre-training can alleviate the dual-burden problem by endowing
+models with foundational agentic capabilities before post-training.
+Experiment Design. We conduct a comparative loss analysis between AgentFounder models and the
+baseline during SFT on identical downstream tasks. All models are trained for 1,340 steps using the same
+SFT-A data, with training efficiency measured through final loss, minimum achieved loss, and average
+loss over the last 100 training steps.
+Observation Results. As shown in Figure 7, our analysis reveals that agentic CPT significantly enhances
+fine-tuning efficiency: (1) AgentFounder substantially reduces SFT loss. All AgentFounder variants
+achieve markedly lower loss values compared to the baseline across all metrics. While the baseline
+reaches a final loss of 0.8656, our best-performing AgentFounder-30B (315B) model achieves 0.7953,
+demonstrating that agentic CPT effectively endows models with foundational capabilities that facilitate
+adaptation to downstream agent tasks. (2) Scaling CPT data yields monotonic improvements. Loss
+values decrease progressively as CPT data volume increases from FAS-only to 315B tokens. The FAS+HAS
+mixture outperforms FAS alone, validating that reorganizing supervision signals from post-training into
+CPT format strengthens the model’s agentic foundation.
+3.6.2
+Tool Call Analysis
+Experiment Design. We analyze AgentFounder’s tool invocation distributions across four representative
+benchmarks to understand how the model adapts its tool usage strategies to different task complexi-
+ties. We examine tool call patterns on HLE, BrowseComp-en, WebWalker, and GAIA-text benchmarks,
+categorizing them based on their task characteristics and required exploration depth.
+16

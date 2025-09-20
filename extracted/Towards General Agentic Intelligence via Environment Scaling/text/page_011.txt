@@ -1,0 +1,43 @@
+References
+Sandhini Agarwal, Lama Ahmad, Jason Ai, Sam Altman, Andy Applebaum, Edwin Arbus, Rahul K
+Arora, Yu Bai, Bowen Baker, Haiming Bao, et al. gpt-oss-120b & gpt-oss-20b model card. arXiv preprint
+arXiv:2508.10925, 2025.
+Anthropic. System card: Claude opus 4 & claude sonnet 4, 2025. URL https://www-cdn.anthropic.c
+om/6d8a8055020700718b0c49369f60816ba2a7c285.pdf.
+Victor Barres, Honghua Dong, Soham Ray, Xujie Si, and Karthik Narasimhan. tau2-bench: Evaluating
+conversational agents in a dual-control environment. arXiv preprint arXiv:2506.07982, 2025.
+Peter Belcak, Greg Heinrich, Shizhe Diao, Yonggan Fu, Xin Dong, Saurav Muralidharan, Yingyan Ce-
+line Lin, and Pavlo Molchanov. Small language models are the future of agentic ai. arXiv preprint
+arXiv:2506.02153, 2025.
+Vincent D Blondel, Jean-Loup Guillaume, Renaud Lambiotte, and Etienne Lefebvre. Fast unfolding of
+communities in large networks. Journal of statistical mechanics: theory and experiment, 2008(10):P10008,
+2008.
+Chen Chen, Xinlong Hao, Weiwen Liu, Xu Huang, Xingshan Zeng, Shuai Yu, Dexun Li, Shuai Wang,
+Weinan Gan, Yuefeng Huang, et al. Acebench: Who wins the match point in tool usage? arXiv preprint
+arXiv:2501.12851, 2025.
+Mingyang Chen, Haoze Sun, Tianpeng Li, Fan Yang, Hao Liang, Keer Lu, Bin Cui, Wentao Zhang, Zenan
+Zhou, and Weipeng Chen. Facilitating multi-turn function calling for llms via compositional instruction
+tuning. arXiv preprint arXiv:2410.12952, 2024a.
+Zehui Chen, Kuikun Liu, Qiuchen Wang, Wenwei Zhang, Jiangning Liu, Dahua Lin, Kai Chen, and Feng
+Zhao. Agent-flan: Designing data and methods of effective agent tuning for large language models.
+arXiv preprint arXiv:2403.12881, 2024b.
+Gheorghe Comanici, Eric Bieber, Mike Schaekermann, Ice Pasupat, Noveen Sachdeva, Inderjit Dhillon,
+Marcel Blistein, Ori Ram, Dan Zhang, Evan Rosen, et al. Gemini 2.5: Pushing the frontier with
+advanced reasoning, multimodality, long context, and next generation agentic capabilities. arXiv
+preprint arXiv:2507.06261, 2025.
+DeepSeek-AI. Deepseek-v3 technical report, 2024. URL https://arxiv.org/abs/2412.19437.
+Runnan Fang, Xiaobin Wang, Yuan Liang, Shuofei Qiao, Jialong Wu, Zekun Xi, Ningyu Zhang, Yong
+Jiang, Pengjun Xie, Fei Huang, et al. Synworld: Virtual scenario synthesis for agentic action knowledge
+refinement. arXiv preprint arXiv:2504.03561, 2025.
+Xinyu Geng, Peng Xia, Zhen Zhang, Xinyu Wang, Qiuchen Wang, Ruixue Ding, Chenxi Wang, Jialong
+Wu, Yida Zhao, Kuan Li, et al. Webwatcher: Breaking new frontiers of vision-language deep research
+agent. arXiv preprint arXiv:2508.05748, 2025.
+Zhicheng Guo, Sijie Cheng, Hao Wang, Shihao Liang, Yujia Qin, Peng Li, Zhiyuan Liu, Maosong Sun,
+and Yang Liu. Stabletoolbench: Towards stable large-scale benchmarking on tool learning of large
+language models. arXiv preprint arXiv:2403.07714, 2024.
+Zhicheng Guo, Sijie Cheng, Yuchen Niu, Hao Wang, Sicheng Zhou, Wenbing Huang, and Yang Liu.
+Stabletoolbench-mirrorapi: Modeling tool environments as mirrors of 7,000+ real-world apis. arXiv
+preprint arXiv:2503.20527, 2025.
+Binyuan Hui, Jian Yang, Zeyu Cui, Jiaxi Yang, Dayiheng Liu, Lei Zhang, Tianyu Liu, Jiajun Zhang, Bowen
+Yu, Kai Dang, et al. Qwen2. 5-coder technical report. arXiv preprint arXiv:2409.12186, 2024.
+11

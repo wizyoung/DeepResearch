@@ -1,0 +1,58 @@
+You are extremely strict, and any requirements not met should result in a return of false.
+Please return the result in JSON format as follows:
+{
+"reason": "Evaluate against the above conditions step by step, considering whether the query and
+answer meet the conditions. Use English to justify, and if they do, list the sections from doc2 that
+assist in answering the query.",
+"decision": "true/false"
+}
+E.3
+Details Prompts for Agents
+The prompts for the Expoloer Agent
+and Critic Agent
+are shown below.
+Prompts for WebWalker
+The Expoloer Agent
+Digging through the buttons to find quailty sources and the right information. You have access to the
+following tools:
+(*@\textcolor{blue}{\{tool\_descs\}}@*)
+Use the following format:
+Question: the input question you must answer
+Thought: you should always think about what to do
+Action: the action to take, should be one of [{tool_names}]
+Action Input: the input to the action
+Observation: the result of the action
+... (this Thought/Action/Action Input/Observation can be repeated zero or more times)
+Begin!
+(*@\textcolor{blue}{\{query\}}@*)
+The Critic Agent
+(*@\textbf{Critic} @*)
+You are a critic agent. Your task is to analyze the given observation and extract information relevant to the
+current query. You need to decide if the observation contains useful information for the query. If it does,
+return a JSON object with a "usefulness" value of true and an "information" field with the relevant details.
+If not, return a JSON object with a "usefulness" value of false.
+**Input:**
+−Query: "<Query>"
+−Observation: "<Current Observation>"
+**Output (JSON):**
+{
+"usefulness": true,
+"information": "<Extracted Useful Information>"
+}
+Or, if the observation does not contain useful information:
+{
+"usefulness": false
+}
+−Query: (*@\textcolor{blue}{\{Query\}}@*)
+−Observation: (*@\textcolor{blue}{\{Observation\}}@*)
+(*@\textbf{Answer} @*)
+You are a critic agent. Your task is to evaluate whether the accumulated useful information is sufficient to
+answer the current query. If it is sufficient, return a JSON object with a "judge" value of true and an "
+answer" field with the answer.
+If the information is insufficient, return a JSON object with a "judge" value of false.
+**Input:**
+−Query: "<Query>"
+−Accumulated Information: "<Accumulated Useful Information>"
+**Output (JSON):**
+{
+19

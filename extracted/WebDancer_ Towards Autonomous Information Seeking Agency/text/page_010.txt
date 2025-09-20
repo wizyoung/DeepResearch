@@ -1,0 +1,105 @@
+40
+45
+50
+55
+60
+Step
+45
+46
+47
+48
+49
+50
+51
+52
+Pass@3
+Pass@3
+Consistency@3
+34
+35
+36
+37
+38
+Consistency@3
+(a) Performance
+across
+training
+steps using the DAPO algorithm.
+Base
+SFT
+RL
+Model
+3.0
+3.5
+4.0
+4.5
+5.0
+5.5
+6.0
+6.5
+7.0
+Action Count
+Action Count
+Reasoning Length
+360
+380
+400
+420
+440
+460
+480
+500
+Reasoning Length
+(b) Evolution of thought length and
+number of actions.
+0.5
+0.6
+0.7
+Tempreture
+0
+10
+20
+30
+40
+Performance
+Pass@1
+Pass@3
+(c) Pass@1 and Pass@3 results on dif-
+ferent temperatures.
+Figure 5: Analysis on RL algorithm, emergent agency, and agent environments using GAIA benchmark.
+the performance fluctuation to changes in the web environment itself, highlighting the non-stationary
+and open-ended nature of real-world agent deployment. Unlike static datasets with fixed distributional
+properties, real-world environments evolve over time, requiring agents to remain robust under changing
+contexts and partial observability. Additionally, to further investigate potential overfitting, we conduct
+a memorization stress test: we fine-tuned a Qwen-7B model on 69 correctly sampled trajectories from
+the GAIA development set for 10 epochs, and subsequently evaluate its performance on the same set.
+Despite this, greedy decoding only achieved 37.4%, suggesting the difficulty of stabilization on the
+open-domained agentic tasks.
+6
+Related Works
+Information Seeking Agents and Benchmarks. Recent advances in information-seeking agents aim to
+integrate web interaction into LLMs’ reasoning. Xi et al. (2025) WebThinker Team (2025b) and Search-o1 Li
+et al. (2025a) use tool-augmented LLMs that actively retrieve evidence mid-inference. Some works like
+R1-Searcher Song et al. (2025), ReSearch Chen et al. (2025) and Search-R1 Jin et al. (2025) focus on rein-
+forcement learning to teach search behavior from outcome-based rewards. DeepResearcher Zheng et al.
+(2025) extends this by operating in real web environments with online RL, while SimpleDeepSearcher Sun
+et al. (2025) shows that a small number of distilled demonstrations can train effective agents without
+full RL. These works demonstrate promising capabilities but often rely on limited or simplistic data. In
+parallel, benchmarks like GAIA Mialon et al. (2023) and WebWalkerQA Wu et al. (2025) test reasoning
+and browsing, but many are single-turn or domain-limited. BrowseComp Wei et al. and BrowseComp-
+zh Zhou et al. (2025) increase task complexity, requiring multi-hop search and multilingual reasoning, yet
+still lack diversity and scalability. Our work addresses these gaps by proposing automatic synthesis QA
+datasets designed to challenge agents across domains and task types in more realistic web environments.
+Agents Learning. Agent learning has evolved from in-context learning towards training-based methods
+Liu et al. (2025a); Zhou et al. (2024; 2023). Recent studies Qiao et al. (2024); Zeng et al. (2024); Chen
+et al. (2024) have primarily focused on leveraging SFT with curated task-solving trajectories following
+the ReAct paradigm. However, empirical evidence suggests that pure SFT-based agents often exhibit
+limited generalization performance when confronted with adaptive operational contexts Zheng et al.
+(2025); Zhang et al. (2025d); Qian et al. (2025); Yu et al. (2024). Building upon these limitations, RL-based
+methods Song et al. (2025); Zheng et al. (2025;?); Zhang et al. (2025d;c) have demonstrated remarkable
+potential in developing sophisticated search strategies through learned exploration policies. Despite
+their theoretical advantages, practical implementations face persistent challenges in training stability and
+sample efficiency. WebDancer implements a two-stage framework: an initial cold-start phase employing
+trajectory-based SFT to establish fundamental agency patterns, followed by targeted RL to cultivate
+adaptive long-term agency capabilities.
+10

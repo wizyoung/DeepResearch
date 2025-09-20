@@ -1,0 +1,226 @@
+Table 1: Performance comparison (in %) between paradigms under training-free settings. Bold indicates
+results using ReSum with our developed ReSumTool-30B, which consistently outperforms ReAct and
+Recent History. Results with † are sourced from Liu et al. (2025), representing leading pre-trained models
+paired with search and visit tools to illustrate the datasets’ performance landscape.
+GAIA
+BrowseComp-zh
+BrowseComp-en
+Agent
+Paradigm
+Summary Tool
+Pass@1
+Pass@3
+Pass@1
+Pass@3
+Pass@1
+Pass@3
+Claude-4†
+ReAct
+−
+68.3
+−
+29.1
+−
+12.2
+−
+OpenAI-o3†
+ReAct
+−
+70.5
+−
+58.1
+−
+50.9
+−
+Kimi-K2†
+ReAct
+−
+57.7
+−
+28.8
+−
+14.1
+−
+DeepSeek-v3.1†
+ReAct
+−
+63.1
+−
+49.2
+−
+30.0
+−
+WebSailor-3B
+ReAct
+−
+25.6
+42.7
+8.2
+17.0
+3.3
+5.6
+Recent History
+27.2
+44.7
+13.2
+24.3
+3.8
+8.9
+ReSum
+Qwen3-30B
+27.5
+45.6
+6.9
+14.5
+4.2
+7.8
+ReSumTool-30B
+35.3
+52.4
+13.7
+24.6
+6.8
+10.8
+GPT-OSS-120B
+40.5
+65.1
+15.2
+28.0
+8.5
+15.8
+Qwen3-235B
+32.4
+49.5
+11.1
+23.9
+5.7
+10.3
+DeepSeek-R1-671B
+39.2
+60.2
+13.0
+23.5
+7.5
+13.4
+WebSailor-7B
+ReAct
+−
+31.7
+44.7
+13.2
+25.6
+5.7
+10.3
+Recent History
+33.0
+48.5
+15.2
+28.0
+5.2
+9.4
+ReSum
+Qwen3-30B
+34.6
+48.5
+13.3
+26.6
+5.8
+10.3
+ReSumTool-30B
+40.5
+60.2
+17.2
+30.8
+9.0
+15.2
+GPT-OSS-120B
+42.4
+61.2
+19.2
+35.6
+10.5
+17.2
+Qwen3-235B
+43.4
+60.2
+18.1
+32.9
+8.7
+15.2
+DeepSeek-R1-671B
+41.1
+58.3
+17.1
+32.2
+10.3
+16.6
+WebSailor-30B
+ReAct
+−
+45.0
+60.2
+23.9
+38.4
+12.8
+21.8
+Recent History
+40.1
+56.3
+24.1
+40.1
+10.3
+16.7
+ReSum
+Qwen3-30B
+45.6
+61.2
+24.8
+40.1
+12.2
+20.4
+ReSumTool-30B
+47.3
+63.1
+24.1
+42.6
+16.0
+25.4
+GPT-OSS-120B
+51.5
+68.9
+27.3
+46.4
+18.8
+30.9
+Qwen3-235B
+46.9
+67.0
+25.7
+42.2
+17.2
+26.7
+DeepSeek-R1-671B
+49.2
+71.8
+27.1
+41.5
+13.7
+22.6
+ReSum integration effectively narrows the performance gap to SOTA pre-trained models. Equipped
+with ReSumTool-30B, WebSailor agents approach the performance of leading pre-trained models. Notably,
+WebSailor-30B with ReSumTool-30B realizes 16.0% Pass@1 on the BrowseComp-en benchmark, surpassing
+Claude-4-Sonnet (12.2%) and Kimi-K2 (14.1%). This demonstrates that ReSum integration not only
+enhances the capabilities of WebSailor agents but also brings their performance in line with top-tier
+models in the field.
+4.3
+Performance of ReSum-GRPO
+Settings: We use WebSailor models as the base for RL training, as they have already undergone RFT to
+acquire tool calling capabilities and provide a clean base without prior RL experience. For training data,
+we randomly select 1K samples from the SailorFog-QA dataset (Li et al., 2025a) due to its high-quality
+and challenging characteristics. The training data scale is limited to 1K to reduce training costs while still
+enabling performance comparison. We emphasize that our goal is to demonstrate the effectiveness of
+ReSum-GRPO rather than pursuing performance limits through extensive training data. We compare
+ReSum-GRPO with standard GRPO, where trajectories are rolled out following the ReAct paradigm. Both
+RL algorithms are trained for 4 epochs with all hyperparameters held consistent (details in Appendix C.2).
+Training Dynamics: During each training step, the rewards on training data are shown in Figure 4,
+8

@@ -1,0 +1,51 @@
+A
+Related Work
+The field of autonomous web agents has witnessed a surge of progress in recent months, with the open-
+source community rapidly advancing capabilities along three primary axes: data construction, training
+methodologies, and inference paradigms.
+Data construction for web agents.
+High-quality data is the bedrock of capable agents. Recent method-
+ologies for constructing agent training data can be broadly categorized into two main approaches. The
+first, pioneered by WebSailor (Li et al., 2025b) with its SailorFog-QA dataset, is graph-based. This ap-
+proach begins with seed entities and uses web tools to build a knowledge graph, from which complex
+question-answer pairs are sampled. The second, an "easy-to-hard" paradigm, is employed by works like
+WebShaper (Tao et al., 2025), ASearcher (Gao et al.), and WebExplorer (Liu et al., 2025a). These methods
+typically start with a simple seed question and iteratively expand its complexity, resulting in tree-like
+logical structures. A common thread connecting many of these recent efforts, starting with WebSailor,
+is the integration of live web tools into the data generation process and the introduction of uncertainty,
+most notably through obfuscation, to elicit more advanced reasoning. In contrast to these works, our
+SailorFog-QA-V2 achieves a more comprehensive coverage of complex logical relationships that better
+mirror real-world information webs and more definitions of uncertainty.
+Agent training strategies.
+A two-stage training pipeline has become the de facto standard for develop-
+ing powerful agents: a SFT "cold start" phase followed by a RL phase for policy refinement. The majority
+of recent RL implementations are based on variants of GRPO (Shao et al., 2024), often incorporating
+algorithmic enhancements and tricks from methods like DAPO (Yu et al., 2025b) and Dr.GRPO (Liu
+et al., 2025b). While these algorithmic nuances exist, our extensive experimentation suggests that the
+specific RL algorithm is not the primary bottleneck for agentic RL at this stage. Instead, we find that the
+quality and distribution of the training data fundamentally determine the upper bound of the training’s
+effectiveness. The careful selection of training samples, particularly how negative trajectories are handled,
+appears to be one of the most critical factors for stable and effective learning. Continual pre-training is
+another specialized training paradigm that can further enhance reasoning abilities (Su et al., 2025).
+Inference paradigms.
+The choice of inference paradigm significantly impacts an agent’s performance.
+WebSailor and WebShaper are built upon the vanilla ReAct framework (Yao et al., 2023) for its simplicity
+and effectiveness. Concurrently, context engineering (Yu et al., 2025a; Zhou et al., 2025b) has emerged
+as a crucial area of innovation. Works such as ASearcher and Kimi-Researcher (Kimi, 2025), as well as
+GUI-focused agents like UI-TARS-2 (Wang et al., 2025), have demonstrated that sophisticated context
+management strategies built on top of ReAct can yield significant performance improvements. For
+WebSailor-V2, we deliberately adopt the standard ReAct framework. This choice is intended to isolate
+and evaluate the intrinsic capabilities of the model itself, minimizing the confounding effects of intricate
+prompt engineering or framework design. By establishing this strong baseline, we pave the way for
+future work to explore how advanced context strategies or plug-in modules can further unlock the
+model’s full potential.
+Despite the rapid proliferation of open-source agents, a considerable performance gap has persisted
+when compared to proprietary systems like OpenAI’s DeepResearch (OpenAI, 2025a). WebSailor-V2
+represents a dedicated effort to bridge this divide, demonstrating for the first time that a meticulously
+trained agent built on a moderately-sized open-source model can achieve performance that is highly
+competitive with, and in some cases superior to, its closed-source counterparts.
+B
+Experimental Details
+Tools
+WebSailor-V2 uses four types of tools, search, visit, Google Scholar, and Python interpreter:
+12

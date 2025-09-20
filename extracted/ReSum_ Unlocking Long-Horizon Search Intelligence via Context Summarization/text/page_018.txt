@@ -1,0 +1,81 @@
+D
+Supplementary Materials for Experiments
+In this section, we supplement the fine-grained experimental analysis of ReSum-GRPO, including training
+efficiency, inference costs, and concrete cases.
+D.1
+Training Efficiency
+Table 3: Comparison of average time per single training step between RL algorithms.
+Model
+Device
+GRPO
+ReSum-GRPO
+WebSailor-3B
+8×144GB GPUs
+0.62 Hours
+1.05 Hours
+WebSailor-7B
+8×144GB GPUs
+0.96 Hours
+1.44 Hours
+WebSailor-30B
+16×144GB GPUs
+0.94 Hours
+1.25 Hours
+We provide the required devices and the average time for each training step for both RL algorithms in
+Table 3. Compared with GRPO, ReSum-GRPO modifies long trajectories by segmenting them based on
+summarization and then resumes the conversation for continued exploration. Consequently, the times
+required for both trajectory collection and policy model updates are lengthened. Based on the statistics in
+the table, ReSum-GRPO roughly increases training time by approximately 33% to 69% compared with
+GRPO, which is acceptable.
+D.2
+Inference Costs
+10
+20
+30
+40
+10
+20
+30
+40
+50
+60
+Pass@1 (%)
+GAIA
+BrowseComp-zh
+BrowseComp-en
+ReAct
+ReSum
+ReSum-GRPO
+(a) Number of tokens (k) vs. Performance
+5
+10
+15
+20
+10
+20
+30
+40
+50
+60
+Pass@1 (%)
+GAIA
+BrowseComp-zh
+BrowseComp-en
+ReAct
+ReSum
+ReSum-GRPO
+(b) Number of tool calls vs. Performance
+Figure 5: Resource consumption vs. performace across different paradigms. We compare three
+paradigms: training-free ReAct, training-free ReSum, and ReSum-GRPO, consistently using WebSailor-
+30B. ReSum paradigms achieve higher performance with acceptable resource utilization across all
+benchmarks.
+We further analyze resource consumption, i.e., the average number of tokens and tool calls required
+to successfully complete a query across different inference paradigms: training-free ReAct, training-
+free ReSum, and ReSum after ReSum-GRPO training. The results for WebSailor-30B across various
+benchmarks are presented in Figure 5. From these results, we observe that in the training-free setting,
+ReSum significantly boosts performance with only marginal increases in resource costs compared to
+ReAct. Following targeted ReSum-GRPO training, agents become more inclined to rely on summaries for
+continued reasoning, which, while incurring additional resource costs, leads to even higher performance.
+Notably, ReSum paradigms achieve substantial performance improvements while maintaining resource
+costs within a reasonable range, e.g., typically ∼2x the original costs.
+18

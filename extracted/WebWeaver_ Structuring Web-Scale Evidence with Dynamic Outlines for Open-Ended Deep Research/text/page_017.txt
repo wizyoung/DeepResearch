@@ -1,0 +1,49 @@
+<id_1>
+Summary: Parkinson’s disease progresses through five defined stages: Stage 1 shows mild,
+unilateral tremor with minimal impact on daily life; Stage 2 adds bilateral tremor, rigidity, and
+noticeable gait/posture changes, making tasks harder; Stage 3 introduces balance problems,
+frequent falls, and slowed movements, requiring assistance with dressing, eating, and bathing;
+Stage 4 features severe motor impairment needing walkers or caregiver help, ending independent
+living; Stage 5 is the most advanced, with inability to walk, bedridden status, and possible
+cognitive disturbances. Early warning signs include a subtle tremor (often starting in a finger),
+micro-handwriting, stiffness, and facial masking, which gradually intensify—tremor spreading,
+rigidity, shuffling gait, swallowing difficulties, and speech changes—mirroring the stage-by-stage
+deterioration.
+</id_1>
+...
+</tool_response>
+Step 2
+<think>
+Great! I’ve gathered comprehensive information about Parkinson’s disease stages and warning
+signs. Now I need to search for specific information about:
+1. Red flag symptoms that should alert family members to seek immediate medical intervention
+2. Deep Brain Stimulation (DBS) surgery and post-operative care
+3. Daily life adjustments and support strategies for DBS patients
+Let me search for information about emergency warning signs and when family mem-
+bers should seek immediate medical help.
+</think>
+<tool_call>
+{"name": "search", "arguments": {"query": ["Parkinson’s disease emergency warning signs family
+caregivers", "when to call doctor Parkinson’s disease red flags", "Parkinson’s disease complications
+requiring immediate medical attention"], "goal": "Find specific warning signs and emergency
+situations that should prompt family members to seek immediate medical intervention for
+Parkinson’s patients"}}
+</tool_call>
+<tool_response>
+<material>
+<id_5>
+Summary:
+Parkinson’s disease begins with subtle, often unilateral signs such as a barely noticeable tremor,
+slight stiffness, slowed movements (bradykinesia), reduced facial expression, and diminished
+arm swing—these constitute the early stage. As the condition progresses, symptoms become
+bilateral and more pronounced, including persistent tremor, rigid muscles, poor posture, balance
+problems, loss of automatic movements, speech and writing changes, and a range of non-motor
+issues (depression, anxiety, constipation, sleep disturbances, olfactory loss, fatigue). In later stages,
+complications emerge: cognitive decline and dementia, emotional changes, swallowing and
+chewing difficulties, severe sleep disorders, autonomic dysfunction (bladder urgency, orthostatic
+hypotension), chronic pain, and sexual dysfunction. Overall, the disease follows a trajectory from
+mild, often unnoticed early warnings to widespread motor and non-motor impairments that
+intensify over time.
+</id_5>
+...
+17

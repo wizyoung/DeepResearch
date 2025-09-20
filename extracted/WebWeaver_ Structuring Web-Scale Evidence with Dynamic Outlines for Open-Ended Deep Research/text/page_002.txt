@@ -1,0 +1,50 @@
+1
+Introduction
+Large Language Models (LLMs) (OpenAI, 2025b; Qwen Team, 2025; Liu et al., 2024; DeepMind, 2025;
+anthropic, 2025) have demonstrated remarkable capabilities across a wide array of well-defined tasks,
+from factual question answering (Wei et al., 2025; Mialon et al., 2023) to document summarization (Zhang
+et al., 2025) and code generation (Jiang et al., 2024). Their success, however, has largely been confined to
+scenarios with clear instructions and ground-truth answers. The true frontier for autonomous AI lies
+in transcending these structured problems to tackle the complex, open-ended challenges that define
+human-level knowledge work—a process driven by curiosity, synthesis, and the discovery of novel
+insights. We term this challenge open-ended deep research (OEDR). Unlike tasks with ground-truth
+answers, OEDR requires an agent to independently navigate and digest a vast corpus of information,
+often exceeding 100 web pages and PDFs, to form a detailed report that offers unique, synthesized
+viewpoints. This represents a monumental challenge, and as shown in Fig. 1, most current agents fail
+dramatically on the recent benchmarks (Du et al., 2025; Consult, 2025; Coelho et al., 2025) designed to test
+this capability, highlighting a critical gap we aim to address.
+Current attempts to tackle OEDR fall into two main categories: proprietary and open-source solutions.
+While several powerful proprietary agents exist (OpenAI, 2025a; Research, 2025b;d;a), their prohibitively
+expensive APIs and restrictive quotas create significant barriers, limiting widespread adoption and
+hindering academic research. Consequently, the focus has shifted towards open-source alternatives,
+which predominantly follow two paradigms. As shown in Fig. 2, the first is a straightforward "search-
+then-generate" approach (Tao et al., 2025; Roucher et al., 2025), where the agent gathers all information
+before directly generating a report. This method often results in low-quality, incoherent outputs because
+it lacks a guiding outline to structure the synthesis. The second, more sophisticated approach first
+generates a static outline and then performs targeted searches for each section (Han et al., 2025; Research,
+2025e;c). However, this strategy is critically flawed: the outline is fixed upfront, relying solely on the
+LLM’s internal and often outdated knowledge. This rigidity "fossilizes" the research process, preventing
+the agent from exploring unexpected but valuable avenues discovered during its search. Furthermore,
+feeding all retrieved materials into a single context for final generation is susceptible to well-known
+issues like “loss in the middle” (Liu et al., 2023) and increased hallucinations, compromising the report’s
+accuracy and depth (Bai et al., 2024; Wu et al., 2025c).
+The key, we believe, lies in abandoning rigid, machine-like pipelines and instead embracing the organic
+process of human intellect. Our approach is designed to do just that: it teaches the agent to research like
+a person. A human expert doesn’t finalize their entire plan before starting; they allow their outline to
+be a living document. We implement this principle through an agentic loop where actions of searching
+and outline optimization are provided. As the agent explores the web-scale information landscape,
+its discoveries continuously inform and reshape the outline. This allows for genuine exploration and
+adaptation, ensuring that the research is not confined to its initial, limited understanding. Then, when it
+is time to write, our agent avoids the brute-force method of "reading" everything at once. Just as a human
+writer would refer to specific notes for a specific chapter, our agent composes each section by focusing
+only on the most pertinent source materials. By doing so, it operates with clarity and precision, crafting
+a final report that is not just a summary of data but a well-structured and deeply considered piece of
+analysis.
+To this end, we propose WebWeaver by following the human-centric philosophy, a dual-agent framework
+comprising a planner and a writer. As shown in Fig. 2, the planner embodies the exploratory research
+phase, operating in a dynamic cycle that iteratively interleaves evidence acquisition with outline op-
+timization, culminating in a comprehensive, source-grounded research outline, where each section is
+explicitly linked via citations to a curated memory bank of source evidence. When it turns to the writing
+phase, to address the critical long context and attentional management challenge, the writer executes a
+memory-grounded, hierarchical synthesis process. It constructs the report section by section, performing
+2

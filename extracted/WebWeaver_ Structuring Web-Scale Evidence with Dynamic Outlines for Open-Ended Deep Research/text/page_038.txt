@@ -1,0 +1,28 @@
+3. End-Stage Considerations
+**The advanced stage requires families to confront difficult realities** about prognosis and care
+goals. <cite id="id_22">After about 10 years, most people will have at least one major issue, like
+dementia or a physical disability</cite>. Understanding this timeline helps families engage in
+advance care planning while the patient can still participate in decision-making.
+**The variability in progression** means that some individuals may never reach the most severe
+stages, while others progress more rapidly. <cite id="id_22">Some people never reach this
+stage</cite> of advanced disability, emphasizing the importance of individualized care planning
+rather than assuming inevitable decline. </write>
+Step 7
+<think>
+Now I need to move on to the second major section about critical warning signs requiring
+immediate medical intervention. This is crucial information for families to know when to seek
+emergency care. Let me retrieve information about emergency situations and warning signs.
+</think>
+<tool_call>
+{"name": "retrieve", "arguments": {"url_id": ["id_24", "id_25", "id_26", "id_28", "id_29", "id_31",
+"id_32", "id_33", "id_34", "id_35", "id_36"], "goal": "Gather comprehensive information about
+emergency warning signs and situations that require immediate medical intervention for
+Parkinson’s patients"}}
+</tool_call>
+<tool_response>
+The page content for the previous section has been masked for saving the space.
+</tool_response>
+Step 8
+...
+<terminate> ✓
+38

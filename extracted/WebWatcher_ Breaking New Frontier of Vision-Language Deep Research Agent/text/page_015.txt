@@ -1,0 +1,43 @@
+uncategorized topics. This taxonomy is adapted from HLE (Phan et al., 2025) and BrowseComp (Wei
+et al., 2025b).
+C
+Prompts
+We use this prompt when obtaining the trajectory with correct responses using reject sampling.
+Prompt: Evaluation of Reject Sampling
+Task: Please evaluate whether the model’s answer is correct based on the given question, standard
+answer, and model-predicted answer. Rate the result as:
+• A: [Correct]
+• B: [Incorrect]
+• C: [Not Attempted]
+Return only the letter “A”, “B”, or “C”, with no additional text.
+Examples of [Correct] responses:
+Question: What are the names of Barack Obama's children?
+Standard Answer: Malia Obama and Sasha Obama
+Model Prediction 1: Malia Obama and Sasha Obama
+Model Prediction 2: Malia and Sasha
+Model Prediction 3: Most people would say it's Malia and Sasha, but I'm not sure.
+Model Prediction 4: Barack Obama has two daughters, named Malia Ann and Natasha Marian,
+but usually referred to as Malia Obama and Sasha Obama. Malia was born on July 4, 1998,
+and Sasha was born on June 10, 2001.
+Examples of [Incorrect] responses:
+Question: What are Barack Obama's children's names?
+Standard Answer: Malia Obama and Sasha Obama
+Model Prediction 1: Malia
+Model Prediction 2: Malia, Sasha, and Susan
+Model Prediction 3: Barack Obama has no children
+Model Prediction 4: I think it's Malia and Jackie.
+Model Prediction 5: Although I don't know their exact names, I can say Barack Obama has
+three children.
+Model Prediction 6: You might be referring to Betsy and Olivia...
+Examples of [Not Attempted] responses:
+Question: What are Barack Obama's children's names?
+Standard Answer: Malia Obama and Sasha Obama
+Model Prediction 1: I don't know.
+Model Prediction 2: I need more context about which Obama you refer to.
+Model Prediction 3: Without checking online, I can't answer this question.
+Model Prediction 4: Barack Obama has two children. I know one is named Malia, but I'm not
+sure of the other's name.
+Notes:
+• Numerical answers: near matches (e.g. “3518” vs. “3518.17”) are [Correct]; wrong num-
+bers are [Incorrect]; vague ranges are [Not Attempted].
+15

@@ -1,0 +1,50 @@
+endowing the web agent with robust behavior across out-of-distribution web environments, complex
+interaction patterns, and long-term objectives.
+To address these challenges, our objective is to unlock the autonomous multi-turn information-seeking
+agency, exploring how to build a web agent like Deep Research from scratch. An agent model like
+Deep Research produces sequences of interleaved reasoning and action steps, where each action invokes
+a tool to interact with the external environment autonomously. Observations from these interactions
+guide subsequent reasoning and actions until the task is completed. This process is optimized through
+end-to-end tool-augmented training. The ReAct framework Yao et al. (2023) is the most suitable paradigm,
+as it tightly couples reasoning with action to facilitate effective learning and generalization in interactive
+settings.
+We aim to provide the research community with a systematic guideline for building such agents from a
+data-centric and training-stage perspective.
+From a data-centric perspective, constructing web QA data is crucial to building web agents, regardless
+of whether the training paradigm is SFT or RL. Widely used QA datasets are often shallow, typically
+consisting of problems that can be solved with a single or a few-turn search. Previous works often filter
+the difficult QA pairs from open-sourced human-labeled datasets using prompting techniques Song et al.
+(2025). Additionally, challenging web-based QA datasets typically only have test or validation sets, and
+their data size is relatively small. For example, GAIA Mialon et al. (2023) only has 466, WebWalkerQA Wu
+et al. (2025) contains 680 examples, and BrowseComp Wei et al. has 1,266, making them insufficient for
+effective training. Therefore, the automatic synthesis of high-quality datasets becomes crucial. Fang et al.
+(2025); Zuo et al. (2025). We synthesise the datasets in two ways: 1). By crawling web pages to construct
+deep queries, referred to as CRAWLQA, enabling the acquisition of web information through click actions.
+2). By enhancing easy-to-hard QA pairs synthesis to incentivize the progression from weak-to-strong
+agency, transforming simple questions into complex ones, termed E2HQA.
+From a training-stage perspective, prior work has explored SFT or off-policy RL, but these approaches
+often face generalization issues, particularly in complex, real-world search environments. Other methods
+adopt on-policy RL directly Chen et al. (2025), but in multi-tool settings, early training steps tend to
+focus primarily on learning tool usage via instruction following. To enable more efficient and effective
+training, we adopt a two-stage approach combining rejection sampling fine-tuning (RFT) with subsequent
+on-policy RL. For the trajectory sampling, we restrict the action space to two commonly effective web
+information-seeking tools as action: search
+and click
+. Building on this setup, we employ rejection
+sampling to generate trajectories using two prompting strategies: one with a strong instruction LLMs
+for Short-CoT and another leveraging the LRMs for Long-CoT. These yield high-quality trajectories
+containing either short or long thought, respectively. In the RL stage, we adopt the Decoupled Clip
+and Dynamic Sampling Policy Optimization (DAPO) algorithm Yu et al. (2025), whose dynamic sampling
+mechanism can effectively exploit QA pairs that remain underutilized during the SFT phase, thereby
+enhancing data efficiency and policy robustness.
+Our key contributions can be summarized as follows: we abstract the end-to-end web agents building
+pipeline into four key stages: Step I: Construct diverse and challenging deep information seeking QA
+pairs based on the real-world web environment (§2.1); Step II: Sample high-quality trajectories from QA
+pairs using both LLMs and LRMs to guide the agency learning process (§2.2); Step III: Perform fine-tuning
+to adapt the format instruction following to agentic tasks and environments (§3.1); Step IV: Apply RL to
+optimize the agent’s decision-making and generalization capabilities in real-world web environments
+(§3.2). We offer a systematic, end-to-end pipeline for building long-term information-seeking web agents.
+Extensive experiments on two web information seeking benchmarks, GAIA and WebWalkerQA, show the
+effectiveness of our pipeline and WebDancer (§4). We further present a comprehensive analysis covering
+data efficiency, agentic system evaluation, and agent learning (§5).
+2

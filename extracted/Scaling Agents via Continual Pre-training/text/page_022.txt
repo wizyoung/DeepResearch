@@ -1,0 +1,13 @@
+GAIA Pass@1 & Pass@3 Analysis by Difficulty Level
+Figure 11: Pass rate on different levels of the GAIA dataset.
+and the Pass@3 rate falls to 58.3%. This trend indicates that the model’s efficacy is significantly impacted
+by the complexity of the tasks.
+Figure 12: MoE activations illustration on BrowseComp-zh dataset. Top-Middle-Bottom: Baseline-Our
+model-Difference.
+B.4
+MoE Activations
+We collect the model’s router logits for the questions’ last token and display the top 8 ones after softmax.
+The scores are sorted and averaged over all samples in BrowseComp-zh. The top one shows the
+activations of the baseline model without applying CPT. The middle one shows the result of our model
+AgentFounder-30B-A3B. The bottom one shows the difference after calculating ours minus the baseline.
+22

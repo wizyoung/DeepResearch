@@ -1,0 +1,43 @@
+Daya Guo, Dejian Yang, Haowei Zhang, Junxiao Song, Ruoyu Zhang, Runxin Xu, Qihao Zhu, Shirong Ma,
+Peiyi Wang, Xiao Bi, et al. DeepSeek-R1: Incentivizing reasoning capability in LLMs via reinforcement
+learning. arXiv preprint arXiv:2501.12948, 2025.
+Kshitij Gupta, Benjamin Thérien, Adam Ibrahim, Mats L. Richter, Quentin Anthony, Eugene Belilovsky,
+Irina Rish, and Timothée Lesort. Continual pre-training of large language models: How to (re)warm
+your model?, 2023. URL https://arxiv.org/abs/2308.04014.
+Xisen Jin, Dejiao Zhang, Henghui Zhu, Wei Xiao, Shang-Wen Li, Xiaokai Wei, Andrew Arnold, and Xiang
+Ren. Lifelong pretraining: Continually adapting language models to emerging corpora, 2022. URL
+https://arxiv.org/abs/2110.08534.
+Jina.ai. Jina, 2025. URL https://jina.ai/.
+Zixuan Ke, Yijia Shao, Haowei Lin, Tatsuya Konishi, Gyuhak Kim, and Bing Liu. Continual pre-training
+of language models. arXiv preprint arXiv:2302.03241, 2023.
+Satyapriya Krishna, Kalpesh Krishna, Anhad Mohananey, Steven Schwarcz, Adam Stambler, Shyam
+Upadhyay, and Manaal Faruqui. Fact, fetch, and reason: A unified evaluation of retrieval-augmented
+generation. arXiv preprint arXiv:2409.12941, 2024.
+Kuan Li, Zhongwang Zhang, Huifeng Yin, Rui Ye, Yida Zhao, Liwen Zhang, Litu Ou, Dingchu Zhang,
+Xixi Wu, Jialong Wu, Xinyu Wang, Zile Qiao, et al. Websailor-v2: Bridging the chasm to proprietary
+agents via synthetic data and scalable reinforcement learning, 2025a.
+Kuan Li, Zhongwang Zhang, Huifeng Yin, Liwen Zhang, Litu Ou, Jialong Wu, Wenbiao Yin, Baixuan Li,
+Zhengwei Tao, Xinyu Wang, et al. Websailor: Navigating super-human reasoning for web agent. arXiv
+preprint arXiv:2507.02592, 2025b.
+Weizhen Li, Jianbo Lin, Zhuosong Jiang, Jingyi Cao, Xinpeng Liu, Jiayu Zhang, Zhenqiang Huang,
+Qianben Chen, Weichen Sun, Qiexiang Wang, et al. Chain-of-agents: End-to-end agent foundation
+models via multi-agent distillation and agentic rl. arXiv preprint arXiv:2508.13167, 2025c.
+Xiaoxi Li, Guanting Dong, Jiajie Jin, Yuyao Zhang, Yujia Zhou, Yutao Zhu, Peitian Zhang, and Zhicheng
+Dou. Search-o1: Agentic search-enhanced large reasoning models. arXiv preprint arXiv:2501.05366,
+2025d.
+Xiaoxi Li, Jiajie Jin, Guanting Dong, Hongjin Qian, Yutao Zhu, Yongkang Wu, Ji-Rong Wen, and Zhicheng
+Dou. Webthinker: Empowering large reasoning models with deep research capability. arXiv preprint
+arXiv:2504.21776, 2025e.
+Zijian Li, Xin Guan, Bo Zhang, Shen Huang, Houquan Zhou, Shaopeng Lai, Ming Yan, Yong Jiang,
+Pengjun Xie, Huang Fei, Jun Zhang, and Jingren Zhou. Webweaver: Structuring web-scale evidence
+with dynamic outlines for open-ended deep research, 2025f.
+Zhenghao Lin, Zhibin Gou, Yeyun Gong, Xiao Liu, Yelong Shen, Ruochen Xu, Chen Lin, Yujiu Yang,
+Jian Jiao, Nan Duan, and Weizhu Chen. Rho-1: Not all tokens are what you need, 2025. URL
+https://arxiv.org/abs/2404.07965.
+Junteng Liu, Yunji Li, Chi Zhang, Jingyang Li, Aili Chen, Ke Ji, Weiyu Cheng, Zijia Wu, Chengyu Du, Qidi
+Xu, Jiayuan Song, Zhengmao Zhu, Wenhu Chen, Pengyu Zhao, and Junxian He. Webexplorer: Explore
+and evolve for training long-horizon web agents, 2025. URL https://arxiv.org/abs/2509.06501.
+Rui Lu, Zhenyu Hou, Zihan Wang, Hanchen Zhang, Xiao Liu, Yujiang Li, Shi Feng, Jie Tang, and Yuxiao
+Dong. Deepdive: Advancing deep search agents with knowledge graphs and multi-turn rl, 2025. URL
+https://arxiv.org/abs/2509.10446.
+29

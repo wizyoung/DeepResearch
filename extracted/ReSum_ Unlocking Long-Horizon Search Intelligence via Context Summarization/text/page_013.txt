@@ -1,0 +1,33 @@
+Jason Wei, Zhiqing Sun, Spencer Papay, Scott McKinney, Jeffrey Han, Isa Fulford, Hyung Won Chung,
+Alex Tachard Passos, William Fedus, and Amelia Glaese. Browsecomp: A simple yet challenging
+benchmark for browsing agents. arXiv preprint arXiv:2504.12516, 2025.
+Jialong Wu, Baixuan Li, Runnan Fang, Wenbiao Yin, Liwen Zhang, Zhengwei Tao, Dingchu Zhang,
+Zekun Xi, Yong Jiang, Pengjun Xie, Fei Huang, and Jingren Zhou. Webdancer: Towards autonomous
+information seeking agency. arXiv preprint arXiv:2505.22648, 2025a.
+Jialong Wu, Wenbiao Yin, Yong Jiang, Zhenglin Wang, Zekun Xi, Runnan Fang, Deyu Zhou, Pengjun
+Xie, and Fei Huang. Webwalker: Benchmarking llms in web traversal. arXiv preprint arXiv:2501.07572,
+2025b.
+Xbench-Team. Xbench-deepsearch, 2025. URL https://xbench.org/agi/aisearch.
+Zhiheng Xi, Wenxiang Chen, Xin Guo, Wei He, Yiwen Ding, Boyang Hong, Ming Zhang, Junzhe Wang,
+Senjie Jin, Enyu Zhou, et al. The rise and potential of large language model based agents: A survey.
+Science China Information Sciences, 68(2):121101, 2025.
+Wujiang Xu, Zujie Liang, Kai Mei, Hang Gao, Juntao Tan, and Yongfeng Zhang. A-mem: Agentic memory
+for llm agents. arXiv preprint arXiv:2502.12110, 2025.
+An Yang, Baosong Yang, Beichen Zhang, Binyuan Hui, Bo Zheng, Bowen Yu, Chengyuan Li, Dayiheng
+Liu, Fei Huang, Haoran Wei, et al. Qwen2.5 technical report. arXiv preprint arXiv:2412.15115, 2024.
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, and Yuan Cao. Re-
+act: Synergizing reasoning and acting in language models. In International Conference on Learning
+Representations (ICLR), 2023.
+Hongli Yu, Tinghong Chen, Jiangtao Feng, Jiangjie Chen, Weinan Dai, Qiying Yu, Ya-Qin Zhang, Wei-Ying
+Ma, Jingjing Liu, Mingxuan Wang, et al. Memagent: Reshaping long-context llm with multi-conv
+rl-based memory agent. arXiv preprint arXiv:2507.02259, 2025a.
+Qiying Yu, Zheng Zhang, Ruofei Zhu, Yufeng Yuan, Xiaochen Zuo, Yu Yue, Tiantian Fan, Gaohong Liu,
+Lingjun Liu, Xin Liu, et al. Dapo: An open-source llm reinforcement learning system at scale. arXiv
+preprint arXiv:2503.14476, 2025b.
+Peilin Zhou, Bruce Leon, Xiang Ying, Can Zhang, Yifan Shao, Qichen Ye, Dading Chong, Zhiling Jin,
+Chenxuan Xie, Meng Cao, et al. Browsecomp-zh: Benchmarking web browsing ability of large language
+models in chinese. arXiv preprint arXiv:2504.19314, 2025a.
+Zijian Zhou, Ao Qu, Zhaoxuan Wu, Sunghwan Kim, Alok Prakash, Daniela Rus, Jinhua Zhao, Bryan
+Kian Hsiang Low, and Paul Pu Liang. Mem1: Learning to synergize memory and reasoning for efficient
+long-horizon agents, 2025b. URL https://arxiv.org/abs/2506.15841.
+13

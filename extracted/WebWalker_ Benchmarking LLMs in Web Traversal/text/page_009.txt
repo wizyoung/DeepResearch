@@ -1,0 +1,129 @@
+Systems
+Single-source QA
+Multi-source QA
+Overall
+Easy
+Medium
+Hard
+Easy
+Medium
+Hard
+Close Book (No Retrieval)
+Gemini-1.5-Pro
+12.50
+7.86
+8.33
+11.25
+6.43
+5.00
+8.08
+o1-preview
+16.25
+10.00
+9.17
+7.50
+10.71
+6.67
+9.85
+Commerical Systems
+Doubao
+45.00
+15.00
+18.33
+13.75
+8.57
+10.00
+16.76
+Gemini-Search
+40.00
+32.14
+29.17
+30.00
+23.57
+17.50
+27.94
+ERNIE-4.0-8K
+52.50
+30.00
+28.33
+21.25
+18.57
+30.00
+28.97
+Kimi
+77.50
+41.43
+40.83
+26.25
+26.43
+22.50
+37.35
+Tongyi
+41.25
+45.00
+41.67
+40.00
+41.43
+34.17
+40.73
+Open-Sourced Systems
+Naive RAG
+37.50
+25.71
+24.17
+20.00
+14.29
+12.50
+20.73
+MindSearch
+15.00
+11.43
+10.83
+8.75
+12.14
+10.00
+11.32
+Avg.
+37.50
+24.29
+23.42
+19.86
+18.02
+16.48
+-
+Table 4: Accuracy results on Commercial and Open-sourced Searched-enhanced RAG systems.
+6
+Discussion
+6.1
+RAG Performance on WebWalkerQA
+We evaluate the performance of RAG systems in tackling WebWalkerQA’s challenges, specifically, whether
+they can retrieve deep information, presented in Table 4.
+We first evaluate the performance under Close Book settings using the state-of-the-art model OpenAI
+o1 (OpenAI, 2024) and Gemini-1.5-Pro without retrieval. We then access the performance of several
+commercial and open-sourced RAG systems9. Without performing the search, even the strongest models
+exhibit very poor performance. WebWalkerQA is built on official websites with dynamically updated
+information, while pre-trained models rely on static knowledge limited by a cutoff date and lack dynamic
+updates10. Both commercial and open-sourced RAG systems exhibit relatively poor performance on
+WebWalkerQA, with the best result coming from Tongyi, which only reaches 40%. Commercial RAG
+systems are typically modular, consisting of various components such as rewrite, router, reranker, and
+others. Some systems, like ERNIE, may have stronger search capabilities for Chinese, resulting in higher
+values. For open-sourced RAG systems, Multi-source queries have lower accuracy than Single-source
+queries, which validates the challenge posed by WebWalkerQA, as search engines are unable to retrieve
+all relevant information in one or several single horizontal search attempts. Furthermore, as the difficulty
+increases, e.g. the depth of information growing deeper, the performance tends to deteriorate. Overall,
+search engines still face challenges when retrieving content that is buried deeper.
+Findings (i): RAG systems struggle with key challenges that require effective web traversal.
+6.2
+WebWalker Combined with RAG System
+The standard RAG system can be viewed as a horizontal search for relevant documents in response
+to a query, while WebWalker can be considered as a vertical exploration approach. WebWalker can
+seamlessly integrate into standard RAG systems to acquire deep information and enhance problem-
+solving capabilities. We integrate WebWalker building upon Qwen-2.5-Plus into the naive RAG system,
+and the detailed results are shown in Figure 7(a). The core contribution of WebWalker is providing
+useful information for question answering; specifically, the memory M of the critic agent is append to
+the relevant documents to aid in generation. It is observed that, after the integration, performance has
+improved across all difficulty levels, especially in the multi-source category.
+9The commercial RAG systems are accessed through business-oriented API. The details of RAG systems are
+provided in Appendix C.
+10The case study is shown in Appendix G.2.
+9

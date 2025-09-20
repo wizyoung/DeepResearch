@@ -1,0 +1,50 @@
+mentions class action settlement.
+</think>
+<tool_call>
+{"name": "visit", "arguments": {"url": ["https://www.annualreports.com/HostedData/Annual
+ReportArchive/f/NASDAQ_FORM_2016.pdf"], "goal": "Find class action settlement details in
+2016 annual report"}}
+</tool_call>
+<tool_response>
+Visit results are omitted
+</tool_response>
+Step 28
+<think>
+Great! This matches the class action clue: former employee filed class action in August 2013
+(which is within Jan 1, 2011 – Dec 31, 2019), court certified class on Jan 4, 2016, settlement $1.5M.
+Thus all clues match FormFactor, Inc.
+Now we can answer: The name of the publicly traded company is FormFactor, Inc.
+But we should verify that FormFactor was founded between 1988-1995 (it was incorporated in
+Delaware on April 15, 1993, according to SEC filings). Let’s confirm. Search for incorporation date.
+</think>
+<tool_call>
+{"name": "search", "arguments": {"query": [""FormFactor" "incorporated" "April 15, 1993""]}}
+</tool_call>
+<tool_response>
+Search results are omitted
+</tool_response>
+Step 29
+<think>
+Thus the company was incorporated in Delaware on April 15, 1993.
+Now we have all clues matched.
+Thus answer: FormFactor, Inc.
+We should provide a succinct answer with supporting references. Use citations from the sources
+we visited.
+We’ll cite:
+- Founder change and new CEO effective Q3 2008 (source from press release) - lines about Mario
+Ruscev becoming CEO and Igor Khandros becoming executive chairman at beginning of fiscal
+third quarter 2008.
+- Incorporation and founding date (source from prospectus) showing incorporation date April 15,
+1993.
+- Revenue concentration: three customers contributed 47.3% of revenue in fiscal 2006 (source PDF).
+And four customers accounted for 72.8% in 2005 and 64.8% in 2004 (source PDF). We have that
+information from 2006 PDF.
+- Class action settlement $1.5 million (source 2016 annual report PDF).
+Thus answer.
+Now we can produce final answer.
+</think>
+<answer>
+The answer is a very long report with comprehensive analysis, so we provide it in the next 3
+pages.
+</answer> ✓
+24

@@ -1,0 +1,49 @@
+C
+Case Study
+Case Trajectory
+Question: At the biennial aerospace marketplace named after the city whose pyramid-fronted
+museum recorded high single-digit millions of visitors during a period of global athletic celebra-
+tion, and where the year before a citywide nuisance led authorities to convene transit operators,
+which buyer placed a perfectly balanced commitment with firm orders equal to options?
+Step 1
+<think>
+... So we need to identify:
+- A biennial aerospace marketplace named after a city.
+- That city had a pyramid-fronted museum that recorded high single-digit millions of visitors
+during a period of global athletic celebration (maybe Olympic Games?).
+- "High single-digit millions of visitors" probably means 7-9 million visitors, maybe 8 million. The
+museum has a pyramid front. Which museum has a pyramid? There is the Louvre Pyramid in
+Paris: the Louvre Museum has a glass pyramid entrance; it gets about 10 million visitors per year
+historically (pre-COVID). But high single-digit millions? Actually the Louvre had around 9.5
+million visitors in 2019 (maybe earlier?). Also "global athletic celebration" could be Olympics. The
+2016 Olympics were in Rio de Janeiro; but Rio’s museum? The city might be Rio de Janeiro; it has
+the Museum of Tomorrow, but not pyramid. Another possibility: The city is Beijing (the National
+Museum?), the Bird’s Nest stadium for Olympics? No.
+...Maybe they refer to the "Louvre Abu Dhabi"? It has a dome, not pyramid. The "Kunsthistorisches
+Museum"? Not. There’s the "Museum of the Iraqi Ministry"? Hmm. Better to search. Let’s search
+web for "pyramid front museum high single digit millions visitors Olympic".
+</think>
+<tool_call>
+’query’: [’pyramid front museum high single digit millions visitors Olympics’, ’pyramid front
+museum visitors 9 million’, ’pyramid front museum visitor numbers Olympic Games’, ’pyramid
+front museum recorded high single-digit millions visitors during Olympics’]
+</tool_call>
+<tool_response>
+A Google search for ’pyramid front museum high single digit millions visitors Olympics’ found
+10 results:
+Web Results
+1. [Louvre](https://en.wikipedia.org/wiki/Louvre) It received 8.7 million visitors in 2024,
+200,000 less than 2023...
+...
+A Google search for ’pyramid front museum visitors 9 million’ found 10 results:
+Web Results
+1. [Not just the Louvre: How Europe’s museums face the future](https://www.dw.com/en/not-j
+ust-the-louvre-how-europes-museums-are-facing-the-future/a-71471539) If you haven’t
+visited the Louvre, then you haven’t...
+...
+</tool_response>
+Step 2
+<think>
+...The museum recorded high single-digit millions of visitors during a period of global athletic
+celebration – likely referring to the Paris Olympics in 2024 ... This refers to some incident in Paris a
+24

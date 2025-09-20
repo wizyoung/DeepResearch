@@ -1,0 +1,50 @@
+1
+Introduction
+The pursuit of artificial general intelligence (AGI) has historically focused on scaling models to acquire
+vast passive knowledge (Anthropic, 2024; Gemma et al., 2025; Google, 2025a; Meta, 2025; OpenAI, 2025c;
+Guo et al., 2025a; Yang et al., 2025). However, this knowledge-centric approach may reach a critical limi-
+tation: while models can memorize and recall information, they struggle to actively discover, verify, and
+synthesize new knowledge from external sources—a capability fundamental to human intelligence. This
+limitation has catalyzed a paradigm shift toward actively autonomous agent systems that emulate human
+research workflows. Rather than relying solely on pre-trained knowledge, these systems dynamically
+construct understanding by autonomously decomposing complex problems, orchestrating sophisticated
+tool use, and synthesizing disparate findings into coherent, evidence-grounded narratives. This emerging
+class of systems, often referred to as deep research (OpenAI, 2025a), represents a crucial step toward AGI
+by bridging the gap between passive knowledge repositories and active knowledge constructors.
+Recent advances in deep-research systems, exemplified by pioneers like OpenAI’s Deep Research (Ope-
+nAI, 2025a), Google’s Gemini Deep Research (Google, 2025b), Grok DeepSearch (xAI, 2025), and Kimi-
+Researcher (MoonshotAI, 2025), have demonstrated breakthrough performance on challenging bench-
+marks including Humanity’s Last Exam (HLE) (Phan et al., 2025) and BrowseComp (Wei et al., 2025).
+The success of these proprietary systems has spurred significant open-source development. Recent open-
+source efforts including WebThinker (Li et al., 2025c), WebShaper (Tao et al., 2025), and WebSailor (Li
+et al., 2025a) have shown competitive performance in deep-research tasks. Notably, these open-source im-
+plementations have converged on a remarkably similar architectural pattern: a mono-contextual paradigm
+that continuously accumulates all retrieved information and intermediate reasoning steps into a single,
+ever-expanding context window (Chen et al., 2025; Jin et al., 2025; Li et al., 2025b; Wu et al., 2025). While
+this linear accumulation strategy appears intuitive and has shown initial success, a deeper analysis
+reveals that it fundamentally constrains the potential of deep-research agents. Specifically, this prevalent
+paradigm suffers from two critical limitations that become increasingly severe as research complexity
+grows: (1) Cognitive Workspace Suffocation: The ever-expanding context progressively constrains the
+model’s capacity for deep reasoning, as the fixed context window becomes dominated by accumulated
+data rather than active thinking space, forcing premature conclusions. (2) Irreversible Noise Contami-
+nation: Without mechanisms to filter or revise earlier content, irrelevant information and initial errors
+persist throughout the entire process, diluting signal quality and propagating biases that compound
+over time. These limitations reveal a paradox: as deep-research agents gather more information to solve
+complex problems, their mono-contextual architecture becomes increasingly ineffective at processing and
+reasoning over that very information.
+In this work, we introduce IterResearch, an Iterative Deep-Research Paradigm that reformulates deep re-
+search as a Markov Decision Process (MDP) (Bellman, 1957; Puterman, 1990). Unlike the mono-contextual
+approach that suffers from unbounded state expansion and noise contamination, IterResearch periodi-
+cally consolidates its findings into a synthesized report and reconstructs its workspace, maintaining both
+continuity of knowledge and clarity of reasoning at arbitrary depths of research. Specifically, IterResearch
+operates through discrete rounds where each state contains only essential components: the research
+question, an evolving report synthesizing all previous findings and current research progress, and the
+immediate context from the recent tool interaction. This evolving report serves as the agent’s central mem-
+ory—progressively refined through each round as new insights are integrated with existing knowledge.
+Between rounds, a state transition function preserves this updated report while discarding ephemeral
+information, ensuring the Markov property while preventing information loss. This periodic synthesis is
+the core of our paradigm: it not only preserves essential knowledge to guide subsequent reasoning but
+also maintains a focused cognitive workspace for each phase, effectively preventing both suffocation and
+noise propagation. Therefore, IterResearch achieves what mono-contextual systems cannot—sustained
+high-quality reasoning across the entire research process, enabling the agent to pursue arbitrarily complex
+2

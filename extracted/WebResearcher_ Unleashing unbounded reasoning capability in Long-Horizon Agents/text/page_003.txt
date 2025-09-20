@@ -1,0 +1,38 @@
+investigations through iterative refinement rather than exhaustive single-pass accumulation.
+Furthermore, to address the critical bottleneck of data scarcity in training deep-research agents, we
+develop WebFrontier, a Scalable Data Synthesis Engine that leverages large language models augmented
+with diverse external tools to systematically generate high-quality training data for complex research
+tasks. WebFrontier tackles a fundamental challenge in agentic AI development: how to create high-quality
+and large-scale training data while maintaining factual accuracy and verifiability. Our approach employs
+a three-stage iterative workflow—seed generation from diverse corpora, tool-augmented complexity
+escalation, and rigorous quality control—to produce tasks that effectively span the capability gap between
+baseline models and their tool-augmented counterparts. The engine’s core mechanism involves a self-
+bootstrapping process where tool-augmented agents progressively refine simple questions into research
+problems that require multi-source synthesis, cross-domain reasoning, and computational verification.
+This systematic approach enables the generation of a large-scale dataset that explore varying levels
+of complexity while ensuring factual grounding. The synthesized data serves as the foundation for
+training IterResearch through a multi-stage training, enabling the model to acquire both robust tool-use
+capabilities and sophisticated reasoning skills.
+Finally, at inference time, we introduce the Research-Synthesis Framework, built upon our IterResearch
+paradigm. This framework consists of two phases: Parallel Research and Integrative Synthesis. In the
+Parallel Research phase, multiple Research Agents concurrently solve the target problem following the
+IterResearch method, with each agent deriving a final report and the predicted answer. Subsequently,
+in the Integrative Synthesis phase, a single Synthesis Agent integrates these findings to produce a
+more comprehensive and robust conclusion. By synthesizing from the final reports rather than the
+entire research trajectories, the Synthesis Agent can process a wider diversity of research paths within a
+constrained context. This approach effectively leverages test-time scaling, maximizing the benefits of
+divergent exploration in complex deep research scenarios.
+We systematically evaluate WebResearcher on benchmarks spanning diverse domains and task types. Our
+experiments demonstrate that WebResearcher achieves state-of-the-art performance across 6 challenging
+benchmarks, even surpassing frontier proprietary systems. On Humanity’s Last Exam (HLE), one of the
+most demanding tests for AI reasoning, WebResearcher-heavy achieves 36.7% accuracy, substantially
+outperforming all existing systems including DeepSeek-V3.1 (29.8%) and OpenAI Deep Research (26.6%).
+Similarly, on complex web navigation tasks like BrowseComp-en, our system reaches 51.7%, matching
+OpenAI’s proprietary Deep Research system while exceeding the best open-source alternative by 21.7
+percentage points. These results validate that our iterative synthesis paradigm fundamentally addresses
+the limitations of mono-contextual approaches, enabling sustained high-quality reasoning even in the
+most complex research scenarios. Furthermore, we demonstrate that the training data generated under
+the IterResearch paradigm provides benefits beyond our own system. When traditional mono-contextual
+methods are trained with our iterative paradigm data, they show substantial performance improvements.
+This highlights that our paradigm produces superior training signals that enhance agentic capabilities.
+3

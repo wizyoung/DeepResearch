@@ -1,0 +1,41 @@
+References
+Perplexity AI. Introducing perplexity deep research, 2025. URL https://www.perplexity.ai/hub/blog
+/introducing-perplexity-deep-research.
+anthropic. Introducing claude 4.
+authors. title, 2025.
+Jingyi Chai, Shuo Tang, Rui Ye, Yuwen Du, Xinyu Zhu, Mengcheng Zhou, Yanfeng Wang, Yuzhi Zhang,
+Linfeng Zhang, Siheng Chen, et al. Scimaster: Towards general-purpose scientific ai agents, part i.
+x-master as foundation: Can we lead on humanity’s last exam? arXiv preprint arXiv:2507.05241, 2025.
+Kevin Chen, Marco Cusumano-Towner, Brody Huval, Aleksei Petrenko, Jackson Hamburger, Vladlen
+Koltun, and Philipp Krähenbühl. Reinforcement learning for long-horizon interactive llm agents. arXiv
+preprint arXiv:2502.01600, 2025.
+Mark Chen, Jerry Tworek, Heewoo Jun, Qiming Yuan, Henrique Ponde De Oliveira Pinto, Jared Kaplan,
+Harri Edwards, Yuri Burda, Nicholas Joseph, Greg Brockman, et al. Evaluating large language models
+trained on code. arXiv preprint arXiv:2107.03374, 2021.
+Claude Team. Claude research, 2025. URL https://www.anthropic.com/news/research.
+Longchao Da, Justin Turnau, Thirulogasankar Pranav Kutralingam, Alvaro Velasquez, Paulo Shakarian,
+and Hua Wei. A survey of sim-to-real methods in rl: Progress, prospects and challenges with foundation
+models. arXiv preprint arXiv:2502.13187, 2025.
+DeepSeek Team. Introducing deepseek-v3.1: our first step toward the agent era!, 2025. URL https:
+//api-docs.deepseek.com/news/news250821.
+ByteDance Doubao. Doubao, 2025. URL http://www.doubao.com/.
+Mingxuan Du, Benfeng Xu, Chiwei Zhu, Xiaorui Wang, and Zhendong Mao. Deepresearch bench: A
+comprehensive benchmark for deep research agents. arXiv preprint arXiv:2506.11763, 2025.
+Jiaxuan Gao, Wei Fu, Minyang Xie, Shusheng Xu, Chuyi He, Zhiyu Mei, Banghua Zhu, and Yi Wu.
+Beyond ten turns: Unlocking long-horizon agentic search with large-scale asynchronous rl, 2025. URL
+https://arxiv. org/abs/2508.07976.
+Gemini Team. Gemini deep research, 2025. URL https://gemini.google/overview/deep-research/.
+Xinyu Geng, Peng Xia, Zhen Zhang, Xinyu Wang, Qiuchen Wang, Ruixue Ding, Chenxi Wang, Jialong
+Wu, Yida Zhao, Kuan Li, et al. Webwatcher: Breaking new frontiers of vision-language deep research
+agent. arXiv preprint arXiv:2508.05748, 2025.
+Grok Team. Grok-3 deeper search, 2025. URL https://x.ai/news/grok-3.
+Mustafa Haiderbhai, Radian Gondokaryono, Andrew Wu, and Lueder A Kahrs. Sim2real rope cutting
+with a surgical robot using vision-based reinforcement learning. IEEE Transactions on Automation Science
+and Engineering, 22:4354–4365, 2024.
+Daniel Ho, Kanishka Rao, Zhuo Xu, Eric Jang, Mohi Khansari, and Yunfei Bai. Retinagan: An object-aware
+approach to sim-to-real transfer. In 2021 IEEE International Conference on Robotics and Automation (ICRA),
+pp. 10920–10926. IEEE, 2021.
+Mengkang Hu, Yuhang Zhou, Wendong Fan, Yuzhou Nie, Bowei Xia, Tao Sun, Ziyu Ye, Zhaoxuan Jin,
+Yingru Li, Qiguang Chen, et al. Owl: Optimized workforce learning for general multi-agent assistance
+in real-world task automation. arXiv preprint arXiv:2505.23885, 2025.
+28

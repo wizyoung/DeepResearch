@@ -1,0 +1,39 @@
+(a) Token consumption distributions for correct and
+incorrect samples.
+(b) Tool call count distributions for correct and incor-
+rect samples.
+Figure 2: Context limits in ReAct constrain exploration. Using open-sourced agent WebSailor-7B (Li
+et al., 2025a) on the BrowseComp-en (Wei et al., 2025), we compare the distributions of token consumption
+and tool call counts between correctly solved and failed problems. Failed cases use far more tool calls
+and tokens, suggesting trajectories are frequently truncated before resolution.
+3.1
+ReSum Paradigm
+Trajectory Initialization: The trajectory begins with a user query q, initializing H0 = (q). Following
+ReAct, the agent alternates between internal reasoning and tool use: at the t-th round, it generates a
+reasoning step within <think> </think> tokens and issues a tool call within <tool_call> </tool_call>
+tokens, expressed as (τt, at) ∼πθ(· | Ht−1). The system parses the tool call arguments and executes the
+corresponding tool, returning results within <tool_response> </tool_response> tokens as ot = R(at),
+where R represents the tool environment. The history is updated by concatenation as follows:
+Ht = Ht−1 ◦(τt, at, ot).
+In the initial rounds, ReSum mirrors ReAct by iteratively building Ht = (q, τ1, a1, o1, . . . , τt, at, ot).
+Context Summarization: When a compression trigger is activated, a summary tool πsum is invoked to
+summarize the accumulated history as:
+s ∼πsum(· | Ht),
+where s is a goal-oriented <summary> </summary> that consolidates verified evidence and explicitly lists
+information gaps (prompt provided in Appendix B). Then, we form a compressed state q′ = (q, s) and
+reset the working history to:
+Ht ←(q′).
+Triggers for summarization can be systematic, e.g., exceeding a token budget or reaching a round limit,
+or agent-initiated, where the policy model decides to summarize for effective context management.
+Trajectory Termination: Through periodic summarization, ReSum dynamically maintains the context
+within the model’s window while preserving essential evidence. The agent continues gathering evidence
+and, once sufficient information is accumulated, produces a synthesized answer within <answer> </
+answer> tokens. Although ReSum theoretically allows unbounded exploration, practical deployments
+impose resource budgets, e.g., limiting the number of tool calls. Trajectories that exceed these limits are
+terminated and marked as failures.
+The complete ReSum workflow is detailed in Algorithm 1 in the Appendix. Unlike ReAct, which
+accumulates all interactions, ReSum transforms lengthy interaction histories into compact, restartable
+reasoning states. This approach distills key evidence and highlights actionable next steps, enabling multi-
+turn exploration while adhering to token budget constraints. Furthermore, by minimizing modifications
+to ReAct, ReSum preserves its simplicity, efficiency, and seamless compatibility with any agent.
+4

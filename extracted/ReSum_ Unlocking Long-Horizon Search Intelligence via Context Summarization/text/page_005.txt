@@ -1,0 +1,47 @@
+3.2
+Summary Tool Specification
+In ReSum, an off-the-shelf LLM can serve as the summary tool. However, its role extends far beyond
+conventional conversation summarization. To guide web agents in persistent, goal-oriented exploration,
+the summary tool must perform logical reasoning over lengthy and noisy interaction histories, distill
+verifiable evidence from large text snippets, and propose actionable, well-scoped next steps grounded in
+web context. These capabilities typically exceed those of generic models that lack web-context reasoning,
+motivating the development of a specialized summary tool for ReSum.
+To build an effective goal-oriented summary tool, we first conduct an empirical study comparing models
+of varying scales (Yang et al., 2024; Team, 2025b). Our findings reveal that smaller models often struggle
+to extract verifiable evidence from lengthy and noisy interaction histories, underscoring the importance
+of strong reasoning capabilities. While larger models excel in summarization, their high API costs and
+significant deployment overhead render them impractical. Therefore, we develop a smaller, deployable
+model that retains the goal-oriented summarization capabilities of larger models.
+Development: We utilize a powerful open-source model as the data engine for its accessibility and capac-
+ity to produce high-quality summaries. For training data, we choose SailorFog-QA (Li et al., 2025a), a chal-
+lenging benchmark where agents must invoke summary tools during extended exploration, rather than
+simpler datasets where problems are solved within a few tool calls. We collect ⟨Conversation, Summary⟩
+pairs from ReSum rollouts and distill this capability into Qwen3-30B-A3B-Thinking1 via supervised
+fine-tuning, obtaining ReSumTool-30B with specialized summarization capabilities.
+3.3
+ReSum-GRPO
+The ReSum paradigm creates a novel query type q′ = (q, s) that combines the original user query q
+with a summary s. This pattern is out-of-distribution for standard agents, as they have not encountered
+summary-conditioned reasoning during training. Therefore, we employ RL to master such paradigm.
+Unlike supervised fine-tuning, which requires costly collection of expert-level ReSum trajectories and
+risks overwriting an agent’s existing skills, RL enables agents to adapt to this paradigm through self-
+evolution while retaining their inherent reasoning capabilities.
+Trajectory Segmentation: The key modification of ReSum-RL is that ReSum naturally segments long
+trajectories into multiple episodes when summarization occurs. Consider a complete ReSum trajectory
+that undergoes K summarization events. This trajectory is naturally partitioned into the following K + 1
+segments:
+H(1) = (q(0), τ1, a1, o1, . . . , τt1, at1, ot1)
+H(2) = (q(1), τt1+1, at1+1, ot1+1, . . . , τt2, at2, ot2)
+...
+H(K+1) = (q(K), τtK+1, atK+1, otK+1, . . . , τT, aT),
+where q(0) = q is the initial query, q(k) = (q, s(k)) is the compressed state after the k-th summarization,
+and aT denotes the final answer. Each segment H(i) forms an individual training episode with input q(i−1)
+and output (τti−1+1, ati−1+1, oti−1+1, . . . , τti, ati). For trajectories that complete without summarization, we
+have the degenerate case K = 0, yielding a single segment that follows the same training format.
+Reward Computation: To avoid manually designing per-segment rewards, we utilize a unified trajectory-level
+reward signal. From the last segment, we extract aT and compute the reward as R(a, aT) ∈{0, 1} using
+an LLM-as-Judge strategy (Gu et al., 2024; Li et al., 2024). This approach provides a single reward per
+complete trajectory, which can be shared across all its segments if necessary. Unlike most agentic RL
+approaches (Liu et al., 2025; Dong et al., 2025) that impose format rewards, ours relies solely on answer
+1https://huggingface.co/Qwen/Qwen3-30B-A3B-Thinking-2507
+5

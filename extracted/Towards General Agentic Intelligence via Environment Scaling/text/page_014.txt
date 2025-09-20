@@ -1,0 +1,7 @@
+Shaokun Zhang, Yi Dong, Jieyu Zhang, Jan Kautz, Bryan Catanzaro, Andrew Tao, Qingyun Wu, Zhiding
+Yu, and Guilin Liu. Nemotron-research-tool-n1: Exploring tool-using language models with reinforced
+reasoning. arXiv preprint arXiv:2505.00024, 2025.
+Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, Tiannan Wang, Shi Qiu, Jintian Zhang,
+Jing Chen, Ruipu Wu, Shuai Wang, et al. Agents: An open-source framework for autonomous language
+agents. arXiv preprint arXiv:2309.07870, 2023.
+14

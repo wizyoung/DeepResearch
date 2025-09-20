@@ -1,0 +1,49 @@
+5
+Experiments
+5.1
+Experimental Setup
+Models and Benchmarks
+We implement our WebResearcher using Qwen3-30B-A3B (Yang et al., 2025)
+as the backbone model, considering both model performance and computational efficiency. The complete
+system integrates our iterative research paradigm (IterResearch) with web-scale training data constructed
+via WebFrontier. To comprehensively evaluate WebResearcher’s capabilities, we conduct extensive
+experiments on 8 challenging benchmarks:
+• HLE (Phan et al., 2025) - Humanity’s Last Exam is an expert-curated benchmark of 2,500 highly
+challenging questions spanning a wide range of disciplines, designed to assess frontier-level
+academic competence. We use the 2,154 text-only questions.
+• GAIA (Mialon et al., 2023) - A set of 466 real-world task questions evaluating general AI assistants
+under demanding conditions, emphasizing multi-step reasoning, multimodality, and tool use.
+We adopt 103 cases from the text-only validation subset (Li et al., 2025c; Wu et al., 2025).
+• BrowseComp-en (Wei et al., 2025) - A benchmark of 1,266 questions probing agents’ ability to
+locate and integrate hard-to-find, interrelated web information, with an emphasis on persistent
+browsing and factual reasoning.
+• BrowseComp-zh (Zhou et al., 2025) - A Chinese web-browsing benchmark with 289 multi-hop
+questions highlighting retrieval and reasoning challenges specific to the Chinese information
+ecosystem.
+• Xbench-DeepSearch (Xbench-Team, 2025) - A specialized deep-search benchmark evaluating
+agents’ end-to-end capabilities in planning, searching, reasoning, and summarization. Featur-
+ing expert-curated questions with broad search spaces and deep reasoning requirements, it
+complements existing benchmarks with substantial Chinese-context coverage.
+• FRAMES (Krishna et al., 2024) - A comprehensive RAG benchmark with 824 questions testing
+factuality, retrieval quality, and multi-hop reasoning. It evaluates models’ ability to synthesize
+information from multiple retrieved sources while maintaining factual accuracy and reasoning
+coherence.
+Baselines
+We compare our WebResearcher against the following baselines:
+• General LLMs with Tools: Models equipped with external tools for complex reasoning. We
+evaluate Qwen3-30B-A3B, Qwen3-235B-A22B (Yang et al., 2025), Claude-4-Sonnet (Anthropic,
+2025), OpenAI-o3 (OpenAI, 2025b), DeepSeek-V3.1 and DeepSeek-R1 (Guo et al., 2025b), GLM-
+4.5 (Zeng et al., 2025), and Kimi-K2 (Team et al., 2025).
+• Commercial Deep Research Agents: We test OpenAI’s DeepResearch (OpenAI, 2025a), Gemini
+Deep Research (Google, 2025b), Perplexity Deep Research (Perplexity, 2025), Grok-DeepResearch (?),
+and Kimi-Researcher (MoonshotAI, 2025). However, as not all of them are fully accessible via
+API, they were not tested across all benchmarks and experiments.
+• Open-source Deep Research Agents: We compare our method with recent open-source we-
+b/search agents, including WebDancer (Wu et al., 2025), WebSailor (Li et al., 2025a), Miro-
+Thinker (MiroMindAI, 2025), WebExplorer (Liu et al., 2025). These represent the current state-of-
+the-art in open-source web research systems.
+Tools
+Our framework equips agents with four essential tools that enable comprehensive research
+capabilities, from information discovery to computational analysis. Each tool is designed to handle batch
+operations efficiently and return structured outputs suitable for iterative research processes.
+10

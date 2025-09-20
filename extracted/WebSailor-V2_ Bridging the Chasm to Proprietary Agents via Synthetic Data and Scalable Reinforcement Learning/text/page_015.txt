@@ -1,0 +1,50 @@
+Could be about wage and hour claims, ERISA, securities fraud? Might be an ESG claim? Let’s
+think.
+Potential candidates: companies like "Burlington Resources", "Ciena", "Viatris"? No.
+Let’s parse timeline: The founding date range is 1988-1995. Many tech firms were founded earlier
+(1970s, 1980s). Possibly small-to-mid cap.
+The founder changed roles in 2008, effective Q3 of fiscal year 2007-2008. So the new CEO took
+over after that. Founder might have been originally CEO, but stepping down to become chairman
+or something.
+One known case: "American Tower" founder? No. "Amdocs"? Founded 1982.
+Perhaps "Covance"? Not sure.
+Better to search for "founder stepped down as CEO effective third quarter 2007 2008" "Delaware
+corporation". Also include "class action former employee settlement $1.5 million".
+Let’s do web search.
+</think>
+<tool_call>
+{"name": "search", "arguments": {"query": ["former employee class action settlement $1.5 million
+2015", "founder stepped down as CEO effective Q3 2007 new CEO 2008 Delaware corporation",
+"three customers contributed 27% of revenue 2005 Form 10-K", "four customers accounted for 55%
+of revenue 2006 Form 10-K"]}}
+</tool_call>
+<tool_response>
+Search Results are omitted...
+</tool_response>
+Step 2
+<think>
+The search results are generic; we need to refine.
+Better approach: Identify a company where founder stepped down as CEO effective Q3 of fiscal
+year 2007-2008. Could be a technology or biotech firm that went public earlier (maybe 1990s).
+Look up "Q3 2007 founder becomes chairman new CEO".
+Search for "founder will step down as chief executive officer and become chairman of the board
+beginning in the third quarter of fiscal 2007".
+</think>
+<tool_call>
+{"name": "search", "arguments": {"query": [""beginning of the third quarter" 2007 founder CEO
+stepped down", ""effective" "third quarter" 2007 "new CEO"", ""founder" "stepped down" "CEO"
+"July 2007" "Delaware""]}}
+</tool_call>
+<tool_response>
+Search Results are omitted...
+</tool_response>
+Step 3
+<think>
+We got a result: "sv1" (SEC filing) that might be relevant. Let’s open that.
+</think>
+<tool_call>
+{"name": "visit", "arguments": {"url": ["https://www.sec.gov/Archives/edgar/data/1255691/000
+089102008000014/v28895orsv1.htm"], "goal": "Find information about founder and CEO change
+in 2007, effective beginning of third quarter"}}
+</tool_call>
+15

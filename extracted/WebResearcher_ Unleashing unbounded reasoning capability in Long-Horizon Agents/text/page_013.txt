@@ -1,0 +1,90 @@
+Table 2: Results on Complex, Goal-Oriented Web Tasks Benchmarks.
+† marks the result from the
+corresponding official reports.
+Backbone
+GAIA
+Xbench-DeepSearch
+Frames
+General LLMs with tools
+Qwen3-30B-A3B
+35.9
+32.0
+56.4
+Qwen3-235B-A22B
+45.6
+46.0
+-
+DeepSeek-R1
+-
+55.0†
+82.0†
+Claude-4-Sonnet
+68.3†
+64.6†
+80.7†
+Commercial Deep Research Agents
+Kimi-Researcher
+-
+69.0†
+78.8†
+OpenAI-o3
+70.5†
+66.7†
+84.0†
+OpenAI Deep Research
+67.0†
+-
+-
+Open-source Deep Research Agents
+WebSailor-72B
+-
+55.0†
+-
+WebExplorer-8B
+-
+53.7†
+-
+Kimi-K2
+57.3†
+50.0†
+72.0†
+GLM-4.5
+66.0†
+70.0†
+78.9†
+DeepSeek-V3.1
+63.1†
+71.2†
+83.7†
+Ours
+WebResearcher-30B-A3B
+72.8
+71.0
+84.8
+WebResearcher-30B-A3B-heavy
+75.7
+73.0
+85.1
+reasoning quality throughout extended research processes, whereas mono-contextual systems suffer from
+progressive degradation due to context bloat.
+On Xbench-DeepSearch, our system reaches 71.0%, matching DeepSeek-V3.1 (71.2%) while vastly ex-
+ceeding other open-source alternatives like WebSailor-72B (55.0%) and Kimi-K2 (50.0%). Similarly
+impressive results are observed on Frames (84.8%), where WebResearcher outperforms all systems in-
+cluding DeepSeek-V3.1 (83.7%) and OpenAI-o3 (84.0%). These consistent improvements across diverse
+task types reveal the fundamental advantage of iterative synthesis: by periodically consolidating findings
+and reconstructing focused workspaces, WebResearcher can pursue complex reasoning chains and adapt
+search strategies based on synthesized insights—capabilities that mono-contextual systems inherently
+lack due to their linear accumulation constraints.
+6
+Analysis
+6.1
+The Primacy of the Iterative Paradigm
+To verify that the performance gains of our model stem from its core design rather than confounding
+factors, we conducted a targeted ablation study. The objective was to isolate and measure the direct
+impact of our Iterative Deep-Research Paradigm.
+Experimental Setup
+We designed an ablation variant, herein referred to as Mono-Agent. This agent
+utilizes the same underlying model architecture as our full agent but is constrained to a linear, non-
+iterative inference strategy. Specifically, it accumulates all generated information—including thoughts,
+tool interactions, and observations—into a single, continuously expanding context window, lacking any
+13

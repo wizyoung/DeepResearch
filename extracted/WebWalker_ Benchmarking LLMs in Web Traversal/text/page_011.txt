@@ -1,0 +1,44 @@
+References
+Tamer Abuelsaad, Deepak Akkil, Prasenjit Dey, Ashish Jagmohan, Aditya Vempaty, and Ravi Kokku.
+Agent-e: From autonomous web navigation to foundational design principles in agentic systems. In
+NeurIPS 2024 Workshop on Open-World Agents, 2024.
+Zehui Chen, Kuikun Liu, Qiuchen Wang, Jiangning Liu, Wenwei Zhang, Kai Chen, and Feng Zhao.
+Mindsearch: Mimicking human minds elicits deep ai searcher. arXiv preprint arXiv:2407.20183, 2024a.
+Zehui Chen, Kuikun Liu, Qiuchen Wang, Wenwei Zhang, Jiangning Liu, Dahua Lin, Kai Chen, and Feng
+Zhao. Agent-FLAN: Designing data and methods of effective agent tuning for large language models.
+In Lun-Wei Ku, Andre Martins, and Vivek Srikumar (eds.), Findings of the Association for Computational
+Linguistics: ACL 2024, pp. 9354–9366, Bangkok, Thailand, August 2024b. Association for Computational
+Linguistics. doi: 10.18653/v1/2024.findings-acl.557. URL https://aclanthology.org/2024.findin
+gs-acl.557.
+Kanzhi Cheng, Qiushi Sun, Yougang Chu, Fangzhi Xu, Yantao Li, Jianbing Zhang, and Zhiyong Wu.
+Seeclick: Harnessing gui grounding for advanced visual gui agents. arXiv preprint arXiv:2401.10935,
+2024.
+Xiang Deng, Yu Gu, Boyuan Zheng, Shijie Chen, Samuel Stevens, Boshi Wang, Huan Sun, and Yu Su.
+Mind2web: Towards a generalist agent for the web. In Thirty-seventh Conference on Neural Information
+Processing Systems Datasets and Benchmarks Track, 2023. URL https://openreview.net/forum?id=ki
+YqbO3wqw.
+Yang Deng, Xuan Zhang, Wenxuan Zhang, Yifei Yuan, See-Kiong Ng, and Tat-Seng Chua. On the multi-
+turn instruction following for conversational web agents. In Lun-Wei Ku, Andre Martins, and Vivek
+Srikumar (eds.), Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics
+(Volume 1: Long Papers), pp. 8795–8812, Bangkok, Thailand, August 2024. Association for Computational
+Linguistics. doi: 10.18653/v1/2024.acl-long.477. URL https://aclanthology.org/2024.acl-long.
+477.
+Abhimanyu Dubey, Abhinav Jauhri, Abhinav Pandey, Abhishek Kadian, Ahmad Al-Dahle, Aiesha Let-
+man, Akhil Mathur, Alan Schelten, Amy Yang, Angela Fan, Anirudh Goyal, Anthony Hartshorn, Aobo
+Yang, Archi Mitra, Archie Sravankumar, Artem Korenev, Arthur Hinsvark, Arun Rao, Aston Zhang,
+Aurélien Rodriguez, Austen Gregerson, and et al. The llama 3 herd of models. CoRR, abs/2407.21783,
+2024. doi: 10.48550/ARXIV.2407.21783. URL https://doi.org/10.48550/arXiv.2407.21783.
+Hiroki Furuta, Kuang-Huei Lee, Ofir Nachum, Yutaka Matsuo, Aleksandra Faust, Shixiang Shane Gu,
+and Izzeddin Gur. Multimodal web navigation with instruction-finetuned foundation models. In The
+Twelfth International Conference on Learning Representations, 2024. URL https://openreview.net/for
+um?id=efFmBWioSc.
+Hongliang He, Wenlin Yao, Kaixin Ma, Wenhao Yu, Yong Dai, Hongming Zhang, Zhenzhong Lan,
+and Dong Yu. WebVoyager: Building an end-to-end web agent with large multimodal models. In
+Lun-Wei Ku, Andre Martins, and Vivek Srikumar (eds.), Proceedings of the 62nd Annual Meeting of the
+Association for Computational Linguistics (Volume 1: Long Papers), pp. 6864–6890, Bangkok, Thailand,
+August 2024a. Association for Computational Linguistics. doi: 10.18653/v1/2024.acl-long.371. URL
+https://aclanthology.org/2024.acl-long.371.
+Hongliang He, Wenlin Yao, Kaixin Ma, Wenhao Yu, Hongming Zhang, Tianqing Fang, Zhenzhong Lan,
+and Dong Yu. Openwebvoyager: Building multimodal web agents via iterative real-world exploration,
+feedback and optimization. arXiv preprint arXiv:2410.19609, 2024b.
+11

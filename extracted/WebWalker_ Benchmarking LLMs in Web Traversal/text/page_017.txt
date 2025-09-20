@@ -1,0 +1,77 @@
+Annotated Data Format
+1
+## JSON Format
+2
+The keys in the JSON include:
+3
+Question, Answer, Root_Url, and Info. The Info field contains
+4
+more detailed information, including Hop, Domain, Language,
+5
+Difficulty_Level, Source Website, and Golden_Path.
+6
+```
+7
+{
+8
+"Question": "When is the paper submission deadline for the ACL 2025 Industry Track, and what is the venue address for the
+conference?",
+9
+"Answer": "The paper submission deadline for the ACL 2025 Industry Track is March 21, 2025. The conference will be held in Brune-
+Kreisky-Platz 1.",
+10
+"Root_Url": "https://2025.aclweb.org/",
+11
+"Info":{
+12
+"Hop": "multi-source",
+13
+"Domain": "Conference",
+14
+"Language": "English",
+15
+"Difficulty_Level": "Medium",
+16
+"Source_Website": ["https://2025.aclweb.org/calls/industry_track/","https://2025.aclweb.org/venue/"],
+17
+"Golden_Path": ["root->call>student_research_workshop", "root->venue"]
+18
+}
+19
+}
+20
+```
+Figure 8: A JSON-format case in WebWalkerQA.
+WebSearcher. (b) Naive RAG built from scratch We use Google to query the relevant terms and
+concatenate the information from the Top-10 returned links with the query to provide instructions for the
+Qwen-Plus to generate a response.
+D
+Annotated Case
+An annotated case is shown in Figure 8. The WebWalkerQA dataset will be available at
+HuggingFace
+Datasets.
+E
+Details on Annotation
+E.1
+Sources of Root Page
+The root page is initially identified through a Google search using keywords such as “conference official
+website” or “game official website”, followed by manual filtering. For the education domain, we choose
+the official websites of various university computer science departments, closely reflecting real-world
+scenarios. The distribution of the domain is shown in Figure 3.
+E.2
+Details on Prompts for Annotation
+The prompts for GPT-4o-based initial annotation are presented below.
+Prompts for Multi-source Data Annotation
+Question Generate
+You are a professional web content analyst. Based on the provided material, construct a query statement:
+Sublink 1 URL; Sublink 1 INFO
+Sublink 2 URL; Sublink 2 INFO
+...
+Sublink n URL; Sublink n INFO
+### Requirements:
+1. **Core Goal of the Query**: Create a multi−step standalone query where the user needs to integrate
+information from at least two sublinks to find the final answer. The answer should be a single, clear,
+concise, and precise entity.
+2. **Relevance of Sublinks**: The selected sublinks must have an intrinsic connection, and the answer
+should be derived by combining information from these two sublinks.
+17

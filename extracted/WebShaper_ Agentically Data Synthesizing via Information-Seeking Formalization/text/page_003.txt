@@ -1,0 +1,45 @@
+seeking tasks and then systematically guide data synthesis through this formalization. During generation,
+information collection is explicitly controlled by formal task requirements. This framework offers three
+key advantages:
+1. Broader Task Coverage: Systematic exploration of task formalizations enables synthesizing
+diverse information-seeking patterns unconstrained by pre-retrieval content limitations;
+2. Task Controllability: Explicit formalization parameters allow precise specification of reasoning
+structures and complexity levels;
+3. Structural and Answer Consistency: Due to the inherent interpretability and verifiability of for-
+malized representations, synthesized outputs exhibit fewer inconsistencies across both information-
+reasoning structures and question-answer pairs.
+WebShaper works fundamentally because it introduces a formalization-guided framework that serves
+as a structural skeleton during data synthesis. With this structured guidance, we produce consistent
+reasoning and redundancy while ensuring rich, diverse reasoning logic.
+We leverage the proposed framework to construct the WebShaper dataset, which serves as training data
+for the IS agent. At the core of our framework lies a formalization of IS tasks, which enables principled
+and systematic generation of task instances with controllable collection complexity and reasoning paths.
+This overcomes the fragmented and ad-hoc nature of task construction in prior information-driven
+approaches. Unlike relevant fields, where there exists task formalization in advance, such as Lean 4
+language (Moura & Ullrich, 2021) in math proving and propositional logic in knowledge-centric question
+answering (Xia et al., 2025), there’s no established formalization for information-seeking. To the best
+of our knowledge, we are the first to derive it based on set theory. WebShaper treats IS as a unified
+problem space where task is systematically derived from compositions of basic units termed Knowledge
+Projections (KP). To align with the formalized structure, we initiate synthesis by constructing foundational
+seed tasks, followed by a multi-step expansion grounded in our formal framework. This process employs
+a dedicated agentic Expander module designed to interpret task requirements via KP representations. At
+each expansion stage, the expander transforms the current formal question into a more complicated one.
+It implements layer-wise expansion mechanisms that minimize redundancy while preventing reasoning
+shortcuts through controlled complexity progression. The Expander operates autonomously during
+synthesis, performing three core functions: (1) internet-based knowledge collection guided by formal
+requirements, (2) construction and validation of new formalized problems, and (3) generation of final
+questions. This process ensures a broad coverage of the formalized task space and the correctness of the
+question and answer.
+We conduct extensive experiments to validate WebShaper dataset by training agents. Comparison with the
+existing training dataset shows the effectiveness of WebShaper. WebShaper achieves best performances
+among all open-source IS agents on the GAIA and WebWalkerQA benchmarks. Further discussions
+demonstrate the validity of each module of our method. We summarize our contributions as:
+• We introduce WebShaper, a formalization-driven data synthesis method for information-seeking
+agents, grounded in our proposed task formalization. Leveraging this method, we construct the
+WebShaper dataset, which enables systematic generation of IS instances.
+• We propose an agentic Expander that iteratively generates and validates questions in alignment
+with the formalization.
+• We conduct extensive experiments across multiple benchmarks to evaluate the effectiveness of
+WebShaper. Empirical results demonstrate that models trained with WebShaper consistently
+outperform baselines, confirming the value of our formalization and synthesis approach.
+3

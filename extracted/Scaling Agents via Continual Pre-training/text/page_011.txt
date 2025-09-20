@@ -1,0 +1,154 @@
+Table 1: Results on general web search benchmarks. † indicates results reported in official sources or prior
+work.
+Backbone
+BrowseComp-en
+BrowseComp-zh
+GAIA
+Xbench-DeepSearch
+WebWalkerQA
+General LLMs with tools
+Qwen3-30B-A3B
+0.5
+13.5
+35.9
+32.0
+46.9
+Qwen3-235B-A22B
+2.3
+29.4
+45.6
+46.0
+59.6
+DeepSeek-R1
+8.9†
+35.7†
+-
+55.0†
+-
+Claude-4-Sonnet
+12.2†
+29.1†
+68.3†
+64.6†
+61.7†
+Commercial Deep Research Agents
+Kimi-Researcher
+-
+-
+-
+69.0†
+-
+OpenAI-o3
+49.7†
+58.1†
+70.5†
+66.0†
+71.7†
+OpenAI Deep Research
+51.5†
+-
+67.0†
+-
+-
+Open-source Deep Research Agents
+WebThinker-32B-RL
+2.8†
+7.3†
+48.5†
+24.0†
+46.5†
+ASearcher-Web-QwQ
+5.2†
+15.6†
+52.8†
+42.1†
+34.3†
+WebSailor-72B
+12.0†
+30.1†
+55.4†
+55.0†
+-
+WebShaper-72B
+-
+-
+60.1†
+-
+52.2†
+AFM-32B-RL
+11.1†
+-
+55.3†
+63.0†
+-
+MiroThinker-32B-DPOv0.2
+17.2†
+29.4†
+64.1†
+56.0†
+53.6†
+DeepDiver-V2-38B
+13.4†
+34.6†
+-
+53.0†
+-
+WebExplorer-8B
+15.7†
+32.0†
+50.0†
+53.7†
+62.7†
+DeepDive-32B
+14.8†
+25.6†
+-
+50.5†
+-
+Kimi-K2
+14.1†
+28.8†
+57.3†
+50.0†
+63.0†
+GLM-4.5
+26.4†
+37.5†
+66.0†
+70.0†
+65.6†
+DeepSeek-V3.1
+30.0†
+49.2†
+63.1†
+71.0†
+61.2†
+Ours
+AgentFounder-30B
+39.9
+43.3
+72.8
+73.0
+71.9
+3.2
+Performance Comparison between Agentic Models (RQ1)
+Table 1 and 2 present a comprehensive performance comparison of our model AgentFounder-30B under
+the single-agent React paradigm against existing SOTA models. We have the following observations:
+Observations on General Web Search Benchmarks. Overall, AgentFounder-30B outperforms all existing
+open-source deep research agents across four benchmarks and achieves comparable performance to
+DeepSeek-V3.1 on BrowseComp-zh. Moreover, it even surpasses commercial deep research agents
+on certain benchmarks. Specifically, on BrowseComp-en, AgentFounder-30B outperforms the best
+open-source model DeepSeek-V3.1 by 10.0%, closely approaching the performance of OpenAI’s closed-
+source o3 and Deep Research. This significant improvement demonstrates that AgentFounder-30B has
+effectively mastered sophisticated search strategies and reasoning capabilities. Unfortunately, despite the
+similar question styles between BrowseComp-zh and BrowseComp-en, AgentFounder-30B’s performance
+(43.3) on the Chinese version, while still surpassing strong open-source models such as GLM-4.5 (37.5),
+is comparable to DeepSeek-V3.1 (49.2) and remains behind OpenAI-o3 (58.1). Beyond the inherent
+distributional differences between BrowseComp-zh and BrowseComp-en evaluations, we attribute
+this performance gap to two potential reasons: the relatively limited proportion of Chinese data in
+our training corpus, and the possibility that the underlying search tool (Google Search) may exhibit
+suboptimal performance or bias in Chinese contexts. On the remaining three benchmarks, AgentFounder-
+30B consistently outperforms all open-source deep research agents and even exceeds OpenAI-o3. Notably,
+AgentFounder-30B achieves the highest single-agent accuracy of 72.8% on GAIA. Although this result
+3We use the text-only subset consisting of 103 questions.
+11

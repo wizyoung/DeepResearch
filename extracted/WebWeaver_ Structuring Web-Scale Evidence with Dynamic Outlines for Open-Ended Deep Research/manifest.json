@@ -1,0 +1,266 @@
+{
+  "title": "WebWeaver_ Structuring Web-Scale Evidence with Dynamic Outlines for Open-Ended Deep Research",
+  "pages": [
+    {
+      "page": 1,
+      "text_file": "text/page_001.txt",
+      "images": [
+        "page001_img01.png",
+        "page001_img02.png",
+        "page001_img03.png",
+        "page001_img04.png"
+      ]
+    },
+    {
+      "page": 2,
+      "text_file": "text/page_002.txt",
+      "images": []
+    },
+    {
+      "page": 3,
+      "text_file": "text/page_003.txt",
+      "images": [
+        "page003_img01.png",
+        "page003_img02.png",
+        "page003_img03.png",
+        "page003_img04.png",
+        "page003_img05.png",
+        "page003_img06.png",
+        "page003_img07.png",
+        "page003_img08.png",
+        "page003_img09.png",
+        "page003_img10.png",
+        "page003_img11.png",
+        "page003_img12.png",
+        "page003_img13.png",
+        "page003_img14.png",
+        "page003_img15.png",
+        "page003_img16.png",
+        "page003_img17.png",
+        "page003_img18.png",
+        "page003_img19.png",
+        "page003_img20.png"
+      ]
+    },
+    {
+      "page": 4,
+      "text_file": "text/page_004.txt",
+      "images": []
+    },
+    {
+      "page": 5,
+      "text_file": "text/page_005.txt",
+      "images": [
+        "page005_img01.png",
+        "page005_img02.png",
+        "page005_img03.png",
+        "page005_img04.png",
+        "page005_img05.png",
+        "page005_img06.png",
+        "page005_img07.png",
+        "page005_img08.png",
+        "page005_img09.png",
+        "page005_img10.png",
+        "page005_img11.png",
+        "page005_img12.png",
+        "page005_img13.png",
+        "page005_img14.png",
+        "page005_img15.png",
+        "page005_img16.png",
+        "page005_img17.png",
+        "page005_img18.png",
+        "page005_img19.png",
+        "page005_img20.png",
+        "page005_img21.png",
+        "page005_img22.png",
+        "page005_img23.png",
+        "page005_img24.png"
+      ]
+    },
+    {
+      "page": 6,
+      "text_file": "text/page_006.txt",
+      "images": []
+    },
+    {
+      "page": 7,
+      "text_file": "text/page_007.txt",
+      "images": []
+    },
+    {
+      "page": 8,
+      "text_file": "text/page_008.txt",
+      "images": []
+    },
+    {
+      "page": 9,
+      "text_file": "text/page_009.txt",
+      "images": []
+    },
+    {
+      "page": 10,
+      "text_file": "text/page_010.txt",
+      "images": []
+    },
+    {
+      "page": 11,
+      "text_file": "text/page_011.txt",
+      "images": []
+    },
+    {
+      "page": 12,
+      "text_file": "text/page_012.txt",
+      "images": []
+    },
+    {
+      "page": 13,
+      "text_file": "text/page_013.txt",
+      "images": []
+    },
+    {
+      "page": 14,
+      "text_file": "text/page_014.txt",
+      "images": []
+    },
+    {
+      "page": 15,
+      "text_file": "text/page_015.txt",
+      "images": []
+    },
+    {
+      "page": 16,
+      "text_file": "text/page_016.txt",
+      "images": []
+    },
+    {
+      "page": 17,
+      "text_file": "text/page_017.txt",
+      "images": []
+    },
+    {
+      "page": 18,
+      "text_file": "text/page_018.txt",
+      "images": []
+    },
+    {
+      "page": 19,
+      "text_file": "text/page_019.txt",
+      "images": []
+    },
+    {
+      "page": 20,
+      "text_file": "text/page_020.txt",
+      "images": []
+    },
+    {
+      "page": 21,
+      "text_file": "text/page_021.txt",
+      "images": []
+    },
+    {
+      "page": 22,
+      "text_file": "text/page_022.txt",
+      "images": []
+    },
+    {
+      "page": 23,
+      "text_file": "text/page_023.txt",
+      "images": []
+    },
+    {
+      "page": 24,
+      "text_file": "text/page_024.txt",
+      "images": []
+    },
+    {
+      "page": 25,
+      "text_file": "text/page_025.txt",
+      "images": []
+    },
+    {
+      "page": 26,
+      "text_file": "text/page_026.txt",
+      "images": []
+    },
+    {
+      "page": 27,
+      "text_file": "text/page_027.txt",
+      "images": []
+    },
+    {
+      "page": 28,
+      "text_file": "text/page_028.txt",
+      "images": []
+    },
+    {
+      "page": 29,
+      "text_file": "text/page_029.txt",
+      "images": []
+    },
+    {
+      "page": 30,
+      "text_file": "text/page_030.txt",
+      "images": []
+    },
+    {
+      "page": 31,
+      "text_file": "text/page_031.txt",
+      "images": []
+    },
+    {
+      "page": 32,
+      "text_file": "text/page_032.txt",
+      "images": []
+    },
+    {
+      "page": 33,
+      "text_file": "text/page_033.txt",
+      "images": []
+    },
+    {
+      "page": 34,
+      "text_file": "text/page_034.txt",
+      "images": []
+    },
+    {
+      "page": 35,
+      "text_file": "text/page_035.txt",
+      "images": []
+    },
+    {
+      "page": 36,
+      "text_file": "text/page_036.txt",
+      "images": []
+    },
+    {
+      "page": 37,
+      "text_file": "text/page_037.txt",
+      "images": []
+    },
+    {
+      "page": 38,
+      "text_file": "text/page_038.txt",
+      "images": []
+    },
+    {
+      "page": 39,
+      "text_file": "text/page_039.txt",
+      "images": []
+    },
+    {
+      "page": 40,
+      "text_file": "text/page_040.txt",
+      "images": []
+    },
+    {
+      "page": 41,
+      "text_file": "text/page_041.txt",
+      "images": []
+    },
+    {
+      "page": 42,
+      "text_file": "text/page_042.txt",
+      "images": []
+    }
+  ]
+}

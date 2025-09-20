@@ -1,0 +1,124 @@
+overall scores
+Comprehensiveness
+Insight
+Instruction following
+Readability
+Evaluation Metrics
+38
+40
+42
+44
+46
+48
+50
+52
+54
+Scores
+45.24
+47.89
+40.97
+48.80
+42.29
+50.58
+51.45
+50.02
+50.81
+49.79
+DeepResearch Bench
+Writing Type
+Brute-force Writing (LongWriter)
+Hierarchical Writing
+Figure 9: Performance comparison between hierar-
+chical writing and brute-force writing (LongWriter)
+on DeepResearch Bench.
+overall scores
+Clarity
+Depth
+Balance
+Breadth
+Support
+Insightfulness
+Evaluation Metrics
+80
+85
+90
+95
+100
+105
+Scores
+91.52
+80.30
+98.18
+90.10
+98.59
+91.82
+90.10
+96.77
+90.50
+99.87
+94.30
+100.00
+98.73
+97.22
+DeepResearchGym
+Writing Type
+Brute-force Writing (LongWriter)
+Hierarchical Writing
+Figure 10: Performance comparison between hi-
+erarchical writing and brute-force writing (Long-
+Writer) on DeepResearchGym.
+focusing the model on a curated context for each section, it can perform deeper reasoning rather than
+shallow summarization. This is further substantiated by the leap in support on DeepResearchGym (91.82
+→98.73), proving that our targeted retrieval-and-pruning mechanism effectively prevents “contextual
+bleeding” and ensures claims are correctly grounded. In conclusion, these results provide definitive
+evidence that emulating the human cognitive process of focused, section-by-section writing is not merely
+a beneficial choice but a fundamental requirement for generating coherent, insightful, and reliable
+long-form reports.
+1 round
+15.0%
+2 rounds
+54.4%
+3 rounds
+28.2%
+4 rounds
+2.4%
+WebWeaver-3k
+Figure 11: Round statistics of outline opti-
+mization on WebWeaver-SFT.
+DeepResearch Bench (RACE) Citation Accuracy
+DeepConsult
+DeepResearchGym
+Benchmark
+0
+20
+40
+60
+80
+100
+Scores / Accuracy (%)
+46.77
+25.00
+4.57
+77.27
+48.11
+85.90
+6.09
+90.89
+Agentic Finetuning
+Model Version
+Qwen3-30b-a3b-Instruct
+Qwen3-30b-a3b-Instruct (SFT)
+Figure 12: Performance improvement of agentic finetun-
+ing on DeepResearch Bench.
+Agentic finetuning. While 30B-scale LLMs (e.g., Qwen3-30b-a3b-instruct-2507) possess strong founda-
+tional capabilities, they often exhibit deficiencies in stability and instruction-following when executing
+complex, multi-turn tool-calling sequences over long contexts. To bridge this critical gap, we constructed
+a high-quality Supervised Fine-Tuning (SFT) dataset: WebWeaver-3k. The process began by sourcing a
+diverse set of queries crawled from the web, which were then processed by a powerful, tier teacher model,
+instantiated within our WebWeaver agent framework. A stringent filtering protocol was applied to the
+resulting end-to-end research trajectories, retaining only those where the agent successfully executed
+the entire workflow and strictly adhered to the predefined action format. This quality control yielded a
+curated dataset of 3.3k high-fidelity planning trajectories and 3.1k writing trajectories. As detailed in
+Table 4 and Fig. 11, these trajectories encapsulate the profound complexity of the OEDR task, with an
+average case involving approximately 15 search steps, over two outline optimizations, and the processing
+11

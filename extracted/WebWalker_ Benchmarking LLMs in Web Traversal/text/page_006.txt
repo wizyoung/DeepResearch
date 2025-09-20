@@ -1,0 +1,29 @@
+Figure 4: The overall framework of WebWalker.
+for one of the K sublinks and have an associated URL. The action At involves selecting a URL of a sub-
+page to explore and does not encompass answering the question. Specifically, we utilize the web page’s
+markdown content along with clickable HTML buttons (and corresponding URL) extracted using Beau-
+tiful Soup as the observation for the current page. The context Ht = (T1, A1, O1, · · · , Ot−1, Tt, At, Ot)
+represents the sequence of past observations and actions leading up to the current step t. The context will
+be updated, and this exploration process will continue until the critic agent determines to answer the
+query or the maximum number of steps is reached.
+4.2
+Think then Critique
+Due to the policy π(At|Ht) being implicit and the potentially large size of Ht, motivated by pair
+programming (Williams et al., 2000; Noori & Kazemifard, 2015), we incorporate a critic agent into the
+WebWalker framework to address these challenges. The critic agent operates after each execution of the
+explorer agent. Its input consists of the query and the explorer’s current observation. The critic initializes
+a memory to incrementally accumulate relevant information. Formally, at each step, t, following the
+execution of the explorer agent, the critic agent takes the query Q and the explorer’s current observation
+and action (Ot, At) as input. It then updates the memory M, evaluates whether the gathered information
+is sufficiently complete to answer the query, and provides an answer once the required information is
+deemed sufficient.
+5
+Experiment
+5.1
+Experimental Setting
+Baselines
+We choose widely recognized state-of-the-art agent frameworks, ReAct and Reflexion, as our
+baselines. ReAct (Yao et al., 2023) is a general paradigm that combines reasoning and acting with LLMs
+by multiple thought-action-observation steps. Reflexion (Shinn et al., 2024) is a single-agent framework
+designed to reinforce language agents through feedback.
+6

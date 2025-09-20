@@ -1,0 +1,54 @@
+• Search enables web information retrieval via Google search engine. It accepts multiple queries
+simultaneously and returns top-10 results for each, with each result containing title, snippet, and
+URL for quick relevance assessment.
+• Scholar provides access to academic literature through Google Scholar. Similar to Search, it
+supports batch queries and returns scholarly metadata including authors, venues, and citation
+counts, enabling efficient academic research.
+• Visit extracts detailed content from specific web pages with goal-oriented summarization. The
+agent provides URLs along with extraction goals (e.g., "find experimental results"), and the tool
+first retrieves full content via Jina (Jina.ai, 2025), then uses Qwen3 (Yang et al., 2025) to produce
+focused summaries based on the specified goals.
+• Python executes code in a sandboxed environment for computational tasks. It supports standard
+libraries for data analysis and visualization, with all outputs explicitly printed to ensure clear
+result communication.
+Evaluation Metrics and Hyper-parameters
+We adopt the pass@k metric (Chen et al., 2021) to evaluate
+the model’s performance. In our experiments, we primarily report pass@1, which represents the percent-
+age of problems solved correctly in a single attempt. To determine the correctness of a generated solution,
+we employ an LLM-as-a-Judge approach (Liu et al., 2024; Wang et al., 2024). For all generation tasks, we
+use nucleus sampling with a temperature of 0.6 and a top-p of 0.95.
+For a dataset with n problems, pass@1 is formally calculated as:
+pass@1 = 1
+n
+n
+∑
+i=1
+I(problem i is solved),
+(8)
+where I(·) is the indicator function. For pass@k where k > 1, we generate k independent samples per
+problem and consider it solved if at least one sample is correct.
+5.2
+Main Results
+We present comprehensive evaluation results across 6 challenging benchmarks, categorized into complex
+goal-oriented web tasks (Table 2) and general web navigation and reasoning challenges (Table 1).
+Overall Performance.
+WebResearcher demonstrates state-of-the-art performance across diverse deep-
+research benchmarks, significantly outperforming both larger models and existing deep-research systems.
+WebResearcher achieves remarkable results that surpass open-source deep-research agents and even
+proprietary deep-research systems. Across 6 challenging benchmarks spanning complex reasoning,
+web navigation, and long-horizon information-seeking tasks, WebResearcher consistently ranks among
+the top performers, validating the effectiveness of our iterative synthesis paradigm over the prevalent
+mono-contextual approach.
+General Web Navigation and Reasoning Benchmarks.
+Table 1 demonstrates WebResearcher’s superior
+performance on web-scale information synthesis tasks, where the advantages of our iterative paradigm
+become most pronounced. On Humanity’s Last Exam (HLE), arguably one of the most challenging
+benchmarks for frontier AI systems, WebResearcher-heavy achieves 36.7% accuracy—dramatically out-
+performing all systems including DeepSeek-V3.1 (29.8%), OpenAI Deep Research (26.6%), and Gemini
+Deep Research (26.9%). This exceptional 6.9 percentage point improvement over the next best system
+on HLE, which requires deep academic knowledge synthesis across multiple disciplines, validates our
+paradigm’s core strength: maintaining deep reasoning capabilities throughout extended research pro-
+cesses by ensuring each round operates with full cognitive capacity rather than diminishing workspace.
+The performance gains are equally impressive on web navigation benchmarks. On BrowseComp-en,
+WebResearcher-heavy achieves 51.7% accuracy, matching OpenAI’s Deep Research (51.5%) while vastly
+11

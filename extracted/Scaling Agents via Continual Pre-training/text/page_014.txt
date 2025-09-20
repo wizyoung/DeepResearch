@@ -1,0 +1,105 @@
+Strategy
+BrowseComp-en
+BrowseComp-zh
+GAIA
+Pass@1
+Pass@3
+Pass@1
+Pass@3
+Pass@1
+Pass@3
+AgentFounder Stage 1 Only
+31.4
+49.9
+34.3
+50.5
+69.9
+81.6
+AgentFounder Stage 1 & 2
+35.5
+52.0
+37.2
+58.5
+72.8
+82.5
+Relative ∆
++4.1
++2.1
++2.9
++8.0
++2.9
++0.9
+Table 4: Evaluation of the effectiveness of the two-stage AgentFounder training strategy.
+Data
+Tokens
+BrowseComp-en
+BrowseComp-zh
+GAIA
+Pass@1
+Pass@3
+Pass@1
+Pass@3
+Pass@1
+Pass@3
+Non CPT
+0B
+26.9
+38.0
+29.8
+45.3
+67.0
+75.7
+FAS
+50B
+31.4
+49.9
+37.0
+54.3
+72.8
+80.6
+FAS+HAS
+50B
+31.4
+50.1
+40.1
+54.7
+69.9
+82.5
+Relative ∆
+/
+0.0
++0.2
++3.1
++0.4
+-2.9
++1.9
+Table 5: Effect of data type (HAS and FAS).
+tion checkpoint and employing SFT-A data. We compare two configurations: AgentFounder Stage 1,
+which applies single-stage training on all data where some HAS data may be truncated due to length
+constraints, and AgentFounder Stage 1&2, which implements our complete two-stage training approach
+that specifically incorporates synthesized long-context agent data in the second stage.
+Observation Results. As shown in Table 4, our analysis demonstrates that the two-stage training
+paradigm yields consistent performance improvements. Specifically, the AgentFounder Stage 1&2
+configuration achieves an average improvement of 3.3% on Pass@1 and 3.7% on Pass@3 across the three
+evaluation tasks compared to the single-stage baseline. These results substantiate the necessity of learning
+complete long-context agent data rather than truncated sequences. While resource constraints preclude
+evaluation of single-stage training with extended context lengths (e.g., 128K), such approaches would
+incur substantially higher computational costs.
+3.4.2
+Impact of Data Types (RQ4)
+Experiment Design. We investigate the effectiveness of the two data types introduced in this work for
+agentic CPT. We conduct single-stage training experiments using approximately 50B tokens of FAS data
+and FAS+HAS mixed data respectively, followed by post-training with SFT-A data. Performance is evalu-
+ated using Pass@1 and Pass@3 metrics on BrowseComp-en, BrowseComp-zh, and GAIA benchmarks.
+Observation Results. Table 5 presents our experimental results, revealing that both FAS and HAS
+data contribute meaningful performance improvements: (1) FAS data demonstrates clear efficacy.
+Training exclusively with FAS data yields substantial performance gains, particularly evident in Pass@3
+metrics. Notably, on BrowseComp-zh, FAS-based continual pre-training achieves a 9.0% improvement,
+establishing a higher performance ceiling for subsequent post-training phases. (2) HAS provides
+complementary benefits. The combination of FAS+HAS data consistently delivers positive gains across
+the evaluated benchmarks. While GAIA shows a modest 2.9% decrease in Pass@1 performance, the
+corresponding 1.9% improvement in Pass@3 suggests this variation falls within normal evaluation
+fluctuations rather than indicating systematic degradation.
+3.5
+Scaling Law Exploration (RQ5)
+14

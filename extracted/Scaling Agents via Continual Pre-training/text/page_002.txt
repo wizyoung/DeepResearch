@@ -1,0 +1,49 @@
+1
+Introdcution
+The prevailing understanding of alignment in language models has been shaped by static interaction
+paradigms, which focus on ensuring model outputs align with human preferences (Ouyang et al., 2022).
+However, as models evolve into autonomous agents capable of multi-step reasoning, dynamic tool
+invocation, and complex environmental interactions (Yao et al., 2023; Schick et al., 2023; Qin et al.,
+2024), this definition requires fundamental expansion. To address this paradigm shift, we introduce
+agentic alignment, which requires language models to maintain behavior consistency with human expert
+demonstrations when solving complex tasks in dynamic environments. This encompasses reasoning
+chains, tool invocations, and adaptive responses to unpredictable environmental changes (e.g., tool failure,
+misleading information). Further, language models achieving such alignment for web retrieval and
+knowledge-intensive tasks can be considered deep research agents, capable of autonomously orchestrating
+sophisticated workflows through search, browsing, code execution and other tools to accomplish complex
+tasks and provide trustworthy answers, e.g., OpenAI Deep Research (OpenAI, 2025b).
+Unfortunately, when extended to agentic alignment, current post-training methods, including Supervised
+Fine-Tuning (SFT) and Reinforcement Learning Fine-Tuning (RL) (Chung et al., 2022; Ouyang et al., 2022;
+Taori et al., 2023), demonstrate limited effectiveness, particularly in open-source implementations. Even
+leading agentic models such as WebSailor (12.0) (Li et al., 2025b), GLM-4.5 (26.4) (Zeng et al., 2025), and
+DeepSeek-V3.1 (30.0) (DeepSeek-AI, 2025) exhibit substantial performance gaps compared to OpenAI’s
+Deep Research (51.5) on challenging benchmarks like BrowseComp (Wei et al., 2025). A potential
+explanation is that these methods predominantly rely on general-purpose foundation models1, such as
+Qwen2.5-72B (Yang et al., 2024), which presents a critical bottleneck. Specifically, deep research agents
+require traversing vast policy spaces where SFT’s reliance on complete, high-quality trajectory data makes
+comprehensive coverage infeasible. Moreover, agent trajectories are inherently long and complex, making
+precise definitions of "correct behavior" challenging. Consequently, both SFT and RL training depend on
+limited deterministic supervisory signals that lock models into replicating specific behavioral patterns
+rather than develop flexible decision-making capabilities. Fundamentally, general-purpose foundation
+models lack agentic inductive biases, forcing post-training to simultaneously learn capabilities and
+alignment, creating inherent optimization conflicts. Crucially, pathways toward developing agentic
+foundation models themselves remain largely unexplored.
+Thus, beyond post-training, we redefine the agentic alignment training pipeline by introducing Agentic
+Continue Pre-training (Agentic CPT) as an intermediate scaling layer for agentic alignment. The core
+objective of Agentic CPT is to deliver a pre-aligned agentic foundation model that naturally supports
+agentic behaviors for effective downstream fine-tuning. To achieve the goal, agentic CPT operates on
+two fundamental principles. First, during the data collection phase, seed data sources must be broad
+and not confined to any single domain. Second, when preparing training data, the training data must
+comprehensively include various types of agentic behaviors, preventing models from imitating and
+memorizing specific behavioral patterns that would compromise their behavioral exploration capabilities.
+Guided by these principles, we develop AgentFounder, a deep research agent model obtained through
+Agentic CPT and subsequent post-training, starting from Qwen3 series models (Yang et al., 2025). Our
+agent relies on a systematic and scalable data synthesis approach, comprising First-order Action Synthesis
+(FAS), Higher-order Action Synthesis (HAS), and a two-stage training strategy.
+For first-order action synthesis, we construct (question, planning, action) data tuples by reorganizing
+diverse knowledge sources into entity-knowledge mappings and randomly sampling entities to create
+diverse QA pairs. Then, based on QAs, we consider two types of action synthesis: planning data that
+generates reasonable planning and next-step tool invocations, and logical reasoning data that produces
+step-by-step reasoning processes leading to final answers. For higher-order action synthesis, we remodel
+1GLM-4.5 incorporates synthetic agent trajectories during mid-training.
+2

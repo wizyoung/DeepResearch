@@ -1,0 +1,98 @@
+8
+9
+10
+11
+12
+Cold-start
+Instruct
+12
+16
+20
+24
+28
+Step
+2
+3
+4
+5
+Pass@1 (%)
+(a) Pass@1 on BrowseComp-en.
+49
+50
+51
+52
+53
+54
+Cold-start
+Instruct
+16
+20
+24
+28
+32
+Step
+34
+36
+38
+40
+42
+Pass@1 (%)
+(b) Pass@1 on GAIA.
+0
+4
+8
+12
+16
+20
+24
+28
+32
+Step
+0
+2
+4
+6
+Number of Tool Call
+Cold-start
+Instruct
+(c) Change in the number of tool calls.
+Figure 6: Comparing direct RL training of Qwen-2.5-instruct-32B with RL training after an RFT cold start.
+strategies and pruning ineffective ones, which significantly improves the model’s ability to converge on
+a coherent solution path. Consequently, the model’s stability is enhanced, leading to greater gains on
+harder benchmarks. Moreover, we observe that the improvement in Pass@1 is proportionally much larger
+than in Pass@3, indicating that RL substantially enhances sample efficiency (Yue et al., 2025), allowing
+the model to achieve near its full potential with just a single sample.
+With/without cold start
+To evaluate the efficacy of our RFT cold-start strategy, we compare it against
+a direct RL training baseline, with results presented in Figure 6. We observe that while the direct RL
+approach exhibits a larger increase in Pass@1 accuracy, the final converged performance of the model
+that underwent an RFT cold start is significantly superior. This performance gap is also reflected in
+the models’ tool usage patterns. The tool call count for the cold-started model remains high and stable
+throughout RL training, whereas the tool call count for the direct RL model, despite a steady increase,
+remains substantially lower, indicating an inability to master long-horizon reasoning. Critically, the
+performance disparity between the cold-started WebSailor and the direct RL model is much wider on
+the BrowseComp-en. This suggests that without an RFT cold start, it is extremely difficult for a model
+to acquire the sophisticated reasoning patterns—often found only in powerful LRMs—through self-
+exploration alone. The cold start is essential for bootstrapping the model with these complex strategies,
+which are necessary to solve exceptionally challenging tasks.
+5.4
+Limitations and Future Work
+First, our decision to filter training trajectories to under 32k tokens, while pragmatic, may cap the model’s
+ability to tackle even more complex problems. Our analysis of failed cases reveals that many errors
+stem from exceeding the context limit, and we observe that performance can degrade as inference length
+increases. Furthermore, WebSailor can exhibit a tendency for "over-thinking", applying multi-step tool
+calls even to seemingly simple questions. However, this is not a clear-cut drawback; our qualitative
+analysis suggests that in many such instances, the agent is not aimlessly exploring but performing cross-
+verification, using different information sources to validate an initial finding. Finally, on the training front,
+our RL process is limited to 50 steps. This is primarily due to the inherent inefficiency of the synchronous
+RL framework; even with the optimizations from DUPO, the training speed remains a bottleneck. Future
+work will focus on migrating to an asynchronous training framework to improve efficiency and enable
+more extensive RL training.
+6
+Related Work
+Information seeking benchmarks
+The landscape of information-seeking benchmarks has evolved from
+tasks with easily reducible uncertainty to those demanding complex, non-linear reasoning (Wu et al.,
+2025b). Early datasets such as NQ (Kwiatkowski et al., 2019), TriviaQA (Joshi et al., 2017), and multi-hop
+variants like HotpotQA (Yang et al., 2018) and Musique (Trivedi et al., 2022) represent problems where
+12

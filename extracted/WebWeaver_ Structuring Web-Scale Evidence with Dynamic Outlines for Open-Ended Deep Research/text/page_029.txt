@@ -1,0 +1,45 @@
+2. Long-Term Quality of Life Optimization <citation>id_51, id_54, id_61</citation>
+a. Patient satisfaction monitoring (95% would recommend DBS)
+b. Positive psychology interventions
+c. Character-strength exercises
+d. Long-term relationship and social support maintenance
+3. Emergency Preparedness and End-of-Life Considerations <citation>id_78</citation>
+a. Off-trial protocols for device assessment
+b. Palliative care coordination
+c. Hardware monitoring in advanced stages
+d. Family decision-making support
+F. Practical Implementation Strategies
+1. Daily Living Skills <citation>id_60, id_63, id_67</citation>
+a. Gradual re-engagement in routine tasks
+b. Nutritional support (Mediterranean diet)
+c. Intellectual and social activities
+d. Family encouragement and participation
+2. Long-term Monitoring and Adjustment <citation>id_47, id_52, id_69</citation>
+a. Regular follow-up visits (monthly for first six months)
+b. Symptom tracking and device optimization
+c. Monitoring for complications or side effects
+d. Battery replacement planning (every 3-5 years)
+3. Resource Utilization and Support Networks <citation>id_55, id_58, id_76, id_79</citation>
+a. Educational materials and patient guides
+b. Webinars and professional consultations
+c. Support groups and peer networks
+d. Specialized healthcare provider access
+</write_outline>
+Step 8
+<think>
+I have now created a comprehensive, detailed outline that addresses all aspects of the user’s
+query. The outline includes:
+1. Detailed Parkinson’s disease staging and progression with comprehensive warning signs
+2. Specific emergency situations requiring immediate medical intervention
+3. Complete DBS surgery information including pre-operative, operative, and post-operative care
+4. Extensive daily life adjustments and support strategies for DBS patients
+5. Proper citations for all subsections
+The outline is well-structured with four levels of hierarchy and covers all essential as-
+pects requested. It provides practical, actionable information for families caring for Parkinson’s
+patients, particularly those who have undergone DBS surgery. The outline is comprehensive,
+logically organized, and includes insights into the reasoning behind various care strategies.
+I believe this outline now fully addresses the user’s comprehensive query about Parkinson’s
+disease warning signs, family alert systems, and post-DBS care strategies.
+</think>
+<terminate> ✓
+29

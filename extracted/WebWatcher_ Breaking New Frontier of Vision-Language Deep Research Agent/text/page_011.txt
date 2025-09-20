@@ -1,0 +1,129 @@
+HLE
+Text search
+Image search
+Code
+Visit
+0%
+5%
+10%
+15%
+20%
+25%
+30%
+35%
+Percentage (%)
+34.7%
+25.6%
+25.1%
+14.6%
+BC-VL
+Text search
+Image search
+Code
+Visit
+0%
+10%
+20%
+30%
+40%
+50%
+60%
+Percentage (%)
+62.1%
+14.0%
+0.5%
+23.3%
+MMsearch
+Text search
+Image search
+Code
+Visit
+0%
+10%
+20%
+30%
+40%
+50%
+Percentage (%)
+46.0%
+27.4%
+1.6%
+25.0%
+LiveVQA
+Text search
+Image search
+Code
+Visit
+0%
+10%
+20%
+30%
+40%
+Percentage (%)
+38.2%
+31.8%
+2.9%
+27.1%
+SimpleVQA
+Text search
+Image search
+Code
+Visit
+0%
+10%
+20%
+30%
+40%
+Percentage (%)
+25.4%
+39.4%
+8.0%
+27.1%
+Across 5 Datasets
+Text search
+Image search
+Code
+Visit
+0%
+10%
+20%
+30%
+40%
+50%
+Percentage (%)
+48.4%
+24.1%
+8.5%
+19.0%
+Figure 5: The percentage of tool calls in the four benchmarks. The height of each bar denotes the fraction
+of total calls made to that tool within the corresponding benchmark.
+each account for about a quarter of all calls, with the remaining interactions mostly involving Visit for
+navigating web pages. In contrast, BrowseComp-VL focuses much more on information seeking: when
+information retrieval becomes the main challenge, the agent concentrates 62% of its interactions on Web
+Text Search, while Web Image Search is used much less and Code Interpreter is almost never used. LiveVQA,
+SimpleVQA, MMSearch shift the focus back to visual content, and the policy adapts accordingly: Web
+Image Search jumps to around one-third or more of all calls, while Web Text Search and Visit serve as
+auxiliary tools for textual evidence and navigation. Across all suites, the heavier Code Interpreter is
+invoked only when genuine calculation is needed, confirming that the agent is cost and context aware.
+Altogether, the distribution of tool usage closely tracks the characteristic skills each benchmark demands,
+highlighting the model’s ability to flexibly choose the right tool chain rather than defaulting to a single
+strategy.
+Cold Start for RL Training. SFT-based cold start is indispensable for our vision–language agent, because
+the tasks require robust multi-hop reasoning while continuously interacting with the environment. We
+verify this claim by running the same online RL algorithm under two different initializations: 1) Instruct:
+the model is warm-started only with public instruction-following data; 2) Cold-start: before RL, the
+model undergoes an extra SFT stage on high-quality trajectories that explicitly demonstrate tool usage
+and step-by-step visual reasoning. As shown in Fig. 6, under the Instruct start the agent stays near zero
+for many steps of tool-call format errors wipe out the reward and the strict Qwen-2.5-72B grader further
+suppresses partial answers. Cold-start SFT lifts the initial scores to 0.12 on HLE, 0.30 on BC-VL, and
+0.45 on LiveVQA, but the subsequent GRPO trends differ: HLE and BC-VL oscillate heavily with no
+clear upward drift, whereas LiveVQA shows a steady rise and keeps a 0.06–0.18 margin over the Instruct
+baseline throughout. Injecting CoT chains from a larger reasoner made the small model unstable, format
+violations, repetitions, and context overflow spiked, confirming that reasoning traces cannot replace an
+SFT cold start under our strict RL setting.
+Pass@k Analysis on HLE. Fig. 7 plots the Pass@k curve of WebWatcher on HLE for k ranging from 1
+to 32. Even with a single attempt (k = 1) the agent attains a 13.6% pass rate, already ahead of every
+direct-inference baseline and most retrieval-augmented systems. As k increases, the curve rises steeply
+at first: three diverse roll-outs raise the score to 20.3%, a relative improvement of roughly fifty percent,
+demonstrating that the agent can harvest substantial benefit from only a handful of complementary
+11

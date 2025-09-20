@@ -1,0 +1,171 @@
+1
+2
+3
+4
+35
+40
+45
+50
+55
+60
+65
+70
+75
+Score
+70.2
+54.4
+46.5
+41.2
+58.8
+45.6
+42.1
+40.4
+Retail
+1
+2
+3
+4
+20
+30
+40
+50
+60
+60.0
+46.0
+38.0
+24.0
+58.0
+46.0
+40.0
+34.0
+Airline
+1
+2
+3
+4
+10
+20
+30
+40
+50
+60 55.3
+43.9
+30.7
+22.8
+26.3
+17.5
+15.8
+12.3
+Telecom
+1
+2
+3
+4
+30
+40
+50
+60
+62.5
+48.6
+38.5
+30.6
+45.3
+34.1
+30.9
+27.7
+Weighted Overall
+Pass^K
+Ours
+Qwen3-Thinking-30B-A3B
+Figure 4: Passˆ k metric results across all domains in the τ2-Bench.
+correctly answers the same question in all k independent trials. According to the experimental results, the
+weighted overall score of AgentScaler-30B-A3B consistently surpasses that of Qwen3-Thinking-30B-A3B
+across all evaluated passˆ k settings, indicating a substantial performance advantage of our model over
+Qwen3-Thinking-30B-A3B. Moreover, a clear downward trend in scores is observed as k increases,
+suggesting that the stability of existing LLMs remains a considerable challenge.
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+Number of Tool Calls
+0%
+20%
+40%
+60%
+80%
+100%
+120%
+Task Accuracy
+Tool Call Complexity vs. Accuracy (Retail vs. Airline)
+82%
+78%
+54%
+90%
+80%
+82%
+40%
+57%
+0%
+100%
+100%
+0%
+100%
+67%
+70%
+33%
+0%
+0%
+33%
+33%
+67%
+50%
+0%
+0%
+100%
+Retail Domain
+Airline Domain
+Retail Trend (dashed)
+Airline Trend (dotted)
+Small Sample Size
+Large Sample Size
+Figure 5: Accuracy by tool call count on τ-bench.
+Long-horizon tool calling re-
+mains a fundamental chal-
+lenge for agentic models.
+To
+further analyze the model’s
+long-horizon tool-calling capa-
+bility, we constructed a scat-
+ter plot on the τ-bench dataset
+showing the relationship be-
+tween the number of tool
+calls in each trajectory and the
+corresponding trajectory accu-
+racy, with a dashed line in-
+dicating the trend.
+As illus-
+trated in Figure 5, there ex-
+ists a clear negative correlation
+between the number of tool
+calls and task accuracy. Our
+AgentScaler models exhibit this trend as well, underscoring that handling extended tool-use chains is
+still an open problem that we plan to address in future work.
+6
+Related Work
+6.1
+Tool-Use Environments
+The construction of tool-use environments primarily involves three approaches: real-world environments,
+LLM–simulated environment, and Simulated Environments based on a state config. Using real-world
+environments (Qin et al., 2023; Song et al., 2023; Mastouri et al., 2025; Wu et al., 2025b) to invoke actual
+tools yields the most authentic feedback and enhances the model’s robustness in practical applications.
+However, this requires frequent calls to MCP services, resulting in high costs and significant time
+overhead. Moreover, maintaining a highly available and stable MCP service is often difficult, posing
+major challenges for agentic data generation and online RL training of models.Many works use LLM-
+generated responses to simulate environments as a source of tool responses (Qin et al., 2024; Lu et al., 2024;
+8

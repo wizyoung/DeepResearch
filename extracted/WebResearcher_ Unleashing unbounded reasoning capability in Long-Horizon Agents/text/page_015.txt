@@ -1,0 +1,74 @@
+1
+2
+4
+8
+16
+Parallel N
+26
+28
+30
+32
+34
+36
+38
+40
+Pass@1
+28.8
+30.42
+32.13
+35.65
+36.7
+(a) Effect of n on HLE
+1
+2
+4
+8
+16
+Parallel N
+35
+40
+45
+50
+55
+Pass@1
+37.3
+38.53
+46.47
+49.33
+51.7
+(b) Effect of n on BrowseComp
+Figure 5: Effect of n in Reason-Synthesis Framework
+sophisticated ability to dynamically adapt its problem-solving approach. It can execute brief, precise
+actions for knowledge-based queries (HLE) as well as sustain long, exploratory sequences for complex
+web-based tasks (BrowseComp), validating the effectiveness of its iterative reasoning architecture.
+6.3
+Analysis on Reasoning Trajectories in Reason-Synthesis Framework
+In Section 4.3, we introduced Reason-synthesis Framework to enhance model performance by running
+n inference trajectories in parallel. To consolidate the findings from all Research Agents, a Synthesis
+Agent aggregates these reasoning paths to generate the final answer. This section presents a quantitative
+analysis of the impact of the hyperparameter n—the number of parallel research—on final performance.
+Experimental Setup
+Our analysis is conducted on the HLE benchmark using the IterResearch-30B-A3B
+model. We systematically vary the number of parallel research, n, evaluating the model’s performance
+(pass@1) for n ∈{1, 2, 4, 8, 16}. The case of n = 1 serves as the baseline, representing the model’s
+performance without any Test-Time Scaling.
+Results and Insights
+The experimental results, illustrated in Figure 5, reveal a clear and positive
+correlation between the number of trajectories (n) and model performance.
+As we increase n, there is a consistent and significant improvement in the pass@1 score. The most
+substantial gains are observed when scaling n from 1 to 8. This result underscores the benefits of the
+ensemble effect inherent in TTS. Each Research Agent explores a unique reasoning path, potentially
+uncovering distinct facets of the problem or overcoming specific intermediate obstacles. By fusing the
+final outcomes of these diverse explorations, the Synthesis Agent can produce a more robust and accurate
+final answer.
+As expected, these performance improvements are accompanied by a linear increase in computational
+cost, as each trajectory is processed independently. Furthermore, the performance gains begin to exhibit
+diminishing marginal returns for n > 8, indicating a trade-off between accuracy and computational
+budget.
+Our analysis demonstrates that employing multiple parallel research trajectories within the Reason-
+Synthesis framework is a highly effective technique for performance enhancement. The number of
+trajectories, n, serves as a direct and controllable parameter to balance performance gains against
+computational cost. Based on our findings, a configuration of n = 8 offers a compelling trade-off,
+delivering substantial performance improvements over the baseline while maintaining manageable
+computational overhead.
+15

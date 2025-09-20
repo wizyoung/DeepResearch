@@ -1,0 +1,54 @@
+challenges, emphasizing the depth of the source information across education, conference, organization,
+and game domains, where official sources are published and paths to information are more structured
+with clickable buttons and reasoning logic. Several types, including multi-source and single-source
+QAs, are developed to evaluate the ability of LLMs to mimic different human web-navigation paradigms.
+Additionally, we introduce a strong baseline WebWalker, a multi-agent framework designed to em-
+ulate human-like web navigation through vertical exploration.
+The framework consists of an ex-
+plorer agent and a critic agent. Given the need for reasoning capabilities to navigate and interact
+with web pages effectively, the explorer agent is built upon the ReAct framework (Yao et al., 2023),
+Figure 1: A multi-source QA1example from Web-
+WalkerQA that requires traversing web pages to
+gather information for answering the given ques-
+tion.
+leveraging a thought-action-observation paradigm,
+while the critic agent is responsible for maintain-
+ing memory and generating responses based on
+the exploration conducted by the explorer agent.
+We evaluate the performance of the WebWalker,
+built on various mainstream LLMs, including both
+closed-source and open-sourced, using WebWalk-
+erQA as the benchmark.
+However, even with
+the most powerful LLMs as the backbone, its per-
+formance on WebWalkerQA remains suboptimal,
+thereby validating the challenge posed by Web-
+WalkerQA.
+We then conduct further experiments to validate
+the integration with the RAG for information-
+seeking QA tasks. Our findings are as follows:
+(i) Web navigation still requires efforts in tasks
+that demand planning and reasoning; (ii) By com-
+bining RAG with the WebWalker, this horizontal
+and vertical coordination proves effective; (iii) Vertical exploration of pages offers a promising direction
+for scaling inference time in RAG systems.
+The contributions of our work are as follows:
+• We construct a challenging benchmark, WebWalkerQA, which is composed of 680 queries from
+four real-world scenarios across over 1373 webpages.
+• To tackle the challenge of web-navigation tasks requiring long context, we propose WebWalker,
+which utilizes a multi-agent framework for effective memory management.
+• Extensive experiments show that the WebWalkerQA is challenging, and for information-seeking
+tasks, vertical exploration within the page proves to be beneficial.
+2
+Related Work
+2.1
+Web-Oriented Benchmark
+Before the era of LLMs, several web-oriented benchmarks had already been proposed (Liu et al., 2018;
+Xu et al., 2021; Humphreys et al., 2022; Yao et al., 2022; Mialon et al., 2024; Xu et al., 2024). LLMs are
+capable of interacting with complex environments, like the open web in HTML or DOM format (Tan
+et al., 2024), leading to the development of an increasing number of benchmarks aimed at evaluating the
+interaction capabilities of LLMs with web content. The widely used benchmark today, Mind2Web (Deng
+et al., 2023), is a dataset designed for evaluating web agents that follow instructions to complete complex
+tasks, typically through multiple-choice questions. Subsequent works have extended the interaction to
+1In our paper, multi-source refers to the requirement of information from multi distinct web pages.
+2

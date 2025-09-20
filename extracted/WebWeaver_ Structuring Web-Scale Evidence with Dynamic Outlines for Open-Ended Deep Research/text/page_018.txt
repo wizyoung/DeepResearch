@@ -1,0 +1,51 @@
+</tool_response>
+Step 3
+<think>
+Excellent! I now have comprehensive information about warning signs and emergency situations
+for family members.
+Now I need to search for information specifically about Deep Brain
+Stimulation (DBS) surgery, post-operative care, and daily life adjustments for DBS patients.
+</think>
+<tool_call>
+{"name": "search", "arguments": {"query": ["Deep Brain Stimulation DBS Parkinson’s post-
+operative care", "DBS surgery recovery daily life adjustments Parkinson’s", "living with DBS
+Parkinson’s disease support strategies"], "goal": "Gather detailed information about Deep Brain
+Stimulation (DBS) surgery outcomes, post-operative care requirements, and daily life adjustments
+needed for Parkinson’s patients who have undergone DBS"}}
+</tool_call>
+<tool_response>
+<material>
+<id_38>
+Summary:
+DBS surgery offers significant benefits for Parkinson patients, helping manage movement
+disorders and enhance quality of life when combined with proper post-operative care and
+follow-up. Patients receive comprehensive support—including recovery and safety guides, FAQs,
+and detailed manuals—through Boston Scientific’s DBS system, and can obtain personalized
+assistance from a DBS Care Specialist during business hours.
+</id_38>
+...
+</tool_response>
+Step 4
+<think>
+Now I have good information about DBS surgery and post-operative care. Let me search for more
+specific information about daily life support strategies, comfort measures, and family caregiver
+guidance for DBS patients.
+</think>
+<tool_call>
+{"name": "search", "arguments": ["DBS patient daily living support family caregivers", "Parkinson
+DBS lifestyle modifications comfort strategies", "DBS programming adjustment patient family
+guide"], "goal": "Find specific daily life support strategies, comfort measures, and family guidance
+for caring for Parkinson’s patients who have undergone DBS surgery"}}
+</tool_call>
+<tool_response>
+<material>
+<id_54>
+Summary:
+Deep-brain stimulation reliably improves motor symptoms in Parkinson’s disease for at least five
+years, but the rapid symptom relief creates a "biographical disruption" that reshapes patients’
+daily lives and identities. The authors describe a four-stage DBS pathway: pre-surgical decision
+making; the operation with required physical support and clinical goal-setting; post-operative
+changes in symptoms, behaviour and role dynamics; and finally re-engagement with life and
+future outlook. Post-operative care therefore extends beyond the surgical wound to include
+structured psychosocial support—counselling, triadic nurse-patient-spouse meetings, and
+18

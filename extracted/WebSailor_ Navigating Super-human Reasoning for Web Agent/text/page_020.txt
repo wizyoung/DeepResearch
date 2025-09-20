@@ -1,0 +1,41 @@
+References
+Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan Mané. Concrete
+problems in ai safety. arXiv preprint arXiv:1606.06565, 2016.
+Baian Chen, Chang Shu, Ehsan Shareghi, Nigel Collier, Karthik Narasimhan, and Shunyu Yao. Fireact:
+Toward language agent fine-tuning. arXiv preprint arXiv:2310.05915, 2023.
+Hardy Chen, Haoqin Tu, Fali Wang, Hui Liu, Xianfeng Tang, Xinya Du, Yuyin Zhou, and Cihang Xie. Sft
+or rl? an early investigation into training r1-like reasoning large vision-language models. arXiv preprint
+arXiv:2504.11468, 2025.
+Mark Chen, Jerry Tworek, Heewoo Jun, Qiming Yuan, Henrique Ponde De Oliveira Pinto, Jared Kaplan,
+Harri Edwards, Yuri Burda, Nicholas Joseph, Greg Brockman, et al. Evaluating large language models
+trained on code. arXiv preprint arXiv:2107.03374, 2021.
+Tianzhe Chu, Yuexiang Zhai, Jihan Yang, Shengbang Tong, Saining Xie, Dale Schuurmans, Quoc V Le,
+Sergey Levine, and Yi Ma. Sft memorizes, rl generalizes: A comparative study of foundation model
+post-training. arXiv preprint arXiv:2501.17161, 2025.
+ByteDance Doubao. Doubao, 2025. URL http://www.doubao.com/.
+Google. Measuring compositional generalization, 2020. URL https://research.google/blog/measuri
+ng-compositional-generalization/.
+Daya Guo, Dejian Yang, Haowei Zhang, Junxiao Song, Ruoyu Zhang, Runxin Xu, Qihao Zhu, Shirong Ma,
+Peiyi Wang, Xiao Bi, et al. DeepSeek-R1: Incentivizing reasoning capability in LLMs via reinforcement
+learning. arXiv preprint arXiv:2501.12948, 2025.
+Xanh Ho, Anh-Khoa Duong Nguyen, Saku Sugawara, and Akiko Aizawa. Constructing a multi-hop qa
+dataset for comprehensive evaluation of reasoning steps, 2020. URL https://arxiv.org/abs/2011.0
+1060.
+Jingcheng Hu, Yinmin Zhang, Qi Han, Daxin Jiang, Xiangyu Zhang, and Heung-Yeung Shum. Open-
+reasoner-zero: An open source approach to scaling up reinforcement learning on the base model. arXiv
+preprint arXiv:2503.24290, 2025.
+Yuheng Huang, Jiayang Song, Zhijie Wang, Shengming Zhao, Huaming Chen, Felix Juefei-Xu, and Lei
+Ma. Look before you leap: An exploratory study of uncertainty measurement for large language
+models. arXiv preprint arXiv:2307.10236, 2023.
+Bowen Jin, Hansi Zeng, Zhenrui Yue, Jinsung Yoon, Sercan Arik, Dong Wang, Hamed Zamani, and Jiawei
+Han. Search-r1: Training llms to reason and leverage search engines with reinforcement learning. arXiv
+preprint arXiv:2503.09516, 2025.
+Jina.ai. Jina, 2025. URL https://jina.ai/.
+Mandar Joshi, Eunsol Choi, Daniel S Weld, and Luke Zettlemoyer. Triviaqa: A large scale distantly
+supervised challenge dataset for reading comprehension. arXiv preprint arXiv:1705.03551, 2017.
+Kyle Jurado, Sydney C Ludvigson, and Serena Ng. Measuring uncertainty. American Economic Review,
+105(3):1177–1216, 2015.
+Sanyam Kapoor, Nate Gruver, Manley Roberts, Katherine Collins, Arka Pal, Umang Bhatt, Adrian Weller,
+Samuel Dooley, Micah Goldblum, and Andrew Gordon Wilson. Large language models must be taught
+to know what they don’t know. arXiv preprint arXiv:2406.08391, 2024.
+20

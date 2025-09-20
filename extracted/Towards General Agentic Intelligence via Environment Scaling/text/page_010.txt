@@ -1,0 +1,16 @@
+Limitation
+Although our proposed framework has demonstrated promising results, several limitations remain,
+which point to ongoing efforts and potential directions for future work.
+Lack of Reinforcement Learning
+While our approach leverages two-stage supervised fine-tuning
+(SFT), the simulated environment we construct provides stable and low-latency feedback, which
+is inherently well-suited for RL optimization. In future work, we aim to integrate RL on top of our
+simulated environment to further improve the agentic behavior of the model.
+Model Scale
+Another limitation of our current work lies in model scale. Our method has so far only
+been validated on a 30B-scale architecture, without extension to larger models exceeding 200B or even
+trillion-parameter scales. While prior work (Belcak et al., 2025) emphasizes that “small language models
+are the future of agentic AI,” we share the view that training agentic capabilities in relatively smaller
+models is particularly meaningful. Such models are easier to deploy on edge devices, enable broader
+applicability across diverse scenarios, and offer faster response times.
+10

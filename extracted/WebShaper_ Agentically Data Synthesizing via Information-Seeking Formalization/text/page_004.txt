@@ -1,0 +1,55 @@
+𝑹𝒇𝒐𝒖𝒏𝒅𝑰𝒏({𝟏𝟗𝟗𝟔})
+𝑹𝒊𝒔𝑨({𝑬𝒂𝒔𝒕 𝑮𝒆𝒓𝒎𝒂𝒏
+ 𝒇𝒐𝒐𝒕𝒃𝒂𝒍𝒍 𝒕𝒆𝒂𝒎})
+𝑻𝟏=
+𝑹𝒑𝒍𝒂𝒚𝑰𝒏(𝑻𝟏)
+𝑹𝒑𝒍𝒂𝒚𝑨𝒕
+𝟐𝟎𝟎𝟒
+∪
+𝑹𝒑𝒍𝒂𝒚𝑨𝒕({𝟐𝟎𝟎𝟓})
+∪𝟏𝟗𝟎𝟎
+𝟐𝟗𝟗𝟗𝑹𝒃𝒐𝒓𝒏𝑰𝒏(𝒚𝒆𝒂𝒓)
+∩
+∩
+∩
+𝒒𝑻 ≜  ? 𝑻=
+Question: Which player of a team in the 2004-05 season, who was born in 90s? This team is 
+founded in 1966 and is an East German football team.
+Answer: Robert Rudwaleit, Danny Kukulies, ..
+Figure 3: A question-answer case in our information-seeking formalization. We use the purple diagram
+to represent a knowledge projection, which is a set of entities.
+2
+Information-Seeking Formalization
+In this section, we introduce our formalization of the information-seeking task. We illustrate an example
+in Figure 3. An information seeking task q(T) aims to search for knowledge and facts prompted by given
+facts and locate the answer entity set T. For a basic example also shown in Figure 3:
+q(T) =Which player of a team in the 2004-05 season, who was born in 90s?
+This team is founded in 1966 and is an East German football team.
+(1)
+To solve it, one should seek information about This team is founded in 1966 and is an East German
+football team to find that the team is Berliner FC Dynamo. And then seek for players of Berliner FC
+Dynamo team in 2004 and 2005 respectively and players born in 90s, then reason the answer T =
+{Robert Rudwaleit, Danny Kukulies, ..}.
+Let E denote the universal set of entities (e.g., players, teams, years). Let R ⊆E × E denote a subspace of
+entity pairs where they have a certain relation. For example, if the relation is bornIn, R stands for all pairs
+of (person, year) where person is born in year.
+For a subset V ⊆E and a sub-space R, define a Knowledge Projection (KP):
+R(V) = {u | ∃v ∈V, (u, v) ∈R or (v, u) ∈R}.
+(2)
+For example, when R denotes entity pairs of relation bornIn, R({90s}) represents the set of all people
+born in 90s. A KP is the set of entities under a certain relation to other entities, which is the basic unit
+in an information-seeking task. KP has two operations:
+R-Union ∪
+In IS, the question may be seeking for a broader condition due to uncertainty about the
+target. For instance, we only know the target player was playing between 2000-2010 rather than the exact
+year in advance. The condition can not be more specific than a year range.
+Therefore, given S1, S2 be entity sets and R, then:
+R(V) = R(S1) ∪R(S2) ∪· · · ∪R(Sm)
+(3)
+represents R(V) is the union result set in which the entities have a certain relation to entries in either
+S1, S2, ..., Sm. If R stands for relation playAt, then the set of players who play between 2000-2010 is
+R({2000}) ∪R({2001}) ∪· · · ∪R({2010}).
+Intersection ∩
+Some IS tasks require the target to satisfy several conditions simultaneously. It’s
+interpreted as an Intersection operation of KP:
+4

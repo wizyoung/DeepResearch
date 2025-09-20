@@ -1,0 +1,89 @@
+CRAWLQA
+E2HQA
+root
+root/…
+root/…/…
+𝐴
+𝑄1
+𝐸1𝐸2 … 𝐸𝑛
+𝑄2
+𝑅1𝐸2 … 𝐸𝑛
+𝑄𝑛
+𝑅1𝑅2 … 𝐸n
+𝑄𝑛+1
+𝑅1𝑅2 … 𝑅𝑛
+…
+𝑄
+𝐴
+<question>
+Which game ranked fourth in the Godot XR 
+Game Jam February 2025 but was not featured 
+in the 2024 Godot Games showreel?
+</question>
+<answer>
+Keziah’s House
+</answer>
+<question>
+Who received the 
+IEEE Frank 
+Rosenblatt Award 
+in 2010?
+</question>
+<question>
+In 2010, who received an esteemed award named after 
+a technology pioneer, honoring their significant 
+contributions to fuzzy logic, particularly in the 
+realm of intelligent digital technologies and 
+industrial processes, utilizing a system noted for 
+complex reasoning as opposed to traditional binary 
+logic, and different from the Mamdani approach?
+</question>
+<answer>
+Michio Sugeno
+</answer>
+𝑆(𝐶1)
+𝑆(𝐶2)
+𝑆(𝐶𝑛)
+<question>
+In 2010, an accolade 
+named after a pioneer in 
+artificial intelligence 
+was awarded … Who was the 
+recipient of this award?
+</question>
+…
+Figure 1: Two web data generation pipelines. ❶For CRAWLQA, we first collect root url of knowlageable
+websites. Then we mimic human behavior by systematically clicking and collecting subpages accessible
+through sublinks on the root/... page. Using predefined rules, we leverage GPT4o to generate synthetic
+QA pairs based on the gathered information. ❷For E2HQA, the initial question Q1 is iteratively evolved
+using the new information Ci retrieved from the entity Ei at iteration i, allowing the task to progressively
+scale in complexity, from simpler instances to more challenging ones. We use GPT-4o to rewrite the
+question until the iteration reaches n.
+2
+Deep Information Seeking Dataset Synthesis
+2.1
+QA Pairs Construction
+To enable longer-horizon web exploration trajectories, it is essential to curate a substantial corpus
+of complex and diverse QA pairs that can elicit multi-step reasoning, goal decomposition, and rich
+interaction sequences. The main requirements for these QAs are: (i) diversity of question types, and (ii)
+increased task complexity as measured by the number of interaction steps required for resolution. In
+contrast to prior datasets that predominantly involve shallow queries solvable in 2–3 steps, our objective
+is to scale both the volume and the depth of multi-hop reasoning. To achieve this, we primarily develop
+the below datasets: CRAWLQA and E2HQA.
+CRAWLQA
+Constructing QA pairs based on information crawled from web pages represents an effective
+paradigm for scalable knowledge acquisition Wu et al. (2025). We begin by collecting the root URLs of
+official and knowledgeable websites spanning arxiv, github, wiki, etc. Mialon et al. (2023) To emulate
+human browsing behavior, we recursively navigate subpages by following accessible hyperlinks from
+each root site. We employ GPT-4o to synthesize QA pairs from the collected content. To ensure specificity
+and relevance of questions, inspired by Sen et al. (2022), we prompt LLMs to generate questions of
+designed types (e.g., COUNT, MULTI-HOP, INTERSECTION) via in-context learning Brown et al. (2020).
+E2HQA
+Similar to the reverse construction strategy Wei et al.; Zhou et al. (2025), we begin from large
+QA pairs in SimpleQA style OpenAI (2025b) where each answer is a concise, fact-seeking entity. We
+first select an entity En from the question Qn, where n represents the number of refinement iterations.
+Then, we use the LLMs to construct a query based on this entity in order to search via search engine S for
+information Cn related to En. After that, we use LLMs π to restructure the obtained content into a new
+query Rn to replace the original entity in the question. The process can be signaled as: Rn = π(S(Cn)).
+This way, the new question Qn+1 requires solving the sub-problem we have constructed before finding
+3

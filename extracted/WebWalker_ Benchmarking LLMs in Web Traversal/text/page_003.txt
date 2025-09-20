@@ -1,0 +1,98 @@
+Language
+Format
+Depth
+Width
+Hop
+# Pages
+Mind2Web (Deng et al., 2023)
+En
+Multi-choice
+✗
+✗
+✗
+100
+WebArena (Zhou et al., 2024a)
+En
+Action
+✗
+✗
+✗
+6
+AssistantBench (Yoran et al., 2024)
+En
+QA
+✗
+✓
+✓
+525
+MMInA (Zhang et al., 2024c)
+En
+Action
+✗
+✓
+✓
+100
+GAIA (Mialon et al., 2024)
+En
+QA
+✗
+✓
+✓
+-
+WebWalkerQA
+En&Zh
+QA
+✓
+✓
+✓
+1373
+Table 1: Comparison between WebWalkerQA and other benchmarks. Depth refers to the extent of
+exploration required on a given website. Width denotes whether answering a query necessitates multiple
+sources. Hop indicates whether multiple steps are required to complete the task. #Pages refers to the
+number of webpages involved.
+the vision domain, incorporating information from screenshots (Zheng et al., 2024a;b; He et al., 2024a;
+Koh et al., 2024a; Cheng et al., 2024). The web-oriented benchmark is becoming progressively more
+human-like, vision-centric, and increasingly broad, complex, and realistic (Liu et al., 2024; Hong et al.,
+2024; Kim et al., 2024; Zhang et al., 2024c). The most closely to ours are the MMInA (Zhang et al.,
+2024c) and AssistantBench (Yoran et al., 2024), both of which focus on time-consuming tasks that require
+navigation across multiple pages. In our work, WebWalkerQA takes the form of QA pairs. Unlike all
+previous works, we construct both single-source and multi-source queries from the width perspectives of
+the website, aiming to simulate two types of page exploration patterns typically exhibited by humans.
+The comparison between WebWalkerQA and other benchmarks is shown in Table 2.
+2.2
+Agents on Web-Navigation
+Based on web-oriented benchmarks, numerous web agents have been proposed (Nakano et al., 2021;
+Liu et al., 2023; Zhou et al., 2023; Lai et al., 2024; Zhou et al., 2024b). Web agents primarily follow
+two lines of development: one leverages a small language model trained specifically to filter actions
+or identify relevant HTML elements (Zheng et al., 2024a; Deng et al., 2024; Furuta et al., 2024). The
+other line focuses on prompting LLMs (Reddy et al., 2024; Song et al., 2024; Koh et al., 2024b), where
+different agentic modules are used to guide the model in accomplishing complex web navigation tasks
+more effectively. In addition, with the rise of visual web-oriented benchmarks, many agents now use
+screenshots as sensory input (He et al., 2024b; Abuelsaad et al., 2024; Iong et al., 2024). Unlike previous
+works, WebWalker specializes in information-seeking by reasoning over HTML button data. It emulates
+human-like page interactions with web pages to access reliable, authoritative information utilizing a
+multi-agent framework.
+3
+WebWalkerQA
+Traverse
+(a) Root Official Website
+URL Tree
+Multi-source
+Single-source 
+(b) Sublinks and Subpages
+Query
+Generation
+(c) Synthetic QA-Pairs
+(d) Verified QA-Pairs
+Manual
+Annotation
+Root page
+2nd level page
+3rd level page
+4th level page
+Figure 2: Data Generation Pipeline for WebWalkerQA. We first collect root official websites across confer-
+ence, organization, education, and game domains. Then we mimic human behavior by systematically
+clicking and collecting subpages accessible through sublinks on the root page. Using predefined rules, we
+leverage GPT4o to generate synthetic QA-pairs based on the gathered information, followed by manual
+verification to ensure accuracy and relevance.
+3

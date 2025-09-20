@@ -1,0 +1,7 @@
+Yuxiang Zheng, Dayuan Fu, Xiangkun Hu, Xiaojie Cai, Lyumanshan Ye, Pengrui Lu, and Pengfei Liu.
+Deepresearcher: Scaling deep research via reinforcement learning in real-world environments. arXiv
+preprint arXiv:2504.03160, 2025.
+He Zhu, Tianrui Qin, King Zhu, Heyuan Huang, Yeyi Guan, Jinxiang Xia, Yi Yao, Hanhao Li, Ningn-
+ing Wang, Pai Liu, et al. Oagents: An empirical study of building effective agents. arXiv preprint
+arXiv:2506.15741, 2025.
+27

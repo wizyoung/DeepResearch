@@ -1,0 +1,50 @@
+1
+Introduction
+The emergence of Large Language Model (LLM)-powered language agents has marked a paradigm-
+shifting advance in artificial intelligence, enabling transformative solutions to previously intractable
+challenges across domains (Guo et al., 2024; Wang et al., 2024; AutoGPT, 2023; Wu et al., 2023; Ye et al.,
+2023). Information-seeking (IS) represents a core component of the cognitive autonomy of language
+agents. This capability not only underpins their adaptability in open-ended tasks but also powers a range
+of powerful commercial systems such as Deep Research of OpenAI (OpenAI, 2025), Gemini (Gemini,
+2025), and Perplexity (Perplexity, 2025).
+Current agentic systems for unlocking this capability typically follow a well-established pipeline in
+agent development: (1) First, construct task-specific trajectories of question-answer pairs; (2) Employ
+supervised fine-tuning (SFT) to acquire foundational skills (Sun et al., 2025). (3) Generalize strategic
+decision-making through on-policy reinforcement learning (RL) (Jin et al., 2025). The entire development
+of the IS agent originates from and its ultimate effectiveness depends on high-quality IS task training
+data. However, due to its complexity, such a high-quality dataset is both sparse and difficult to construct
+through crowdsourcing. Thus, constructing training data through a carefully designed agent pipeline
+becomes the cornerstone of effective IS agent development.
+(b) Formalization-Driven
+(a) Information-Driven
+Organized
+Information
+𝒒𝑻≜  ? 𝑻
+Formalization
+Synthesized 
+Data
+source
+source
+Synthesized 
+Data
+Figure 2: Data synthesis paradigm shift from information-driven to formalization-driven. “Source”
+stands for information sources such as the internet and databases. “Data” represents the synthesized
+QA data. (a) Previous methods retrieve and organize collected information in advance, then synthesize
+data according to the information structures. (b) Our method establishes the task formalization first, then
+collects information, and synthesizes QA data based on the formalization.
+Existing IS dataset synthesis methods typically involve freely pre-searching for information online and
+employing LLMs to generate questions from the collected content (Figure 2(a)). These approaches first
+organize the collected information into structured formats, then prompt the LLM with the structured
+data to produce natural language (NL) questions. Their core objective is to map information structures into
+reasoning structures within the resulting NL questions. Representative methods like WebDancer (Wu et al.,
+2025a) and TaskCraft (Shi et al., 2025a) generate linear information chains, while others construct graphs
+connected via web links (Wu et al., 2025b) or entity coreference networks (Li et al., 2025a). However,
+these information-driven approaches face two critical limitations. First, the synthesis using LLM may
+struggle to fully comprehend the information structure, resulting in inconsistent reasoning structures or
+incorrect answers to the generated NL questions. Besides, disordered information retrieval will lead to
+excessive data processing and will collect redundant homogeneous information structures, which limits
+the diversity of information structures and reduces knowledge coverage.
+To overcome these limitations, we propose WebShaper1, a formalization-driven IS data synthesis
+paradigm, WebShaper, as illustrated in Figure 2(b). Unlike prior approaches, we first formalize information-
+1Without loss of generality, we use WebShaper to denote our data method, dataset, and model.
+2

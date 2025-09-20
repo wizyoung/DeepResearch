@@ -1,0 +1,96 @@
+Base Model
+SFT Data
+BrowseComp-en
+BrowseComp-zh
+GAIA
+HLE
+Qwen3-30B-A3B-Base
+SFT-A
+26.9
+29.8
+67.0
+23.5
+AgentFounder-30B-Base
+SFT-A
+31.4
+35.6
+72.8
+30.4
+Relative ∆
+SFT-A
++4.5
++5.8
++5.8
++6.9
+Qwen3-30B-A3B-Base
+SFT-B
+28.6
+35.6
+71.8
+27.0
+AgentFounder-30B-Base
+SFT-B
+39.9
+43.3
+72.8
+31.5
+Relative ∆
+SFT-B
++11.3
++7.7
++1.0
++4.5
+Qwen3-30B-A3B-Base
+SFT-C
+24.5
+36.7
+68.9
+27.9
+AgentFounder-30B-Base
+SFT-C
+38.8
+44.3
+71.8
+28.9
+Relative ∆
+SFT-C
++14.3
++7.6
++2.9
++1.0
+Table 3: Adaptability Validation of the AgentFounder Base Model with Different Post-Training Data.
+3.3
+Adaptability of the Agentic Base Model to Post-Training (RQ2)
+Agentic continual pre-training provides a pre-alignment base model that captures agentic behaviors prior
+to post-training. In this section, we investigate whether such a pre-alignment base model can effectively
+adapt to different paradigms of post-training.
+Experiment Design. We adopt the AgentFounder-30B-Base as the pre-alignment agentic base model. We
+then conduct further agentic alignment training using three distinct SFT datasets as described in Section
+3.1.1: SFT-A, SFT-B, and SFT-C. To ensure the robustness of results, we report Pass@1 accuracy on four
+general web search benchmarks: BrowseComp-en, BrowseComp-zh, GAIA, and Xbench-DeepSearch.
+Observation Results. Table 3 presents the results, from which we make the following three observations:
+(1) Agentic CPT demonstrates consistent and substantial improvements.
+Models fine-tuned on
+AgentFounder-30B-Base consistently outperform their Qwen3-30B-A3B-Base counterparts across all
+configurations, validating the universal effectiveness of Agentic Continual Pre-Training. Specifically,
+models trained on SFT-A, SFT-B, and SFT-C datasets show average performance gains of 5.75%, 6.13%,
+and 6.45% respectively when built upon AgentFounder-30B-Base.
+(2) Post-training data remains crucial for unlocking base model capabilities. Despite sharing the same
+AgentFounder-30B-Base foundation, models exhibit significant performance variations across different
+post-training datasets. For instance, on BrowseComp-zh, AgentFounder-30B with SFT-B outperforms
+variants with SFT-A and SFT-C by 8.5% and 3.0% respectively. This underscores the irreplaceable role
+of agentic post-training and highlights the ongoing challenge of fully realizing base model potential
+through optimal training strategies.
+(3) Information retrieval tasks benefit more from Agentic CPT than knowledge-intensive tasks. Com-
+pared to HLE, the BrowseComp benchmarks show more pronounced improvements from AgentFounder-
+30B-Base. We hypothesize that knowledge-intensive tasks like HLE require not only successful infor-
+mation retrieval but also strong reasoning capabilities to correctly utilize the retrieved knowledge. This
+suggests that enhancing base models’ knowledge comprehension abilities represents a promising future
+research direction.
+3.4
+Ablation Studies
+3.4.1
+Impact of Training Strategies (RQ3)
+We examine whether our proposed two-stage training paradigm can bring performance improvements.
+Experiment Design. We set the training tokens to 50B, using Qwen3-30B-A3B-Base as the initializa-
+13

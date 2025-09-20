@@ -1,0 +1,43 @@
+Grégoire Mialon, Clémentine Fourrier, Thomas Wolf, Yann LeCun, and Thomas Scialom. Gaia: a
+benchmark for general ai assistants. In The Twelfth International Conference on Learning Representations,
+2023.
+OpenAI. Hello GPT-4o, 2024. URL https://openai.com/index/hello-gpt-4o/.
+OpenAI. Deep research system card, 2025a. URL https://cdn.openai.com/deep-research-system-c
+ard.pdf.
+OpenAI. Introducing openai o3 and o4-mini, 2025b. URL https://lilianweng.github.io/posts/202
+4-11-28-reward-hacking/.
+Perplexity. Perplexity deep research, 2025. URL https://www.perplexity.ai/hub/blog/introducing
+-perplexity-deep-research.
+Long Phan, Alice Gatti, Ziwen Han, Nathaniel Li, Josephina Hu, Hugh Zhang, Chen Bo Calvin Zhang,
+Mohamed Shaaban, John Ling, Sean Shi, et al. Humanity’s last exam. arXiv preprint arXiv:2501.14249,
+2025.
+Daniel Rose, Vaishnavi Himakunthala, Andy Ouyang, Ryan He, Alex Mei, Yujie Lu, Michael Saxon,
+Chinmay Sonar, Diba Mirza, and William Yang Wang. Visual chain of thought: bridging logical gaps
+with multimodal infillings. arXiv preprint arXiv:2305.02317, 2023.
+Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan
+Zhang, YK Li, Yang Wu, et al. Deepseekmath: Pushing the limits of mathematical reasoning in open
+language models. arXiv preprint arXiv:2402.03300, 2024.
+Xiaoyu Shen, Rexhina Blloshmi, Dawei Zhu, Jiahuan Pei, and Wei Zhang. Assessing" implicit" retrieval
+robustness of large language models. arXiv preprint arXiv:2406.18134, 2024.
+Guangming Sheng, Chi Zhang, Zilingfeng Ye, Xibin Wu, Wang Zhang, Ru Zhang, Yanghua Peng, Haibin
+Lin, and Chuan Wu. Hybridflow: A flexible and efficient rlhf framework. In Proceedings of the Twentieth
+European Conference on Computer Systems, pp. 1279–1297, 2025.
+Huatong Song, Jinhao Jiang, Yingqian Min, Jie Chen, Zhipeng Chen, Wayne Xin Zhao, Lei Fang, and
+Ji-Rong Wen. R1-searcher: Incentivizing the search capability in llms via reinforcement learning. arXiv
+preprint arXiv:2503.05592, 2025.
+Zhaochen Su, Linjie Li, Mingyang Song, Yunzhuo Hao, Zhengyuan Yang, Jun Zhang, Guanjie Chen,
+Jiawei Gu, Juntao Li, Xiaoye Qu, et al. Openthinkimg: Learning to think with images via visual tool
+reinforcement learning. arXiv preprint arXiv:2505.08617, 2025a.
+Zhaochen Su, Peng Xia, Hangyu Guo, Zhenhua Liu, Yan Ma, Xiaoye Qu, Jiaqi Liu, Yanshu Li, Kaide
+Zeng, Zhengyuan Yang, et al. Thinking with images for multimodal reasoning: Foundations, methods,
+and future frontiers. arXiv preprint arXiv:2506.23918, 2025b.
+Jiabin Tang, Tianyu Fan, and Chao Huang. Autoagent: A fully-automated and zero-code framework for
+llm agents. arXiv preprint arXiv:2502.05957, 2025.
+Zhengwei Tao, Jialong Wu, Wenbiao Yin, Junkai Zhang, Baixuan Li, Haiyang Shen, Kuan Li, Liwen Zhang,
+Xinyu Wang, Yong Jiang, et al. Webshaper: Agentically data synthesizing via information-seeking
+formalization. arXiv preprint arXiv:2507.15061, 2025.
+Minzheng Wang, Longze Chen, Fu Cheng, Shengyi Liao, Xinghua Zhang, Bingli Wu, Haiyang Yu, Nan
+Xu, Lei Zhang, Run Luo, Yunshui Li, Min Yang, Fei Huang, and Yongbin Li. Leave no document
+behind: Benchmarking long-context llms with extended multi-doc QA. In Yaser Al-Onaizan, Mohit
+Bansal, and Yun-Nung Chen (eds.), Proceedings of the 2024 Conference on Empirical Methods in Natural
+25

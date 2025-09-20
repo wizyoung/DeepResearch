@@ -1,0 +1,52 @@
+Task Level 1
+Task Level 2
+Task Level 3
+Example 1: 
+Who received the Richard Dawkins 
+Award in 2004?
+Fuzz
+Sample
+Example 2: 
+Who was the most prominent figure 
+of the 1986 People Power Revolution?
+Example 1: 
+Who was the first academician of the 
+Chinese Academy of Sciences from the 
+alma mater of Alibaba’s current CEO?
+Example 2: 
+Which state is the hometown of the 
+American athlete who won the most 
+gold medals at the 2004 Olympic 
+Games located in?
+Figure 2: Information seeking tasks can be categorized into three levels. Level 1 features a relatively simple
+logical structure and can be answered directly or with a single, straightforward tool invocation. Level 2
+resembles multi-hop questions, where solutions are obtained through a fixed sequence of reasoning steps.
+Level 3 exhibits the most complex and variable topology after obfuscation, making it difficult to define
+manually, and its inherent uncertainty is challenging to reduce.
+three levels based on these two dimensions.
+• Level 1: tasks exhibit low uncertainty that is easily reduced. These include questions answerable
+by the model’s internal knowledge or through a single, straightforward web search.
+• Level 2: tasks, such as multi-hop QA, present high initial uncertainty but follow a clear path
+to resolution. Even with many steps, the entities are linked by well-defined logic, allowing
+uncertainty to be systematically reduced through a structured sequence of actions.
+• Level 3: the focus of our work, involves problems with both high uncertainty and high
+difficulty in its reduction. Here, entities are coupled in complex, emergent ways, lacking a
+pre-defined reasoning path. Solving these problems demands creative exploration and novel
+reasoning patterns that are difficult to specify manually.
+Constructing the Structural Foundation for Hard-to-Reduce Uncertainty
+To generate Level 3 tasks,
+we first construct a complex informational landscape where uncertainty is inherently difficult to reduce.
+Our process, inspired by random walks, builds knowledge graphs with emergent, non-linear structures.
+We begin by seeding the graph with a fuzzy entity retrieved from Wikidata’s SPARQL service to ensure
+a challenging starting point. Using simulated web browsing, we gather unstructured text and features
+about this entity from the internet. From this raw information, we extract related entities and the
+relationships connecting them, forming the initial nodes and edges. The crucial step is the iterative
+expansion: we probabilistically select existing nodes and seek out new, distinct entities to connect. This
+stochastic process discourages simple linear chains (characteristic of Level 2 tasks) and instead fosters a
+densely interconnected graph with intricate, overlapping relational paths. The resulting graph serves
+as a structural foundation for problems that lack a pre-defined reasoning path, compelling an agent to
+navigate a complex web of information rather than follow a straight line.
+Generating High-Uncertainty Questions via Subgraph Sampling and Obfuscation
+With these com-
+plex graphs as a foundation, we generate questions characterized by high initial uncertainty. This is
+4

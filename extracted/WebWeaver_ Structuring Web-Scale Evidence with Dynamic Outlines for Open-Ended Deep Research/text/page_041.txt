@@ -1,0 +1,46 @@
+Zhengwei Tao, Jialong Wu, Wenbiao Yin, Junkai Zhang, Baixuan Li, Haiyang Shen, Kuan Li, Liwen
+Zhang, Xinyu Wang, Yong Jiang, Pengjun Xie, Fei Huang, and Jingren Zhou. Webshaper: Agentically
+data synthesizing via information-seeking formalization. CoRR, abs/2507.15061, 2025. doi: 10.48550/A
+RXIV.2507.15061. URL https://doi.org/10.48550/arXiv.2507.15061.
+Kaiyang Wan, Honglin Mu, Rui Hao, Haoran Luo, Tianle Gu, and Xiuying Chen. A cognitive writing
+perspective for constrained long-form text generation. In Wanxiang Che, Joyce Nabende, Ekaterina
+Shutova, and Mohammad Taher Pilehvar (eds.), Findings of the Association for Computational Linguistics,
+ACL 2025, Vienna, Austria, July 27 - August 1, 2025, pp. 9832–9844. Association for Computational
+Linguistics, 2025. URL https://aclanthology.org/2025.findings-acl.511/.
+Qianyue Wang, Jinwu Hu, Zhengping Li, Yufeng Wang, Daiyuan Li, Yu Hu, and Mingkui Tan. Generating
+long-form story using dynamic hierarchical outlining with memory-enhancement. In Luis Chiruzzo,
+Alan Ritter, and Lu Wang (eds.), Proceedings of the 2025 Conference of the Nations of the Americas Chapter
+of the Association for Computational Linguistics: Human Language Technologies, NAACL 2025 - Volume
+1: Long Papers, Albuquerque, New Mexico, USA, April 29 - May 4, 2025, pp. 1352–1391. Association
+for Computational Linguistics, 2025. doi: 10.18653/V1/2025.NAACL-LONG.63. URL https:
+//doi.org/10.18653/v1/2025.naacl-long.63.
+Jason Wei, Zhiqing Sun, Spencer Papay, Scott McKinney, Jeffrey Han, Isa Fulford, Hyung Won Chung,
+Alex Tachard Passos, William Fedus, and Amelia Glaese. Browsecomp: A simple yet challenging
+benchmark for browsing agents. arXiv preprint arXiv:2504.12516, 2025.
+Jialong Wu, Baixuan Li, Runnan Fang, Wenbiao Yin, Liwen Zhang, Zhengwei Tao, Dingchu Zhang, Zekun
+Xi, Yong Jiang, Pengjun Xie, et al. Webdancer: Towards autonomous information seeking agency. arXiv
+preprint arXiv:2505.22648, 2025a.
+Weiqi Wu, Xin Guan, Shen Huang, Yong Jiang, Pengjun Xie, Fei Huang, Jiuxin Cao, Hai Zhao, and Jingren
+Zhou. Masksearch: A universal pre-training framework to enhance agentic search capability. 2025b.
+URL https://arxiv.org/abs/2505.20285.
+Yuhao Wu, Ming Shan Hee, Zhiqiang Hu, and Roy Ka-Wei Lee. Longgenbench: Benchmarking long-form
+generation in long context llms. In The Thirteenth International Conference on Learning Representations,
+2025c.
+An Yang, Anfeng Li, Baosong Yang, Beichen Zhang, Binyuan Hui, Bo Zheng, Bowen Yu, Chang Gao,
+Chengen Huang, Chenxu Lv, et al. Qwen3 technical report. arXiv preprint arXiv:2505.09388, 2025.
+Kevin Yang, Yuandong Tian, Nanyun Peng, and Dan Klein. Re3: Generating longer stories with recursive
+reprompting and revision. In Yoav Goldberg, Zornitsa Kozareva, and Yue Zhang (eds.), Proceedings of
+the 2022 Conference on Empirical Methods in Natural Language Processing, EMNLP 2022, Abu Dhabi, United
+Arab Emirates, December 7-11, 2022, pp. 4393–4479. Association for Computational Linguistics, 2022. doi:
+10.18653/V1/2022.EMNLP-MAIN.296. URL https://doi.org/10.18653/v1/2022.emnlp-main.296.
+Kevin Yang, Dan Klein, Nanyun Peng, and Yuandong Tian. DOC: improving long story coherence with
+detailed outline control. In Anna Rogers, Jordan L. Boyd-Graber, and Naoaki Okazaki (eds.), Proceedings
+of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), ACL
+2023, Toronto, Canada, July 9-14, 2023, pp. 3378–3465. Association for Computational Linguistics, 2023.
+doi: 10.18653/V1/2023.ACL-LONG.190. URL https://doi.org/10.18653/v1/2023.acl-long.190.
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, and Yuan Cao. Re-
+act: Synergizing reasoning and acting in language models. In International Conference on Learning
+Representations (ICLR), 2023.
+Haopeng Zhang, Philip S Yu, and Jiawei Zhang. A systematic survey of text summarization: From
+statistical methods to large language models. ACM Computing Surveys, 57(11):1–41, 2025.
+41

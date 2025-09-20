@@ -1,0 +1,48 @@
+various structurally distinct subgraphs, each forming the basis for generating questions that probe
+different reasoning patterns.
+Recent advancements in data construction for web agents have also aimed at acquiring such structured
+information. These methods typically initiate from a simple "seed" question, progressively expanding the
+graph by employing external tools (e.g., search or browsing) to discover related entities and facts (Gao
+et al.; Liu et al., 2025a; Tao et al., 2025). However, a significant drawback of this "easy-to-hard" or iterative
+expansion strategy is its inherent tendency to produce predominantly tree-like or acyclic logical structures.
+While effective for certain types of information retrieval, this approach inherently struggles to capture or
+generate scenarios involving complex cyclic relationships, feedback loops, or intricate interdependencies
+that are common in real-world knowledge graphs.
+Building upon the foundational framework of SailorFog-QA (Li et al., 2025b), V2 still starts with a seed
+entity and leverages web tools to discover related entities and extract their corresponding information.
+However, to achieve a more comprehensive topological coverage to overcome the limitations of acyclic
+graphs,we introduce significant enhancements to the graph expansion phase. Specifically, we actively
+seek out and establish more dense connections between nodes, intentionally creating cyclic structures.
+This ensures that the resulting graph is not merely a sprawling tree but a richly interconnected web, more
+accurately reflecting the complex, non-linear nature of real-world knowledge. Beyond these structural
+improvements, we now preserve more complete procedural information, such as the specific search
+queries used and the source URLs that led to a new discovery. Furthermore, we compute and store
+various statistical features for each entity, which is instrumental for the subsequent QA generation phase,
+enabling us to craft more nuanced and challenging questions.
+3.2
+Subgraph Extraction
+In the previous version, our subgraph sampling strategy relied on random sampling, with an attempt
+to enumerate all possible substructures of a fixed edge count. However, as the graph in V2 has become
+substantially denser, such an exhaustive enumeration is computationally infeasible due to combinatorial
+explosion. To overcome this scalability issue, we adopt a random-walk based approach for subgraph
+extraction. Ultimately, this strategy enables us to efficiently gather a sufficient quantity of non-isomorphic
+(verified by Weisfeiler-Leman algorithm (Weisfeiler & Leman, 1968)), connected subgraphs that collec-
+tively represent the full spectrum of structural complexities, without the prohibitive cost of a brute-force
+search.
+3.3
+QA Generation
+When generating QA, we do not directly feed the subgraph into the LLM end-to-end to produce the
+result. Instead, we first analyze how many non-isomorphic nodes exist in a given topology, so that the QA
+focus can be evenly distributed across all orbit nodes (i.e., nodes that occupy different structural roles).
+Moreover, obfuscation has become one of the most common methods for introducing uncertainty and
+eliciting high-order reasoning patterns in the construction of challenging information-seeking tasks (Li
+et al., 2025b; Gao et al.; Shi et al., 2025; Liu et al., 2025a; Geng et al., 2025). Specifically, obfuscation
+corresponds to the reasoning behavior required when a query’s key elements—such as specific entities,
+dates, or values—are replaced with more general or ambiguous descriptions. Answering such questions
+compels the model to move beyond simple keyword matching, engaging in contextual inference to
+disambiguate underspecified entities, generating and verifying hypotheses through iterative information
+gathering, and synthesizing evidence from multiple sources to converge on a conclusive answer. However,
+this set of skills, while crucial, represents only a subset of the capabilities required for a truly super-human
+web agent. To this end, we introduce a wider array of defined uncertainties, aiming to elicit a more
+diverse and comprehensive suite of advanced reasoning abilities from the model.
+4

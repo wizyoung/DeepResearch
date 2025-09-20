@@ -1,0 +1,51 @@
+SS easy SS medium SS hard
+MS easy MS medium MS hard
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+Performance
+RAG
+RAG w/ WebWalker
+(a)
+0
+5
+10
+15
+20
+25
+Number of Action K
+0.0
+0.1
+0.2
+0.3
+0.4
+Performace
+WebWalker
+RAG
+(b)
+Figure 7: (a) Performance under standard RAG and RAG combined with WebWalker configurations. SS
+and MS denote single-source and multi-source QAs. (b) Overall performance on WebWalker and
+RAG combined WebWalker at varying values of K, using Qwen-Plus as backbones.
+Findings (ii): WebWalker can be a module in agentic RAG system, enabling vertical exploration .
+6.3
+Scaling Up on Action Count K
+Previous work (Yue et al., 2024) explored the inference scaling laws for the RAG system by examining the
+impact of increasing retrieved documents. We scale up the amount of K ∈{5, 10, 15, 20, 25} to study the
+impact of scaling during the inference phase when tracing source information. Figure 7(b) shows the
+results of scaling up, where larger values of K lead to better performance, validating the feasibility of
+vertical scaling within a certain range.
+Findings (iii): Scaling the process of digging through links could represent a potential direction for vertical
+exploration in RAG systems.
+7
+Conclusion
+We introduce WebWalkerQA, a benchmark for evaluating LLMs’ web traversal abilities in complex, multi-
+step information-seeking tasks. We also proposed WebWalker, a multi-agent framework that mimics
+human-like web navigation, combining exploration and critique. Experiments show that WebWalkerQA
+effectively challenges RAG systems, and combining RAG with WebWalker improves web navigation
+performance. Our work highlights the importance of deep, vertical exploration in web-based tasks,
+paving the way for more scalable and reliable LLM-based information retrieval integrated with RAG.
+10

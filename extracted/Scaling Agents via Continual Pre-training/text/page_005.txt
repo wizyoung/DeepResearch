@@ -1,0 +1,48 @@
+we reformulate it into diverse training contexts that simulate real-world agent scenarios. This is accom-
+plished through a two-phase transformation approach that systematically generates multi-style questions
+from static knowledge sources (illustrated in Figure 3):
+Phase 1: Entity-Anchored Open-World Knowledge Memory. We transform continuously updated
+unstructured text from various sources into an open-world memory, where entities serve as indexing
+keys mapping to their associated declarative statements. Unlike traditional knowledge graphs with fixed
+schemas (Auer et al., 2007; Vrandeˇci´c & Krötzsch, 2014), we do not focus on inter-entity relationships, but
+instead enhance the density of corresponding knowledge statements through reformulation, preserving
+critical information such as temporal markers, sources, and original stylistic features. For instance, web
+data containing “The number of tourist arrivals in France increased from 3,793 thousand in May 2025
+to 4,222 thousand in June” can be reformulated as: (“France”, “Tourist arrivals in France reached 4,222
+thousand in June 2025”), rather than limiting to conventional wiki-style knowledge such as “Paris is
+the capital of France.” Through continuous updates from search results and web access outcomes, both
+entities and their corresponding knowledge statements continuously expand, forming a living memory
+system whose content better aligns with the information distribution of the internet world.
+Phase 2: Multi-Style Question Synthesis. Drawing on the entity-anchored open-world memory, we
+sample entity clusters along with their associated knowledge statements to synthesize diverse ques-
+tions spanning factual retrieval, numerical computation, multi-hop reasoning, and synthesis tasks. This
+transformation converts static knowledge into dynamic problem-solving contexts that necessitate active
+information retrieval, integration, and tool innovations, thereby establishing a foundation for reinforcing
+agentic behaviors in subsequent data synthesis. By exploiting the high density of statements per entity
+to induce implicit cross-entity links, our approach yields diverse, reliable, and novel questions. Unlike
+WebSailor (Li et al., 2025b) which requires explicit relationship construction between entities, our method
+leverages the richness of reformulated knowledge statements from the entity-anchored memory to create
+natural knowledge intersections, substantially improving the reliability and novelty of question genera-
+tion. Moreover, the comprehensive knowledge coverage per entity enables synthesis of sophisticated
+questions even from single-entity contexts.
+Example: Generated Questions with the entity "Paris"
+Source Entity: Paris
+Knowledge 1: The Louvre welcomed 8.7 million visitors in 2024. Visitor numbers thus remained at 2023
+levels (8.9 million visitors) in the rather unique context of the Paris 2024 Olympic and Paralympic Games
+Knowledge 2: In 2023, France’s bedbug outbreak sparked a political row; Paris pushed pre-2024 Olympic
+action, and the transport minister summoned transit operators.
+Knowledge 3: At Paris 2025, Airbus announced 132 firm orders and up to 106 additional options/in-
+creases—AviLease (40+37), Riyadh Air (25+25), ANA (27), LOT (40+44)—underscoring Paris as a global
+aviation deal hub.
+. . .
+Question: At the biennial aerospace marketplace named after the city whose pyramid-fronted
+museum recorded high single-digit millions of visitors during a period of global athletic celebration,
+and where the year before a citywide nuisance led authorities to convene transit operators, which
+buyer placed a perfectly balanced commitment with firm orders equal to options?
+Answer: Riyadh Air
+This example synthesizes a question from the entity Paris using three news-sourced statements. Knowl-
+edge 1 offers an indirect locational anchor via visitor counts at the pyramid-fronted museum during a
+global sporting period, which localizes the marketplace without naming the city. Knowledge 2 adds a
+prior-year civic disturbance that supplies a relative timeline and helps isolate the 2025 iteration of the
+biennial event. Knowledge 3 provides the order breakdown at that edition, establishes the criterion “firm
+5

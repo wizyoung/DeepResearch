@@ -1,0 +1,45 @@
+Case Trajectory
+<think> thinking process here </think>
+<tool_call>
+"name": "tool name here", "arguments": "parameter name here": parameter value here, "another
+parameter name here": another parameter value here, ...
+</tool_call>
+<tool_response>
+tool_response here
+</tool_response>
+(more thinking processes, tool calls and tool responses here)
+<think> thinking process here </think>
+<answer> answer here </answer>
+D.3
+Training Details
+We use Llama-Factory (Zheng et al., 2024) for SFT and Verl (Sheng et al., 2025) for RL training. For SFT,
+we use a batch size of 32, learning rate of 5e-6 with a minimum of 1e-10, warmup plus cosine decay
+schedule, and a weight decay of 0.1. For RL training, the rollout number in a group is 8, the temperature
+is 1.0, top_p = 1.0, the batch size is 128, the mini batch size is 32, and the learning rate is 1e-6.
+D.4
+Benchmarks
+We evaluate our method on five challenging benchmarks:
+• BrowseComp-VL: We sample 100 instances from Level 1 and 200 instances from Level 2 to
+form the evaluation set. Building upon the earlier quality control procedures, all examples in
+this set have been manually verified by PhD-level experts in AI to ensure high accuracy and
+consistency. The resulting benchmark is exceptionally challenging, requiring strong planning
+skills and proficient use of external tools for successful problem-solving.
+• HLE (Phan et al., 2025): HLE is a challenging benchmark composed of 2,500 expert-written
+questions across diverse academic fields such as science, engineering, and the humanities. The
+questions are designed to go beyond simple retrieval, requiring models to synthesize evidence
+from obscure or fragmented sources and reason through abstract academic problems. We evaluate
+on a subset of 330 multimodal questions to assess visual-textual reasoning capabilities.
+• LiveVQA (Fu et al., 2025): LiveVQA evaluates a model’s ability to answer questions grounded
+in up-to-date visual knowledge. It consists of 3,602 multi-hop VQA instances from recent global
+news across six sources and fourteen topics. We evaluate on a 300-example subset.
+• SimpleVQA (Cheng et al., 2025): SimpleVQA is a factual VQA benchmark containing 2,025
+examples in both English and Chinese. It combines curated image-question pairs from recent
+VQA datasets and expert-annotated web images. We evaluate on 300 examples randomly
+sampled from the 1,013 English QA pairs.
+• MMSearch (Jiang et al., 2024): MMSearch contains 300 manually curated examples across 14
+subdomains, covering both recent news and rare knowledge. Of these, 171 are paired with
+images. We use this visual subset for evaluation.
+D.5
+Evaluation Prompt
+We used the official prompt of HLE for scoring.
+18

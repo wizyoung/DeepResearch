@@ -1,0 +1,39 @@
+Figure 4: Planning Action Synthesis.
+orders equal options,” and narrows the answer to Riyadh Air. Since these facts are recent and fluid,
+reliable resolution typically requires external retrieval with search tools.
+2.2.2
+Planning Action Synthesis
+While we have constructed large-scale, scalable questions to cover diverse scenarios, questions alone
+cannot constitute complete agent training data, because corresponding reasoning processes and action
+sequences are also required.
+Scalability Challenges. The intuitive solution is to leverage LLMs to perform tool invocations and
+reasoning for each question, generating complete agent trajectories. However, this approach faces severe
+scalability bottlenecks: (1) commercial API costs are prohibitively expensive, particularly for search
+engine APIs (e.g., Google Search API) and web access APIs (e.g., Jina Reader API (Jina.ai, 2025) and
+Scraper (scr, 2025)); (2) complete trajectory generation is inefficient and cannot meet the massive data
+requirements for continual pre-training.
+Insighs. To address this challenge, we propose a scalable reasoning-action synthesis approach. We
+observe that the initial analysis of complex problems by LLMs typically involves problem decomposition,
+information requirement identification, and solution planning, which inherently constitutes high-quality
+planning data. More importantly, the quality of first-step reasoning exhibits strong positive correlation
+with final task completion rates.
+Based on this finding and inspired by multi-reference learning (Zheng et al., 2018; Banerjee & Lavie, 2005),
+FAS generates multiple reasoning-action data for each problem in planning action synthesis. As illustrated
+in Figure 4 (left), given a query Q, we employ LLMs to generate K diverse problem analyses along with
+their corresponding first-step action predictions (tool invocations or direct answers). This approach yields
+two key advantages: (1) it generates only reasoning chains and tool calls without incurring actual API
+invocation costs during training data production; (2) the K distinct analytical perspectives effectively
+expand the action space exploration for each problem.
+However, we realize that the aforementioned approach faces two limitations: (1) the generated reasoning-
+action data may still exhibit similarity despite adjusting parameters like temperature to enhance diversity;
+(2) it leads to repetitive question text in training data, which is not our optimization target. To address
+these issues, we propose an improved strategy. Instead of generating K iterations of reasoning-action
+data for a single question, we generate reasoning-action data for K different questions that share the
+same knowledge memory but differ in style. This approach better covers training contexts and explores
+the potential reasoning-action space more comprehensively. In practice, we adopt this question-level
+diversity expansion as the planning action synthesis method in FAS.
+Reject Sampling with Knowledge Alignment Verification. The reasoning and action predictions are not
+always accurate, and we lack end-to-end trajectory signals to verify their correctness. Beneficially, since
+the knowledge involved in question construction is accessible, we can implement reject sampling based
+on knowledge alignment verification. Specifically, we employ an LLM-as-Judge approach to evaluate
+6

@@ -230,6 +230,33 @@ If this work is helpful, please kindly cite as:
 
 > 说明：以上为关键代码片段，结合上下文解释其作用与调用关系。
 
+## 六、补充注释与论文要点对齐（精细解读）
+
+### 1）`src/agent.py` 总体逻辑与论文“探索-评审”范式对齐
+- ReAct 主循环（`_run`）严格遵循论文的“Thought → Action → Observation”链；每次工具返回 Observation 后，调用两个阶段函数：
+  - `observation_information_extraction`：判断 Observation 是否含与 Query 相关的“有效信息”，若有则结构化提取并存入 `self.momery`。
+  - `critic_information`：对累计 `memory` 进行“能否回答”的判定；若足够则输出 `Final Answer` 并停止探索。
+- 这一流程与论文中“横向/纵向整合”的思想一致：多步点击（纵向深入网页层级）+ 多条信息的聚合记忆（横向整合来源）。
+
+注：`self.extra_generate_cfg` 中的 `stop=['Observation:', 'Observation:\n']` 对流式中止点尤为关键，可避免模型在应当让工具继续工作的时刻“跑偏”生成。
+
+### 2）`src/app.py` 的工具抽象与动作空间约束
+- `@register_tool('visit_page')` 将动作空间严格收敛为“点击按钮文本”。系统把 `<button>文本` → URL 的映射缓存在 `BUTTON_URL_ADIC.json` 中。
+- 优点：
+  - 将“浏览器复杂 DOM 操作”抽象为“点击一个按钮文本”，极大简化了模型决策空间，降低无关动作与失败率。
+  - 工具返回 Markdown 化页面与新一轮按钮列表，为下一轮 ReAct 提供了结构化 Observation。
+
+### 3）与 RAG 的结合位置与价值
+- 论文中强调 RAG 与站点遍历的互补性：RAG 做外部横向检索，WebWalker 做站内纵向深挖；在代码中，这体现在：
+  - ReAct Prompt（`prompts.py/SYSTEM_EXPLORER`）强制“每步必须行动”，避免“纯语言反刍”；
+  - 工具在 Observation 中提供结构化内容，后续可被外部检索/记忆模块二次利用（虽然当前 demo 里未直接调用外部检索，但接口设计上是兼容的）。
+
+### 4）工程注意点（给上手者）
+- 建议对 `extract_links_with_text` 的规则再做细化（如适应更多 SPA 框架、懒加载、遮罩层等）。
+- `momery` 命名应更正为 `memory`，同时考虑去重、合并策略，避免冗余。
+- 若要训练/评估端到端智能体：将 `critic_information` 的“足够/不足”判定信号用于奖励设计，能更稳定地驱动 RL 采样。
+
+
 ### 文件：`WebAgent/WebWalker/src/agent.py`
 
 ```py

@@ -1,0 +1,85 @@
+Analyze
+ImageEdges
+Texture 
+Analysis
+Web Search
+Text
+Inference
+Text 
+Inference
+Image Search
+Web Search
+Text
+Inference
+VL Agent
+Search Agent
+WebWatcher
+VL DeepResearch
+Question: On the Wikipedia page 
+for the animal in the provided 
+image, how many revisions from 
+before 2020 had "visual edit" tags?
+> Poor tool usage, reliance on shallow problem 
+decomposition, and lack of deep reasoning capabilities.
+Answer: 11
+Response: 0
+ImageSearch
+VisualDiff
+ImageVist
+WebSearch
+PageView
+EvidenceSum
+OCR
+CrossValidate
+Count
+Thought
+> Genuine multi-step reasoning with appropriate tool use 
+and cross-validation.
+Thought
+Thought
+looks like a pelican.
+query="pelican Wikipedia"
+maybe a penguin or a seagull.
+query= “penguin”, “seagull”
+Atlantic 
+puffin
+Wikipedia
+Wikipedia
+history
+Visual
+edit
+> Excessive edge/texture inference, amplifying downstream 
+tool errors.
+Response: 11
+Response:
+2 or 8
+Double 
+check
+Figure 2: Comparison of VL reasoning agents. WebWatcher resolves the GAIA case that defeats either
+vision-only reasoning or search-based agents, demonstrating the strength of multi-tool integration and
+in-depth reasoning generalization.
+generated data.
+Moreover, to enable effective use of multiple external tools, first we implement the integration of multiple
+tools, including Web Image Search, Web Text Search, Webpage Visit, Code Interpreter and internal OCR.
+However, a key challenge lies in obtaining high-quality reasoning trajectories. Firstly, recent reasoning
+agents generate traces that often tend to be long and templated, with limited diversity or adaptability
+across tasks (Rose et al., 2023; Bi et al., 2025). Secondly, coordinating multiple tools, each of which has
+distinct input-output formats and reasoning roles, makes trajectory construction even more complex. To
+address this, we develop a fully automated pipeline that uses prompting to construct reasoning trajectories
+from action-observation sequences. Unlike hand-crafted CoT-style traces or template-based rationales,
+our trajectories are grounded in actual tool-use behavior and reflect procedural decision-making aligned
+with complex reasoning demands. We also combine LLM-based prompting with rule-based filtering
+to ensure high-quality. Then we finetune the agent model using synthesized high-quality trajectories
+that reflect deep reasoning across tools, and further optimize it via reinforcement learning algorithm,
+GRPO (Shao et al., 2024).
+Finally, we introduce a challenging VQA benchmark BrowseComp-VL, which mirrors the complexity of
+BrowseComp, but extends it into the visual domain, emphasizing challenges that demand both perception
+and superhuman information-gathering abilities. Queries are constructed to be long, BrowseComp-style,
+and entity-obfuscated, requiring agents to perform cross-modal inference, thorough information-seeking,
+and high-level planning to resolve. Perception alone is not sufficient. Agents need to use external tools
+such as web search, image retrieval and webpage browsing to gather and integrate evidence.
+As shown in Fig.1, WebWatcher achieves strong performance on several high-difficulty benchmarks,
+including HLE, LiveVQA, BrowseComp-VL, and MMSearch. It consistently outperforms existing open-
+source multimodal research agents and proprietary systems on four reasoning benchmarks, and show a
+competitive performance on the perception benchmark, SimpleVQA.
+3

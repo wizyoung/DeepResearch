@@ -1,0 +1,95 @@
+g unfolds over T(i)
+g
+rounds, where each round j produces a training tuple (s(i)
+g,j, r(i)
+g,j, o(i)
+g,j) consisting of the
+state, response, and tool response. This decomposition yields a rich training corpus:
+C(i) =
+n
+(s(i)
+g,j, r(i)
+g,j) : g ∈[1, G], j ∈[1, T(i)
+g ]
+o
+,
+(2)
+containing ∑G
+g=1 T(i)
+g
+samples per question. Aggregating across all N training questions, our iterative
+paradigm generates a total corpus:
+Ctotal =
+N
+[
+i=1
+C(i),
+|Ctotal| =
+N
+∑
+i=1
+G
+∑
+g=1
+T(i)
+g .
+(3)
+This represents a substantial data amplification compared to mono-contextual approaches which would
+yield only N × G samples. However, the variable trajectory lengths introduce a practical challenge:
+the total sample count varies across batches due to different T(i)
+g
+values, conflicting with distributed
+training requirements for fixed batch sizes. To address this while preserving data efficiency, we employ
+minimal-loss downsampling, reducing the entire training corpus to the largest multiple of the data parallel
+(DP) size that does not exceed the original count:
+|Ctrain| =
+|Ctotal|
+DPsize
+
+× DPsize.
+(4)
+This approach ensures uniform distribution across devices while minimizing data loss (typically <1%),
+maintaining distributed training stability.
+To optimize IterResearch over these multi-round trajectories, we adopt Group Sequence Policy Optimiza-
+tion (GSPO) (Zheng et al., 2025). We optimize the following objective:
+JGSPO(θ) = Eq∼Q,Ctrain∼πθold(·|q)
+"
+1
+|Ctrain|
+G
+∑
+g=1
+Tg
+∑
+j=1
+min(ρg,j(θ) ˆAg,j, clip(ρg,j(θ), 1 −ε, 1 + ε) ˆAg,j)
+#
+(5)
+where Q is the training set, ˆAg,j =
+rg,j−µr
+σr
+is the normalized advantage, with µr and σr computed across all
+(g, j) pairs in Ctrain, and ρg,j(θ) is the importance ratio based on sequence likelihood. Notably, all ∑G
+g=1 Tg
+rounds from the G trajectories for question q form one group, enabling efficient batched training while
+respecting the variable-length nature of our iterative research process. This differs from traditional GSPO
+where each trajectory would be treated separately—our approach leverages the natural decomposition
+of trajectories into rounds, treating each round as an independent training sample while maintaining
+group-level advantage normalization across all rounds. This design maximizes data utilization and
+ensures balanced learning across different research depths.
+4.3
+Research-Synthesis: Harnessing Test-time Scaling with IterResearch
+To further unlock the potential of IterResearch, we further investigate test-time scaling. Given that
+DeepResearch involves multi-round tool calls and intensive reasoning, directly aggregating the context
+from every complete trajectory is computationally infeasible. Therefore, effective context management
+during test-time scaling is crucial, enabling the use of minimal context to accurately represent the
+problem-solving logic of a trajectory.
+To address this challenge, we introduce the Research-Synthesis Framework as illustrated in Figure 4. The
+framework consists of two distinct phases: Parallel Research and Integrative Synthesis. The former phase
+fosters the concurrent exploration of diverse problem-solving approaches, while the latter integrates
+these disparate perspectives into a single, unified solution.
+Parallel Research
+In Parallel Research phase, we employ n Research Agents to independently solve
+the target problem. Each agent adheres to the IterResearch paradigm but carves out a unique solution
+trajectory by invoking distinct tools and generating different lines of reasoning. Ultimately, this phase
+8

@@ -1,0 +1,10 @@
+7
+Conclusion
+In this work, we propose a systematic framework for building end-to-end multi-step information-seeking
+web agents from scratch. By introducing scalable QA data synthesis methods and a two-stage training
+pipeline combining SFT and on-policy RL, our WebDancer agent achieves strong performance on GAIA
+and WebWalkerQA. These findings underscore the significance of our proposed training strategy and
+provide valuable insights into the critical aspects of agent training. Moving forward, this research offers
+actionable and systematic pathways for the community to advance the development of increasingly
+sophisticated agentic models capable of tackling complex real-world information-seeking tasks.
+11

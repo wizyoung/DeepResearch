@@ -1,0 +1,41 @@
+Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph E.
+Gonzalez, Hao Zhang, and Ion Stoica. Efficient memory management for large language model serving
+with pagedattention. In Proceedings of the ACM SIGOPS 29th Symposium on Operating Systems Principles,
+2023.
+Guohao Li, Hasan Abed Al Kader Hammoud, Hani Itani, Dmitrii Khizbullin, and Bernard Ghanem.
+Camel: Communicative agents for "mind" exploration of large language model society. In Thirty-seventh
+Conference on Neural Information Processing Systems, 2023.
+Xiaoxi Li, Guanting Dong, Jiajie Jin, Yuyao Zhang, Yujia Zhou, Yutao Zhu, Peitian Zhang, and Zhicheng
+Dou. Search-o1: Agentic search-enhanced large reasoning models. arXiv preprint arXiv:2501.05366,
+2025a.
+Yuetai Li, Xiang Yue, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Bill Yuchen Lin, Bhaskar Ramasubra-
+manian, and Radha Poovendran. Small models struggle to learn from strong reasoners. arXiv preprint
+arXiv:2502.12143, 2025b.
+Xinbin Liang, Jinyu Xiang, Zhaoyang Yu, Jiayi Zhang, Sirui Hong, Sheng Fan, and Xiao Tang. Openmanus:
+An open-source framework for building general ai agents, 2025. URL https://doi.org/10.5281/ze
+nodo.15186407.
+Bang Liu, Xinfeng Li, Jiayi Zhang, Jinlin Wang, Tanjin He, Sirui Hong, Hongzhang Liu, Shaokun Zhang,
+Kaitao Song, Kunlun Zhu, et al. Advances and challenges in foundation agents: From brain-inspired
+intelligence to evolutionary, collaborative, and safe systems. arXiv preprint arXiv:2504.01990, 2025a.
+Zijun Liu, Peiyi Wang, Runxin Xu, Shirong Ma, Chong Ruan, Peng Li, Yang Liu, and Yu Wu. Inference-
+time scaling for generalist reward modeling. arXiv preprint arXiv:2504.02495, 2025b.
+Xinji Mai, Haotian Xu, Xing W, Weinong Wang, Yingying Zhang, and Wenqiang Zhang. Agent rl scaling
+law: Agent rl with spontaneous code execution for mathematical problem solving, 2025.
+Alex Mallen, Akari Asai, Victor Zhong, Rajarshi Das, Daniel Khashabi, and Hannaneh Hajishirzi. When
+not to trust language models: Investigating effectiveness of parametric and non-parametric memories,
+2022.
+Grégoire Mialon, Clémentine Fourrier, Thomas Wolf, Yann LeCun, and Thomas Scialom. Gaia: a
+benchmark for general ai assistants. In The Twelfth International Conference on Learning Representations,
+2023.
+OpenAI. Gpt-4 system card, 2022. URL https://cdn.openai.com/papers/gpt-4-system-card.pdf.
+OpenAI. Deep research system card, 2025a. URL https://cdn.openai.com/deep-research-system-c
+ard.pdf.
+OpenAI. Introducing simpleqa, 2025b. URL https://openai.com/index/introducing-simpleqa/.
+Long Phan, Alice Gatti, Ziwen Han, Nathaniel Li, Josephina Hu, Hugh Zhang, Chen Bo Calvin Zhang,
+Mohamed Shaaban, John Ling, Sean Shi, et al. Humanity’s last exam. arXiv preprint arXiv:2501.14249,
+2025.
+Ofir Press, Muru Zhang, Sewon Min, Ludwig Schmidt, Noah A. Smith, and Mike Lewis. Measuring and
+narrowing the compositionality gap in language models, 2022.
+Cheng Qian, Emre Can Acikgoz, Qi He, Hongru Wang, Xiusi Chen, Dilek Hakkani-Tür, Gokhan Tur, and
+Heng Ji. Toolrl: Reward is all tool learning needs. arXiv preprint arXiv:2504.13958, 2025.
+13

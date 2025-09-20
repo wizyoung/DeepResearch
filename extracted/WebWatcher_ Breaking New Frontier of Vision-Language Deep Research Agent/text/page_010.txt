@@ -1,0 +1,141 @@
+Table 2: Main results on four challenging benchmarks. Avg. signifies the average score of three inference
+runs.
+Backbone
+BC-VL
+LiveVQA
+MMSearch
+SimpleVQA
+Level1
+Level2
+Avg.
+Direct Inference
+GPT-4o
+6.4
+4.0
+5.5
+29.7
+18.7
+47.0
+Gemini-2.5-flash
+11.6
+6.0
+9.6
+35.0
+19.6
+63.0
+Claude-3.7-Sonnet
+8.8
+4.0
+7.1
+23.7
+12.3
+42.7
+Qwen-2.5-VL-7B
+0.8
+0.0
+0.5
+22.7
+4.09
+30.7
+Qwen-2.5-VL-32B
+3.2
+1.0
+2.4
+26.3
+7.60
+40.7
+Qwen-2.5-VL-72B
+9.2
+3.0
+7.1
+30.3
+11.7
+51.3
+RAG Workflow
+GPT-4o
+16.8
+7.0
+13.4
+34.0
+24.1
+61.6
+Gemini-2.5-flash
+15.2
+9.0
+13.0
+41.3
+43.9
+68.6
+Claude-3.7-Sonnet
+13.9
+6.0
+11.2
+30.3
+32.7
+59.3
+Qwen-2.5-VL-7B
+3.6
+1.0
+2.7
+21.7
+9.94
+21.0
+Qwen-2.5-VL-32B
+9.4
+3.0
+7.2
+30.5
+17.5
+44.6
+Qwen-2.5-VL-72B
+14.4
+6.0
+11.5
+35.7
+29.2
+58.6
+Agents
+OmniSearch (GPT-4o)
+19.7
+10.0
+16.3
+40.9
+49.7
+63.0
+WebWatcher-7B
+23.6
+17.0
+21.2
+51.2
+49.1
+54.3
+WebWatcher-32B
+28.4
+25.0
+27.0
+58.7
+55.3
+59.0
+Omnisearch baseline by a substantial margin. Moreover, WebWatcher-32B demonstrates particularly
+significant gains in challenging domains such as Biology and Physics, underscoring the effectiveness and
+broad applicability of our agentic approach for solving real-world, open-domain, high-stakes exams.
+Results on Four Challenging Benchmarks. Results in Tab. 2 highlight the comparative advantages of
+WebWatcher across four challenging VQA benchmarks. While direct inference methods with strong
+MLLMs remain limited, and RAG workflows offer consistent improvement, especially on LiveVQA and
+SimpleVQA, our agentic system shows clear superiority. Among these, our proposed WebWatcher-32B
+stands out, delivering top-tier performance with 58.7% on LiveVQA, 55.3% on MMSearch, and highly
+competitive results on the other two datasets. Compared to both RAG-based and previous agentic
+baselines such as OmniSearch, WebWatcher achieves more stable and superior results, particularly on
+demanding, real-world visual search benchmarks like MMSearch. Furthermore, the BrowseComp-VL
+benchmark is purposely difficult, requiring multi-page web browsing plus fine-grained visual grounding,
+and most baselines stay below 20%, underscoring the benefit of our dynamic tool-use loop. Even
+on SimpleVQA, which mainly tests fine-grained visual perception and reasoning rather than external
+knowledge, WebWatcher attains a leading score of 52.6%. This demonstrates that our approach not only
+excels at knowledge-intensive tasks but also exhibits robust visual reasoning capabilities, highlighting its
+broad applicability across diverse VQA scenarios.
+4.3
+Analysis
+Number of Tool Calls. Fig. 5 contrasts the share of calls to each tool with the unique demands of every
+benchmark. HLE involves a diverse set of tasks, including multimodal search, numerical computation,
+and visual reasoning, so no single tool dominates. Web Text Search, Web Image Search, and Code Interpreter
+10

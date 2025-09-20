@@ -1,0 +1,38 @@
+Jialong Wu, Wenbiao Yin, Yong Jiang, Zhenglin Wang, Zekun Xi, Runnan Fang, Linhai Zhang, Yulan He,
+Deyu Zhou, Pengjun Xie, and Fei Huang. Webwalker: Benchmarking llms in web traversal, 2025b.
+URL https://arxiv.org/abs/2501.07572.
+Qingyun Wu, Gagan Bansal, Jieyu Zhang, Yiran Wu, Beibin Li, Erkang Zhu, Li Jiang, Xiaoyun Zhang,
+Shaokun Zhang, Jiale Liu, et al. Autogen: Enabling next-gen llm applications via multi-agent conversa-
+tion. arXiv preprint arXiv:2308.08155, 2023.
+Weiqi Wu, Xin Guan, Shen Huang, Yong Jiang, Pengjun Xie, Fei Huang, Jiuxin Cao, Hai Zhao, and Jingren
+Zhou. Masksearch: A universal pre-training framework to enhance agentic search capability, 2025c.
+URL https://arxiv.org/abs/2505.20285.
+Tianle Xia, Liang Ding, Guojia Wan, Yibing Zhan, Bo Du, and Dacheng Tao. Improving complex reasoning
+over knowledge graph with logic-aware curriculum tuning. In Proceedings of the AAAI Conference on
+Artificial Intelligence, volume 39, pp. 12881–12889, 2025.
+Huajian Xin, Daya Guo, Zhihong Shao, Zhizhou Ren, Qihao Zhu, Bo Liu, Chong Ruan, Wenda Li, and
+Xiaodan Liang. Deepseek-prover: Advancing theorem proving in llms through large-scale synthetic
+data. arXiv preprint arXiv:2405.14333, 2024.
+An Yang, Baosong Yang, Beichen Zhang, Binyuan Hui, Bo Zheng, Bowen Yu, Chengyuan Li, Dayiheng
+Liu, Fei Huang, Haoran Wei, et al. Qwen2.5 technical report. arXiv preprint arXiv:2412.15115, 2024.
+Zhilin Yang, Peng Qi, Saizheng Zhang, Yoshua Bengio, William W Cohen, Ruslan Salakhutdinov, and
+Christopher D Manning. Hotpotqa: A dataset for diverse, explainable multi-hop question answering.
+arXiv preprint arXiv:1809.09600, 2018.
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, and Yuan Cao. Re-
+act: Synergizing reasoning and acting in language models. In International Conference on Learning
+Representations (ICLR), 2023.
+Qinghao Ye, Haiyang Xu, Guohai Xu, Jiabo Ye, Ming Yan, Yiyang Zhou, Junyang Wang, Anwen Hu,
+Pengcheng Shi, Yaya Shi, et al. mPLUG-Owl: Modularization empowers large language models with
+multimodality. CoRR, abs/2304.14178, 2023.
+Dingchu Zhang, Yida Zhao, Jialong Wu, Baixuan Li, Wenbiao Yin, Liwen Zhang, Yong Jiang, Yufeng Li,
+Kewei Tu, Pengjun Xie, and Fei Huang. Evolvesearch: An iterative self-evolving search agent, 2025.
+URL https://arxiv.org/abs/2505.22501.
+Peilin Zhou, Bruce Leon, Xiang Ying, Can Zhang, Yifan Shao, Qichen Ye, Dading Chong, Zhiling Jin,
+Chenxuan Xie, Meng Cao, et al. Browsecomp-zh: Benchmarking web browsing ability of large language
+models in chinese. arXiv preprint arXiv:2504.19314, 2025.
+He Zhu, Tianrui Qin, King Zhu, Heyuan Huang, Yeyi Guan, Jinxiang Xia, Yi Yao, Hanhao Li, Ningning
+Wang, Pai Liu, Tianhao Peng, Xin Gui, Xiaowan Li, Yuhui Liu, Yuchen Eleanor Jiang, Jun Wang,
+Changwang Zhang, Xiangru Tang, Ge Zhang, Jian Yang, Minghao Liu, Xitong Gao, Jiaheng Liu,
+and Wangchunshu Zhou. Oagents: An empirical study of building effective agents, 2025. URL
+https://arxiv.org/abs/2506.15741.
+18

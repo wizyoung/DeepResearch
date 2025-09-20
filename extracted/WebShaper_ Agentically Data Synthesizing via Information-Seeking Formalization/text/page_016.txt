@@ -1,0 +1,42 @@
+References
+AutoGPT. AutoGPT: The heart of the open-source agent ecosystem, 2023. URL https://github.com/S
+ignificant-Gravitas/Auto-GPT.
+Mingyang Chen, Tianpeng Li, Haoze Sun, Yijie Zhou, Chenzheng Zhu, Haofen Wang, Jeff Z. Pan, Wen
+Zhang, Huajun Chen, Fan Yang, Zenan Zhou, and Weipeng Chen. Research: Learning to reason with
+search for llms via reinforcement learning, 2025. URL https://arxiv.org/abs/2503.19470.
+Nurendra Choudhary and Chandan K Reddy. Complex logical reasoning over knowledge graphs using
+large language models. arXiv preprint arXiv:2305.01157, 2023.
+Gemini. Gemini deep research, 2025. URL https://gemini.google.com/app.
+Taicheng Guo, Xiuying Chen, Yaqi Wang, Ruidi Chang, Shichao Pei, Nitesh V Chawla, Olaf Wiest, and
+Xiangliang Zhang. Large language model based multi-agents: A survey of progress and challenges.
+arXiv preprint arXiv:2402.01680, 2024.
+Bowen Jin, Hansi Zeng, Zhenrui Yue, Jinsung Yoon, Sercan Arik, Dong Wang, Hamed Zamani, and Jiawei
+Han. Search-r1: Training llms to reason and leverage search engines with reinforcement learning. arXiv
+preprint arXiv:2503.09516, 2025.
+Jina.ai. Jina, 2025. URL https://jina.ai/.
+Mandar Joshi, Eunsol Choi, Daniel S Weld, and Luke Zettlemoyer. Triviaqa: A large scale distantly
+supervised challenge dataset for reading comprehension. arXiv preprint arXiv:1705.03551, 2017.
+Kimi. Kimi deep research, 2025. URL https://www.kimi.com/.
+Tom Kwiatkowski, Jennimaria Palomaki, Olivia Redfield, Michael Collins, Ankur Parikh, Chris Alberti,
+Danielle Epstein, Illia Polosukhin, Jacob Devlin, Kenton Lee, et al. Natural questions: a benchmark
+for question answering research. Transactions of the Association for Computational Linguistics, 7:453–466,
+2019.
+Joshua Ong Jun Leang, Giwon Hong, Wenda Li, and Shay B Cohen. Theorem prover as a judge for
+synthetic data generation. arXiv preprint arXiv:2502.13137, 2025.
+Kuan Li, Zhongwang Zhang, Huifeng Yin, Liwen Zhang, Litu Ou, Jialong Wu, Wenbiao Yin, Baixuan Li,
+Zhengwei Tao, Xinyu Wang, et al. Websailor: Navigating super-human reasoning for web agent. arXiv
+preprint arXiv:2507.02592, 2025a.
+Xiaoxi Li, Guanting Dong, Jiajie Jin, Yuyao Zhang, Yujia Zhou, Yutao Zhu, Peitian Zhang, and Zhicheng
+Dou. Search-o1: Agentic search-enhanced large reasoning models. arXiv preprint arXiv:2501.05366,
+2025b.
+Xiaoxi Li, Jiajie Jin, Guanting Dong, Hongjin Qian, Yutao Zhu, Yongkang Wu, Ji-Rong Wen, and
+Zhicheng Dou. Webthinker: Empowering large reasoning models with deep research capability.
+CoRR, abs/2504.21776, 2025c. doi: 10.48550/ARXIV.2504.21776. URL https://doi.org/10.48550/a
+rXiv.2504.21776.
+Yong Lin, Shange Tang, Bohan Lyu, Jiayun Wu, Hongzhou Lin, Kaiyu Yang, Jia Li, Mengzhou Xia, Danqi
+Chen, Sanjeev Arora, et al. Goedel-prover: A frontier model for open-source automated theorem
+proving. arXiv preprint arXiv:2502.07640, 2025.
+Grégoire Mialon, Clémentine Fourrier, Thomas Wolf, Yann LeCun, and Thomas Scialom. Gaia: a
+benchmark for general ai assistants. In The Twelfth International Conference on Learning Representations,
+2023.
+16

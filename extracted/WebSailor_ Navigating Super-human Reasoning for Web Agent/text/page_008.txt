@@ -1,0 +1,52 @@
+information across the internet, which demands sophisticated browsing strategies and reasoning
+capabilities.
+• BrowseComp-zh (Zhou et al., 2025): Similar to BrowseComp-en, but the QAs are in Chinese.
+• GAIA (Mialon et al., 2023): A benchmark that requires multi-modality and tool-use abilities.
+We only use a subset of 103 cases from the text-only validation subset (Li et al., 2025c; Wu et al.,
+2025a).
+• XbenchDeepSearch (Xbench-Team, 2025): A new, dynamic, professionally-aligned benchmark
+that focuses on evaluating AI agents’ tool usage capabilities, specifically in deep information
+retrieval and complex search tasks.
+Baselines
+We compare our method with the following paradigms:
+• Direct Inference: Models answer questions based on its internal knowledge. For the non-
+reasoning model, we choose Qwen-2.5-32B, Qwen-2.5-72B (Yang et al., 2024), GPT-4o (OpenAI,
+2024), GPT-4.1 (OpenAI, 2025b), and for the reasoning models, we select QWQ-32B (Qwen Team,
+2025), o4-mini (OpenAI, 2025c), and DeepSeek-R1 (Guo et al., 2025). We do not consider smaller
+models because their scores on BrowseComp are essentially zero.
+• Proprietary Browsing Agents: We test OpenAI DeepResearch (OpenAI, 2025a), Grok-DeepResearch
+(x.ai, 2025), and Doubao with Deep Think and Search (Doubao, 2025); however, as not all of them
+are fully accessible via API, they were not tested across all benchmarks and experiments.
+• Open-source Agents: We compare our method with recent open-source web/search agents,
+including Search-o1 (Li et al., 2025b), WebThinker (Li et al., 2025c), R1-Searcher (Song et al., 2025),
+and WebDancer (Wu et al., 2025a).
+Metric and Hyper-parameters
+We default to pass@k evaluation (Chen et al., 2021) and report pass@1
+using non-zero temperature, and temperature and top-p are set to 0.6 and 0.95. For accuracy, we use LLM
+as a judge (Liu et al., 2024; Wang et al., 2024). The pass@1 is computed as:
+pass@1 = 1
+n
+n
+∑
+i=1
+pi,
+(6)
+where pi denotes the correctness of the i-th response. For pass@k that k > 1 we repeatedly generate for k
+times.
+5.2
+Main Results
+Our main results, presented in Table 1, reveal several critical insights.
+The Inadequacy of Direct Inference for Complex Information Seeking
+Relying solely on a model’s
+internal knowledge and reasoning capabilities is insufficient for solving complex information retrieval
+tasks. Across the board, all models, including strong proprietary model like GPT-4.1, exhibit poor
+performance on BrowseComp-en/zh, with accuracy scores often near zero. This starkly demonstrates
+that these tasks require dynamic interaction with an external information source—the web—to gather
+the necessary evidence. The inherent uncertainty and specificity of the questions far exceed the scope of
+pre-trained knowledge, underscoring the necessity of an agentic, tool-using framework.
+Superior Reasoning Models Show a Glimmer of Potential
+Within the direct inference paradigm, a
+notable exception is the superior performance of leading reasoning models like DeepSeek-R1 and o4-mini
+compared to other base models. For instance, DeepSeek-R1 achieves a score of 26.3 on BrowseComp-
+zh, significantly higher than other models in its category. This suggests that their advanced intrinsic
+8

@@ -1,0 +1,58 @@
+non-native species according to USGS before 2020. First, I remember that the main fish in Finding
+Nemo is Nemo, a clownfish. So the species in question is likely the orange clownfish, Amphiprion
+ocellaris. But I should confirm that. Maybe I should start by searching for ¨clownfish invasive
+species USGS¨to see if there’s any info. Wait, but the user mentioned the USGS specifically. Let me
+check what USGS says about ...
+</think>
+<tool_call>
+{"name": "search", "arguments": {"query": "USGS Amphiprion ocellaris nonnative locations before
+2020"}}
+</tool_call>
+<tool_response>
+A Google search for ’USGS Amphiprion ocellaris nonnative locations before 2020’ found 9 results:
+1.
+[clown
+anemonefish
+(Amphiprion
+ocellaris)
+-
+Species
+Pro-
+file](https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=3243) Table 1.
+States with
+nonindigenous occurrences, the earliest and ...
+2. [clown anemonefish (Amphiprion ocellaris)] (https://nas.er.usgs.gov/viewer/omap.aspx)
+Citation information: U.S. Geological Survey. [2025]. Nonindigenous Aquatic Species Database.
+Gainesville, Florida. Accessed [5/9/2025]. Contact us if you are...
+...
+</tool_response>
+Step 2
+<think>
+Okay, so I need to find the absolute difference in tens of thousands between the population of
+chinstrap penguins from the Wikipedia page as of the end of 2018 and the population from the
+2020 Nature.com article. The user also wants us to assume two penguins per breeding pair. Let
+me start by going through the information provided.First, looking at the search results for the
+Wikipedia part. The sixth result mentions the Chinstrap penguin’s conservation status, stating
+that in 2018, the IUCN estimated around 8 million specimens...
+</think>
+<tool_call>
+{"name": "visit", "arguments": {"url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID
+=3243", "goal": "Identify states with nonindigenous occurrences of Amphiprion ocellaris before
+2020"}}
+</tool_call>
+<tool_response>
+{"evidence": "The provided webpage content includes a table listing nonindigenous occurrences of
+Amphiprion ocellaris. The table shows that one individual was collected in Florida in July 2018 at
+Fred Howard Park, Pinellas Co., which is before 2...
+</tool_response>
+Step 3
+<think>
+Okay, let’s tackle this question step by step. The user is asking about the zip codes where the
+clownfish (Amphiprion ocellaris), made famous by Finding Nemo, was found as a nonnative
+species in the US before 2020 according to USGS. First, I did a search using the provided tools. The
+initial search led me to the USGS Nonindigenous Aquatic Species database page for Amphiprion
+ocellaris. Visiting that page showed a table listing occurrences. The key point here is that the only
+entry before 2020 is in Florida, specifically Pinellas County, collected in July 2018 at Fred Howard
+Park.Now, the next step is converting that location into a zip code ...
+</think>
+22

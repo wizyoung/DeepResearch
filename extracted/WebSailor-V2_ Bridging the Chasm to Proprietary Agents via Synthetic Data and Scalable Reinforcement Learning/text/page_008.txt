@@ -1,0 +1,129 @@
+Table 1: Main results on four challenging benchmarks. ‡ indicates that these proprietary methods are
+manually evaluated through their websites (some are reported in the corresponding papers). - means
+that we do not have the results due to cost constraints.
+Backbone
+BrowseComp-EN
+BrowseComp-ZH
+xbench-DeepSearch
+GAIA
+HLE
+Proprietary Agents
+Claude-4-Sonnet
+12.2
+29.1
+64.6
+68.3
+20.3
+Claude-4-Opus‡
+18.8
+-
+-
+-
+-
+OpenAI-o3
+49.7
+58.1
+66.7
+70.5
+20.2
+OpenAI DeepResearch‡
+51.5
+42.9
+-
+67.4
+26.6
+Kimi-Researcher‡
+-
+-
+69.0
+-
+26.9
+Open-Source Agents
+ASearcher-Web-32B
+5.2
+15.6
+42.1
+52.8
+12.5
+MiroThinker-32B-DPO-v0.2
+13.0
+17.0
+-
+64.1
+11.8
+WebSailor-72B
+12.0
+30.1
+55.0
+55.4
+-
+WebExplorer-8B
+15.7
+32.0
+53.7
+50.0
+17.3
+DeepDiver-V2-38B
+13.4
+34.6
+53.0
+-
+-
+DeepDive-32B
+14.8
+25.6
+50.5
+-
+-
+Kimi-K2-Instruct-1T‡
+14.1
+28.8
+50.0
+57.7
+18.1
+GLM-4.5-355B‡
+26.4
+37.5
+70.0
+66.0
+21.2
+DeepSeek-V3.1-671B‡
+30.0
+49.2
+71.2
+63.1
+29.8
+WebSailor-V2-30B-A3B (SFT)
+24.4
+28.3
+61.7
+66.0
+23.9
+WebSailor-V2-30B-A3B (RL)
+35.3
+44.1
+73.7
+74.1
+30.6
+where pi denotes the correctness of the i-th response. For pass@k that k > 1 we repeatedly generate for k
+times.
+5.2
+Main Results
+Our main experimental results, summarized in Table 1, unequivocally demonstrate the superior perfor-
+mance of WebSailor-V2-30B-A3B. Across a diverse suite of web-agent benchmarks, our model consistently
+achieves state-of-the-art results among open-source solutions and proves highly competitive with top-tier
+proprietary agents. On the extremely complex BrowseComp-EN and BrowseComp-ZH benchmarks,
+which demand sophisticated, multi-step reasoning and information synthesis, WebSailor-V2 scores 35.3
+and 44.1 respectively, significantly outperforming all other open-source agents. On relatively more
+straightforward but still challenging benchmarks like xbench-DeepSearch and GAIA, our agent not only
+leads the open-source field but surpasses even the strongest proprietary systems.
+Another compelling result is on HLE, a benchmark designed to test deep academic and logical reasoning.
+Here, WebSailor-V2 achieves a score of 30.6, establishing a new state-of-the-art. This is particularly
+noteworthy as it exceeds the performance of much larger and more powerful models, including the 671B
+parameter DeepSeek-V3.1 and proprietary models like OpenAI-o3. This result strongly validates our core
+hypothesis: equipping a model with exceptionally strong information retrieval and synthesis capabilities
+can profoundly enhance its logical reasoning abilities, allowing it to effectively "reason over" externally
+acquired knowledge and overcome the limitations of its intrinsic scale. We believe agentic paradigm is a
+good way to close the gap between strong and weak models.
+Furthermore, these results highlight the indispensable role of the SFT cold-start stage, especially for
+8

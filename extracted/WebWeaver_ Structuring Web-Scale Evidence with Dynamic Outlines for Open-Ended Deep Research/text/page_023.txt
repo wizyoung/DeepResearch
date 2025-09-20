@@ -1,0 +1,52 @@
+2. Quality of Life Optimization <citation>id_51, id_54, id_61</citation>
+a. Patient satisfaction monitoring (95% would recommend DBS)
+b. Positive psychology interventions
+c. Character-strength exercises
+d. Long-term relationship and social support maintenance
+</write_outline>
+Step 6
+<think>
+I have now created a comprehensive outline covering all aspects of the user’s query. The outline
+includes:
+1. Detailed information about Parkinson’s disease stages and warning signs at each stage
+2. Specific emergency warning signs that should alert family members to seek immediate medical
+intervention
+3.
+Comprehensive information about DBS surgery, including pre-operative considerations,
+surgical process, and post-operative care
+4. Detailed daily life adjustments and support strategies for DBS patients
+The outline is well-structured with proper hierarchical organization and includes citations from
+the research materials. However, I should search for any additional information that might be
+missing, particularly around specific comfort measures and practical tips for families caring for
+DBS patients.
+</think>
+<tool_call>
+{"name": "search", "arguments": {"query": ["Parkinson DBS patient comfort measures home care
+tips", "DBS device troubleshooting family guide", "Parkinson DBS medication management post
+surgery"], "goal": "Find additional specific comfort measures, troubleshooting guidance, and
+medication management strategies for families caring for DBS patients"}}
+</tool_call>
+<tool_response>
+<id_65>
+Summary:
+The guide provides comprehensive daily-life support for Parkinson’s patients after DBS: keep
+incisions clean, dry, and allow them to heal without ointments; shower the day after surgery
+but avoid baths/swimming until the wound check. Resume Parkinson’s meds immediately
+and discuss timing for blood-thinner restart.
+Limit strenuous activity for 2-4 weeks and
+incorporate gentle neck stretches to prevent bow-stringing. Expect DBS activation about 4 weeks
+post-stage 1 and be patient with programming adjustments. Anticipate possible temporary
+confusion—maintain a consistent routine, strict medication schedule, regular walking, and good
+sleep (melatonin if needed); arrange caregiver assistance especially if living alone. Monitor for
+fever, worsening incision signs, facial swelling, new neurological deficits, or worsening confusion,
+and contact the surgeon promptly. These strategies together offer practical comfort measures and
+clear family guidance for post-DBS care.
+</id_65>
+...
+</tool_response>
+Step 7
+<write_outline>
+Parkinson’s Disease: Health Warning Signs, Family Alert Systems, and Post-DBS Care Strategies
+I. Understanding Parkinson’s Disease Progression and Warning Signs
+A. Disease Staging Systems
+23

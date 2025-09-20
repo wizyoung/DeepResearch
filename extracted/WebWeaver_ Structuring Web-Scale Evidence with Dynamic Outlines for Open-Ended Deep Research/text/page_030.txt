@@ -1,0 +1,50 @@
+B.3
+Case Study of Writing
+We present only the first 7 steps of the long writing trajectory to save space. The afterwards reasoning
+process is similar to that in the first 7 steps.
+Case Trajectory of Writing in DeepResearch Bench
+Question: Parkinson’s disease has a profound impact on patients. What are the potential health
+warning signs associated with different stages of the disease? As family members, which specific
+signs should alert us to intervene or seek medical advice regarding the patient’s condition?
+Furthermore, for patients who have undergone Deep Brain Stimulation (DBS) surgery, what daily
+life adjustments and support strategies can be implemented to improve their comfort and overall
+well-being?
+Step 1
+<think>
+I need to write a comprehensive article about Parkinson’s disease warning signs, emergency
+situations for family members, and post-DBS care strategies. Looking at the outline, I should start
+by retrieving information about disease staging systems and warning signs. Let me begin with
+the first section on understanding Parkinson’s disease progression and warning signs.
+</think>
+<tool_call>
+{"name": "retrieve", "arguments": {"url_id": ["id_2", "id_6", "id_9", "id_12", "id_13", "id_14", "id_15",
+"id_17", "id_20", "id_21"], "goal": "Gather comprehensive information about Hoehn and Yahr scale
+classifications and disease staging systems for Parkinson’s disease"}}
+</tool_call>
+<tool_response>
+The page content for the previous section has been masked for saving the space.
+</tool_response>
+Step 2
+<think>
+I have comprehensive information about the Hoehn and Yahr scale classifications and disease stag-
+ing systems. This provides a solid foundation for understanding Parkinson’s disease progression.
+I can see the clear progression from Stage 0 (no disease) through Stage 5 (wheelchair/bedridden),
+with intermediate stages 1.5 and 2.5 in the modified version. The information shows both motor
+and non-motor symptoms, timing of transitions between stages, and functional impacts. I should
+now write the takeaway section and begin the first major section on disease staging systems.
+</think>
+<write>
+<takeaway>
+Parkinson’s disease progresses through distinct stages with recognizable warning signs that
+families must understand to provide appropriate care and seek timely medical intervention. The
+disease advances from subtle unilateral symptoms in early stages to severe bilateral impairment
+requiring constant care in advanced stages. Critical emergency signs include sudden choking,
+severe falls, medication disruptions, neurological changes, and psychiatric crises that demand
+immediate medical attention.
+For patients who have undergone Deep Brain Stimulation
+(DBS) surgery, comprehensive daily life adjustments encompass structured post-operative care,
+medication management, device safety protocols, psychosocial support, and coordinated family
+involvement to optimize comfort and long-term outcomes. Understanding these progressive
+warning signs and implementing evidence-based support strategies enables families to navigate
+the complex challenges of Parkinson’s disease while maintaining patient dignity and quality of
+30

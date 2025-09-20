@@ -1,0 +1,44 @@
+must be as least one rollout correctly answering the question. We finally construct 18k seed questions.
+We denote the harvested seed question as q1(T).
+3.2
+Agentic Expansion
+Subsequently, we progressively expand seed questions into increasingly complex ones through n-step
+expansion qn+1(T) = Expand(qn(T)) guided by the task formalization. However, the IS formalization in
+Eq. (5-7) is complicated. The nature of recursion and the composition of multiple operations are hard
+for the model to understand during the synthesis. Besides, since the synthesis relies on retrieving new
+knowledge online, there are several intermediate processes, such as knowledge filtering and selection.
+Therefore, we establish an Agentic Expansion. We first introduce the KP representation, which enables
+clear comprehension of our IS formalization. Then, we propose the Layer-wise Expansion Strategy to
+mitigate the limitations of redundant and reasoning shortcuts. The core of the expansion is the Expander,
+which is an agent itself to autonomously retrieve information and validate the generation.
+3.2.1
+KP Representation
+Since q(T) contains recursion and composition of R-Union and Intersection operations, it’s not trivial
+to represent q(T) in the Expander agent prompt. We introduce our KP Representation. The key to this
+representation is to: 1) represent a KP unit. 2) can handle R-Union and Intersection operations. 3) can
+handle recursions of KPs. We start with introducing Constant and Variable:
+• Constant: A constant is a subset of E explicitly defined by its elements, e.g., {90s}, {2004, 2005}.
+• Variable: A variable is a subset of E whose elements are not explicitly given. It may appear as a
+symbolic placeholder in an expression.
+Then, we use a triplet [X, r, S] to represent a KP R(S). r is the name of the relation R. X is a variable
+while S can be a variable or a constant.
+We use the prefix V@ followed by a variable to denote the variable V. We use the prefix @C before its
+natural language description to represent a constant. For example, RbornIn({90s}) is represented as [@V,
+bornIn, 90s]. The Intersection operation in Eq.(4) can be naturally represented as a list of triplets [[X, r1,
+S1], [X, r2, S2], ..., [X, rn, Sn]].
+For the R-Union in Eq.(3), simply expressing it in a list-like form will make the representation complicated
+in recursive R-Union and Intersection. We notice R-Union has the following proposition:
+Proposition 1. For a certain R, R-union satisfies the distributive Law:
+R(S1) ∪R(S2) = R(S1 ∪S2)
+(9)
+Proof. Let x be an element of R(S1) ∪R(S2). By Equation 2, there exists either a y1 ∈S1 such that
+(y1, x) ∈R or (x, y1) ∈R, or a y2 ∈S2 such that (y2, x) ∈R or (x, y2) ∈R. Consequently, there exists a
+y ∈S1 ∪S2, e.g., y1 or y2, such that (y, x) ∈R or (x, y) ∈R. Thus, we have x ∈R(S1 ∪S2), and hence
+R(S1) ∪R(S2) ⊆R(S1 ∪S2).
+Conversely, let z be an element of R(S1 ∪S2). Then there exists a y ∈S1 ∪S2 such that (y, z) ∈R or
+(z, y) ∈R. If y ∈S1, then z ∈R(S1); if y ∈S2, then z ∈R(S2). In either case, z ∈R(S1) ∪R(S2).
+Therefore, R(S1 ∪S2) ⊆R(S1) ∪R(S2).
+Combining both directions, we conclude that:
+R(S1) ∪R(S2) = R(S1 ∪S2).
+Thus, we end proof of the Proposition.
+6

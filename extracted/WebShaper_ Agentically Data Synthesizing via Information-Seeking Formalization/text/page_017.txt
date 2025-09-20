@@ -1,0 +1,44 @@
+Leonardo de Moura and Sebastian Ullrich. The lean 4 theorem prover and programming language. In
+International Conference on Automated Deduction, pp. 625–635. Springer, 2021.
+OpenAI. Deep research system card, 2025. URL https://cdn.openai.com/deep-research-system-c
+ard.pdf.
+Long Ouyang, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong Zhang,
+Sandhini Agarwal, Katarina Slama, Alex Ray, et al. Training language models to follow instructions
+with human feedback. Advances in neural information processing systems, 35:27730–27744, 2022.
+Perplexity. Perplexity deep research, 2025. URL https://www.perplexity.ai/.
+Rafael Rafailov, Archit Sharma, Eric Mitchell, Christopher D Manning, Stefano Ermon, and Chelsea Finn.
+Direct preference optimization: Your language model is secretly a reward model. Advances in neural
+information processing systems, 36:53728–53741, 2023.
+ZZ Ren, Zhihong Shao, Junxiao Song, Huajian Xin, Haocheng Wang, Wanjia Zhao, Liyue Zhang, Zhe Fu,
+Qihao Zhu, Dejian Yang, et al. Deepseek-prover-v2: Advancing formal mathematical reasoning via
+reinforcement learning for subgoal decomposition. arXiv preprint arXiv:2504.21801, 2025.
+Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan
+Zhang, YK Li, Y Wu, et al. Deepseekmath: Pushing the limits of mathematical reasoning in open
+language models. arXiv preprint arXiv:2402.03300, 2024.
+Guangming Sheng, Chi Zhang, Zilingfeng Ye, Xibin Wu, Wang Zhang, Ru Zhang, Yanghua Peng, Haibin
+Lin, and Chuan Wu. Hybridflow: A flexible and efficient rlhf framework. In Proceedings of the Twentieth
+European Conference on Computer Systems, pp. 1279–1297, 2025.
+Dingfeng Shi, Jingyi Cao, Qianben Chen, Weichen Sun, Weizhen Li, Hongxuan Lu, Fangchen Dong,
+Tianrui Qin, King Zhu, Minghao Yang, et al. Taskcraft: Automated generation of agentic tasks. arXiv
+preprint arXiv:2506.10055, 2025a.
+Wenxuan Shi, Haochen Tan, Chuqiao Kuang, Xiaoguang Li, Xiaozhe Ren, Chen Zhang, Hanting Chen,
+Yasheng Wang, Lifeng Shang, Fisher Yu, and Yunhe Wang. Pangu deepdiver: Adaptive search intensity
+scaling via open-web reinforcement learning, 2025b. URL https://arxiv.org/abs/2505.24332.
+Huatong Song, Jinhao Jiang, Yingqian Min, Jie Chen, Zhipeng Chen, Wayne Xin Zhao, Lei Fang, and
+Ji-Rong Wen. R1-searcher: Incentivizing the search capability in llms via reinforcement learning. arXiv
+preprint arXiv:2503.05592, 2025.
+Shuang Sun, Huatong Song, Yuhao Wang, Ruiyang Ren, Jinhao Jiang, Junjie Zhang, Fei Bai, Jia Deng,
+Wayne Xin Zhao, Zheng Liu, et al. Simpledeepsearcher: Deep information seeking via web-powered
+reasoning trajectory synthesis. arXiv preprint arXiv:2505.16834, 2025.
+QwQ Team. Qwq-32b: Embracing the power of reinforcement learning, 2025. URL https://qwenlm.git
+hub.io/blog/qwq-32b/.
+Lei Wang, Chen Ma, Xueyang Feng, Zeyu Zhang, Hao Yang, Jingsen Zhang, Zhiyuan Chen, Jiakai Tang,
+Xu Chen, Yankai Lin, et al. A survey on large language model based autonomous agents. Frontiers of
+Computer Science, 18(6):186345, 2024.
+Jason Wei, Zhiqing Sun, Spencer Papay, Scott McKinney, Jeffrey Han, Isa Fulford, Hyung Won Chung,
+Alex Tachard Passos, William Fedus, and Amelia Glaese. Browsecomp: A simple yet challenging
+benchmark for browsing agents. arXiv preprint arXiv:2504.12516, 2025.
+Jialong Wu, Baixuan Li, Runnan Fang, Wenbiao Yin, Liwen Zhang, Zhengwei Tao, Dingchu Zhang, Zekun
+Xi, Yong Jiang, Pengjun Xie, et al. Webdancer: Towards autonomous information seeking agency. arXiv
+preprint arXiv:2505.22648, 2025a.
+17

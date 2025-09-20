@@ -1,0 +1,21 @@
+models. Upon applying the findings within a continued pre-training run on top of a well-trained 15B
+parameter model, they find improvements compared to the baseline that is trained on the pre-training
+set. These findings highlight CPT as a promising approach for expanding LLMs’ agent capabilities.
+However, regarding CPT and nowadays agents development, existing work focuses primarily either
+on CPT on tasks without tool calling or on post-training (such as SFT and RL) for agent development.
+Integrating agentic capabilities directly via the continual pre-training phase remains largely unexplored.
+This motivates our exploration of Agentic CPT as a novel paradigm that embeds agentic reasoning and
+tool-use capabilities at the foundational pre-training level.
+5
+Conclusion
+In this work, we redefine the training pipeline for agentic alignment in deep research agents by intro-
+ducing agentic continual pre-training (Agentic CPT) beyond traditional post-training for the first time.
+Furthermore, we present a systematic agentic CPT method comprising scalable agentic data synthesis
+and an adapted two-stage training strategy. Specifically for agentic data synthesis, we propose first-order
+action synthesis without additional commercial API calls, including planning action synthesis and reason-
+ing action synthesis to enhance the model’s planning and logical reasoning capabilities. Additionally, we
+provide a higher-order action synthesis method that remodels trajectories as multi-step decision-making
+problems, leveraging step-level expansion to thoroughly explore solution paths. Built on large-scale
+offline synthesized HAS and FAS data, we develop a powerful agentic model, AgentFounder-30B, which
+surpasses current closed-source models across 10 benchmarks, establishing a new state-of-the-art.
+19
