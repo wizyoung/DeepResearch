@@ -1,0 +1,83 @@
+WebSsailor-72B
+webSailor-32B
+WebDancer-QwQ
+WebDancer-32B
+WebThinker-rl
+DeepSeek-R1-ReAct
+r1-searcher-7b
+GPT-4.1
+GPT-4o
+DeepSeek-R1
+o4-mini
+Qwen-2.5-72B
+QwQ-32B
+Qwen-2.5-32B
+0
+20
+40
+60
+80
+100
+Pass@1 (%)
+93.5 92.8 90.5 87.5
+77.5 72.2
+52.0
+41.6 38.2
+27.8
+20.0 15.8 12.7
+9.0
+Figure 4: Performance on the SimpleQA benchmark.
+can ensure the correctness of the conditions relative to the answer, i.e., the answer always satisfies the
+constraints specified in the question.
+Compatibility with simple tasks
+WebSailor is trained exclusively on high-difficulty data, while
+BrowseComp-en/zh, GAIA, and Xbench can all be considered as level-2 or level-3 tasks according
+to our definition. To verify whether WebSailor still performs strongly on simpler level-1 tasks, we
+evaluate its performance on a subset of SimpleQA benchmark (Wei et al., 2024). The complete Sim-
+pleQA dataset contains 4,326 QA pairs. Since testing on the entire set would be too time-consuming,
+we randomly sample 200 QA pairs for evaluation. This benchmark is characterized by high correctness
+and fact-based questions with simple conditions, and it is challenging for frontier LLMs to answer
+directly. The results, as shown in Figure 4, indicate that almost all agent-based methods outperform direct
+answering. WebSailor surpasses all other methods, demonstrating its compatibility and effectiveness
+even on simpler tasks.
+32B-P@1 32B-P@3 72B-P@1 72B-P@3
+32B-P@1 32B-P@3 72B-P@1 72B-P@3
+32B-P@1 32B-P@3 72B-P@1 72B-P@3
+32B-P@1 32B-P@3 72B-P@1 72B-P@3
+0
+20
+40
+60
+Accuracy (%)
++3.3
++2.2
++3.7
++3.4
+BrowseComp-en
++6.3
++6.5
++8.3
++4.9
+BrowseComp-zh
++6.6
++4.7
++3.0
++3.6
+GAIA
++7.6
++8.0
++3.7
++2.0
+XBench
+RFT
+RL
+Figure 5: Detailed evaluation results using Pass@1, Pass@3.
+Pass@1 vs Pass@3
+We analyze the impact of our RL training by comparing the Pass@1 and Pass@3
+performance of WebSailor before and after the RL stage (Fig. 5). The results reveal that RL brings
+notable improvements across all benchmarks, with the most significant gains observed on the highly
+difficult BrowseComp-en/zh tasks. This disparity is telling: the extreme complexity of BrowseComp
+requires agents to generate exceptionally long and intricate trajectories, making stable, repeatable success
+challenging (Sun et al., 2025). This instability is evident in the wide initial gap between Pass@1 and
+Pass@3 scores for BrowseComp. RL training directly addresses this issue by reinforcing successful
+11

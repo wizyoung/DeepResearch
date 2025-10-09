@@ -1,0 +1,39 @@
+E.4
+Prompts for Agent Trajectories Sampling
+Traditional ReAct for LLMs
+Prompts for ReAct
+Answer the following questions as best you can.
+Use the following format:
+Question: the input question you must answer
+Thought: you should always think about what to do
+Action: the action to take, should be one of [{tool_names}]
+Action Input: the input to the action, use JSON Schema with explicit parameters
+Observation: the result of the action
+... (this Thought/Action/Action Input/Observation can be repeated many times)
+Thought: you should always think about what to do
+Action: Final Answer: the final answer to the original input question
+## Execution Framework
+1. Thinking phase
+- Mandatory components:
+(a). Evidence chain completeness assessment
+(b). Tool selection rationale
+2. Action Phase
+- Allowed tools: Only use tools listed in ‘{tool_descs}‘ or can be `Final Answer`, which returns the
+answer and finishes the task.
+You may only provide the ‘Final Answer‘ when you can confidently confirm the answer.
+You must also ensure that the ‘Final Answer‘ is accurate and reliable.
+To output the Final Answer, use the following template: Final Answer: [YOUR Final Answer]
+3. Observation phase
+- Return information from the tool: The result of the action, you can use the result to think about
+the next step.
+You have access to the following tools:
+{tool_descs}
+Begin!
+You are likely to use the given tools to gather information and then make the final an-
+swer.
+Solve the following question using interleaving thought, action, and observation steps. You may
+take as many steps as necessary.
+Question: {query}
+Figure 6: Prompts for ReAct using LLMs.
+Modified ReAct for LRMs
+20

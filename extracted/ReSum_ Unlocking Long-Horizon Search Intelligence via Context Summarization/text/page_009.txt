@@ -1,0 +1,190 @@
+0
+10
+20
+30
+40
+50
+60
+Training Step
+0.15
+0.25
+0.35
+0.45
+0.55
+0.65
+Reward
+Epoch 1
+Epoch 2
+Epoch 3
+Epoch 4
+GRPO
+ReSum-GRPO
+(a) WebSailor-3B
+0
+10
+20
+30
+40
+50
+60
+Training Step
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+Reward
+Epoch 1
+Epoch 2
+Epoch 3
+Epoch 4
+GRPO
+ReSum-GRPO
+(b) WebSailor-30B
+Figure 4: Training dynamics comparison between GRPO (Shao et al., 2024) and ours ReSum-GRPO.
+ReSum-GRPO demonstrates higher initial rewards and faster convergence compared to standard GRPO.
+Table 2: Performance comparison (in %) between RL algorithms. ReSum-GRPO enables agents to
+become better familiarized with the ReSum paradigm, boosting performance. Results with † are sourced
+from Liu et al. (2025), representing powerful web agents trained with 10K+ samples.
+GAIA
+BrowseComp-zh
+BrowseComp-en
+Agent
+RL
+Paradigm
+Pass@1
+Pass@3
+Pass@1
+Pass@3
+Pass@1
+Pass@3
+Qwen3-ARPO-14B
+ARPO
+ReAct
+43.7
+−
+−
+−
+−
+−
+MiroThinker-8B†
+v0.1
+DPO
+ReAct
+46.6
+−
+13.6
+−
+8.7
+−
+MiroThinker-32B†
+v0.1
+DPO
+ReAct
+57.3
+−
+17.0
+−
+13.0
+−
+ASearcher-32B†
+GRPO
+ReAct
+52.8
+−
+15.6
+−
+5.2
+−
+WebExplorer-8B†
+GRPO
+ReAct
+50.0
+−
+32.0
+−
+15.7
+−
+WebSailor
+3B
+−
+ReAct
+25.6
+42.7
+8.2
+17.0
+3.3
+5.6
+GRPO
+ReAct
+28.5
+48.5
+11.8
+22.5
+4.2
+8.5
+ReSum
+38.5
+53.4
+17.3
+29.1
+8.5
+13.0
+ReSum-GRPO
+ReSum
+37.9
+56.3
+20.5
+34.3
+9.2
+13.0
+WebSailor
+30B
+−
+ReAct
+45.0
+60.2
+23.9
+38.4
+12.8
+21.8
+GRPO
+ReAct
+48.2
+62.1
+23.3
+36.7
+14.3
+21.5
+ReSum
+48.5
+61.2
+29.3
+42.6
+15.0
+25.0
+ReSum-GRPO
+ReSum
+48.5
+68.0
+33.3
+48.8
+18.3
+26.5
+demonstrating that ReSum-GRPO consistently achieves higher rewards than GRPO. This is because
+ReSum mode extends the conversation of otherwise unsolvable questions for more exploration. As
+training progresses, ReSum-GRPO effectively encourages the agent to familiarize itself with this inference
+pattern, achieving higher rewards.
+Evaluation: We evaluate these RL-trained agents on both inference paradigms, along with their direct
+ReAct performance shown in Table 2. We also list the performance of powerful web agents trained
+with RL on 10K+ samples to contextualize the performance. We can conclude that: (1) ReSum-GRPO
+successfully familiarizes agents with the ReSum paradigm, achieving more significant improvements
+across benchmarks. For example, after ReSum-GRPO, WebSailor-3B achieves Pass@1 from 8.2% to 20.5%
+on BrowseComp-zh, demonstrating the effectiveness of RL training. (2) The GRPO algorithm fails to
+enable agents to master summary-conditioned reasoning. GRPO is designed for familiarizing agents
+with the ReAct inference mode, which indeed boosts the agent’s ReAct inference, while applying the
+ReSum paradigm cannot outperform ReSum-GRPO trained counterparts by a significant margin, showing
+the necessity for paradigm adaptation. (3) ReSum-GRPO enables agents to achieve performance
+comparable to agents trained with 10K+ samples. Even compared with powerful open-source agents
+9

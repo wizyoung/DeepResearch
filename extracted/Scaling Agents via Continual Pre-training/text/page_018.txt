@@ -1,0 +1,50 @@
+Open-source deep research agents. Open-source deep research agents have witnessed remarkable
+growth, achieving impressive results on deep research benchmarks including BrowseComp-en (Wei et al.,
+2025), BrowseComp-zh (Zhou et al., 2025b) Xbench-DeepSearch (Xbench-Team, 2025), and GAIA (Mialon
+et al., 2023). These works include early contributions such as Search-o1 (Li et al., 2025d), R1-Searcher (Song
+et al., 2025), EvolveSearch (Zhang et al., 2025a), MaskSearch (Wu et al., 2025c) and WebThinker (Li et al.,
+2025e), as well as later web agents that tackle challenging problems, such as MiroThinker (Team, 2025a).
+One common research focus across these works is how to construct more challenging problems and
+their corresponding trajectories for training agent models. Accordingly, various innovative approaches
+have emerged for generating complex training data. WebDancer (Wu et al., 2025a) and ASearcher (Gao
+et al., 2025) take an iterative approach, incrementally adding new information to increase problem
+complexity. WebSailor (Li et al., 2025b) proposes SailorFog, a knowledge graph-based data synthesis
+method that starts with obscure Wikipedia entities and progressively builds entity relationship graphs
+through search and web reading to create highly ambiguous questions. WebShaper (Tao et al., 2025)
+adopts a more systematic methodology, formally modeling information-seeking tasks as set operations
+and introducing knowledge projection concepts to provide a principled method for constructing difficult
+problems. AFM (Li et al., 2025c) synthesizes high-quality agentic trajectory data by constructing a
+Chain-of-Agents pipeline. DeepDive (Lu et al., 2025) constructs high-difficulty QA pairs by randomly
+sampling nodes and their attributes within open knowledge graphs. Deepdiver (Team, 2025b) utilizes
+cross-page question generation and riddle creation to construct complex questions and assigns difficulty
+levels. WebExplorer (Liu et al., 2025) employs autonomous model exploration to build information
+networks, using iterative query evolution strategies to generate ambiguous and implicit questions. While
+these methods successfully construct challenging post-training data that enhances agent capabilities
+for difficult problems, they predominantly follow supervised SFT or RL paradigms, overlooking the
+potential for training agentic capabilities during the continual pre-training phase.
+Recent open-source general models, including Kimi-K2 (Team et al., 2025), GLM-4.5 (Zeng et al., 2025),
+and DeepSeek-V3.1 (DeepSeek-AI, 2025), have begun emphasizing enhanced agentic capabilities, yet the
+systematic exploration of continual pre-training for agent development remains limited.
+Multi Deep Research Agents and Multi-modal Deep Research Agents. Beyond training methodologies,
+innovative inference paradigms have also emerged. Tencent’s contribution extends beyond their trained
+CK-Pro-8B model to include the open-sourced Cognitive Kernel-Pro multi-agent framework (Fang et al.,
+2025b). Tencent Youtu has developed a multi-agent framework utilizing DeepSeek-V3.1, achieving 71.47%
+accuracy on the WebWalkerQA benchmark (Wu et al., 2025b). Additional notable contributions include
+SkyworkAI’s DeepResearchAgent (Zhang et al., 2025b) and ByteDance’s deer-flow (ByteDance, 2025),
+which further explore the potential of agent models. In the multimodal domain, Alibaba Tongyi Lab has
+open-sourced WebWatcher (Geng et al., 2025), the first multimodal deep research agent.
+4.2
+Continual Pre-training
+While large language models are initially pretrained on massive general corpora, research shows that CPT
+can significantly enhance model performance by continuing unsupervised training (Gupta et al., 2023;
+Lin et al., 2025; Jin et al., 2022). Ke et al. (2023) proposes continual domain-adaptive pre-training, which
+not only overcomes catastrophic forgetting, but also achieves knowledge transfer to improve end-task
+performances. Though their experiments focus on million-scale language models on Natural Language
+Understanding tasks, the work gives insightful guidance for scaling CPT strategies to larger models
+and broader task families. Following that, Ça˘gatay Yıldız et al. (2025) investigates continual domain-
+adaptive pre-training in larger (billion-level) language models, aiming to enable models to assimilate
+new domain knowledge while preserving previously acquired information. Their experimental findings
+reveal that continual pre-training consistently enhances performance for models under 1.5B parameters
+and outperforms standard domain adaptation. Parmar et al. (2024) detail a set of guidelines about how to
+design efficacious data distributions and learning rate schedules for continued pre-training of language
+18

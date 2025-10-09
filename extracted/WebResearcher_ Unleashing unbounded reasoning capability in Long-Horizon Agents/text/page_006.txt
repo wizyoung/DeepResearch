@@ -1,0 +1,70 @@
+(n)QA Complexity
+(1)QA Complexity
+(2)QA Complexity
+Similarity
+Scorer
+Question
+Solver(base)
+Question
+Solver(advanced)
+Raw Corpus
+Text Chunks
+Summary
+Agent
+relevance-based
+ 
+triplet grouping
+Composite Units
+ItemWriter
+Agent
+Seed QA pairs
+Refined QA pairs
+Final QA pairs
+Knowledge-based QA
+QA Flagged for Review
+High-similarity QA
+filter
+Pass
+Fail   drop
+Fail
+Pass   drop
+ask
+ItemWriter
+Agent
+Integrate
+···
+iteratively
+refine
+drop
+Figure 3: Overview of the three-stage data synthesis workflow, powered by a multi-agent system. The
+process begins with seed data generation from a curated corpus. It then enters an iterative loop where
+tool-augmented agents systematically increase task complexity. The workflow concludes with a multi-
+stage quality control process to calibrate difficulty and ensure factual correctness.
+content, removing artifacts (e.g., HTML tags), and distilling the text into information-dense chunks.
+To generate initial tasks that require non-trivial reasoning, we form composite units by combinatorially
+grouping these thematically related chunks. An ItemWriter Agent is then prompted with these composite
+units to generate seed question-answer (QA) pairs. These initial pairs are designed to require multi-source
+information synthesis, thereby providing the foundation for the subsequent complexity escalation stage.
+3.2
+Stage 2: Iterative Complexity Escalation
+The core of the data engine is a self-bootstrapping refinement loop orchestrated by the ItemWriter Agent.
+At this stage, the agent is augmented with a suite of external tools: (i) general web search, (ii) academic
+literature search, (iii) webpage browswer, and (iv) Python code interpreter. For each seed QA pair,
+the tool-augmented agent iteratively evolves both the question and answer to increase their cognitive
+complexity and extend their scope beyond the original context. This iterative evolution is driven by four
+key operations. Initially, the agent performs knowledge expansion, querying external sources to broaden
+the question’s scope. It then engages in conceptual abstraction, analyzing materials to distill higher-level
+principles and identify subtle cross-domain relationships. To ensure correctness, factual grounding is
+achieved through multi-source cross-validation, enhancing the answer’s accuracy and depth. Finally, the
+agent leverages a Python environment for computational formulation, crafting problems that demand
+quantitative calculation or logical simulation.
+This iterative process creates a virtuous cycle where a more sophisticated QA pair generated in one
+iteration becomes the seed for the next. This enables a controlled and systematic escalation in task
+complexity.
+3.3
+Stage 3: Rigorous Quality Control
+To ensure the final dataset is of high quality and precisely calibrated to the target difficulty, all generated
+QA pairs undergo a rigorous validation process managed by specialized agents. First, a QuestionSolver
+Agent, operating in a baseline mode without access to tools, attempts to answer each question. Any pair
+answered correctly at this step is deemed too simple for our target complexity level and is filtered out.
+6

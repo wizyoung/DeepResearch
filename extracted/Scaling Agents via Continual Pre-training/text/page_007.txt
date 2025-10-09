@@ -1,0 +1,47 @@
+whether the current reasoning and actions have a high probability of acquiring the required knowledge.
+We find that this rejection sampling strategy effectively filters out the majority of low-quality data, as
+detailed in Section B.1.
+2.2.3
+Reasoning Action Synthesis
+In the workflow of deep research agents, a critical scenario emerges when comprehensive information
+has been acquired through various tool invocations or user interactions: how to effectively synthesize this
+information to generate final answers or reports. Unlike conventional mathematical numerical reasoning,
+this type of reasoning typically involves logic-based inference grounded in factual information, requiring
+a balance between divergent thinking and convergent thinking guided by contextual clues, while being
+difficult to verify through formal methods. To enhance agent capabilities in this domain, we generate
+synthetic data based on the Question-Answer pairs constructed in Section 2.2.1.
+Questions constructed from knowledge clusters not only provide the questions itself but also enable
+precise mapping to the information required for solving them. Based on this foundation, we propose a
+two-step logical reasoning data synthesis scheme:
+1. Step 1: We require the large language model to decompose the question Q into multiple sub-
+questions, then leverage its internal knowledge to generate reasonable speculations and answers
+for each sub-question, producing preliminary answer A1.
+2. Step 2: Given the question Q and its mapped requisite knowledge, we require the model to refine
+answer A1, correct logical errors, and generate the final answer A2.
+Notably, we prohibit the model from invoking any external tools during both stages. The motivation
+behind this two-step design is that if we directly provide both the question and necessary knowledge, the
+model tends to mechanically utilize the given knowledge as intermediate reasoning nodes rather than
+simulating an authentic thinking process. We show an example below.
+Example: An Overview Reasoning Action Synthesis Data
+(Clue1: The Location): First, the question mentions ..., which presents several potential candidates:
+the Louvre in Paris with its iconic glass pyramid entrance, .... However, the crucial filtering criterion
+is the high visitor numbers "during a period of global athletic celebration." This could refer to various
+major international sporting events: .... Among these candidate cities, only Paris simultaneously pos-
+sesses both a pyramid-fronted museum and hosted a global athletic celebration, ...., thus confirming
+this refers to the Louvre during the 2024 Paris Olympics.
+(Clue2: The Time): Next, the question describes "the year before a citywide nuisance led authorities
+to convene transit operators," requiring consideration of events in 2023 that could have affected
+all of Paris and involved the transportation system. Possible candidates include massive public
+transit strikes, severe air pollution episodes, .... Having established the city as Paris, the "biennial
+aerospace marketplace named after the city" clearly points to the Paris Air Show, which is held in
+odd-numbered years, thus locking in the timeframe as the 2025 Paris Air Show.
+(Clue3: The Order): Finally, the question asks which buyer placed "a perfectly balanced commitment
+with firm orders equal to options." Examining the major order announcements at the 2025 Paris Air
+Show reveals: .... Therefore, the answer is Riyadh Air.
+Reject Sampling. Furthermore, we employ an LLM-as-judge approach to evaluate the alignment between
+the generated answer A2 and the ground truth answer, implementing rejection sampling accordingly. If
+the final answer proves correct, we consider the reasoning process contained in A2 to be reliable. Through
+this methodology, we generate a substantial corpus of high-quality logical reasoning chain-of-thought
+data. It is worth emphasizing that this logical deduction capability constitutes a fundamental competency
+required by deep research agents throughout the entire problem-solving lifecycle.
+7

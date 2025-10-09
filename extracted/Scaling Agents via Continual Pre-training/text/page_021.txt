@@ -1,0 +1,90 @@
+Before Filter
+After Filter
+0
+20
+40
+60
+80
+100
+Data Percentage (%)
+Correct
+50%
+Correct
+46.4%
+Incorrect
+50%
+Incorrect
+10.2%
+Filtered
+43.5%
+100%
+100%
+Accuracy = 50%
+Accuracy = 82%
+FAS Filtering
+Detailed
+Judgment
+Breakdown
+Correct
+Incorrect
+Filtered
+CI
+SN
+LD
+PD
+IT
+0
+5
+10
+15
+20
+25
+30
+Percentage (%)
+26.2%
+6.9%
+5.7%
+3.5%
+1.2%
+ CI: Content Inconsistency
+ SN: Search Necessity
+ LD: Logic Discontinuity
+ PD: Parameter Deviation
+ IT: Invalid Tool
+Filtered Data Distribution (43.5% Total)
+Weakly-Supervised Filtering for First-Order Action Synthesis
+Figure 9: Filtering performance and representative low-quality outputs for weakly supervised filtering in
+first-order action synthesis.
+1
+4
+8
+12
+16
+Number of Samples
+0.25
+0.35
+0.45
+0.55
+0.65
+0.75
+Accuracy
+Pass of N
+Figure 10: Pass@N Scaling on BrowseComp-en.
+samples validates prioritizing precision over recall for effective agentic CPT.
+B.2
+Sampling Strategies and Performance Scaling
+We examine whether HAS enhances behavioral diversity and enables effective scaling through sampling.
+Experiment Design. We conduct Pass@n evaluation on BrowseComp-en with varying sampling sizes
+(n=1 to 18) using increased temperature to enable multiple trajectory generation. This experimental
+setup allows us to assess whether our HAS methodology, which exposes models to (N + 1) × K potential
+actions per trajectory during training, successfully preserves solution diversity in the learned model.
+Observation Results. As shown in Figure 10, AgentFounder demonstrates strong scaling character-
+istics with progressive performance improvements: from 31.5% Pass@1 to 75.8% Pass@16, yielding a
+substantial +44.3 percentage point gain. The gradual saturation between Pass@16 and Pass@18 (only
+1.16% improvement) indicates a healthy balance between consistency and diversity.
+B.3
+Performance of GAIA on Different Levels
+We show the Pass Rate of the GAIA dataset w.r.t. different levels in Figure 11. Specifically, the model
+achieves its highest performance on level 1 tasks, with a 79.5% Pass@1 rate and an 87.2% Pass@3 rate. A
+more substantial performance degradation is evident at level 3, where the Pass@1 rate drops to 50.0%
+21

@@ -1,0 +1,94 @@
+8
+12
+16
+20
+24
+28
+32
+36
+Training Steps
+0.00
+0.05
+0.10
+0.15
+Score
+Cold-start
+Instruct
+Score on HLE Benchmark
+8
+12
+16
+20
+24
+28
+32
+36
+Training Steps
+0.0
+0.1
+0.2
+0.3
+0.4
+Score
+Cold-start
+Instruct
+Score on BC-VL Benchmark (average)
+16
+20
+24
+28
+32
+36
+40
+44
+Training Steps
+0.0
+0.2
+0.4
+0.6
+Score
+Cold-start
+Instruct
+Score on LiveVQA Benchmark
+Figure 6: Performance comparison using cold start in RL training on three benchmarks.
+trajectories, far more than one would obtain by merely turning up temperature on the backbone model.
+Improvement continues beyond k = 8 but at a slower pace; still, performance remains monotonically
+increasing, reaching 35.7% at k = 16 and 41.9% at k = 32. Thus, compared with single-shot inference, 32
+trials almost quadruple the success rate and surpass reasoning models such as Gemini-2.5-Pro and o4-mini.
+Figure 7: Pass@k performance of Web-
+Watcher on HLE Benchmark.
+The smooth, jump-free shape of the curve indicates that our
+de-correlated sampling strategy successfully generates mutu-
+ally informative trajectories rather than redundant variants,
+enlarging knowledge coverage and avoiding dependence
+on lucky outliers. Because marginal gains taper after about
+sixteen samples, practitioners may cap the budget at 8–16
+roll-outs to secure a 2 to 3 fold accuracy boost while contain-
+ing compute costs. Overall, the Pass@k profile highlights
+the clear advantage of the agentic paradigm: by systemati-
+cally exploring and refining reasoning paths, WebWatcher
+delivers robust, scalable improvements on one of the most
+challenging open-domain multimodal exams to date.
+5
+Related Work
+Deep Research
+The notion of "deep research" agents—systems that autonomously search, read, reason,
+and synthesize knowledge from the open web—has evolved rapidly in the last two years. Proprietary
+solutions such as DeepResearch (OpenAI, 2025a), Gemini Deep Research (Google, 2024), now exhibit near-
+expert performance across fact-finding, argumentative writing, and exploratory analysis, yet the secrecy
+of their model architectures and data curation pipelines inhibits rigorous ablation and reproducibility.
+Open-source initiatives have attempted to close this gap: WebDancer (Wu et al., 2025a) introduces
+curriculum-driven SFT over ReAct traces. WebThinker (Li et al., 2025b) then augments SFT with policy-
+gradient refinement and R1-Searcher (Song et al., 2025) leverages self-play to learn tree-structured
+exploration policies. WebSailor (Li et al., 2025a) focuses on uncertainty reduction which used structured
+task obfuscation, RFT cold-start, and the DUPO algorithm. Recently, WebShaper (Tao et al., 2025) proposes
+a formalization-driven data-synthesis pipeline by introducing Knowledge Projections and an agentic
+Expander. Nevertheless, nearly all leading deep-research agents are still text-bound (Tang et al., 2025;
+Zhu et al., 2025). Integrating vision, layout, and cross-modal grounding is therefore not a minor tweak
+but the necessary next leap, multimodality will fundamentally redefine what deep research can achieve.
+Multimodal VQA Benchmark
+Most existing VQA benchmarks primarily assess single-step perception
+or shallow retrieval, with limited support for integrated multimodal reasoning and planning (Chen et al.,
+2024; Li et al., 2025c). Datasets such as OK-VQA and A-OKVQA typically emphasize static knowledge
+grounding and heuristic answer prediction without requiring complex reasoning. Recent efforts have
+12

@@ -1,0 +1,79 @@
+2
+IterResearch: An Iterative Deep-Research Paradigm
+Final Answer
+Environment 
+Search
+Scholar Browsing Python
+Update Workspace
+IterResearch
+Think
+Think
+Tool Call
+Mono-contextual Paradigm:
+Iterative Deep-Research Paradigm:
+QUESTION
+Current Agent
+Report
+🔄  Central Memory
+✂️ Streamline Workspace
+🔇 Prevent Noise
+💡  Sustain Quality
+Report
+Action
+Tool Response
+QUESTION
+Workspace
+Tool Response
+Action
+If Action is
+Tool Call
+If Action is
+Answer
+Round # 
+Tool Response
+Noise
+Signal
+Linear Accumulation of Information
+🚫 Context Limit 
+📢 Noise Contamination
+📉 Performance Degradation 
+Think
+Tool Call
+Noise
+Signal
+Tool Response
+Figure 2: An illustration of our Iterative Deep-Research Paradigm in contrast to the prevalent Mono-
+contextual Paradigm. (Top) The mono-contextual approach linearly accumulates all information into a
+single, ever-expanding context, leading to cognitive suffocation and noise contamination. (Bottom) Our
+IterResearch paradigm deconstructs research into discrete rounds. In each round i, the agent operates
+on a lean, reconstructed Workspace. It first Thinks, then synthesizes new findings into an evolving
+summary Reporti, and finally decides on an Actioni. The crucial step is the reconstruction: the Workspace
+for the next round is rebuilt using only the essential outputs of the previous round (the updated Report
+and Tool Response), thus preventing context bloat and enabling sustained reasoning.
+Deep-research agents aim to accomplish in minutes what would take human researchers hours. Such
+long-horizon tasks require navigating heterogeneous evidence sources, coordinating multiple rounds of
+tool use, and maintaining coherent chains of reasoning across an ever-expanding body of information.
+Yet, this very complexity directly challenges the mono-contextual, linear accumulation paradigm adopted
+by current research agents (Li et al., 2025c; Tao et al., 2025; Li et al., 2025a), which is fundamentally
+constrained by: (1) Cognitive Workspace Suffocation: As the context window fills with accumulated data,
+the model’s capacity for active reasoning diminishes. The fixed context budget becomes dominated by
+historical information rather than providing space for deep thinking, forcing premature conclusions when
+the window approaches its limit. (2) Irreversible Noise Contamination: Without mechanisms to filter or
+revise earlier content, irrelevant information and initial errors persist throughout the entire process. This
+noise accumulation dilutes signal quality and propagates biases that compound over time, degrading the
+overall research quality. These limitations create a paradox: as agents gather more information to solve
+complex problems, their mono-contextual architecture becomes increasingly ineffective.
+To overcome these limitations, we propose IterResearch, which reformulates deep research as a Markov
+Decision Process (MDP) with periodic state reconstruction. Instead of maintaining an ever-expanding
+context, IterResearch operates through discrete rounds where each state contains only essential com-
+ponents, as illustrated in Figure 2. The key insight of IterResearch is to replace linear accumulation
+with iterative synthesis and reconstruction. Each research round operates on a focused Workspace that
+maintains clarity while preserving continuity through an evolving report that serves as the agent’s central
+memory. At each round i, the agent’s state si consists of three components: (1) The original research
+Question q, (2) The evolving Reporti−1 from the previous round (empty for i = 1), and (3) The most
+recent Actioni−1 and its Tool Responsei−1 (if i > 1). This compact state representation ensures the
+Markov property while maintaining all essential information for decision-making.
+To implement this iterative paradigm effectively, we define three structured meta-information cate-
+gories— Think , Report , and Action —that guide the agent’s decision in each round:
+• Think : This component serves as the agent’s cognitive scratchpad where it articulates its internal
+4

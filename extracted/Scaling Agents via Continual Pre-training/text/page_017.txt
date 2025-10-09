@@ -1,0 +1,88 @@
+WebWalker vs. GAIA
+[0, 1]
+[4, 5]
+[8, 9]
+[12, 13]
+[16, 17]
+[20, 21]
+[24, 25]
+[28, 29]
+[32, 33]
+[36, 37]
+[40, 41]
+[44, 45]
+[48, 49]
+Number of Tool Calls
+0.00
+0.05
+0.10
+0.15
+0.20
+Sample Proportion
+WebWalker
+GAIA
+HLE vs. BrowseComp(en)
+[0, 1]
+[4, 5]
+[8, 9]
+[12, 13]
+[16, 17]
+[20, 21]
+[24, 25]
+[28, 29]
+[32, 33]
+[36, 37]
+[40, 41]
+[44, 45]
+[48, 49]
+Number of Tool Calls
+0.000
+0.025
+0.050
+0.075
+0.100
+0.125
+0.150
+0.175
+0.200
+Sample Proportion
+HLE
+BrowseComp(en)
+Figure 8: Tool call distribution comparison.
+Observation Results. As illustrated in Figure 8, AgentFounder demonstrates distinct adaptive behaviors
+across task types: (1) Complex research tasks exhibit intensive tool usage. BrowseComp-en and HLE
+show heavy-tailed distributions with high tool density. BrowseComp-en requires extensive invocations for
+persistent web browsing, while HLE’s extended patterns reflect the need to combine complex reasoning
+with search-augmented inference. (2) Structured tasks employ conservative tool usage. WebWalker’s
+distribution peaks sharply at low invocation counts for efficient text navigation, while GAIA-text exhibits
+a compact distribution suited for well-defined problems with clear solution paths. These contrasting
+patterns demonstrate AgentFounder’s ability to calibrate tool usage based on task complexity—intensive
+exploration for open-ended research versus targeted invocations for structured problems.
+Model
+ACEBench
+Qwen3-30B-A3B
+67.2
+AgentFounder-30B
+70.0
+Table 6: A comparison of general tool-use ability on ACEBench on overall performance.
+3.6.3
+General Tool-use Abilities
+Beyond the tool-use capabilities of Deep Research, we construct agentic CPT data to address more
+general tool-use scenarios. As shown in Table 6, we compare AgentFounder-30B with Qwen3-30B-A3B
+on ACEBench (Chen et al., 2025), a benchmark designed to evaluate the tool-use performance of LLMs in
+diverse, general settings. The results reveal that AgentFounder-30B surpasses Qwen3-30B-A3B in general
+tool-use ability, suggesting that the Agentic CPT framework can be effectively applied to a broader range
+of agentic scenarios.
+4
+Related Work
+4.1
+Deep Research Agents
+Deep research agents refer to language models that can autonomously invoke tools and perform multi-
+step reasoning, particularly utilizing search, web access, code execution, and file parsing capabilities,
+to complete research-level tasks or solve complex problems and generate trustworthy reports. OpenAI
+pioneered this field with their closed-source deep research agent, capable of searching and analyzing
+hundreds of web pages to generate comprehensive reports with citations within minutes (OpenAI,
+2025b). This breakthrough has catalyzed widespread industry adoption, with Grok (xAI, 2025), Perplexity
+(Perplexity AI, 2025), Google Gemini (Google, 2025), and Kimi (Moonshot AI, 2025) subsequently releasing
+their own deep research products.
+17

@@ -1,0 +1,46 @@
+achieved by sampling subgraphs with diverse topologies, each representing a unique constellation of
+coupled entities and relations. We then formulate a question and an answer based on the subgraph.
+Critically, we introduce ambiguity through deliberate information obfuscation. Instead of presenting
+clear facts, we obfuscate features and relationships within the question. For example, a precise date is
+transformed into a vague period ("in the early 2010s"), a name is partially masked ("an institution founded
+by someone with the initial ’F’"), or a quantitative attribute is described qualitatively ("a market share
+of less than 1%"). This obfuscation directly increases the initial uncertainty, forcing the agent to reason,
+compare, and synthesize information rather than simply executing a lookup. We name our synthetic
+training data SailorFog-QA, which has three key advantages:
+• The data is grounded in the real-world internet, mirroring the challenges agents face in practice.
+• The diverse subgraph topologies naturally produce problems requiring a spectrum of complex
+reasoning patterns, from multi-step deduction to compositional and comparative analysis.
+• The approach is highly scalable, as the number of potential subgraphs—and thus challenging
+questions—grows non-linearly with the graph size, enabling efficient large-scale data synthesis.
+To illustrate the characteristics of our generated Level 3 tasks, two examples are presented below. These
+questions epitomize our methodology: they feature multiple, intricately coupled entities and deliberately
+obfuscated information, such as vague time references ("around the mid-5th century", "early 21st century")
+and non-specific descriptors ("a prominent South American capital", "a respected arts institution"). This
+combination of structural complexity and informational ambiguity creates a high degree of initial
+uncertainty that is exceptionally difficult to reduce. In fact, our manual evaluations confirm that these
+problems are intractable for human researchers under typical time constraints (e.g., within two hours), as
+they lack clear starting points for search and require extensive, non-linear exploration. Further details on
+our QA generation process are available in Appendix A.2.
+Examples of Generated Questions
+Question: There was an early Christian poetic hymn composed by a late antique writer who passed away around the
+mid-5th century. The year of this writer’s death coincides with the last year of a scientific chronology that reconstructs
+environmental conditions from several centuries before the modern era. What is the name of this chronology?
+Answer: Estimated Tree-Ring Chronology: 300-450 A.D.
+Question: A musical piece closely associated with a prominent South American capital features lyrics written by a
+notable figure who was later recognized with a distinguished local civic honor in the early 21st century. The composition’s
+melody was created by a musician who received formal training at a respected arts institution in western Colombia.
+What is the name of this musical piece?
+Answer: the Rue de Rivoli
+3.2
+Reconstructing Reasoning from Expert LRM Trajectories
+Having synthesized complex QA pairs, the next challenge is to generate corresponding solution trajecto-
+ries for cold-start supervision. While powerful open-source LRMs like QwQ-32B (Qwen Team, 2025) can
+provide some correct trajectories, directly using their full output for fine-tuning is counterproductive. We
+identify two critical issues:
+• Stylistic Contamination: These LRMs possess strong, often verbose, stylistic priors in their
+reasoning. Directly fine-tuning on these outputs can be overly prescriptive, stifling the agent’s
+ability to develop its own exploratory strategies and generalize to unseen problems.
+• Context Overload: The verbosity of their reasoning chains is a practical barrier for complex web
+agent tasks. A trajectory with dozens of tool calls can easily generate a history that exceeds the
+context limits, degrading performance and making the reasoning process intractable.
+5

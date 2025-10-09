@@ -1,0 +1,92 @@
+{
+  "title": "Towards General Agentic Intelligence via Environment Scaling",
+  "pages": [
+    {
+      "page": 1,
+      "text_file": "text/page_001.txt",
+      "images": [
+        "page001_img01.png",
+        "page001_img02.png",
+        "page001_img03.png",
+        "page001_img04.png"
+      ]
+    },
+    {
+      "page": 2,
+      "text_file": "text/page_002.txt",
+      "images": []
+    },
+    {
+      "page": 3,
+      "text_file": "text/page_003.txt",
+      "images": [
+        "page003_img01.png",
+        "page003_img02.png"
+      ]
+    },
+    {
+      "page": 4,
+      "text_file": "text/page_004.txt",
+      "images": [
+        "page004_img01.png",
+        "page004_img02.png",
+        "page004_img03.png",
+        "page004_img04.png",
+        "page004_img05.png",
+        "page004_img06.png",
+        "page004_img07.png",
+        "page004_img08.png"
+      ]
+    },
+    {
+      "page": 5,
+      "text_file": "text/page_005.txt",
+      "images": []
+    },
+    {
+      "page": 6,
+      "text_file": "text/page_006.txt",
+      "images": []
+    },
+    {
+      "page": 7,
+      "text_file": "text/page_007.txt",
+      "images": []
+    },
+    {
+      "page": 8,
+      "text_file": "text/page_008.txt",
+      "images": []
+    },
+    {
+      "page": 9,
+      "text_file": "text/page_009.txt",
+      "images": []
+    },
+    {
+      "page": 10,
+      "text_file": "text/page_010.txt",
+      "images": []
+    },
+    {
+      "page": 11,
+      "text_file": "text/page_011.txt",
+      "images": []
+    },
+    {
+      "page": 12,
+      "text_file": "text/page_012.txt",
+      "images": []
+    },
+    {
+      "page": 13,
+      "text_file": "text/page_013.txt",
+      "images": []
+    },
+    {
+      "page": 14,
+      "text_file": "text/page_014.txt",
+      "images": []
+    }
+  ]
+}

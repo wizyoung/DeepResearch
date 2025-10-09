@@ -1,0 +1,48 @@
+Sun et al., 2025). By leveraging strong or fine-tuned LLMs, these approaches generate plausible responses
+given a tool call. However, such methods struggle with issues like hallucination and inconsistent
+response variability. To address the limitations of the above two approaches, some recent work (Ye et al.,
+2025b; Yao et al., 2024; Barres et al., 2025; Prabhakar et al., 2025b; Ye et al., 2025a) proposes building an
+offline tool execution environment for LLM training and evaluation. On one hand, offline environments
+avoid calling real tools, significantly reducing response generation cost and latency. On the other hand,
+mocked tool usage in such environments can still interact with real databases or state files through
+actual execution. However, these methods are more commonly applied in LLM evaluation rather than
+training, as constructing a reliable tool suite and a high-fidelity execution environment typically requires
+substantial manual effort. Furthermore, it is difficult to automatically validate the quality of such
+environments without human involvement, making scalability a significant challenge. Our approach
+enables domain scalability through sampling from a toolgraph, and eliminates the need for human
+intervention via a rigorous, rule-based validation pipeline. This makes scalable construction of tool
+execution environments feasible.
+6.2
+Tool Learning
+To enhance the agentic capabilities and tool-calling abilities of models, many works have attempted
+to improve tool utilization through various approaches. For instance, xLAMs (Prabhakar et al., 2025b;
+Zhang et al., 2024) and ToolAce (Liu et al., 2024a) leverage large-scale agentic data synthesis pipelines
+to generate high-quality training data and thereby boost model performance. DiaTool-DPO (Jung
+et al., 2025) employs DPO to enable models to learn from multi-turn positive and negative trajectories.
+Meanwhile, Tool-RL (Qian et al., 2025), Tool-N1 (Zhang et al., 2025) utilize reinforcement learning (RL)
+algorithms to enhance both the tool-calling proficiency and generalization ability of models, further
+pushing the performance boundaries beyond supervised fine-tuning. Overall, whether relying on agentic
+data synthesis or online interaction with environments via RL training, a stable, reliable, and scalable
+execution environment is essential. For example, Kimi-K2 (Team et al., 2025) uses a tool simulator during
+Agentic Data Synthesis to obtain observations for multi-turn trajectories. Our method not only leverages
+accurately simulated tool environments to collect trajectories but also introduces verifiable environmental
+state changes, making each simulation response more reliable. Furthermore, we propose a state change
+based environment validation strategy, enabling a robust filtering mechanism for large-scale agentic data
+synthesis.
+7
+Conclusion
+In this work, we presented a principled pipeline for advancing general agentic intelligence through
+systematic environment scaling and agent experience learning. By programmatically materializing tools
+as executable code and grounding them in database-structured environments, our approach enables
+large-scale construction of verifiable trajectories. Building on these environments, we introduced a
+two-stage agent experience learning framework that first equips agents with fundamental tool-usage
+capabilities and then specializes them for domain-specific contexts. Extensive experiments on three
+representative benchmarks, τ-bench, τ2-Bench, and ACEBench, demonstrate the effectiveness of our
+pipeline. Notably, our AgentScaler family achieves state-of-the-art performance among open-source
+models under 1T parameters, and in several cases reaches parity with much larger or closed-source
+counterparts.
+Looking ahead, we believe our work highlights the importance of scalable environment construction and
+verifiable agentic experience for fostering robust and generalizable language agents. Future directions
+include integrating reinforcement learning on top of our fully simulated environments and extending
+our pipeline to broader modalities and real-world deployment scenarios.
+9

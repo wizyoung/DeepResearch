@@ -1,0 +1,49 @@
+A
+Algorithm Pseudo-Code
+In this section, we provide a detailed algorithmic description of the ReSum process in Algorithm 1.
+Algorithm 1 ReSum Rollout with Periodic Context Summarization
+Require: Query q, policy model πθ, summary tool πsum, tool environment R, maximum tool calls B
+Ensure: Final answer or failure
+1: Initialize conversation history H0 ←(q), tool-call count b ←0, round t ←1
+2: while b < B do
+3:
+Generate reasoning and tool decision
+4:
+(τt, at) ∼πθ(· | Ht−1)
+▷<think> </think> and <tool_call> </tool_call>
+5:
+if <answer> </answer> is detected in at then
+6:
+return final answer at
+7:
+else if at is a tool call then
+8:
+ot ←R(at)
+▷<tool_response> </tool_response>
+9:
+Ht ←Ht−1 ◦(τt, at, ot)
+10:
+t ←t + 1, b ←b + 1
+11:
+else
+12:
+return failure
+▷no answer or tool call
+13:
+end if
+14:
+if Trig(Ht) then
+▷e.g., token budget or agent-initiated
+15:
+s ∼πsum(· | Ht)
+▷<summary> </summary> includes evidence and gaps
+16:
+q′ ←(q, s),
+Ht ←(q′)
+▷reset to compressed state
+17:
+end if
+18: end while
+19: return failure
+▷budget exhausted
+14

@@ -1,0 +1,50 @@
+(a) Random Structure
+Expanded Question 𝒒𝒏(𝑻)
+(b) Sequential Structure
+(c) Layer-wise Structure
+Seed Question 
+𝒒𝟏(𝑻)
+Target
+Variable
+Constant
+Figure 4: Structures on different expansion paradigms. (a) Random Structure denotes expanding by
+randomly adding constants. (b) Sequential Structure is expanding on a chain of reasoning sequence. (c)
+Layer-wise Structure traverses layer-wisely on leaf constants and replaces them with variables. “Target”
+stands for target variable. “Variable” means the intermediate variable. “Constant” is the constant in our
+KP representation.
+With this proposition, we represent the R-Union of KP by a merge set S1 ∪S2. In practice, we express
+the union of sets by induction (eg. {1990} ∪{1991}∪, . . . , ∪{1999} as {90s}). Or simply add underlines
+between them (eg. {1990} ∪{1991}) as {1990_1991}). After that, our representation would only have an
+intersection between triplets.
+By introducing variables, our representation naturally handles KP recursion by faltten it into the intersec-
+tion of KPs. For example, given a recursion R1(R2(S)), we can represent it as [[V@X, r1, V@Y], [V@Y, r2,
+S]].
+Finally, an IS task q(T) can be represented by a list of triplets. For example, the question in Eq. (1) can be
+represented as:
+q(T) ≜?T
+s.t.
+[[V@T, playIn, V@X],
+[V@T, playAt, C@2004_05],
+[V@T, bornIn, C@90s],
+[V@X, foundIn, C@1966],
+[V@X, isA, C@East German football team]]
+(10)
+3.2.2
+Layer-wise Expansion Strategy
+After representing the q(T), we now elaborate on the expansion process in each iteration. Expansion
+strategy is key to our data synthesis. Compared to previous approaches that synthesize or extend
+questions at the natural language form, our formalization of IS tasks enables systematic analysis of
+structural question characteristics. This formal framework allows us to explicitly identify latent structural
+patterns within questions and perform a controlled and optimized expansion paradigm.
+To clearly illustrate the expansion strategy, we show our KP representation in a graph. The nodes in the
+graph are variables and constants in the list of triplets. And the edges are the relations. For example, the
+question in Eq. (10) can be illustrated as a graph in Figure 4. The question requires determining the target
+variable via the given constants.
+Previous methods are constrained by informal representations of natural language, which limit the
+controllable expansion and synthesis paradigms for questions. In our formalization language, previous
+methods would result in question structures as Random (Wu et al., 2025b; Shi et al., 2025a) or Sequen-
+tial (Wu et al., 2025a). The Random structure stands for methods that directly add FP to any nodes in the
+graph shown in Figure 4 (a). Sequential structure is resulted from generating the reasoning chain via a
+sequence shown in Figure 4 (b). However, these two paradigms have key limitations:
+• Redundancy As shown in Random structure in Figure 4, there exist constants connect to other
+7

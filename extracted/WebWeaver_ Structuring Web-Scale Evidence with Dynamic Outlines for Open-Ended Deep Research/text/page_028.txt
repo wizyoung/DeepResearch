@@ -1,0 +1,50 @@
+d. Coordination with stimulation programming
+2. Long-Term Medication Optimization <citation>id_83, id_84, id_85, id_93</citation>
+a. Levodopa dosing adjustments
+b. Dopamine agonist tapering strategies
+c. Management of persistent symptoms
+d. Monitoring for mood and cognitive changes
+3. Troubleshooting Medication Issues <citation>id_81, id_86</citation>
+a. Home-health nurse medication reviews
+b. Emergency protocols for medication disruption
+c. Balancing stimulation with pharmaceutical needs
+d. Communication with neurology team
+C. Home-Based Care and Comfort Measures
+1. Daily Routine Optimization <citation>id_63, id_65, id_67, id_72</citation>
+a. Structured daily routines and symptom diaries
+b. Sleep hygiene and rest protocols
+c. Regular physical activity programs
+d. Comfort interventions (massage, voice training)
+2. Home Health Services <citation>id_72, id_81</citation>
+a. Trained home-health nurse visits
+b. Remote programming capabilities
+c. Vital sign monitoring and medication adjustments
+d. Reduced travel burden for families
+3. Device Troubleshooting at Home <citation>id_77, id_78, id_86, id_90</citation>
+a. Basic device operation and monitoring
+b. Recognition of malfunction signs
+c. Emergency contact protocols
+d. Battery status management
+D. Psychosocial Support and Adaptation
+1. Identity and Role Adjustment <citation>id_54, id_66, id_68</citation>
+a. Managing "biographical disruption" from rapid symptom relief
+b. Negotiating new caregiver-patient role boundaries
+c. Addressing "burden of normality" phenomenon
+d. Reclaiming personal interests and autonomy
+2. Family Relationship Dynamics <citation>id_54, id_58, id_66, id_68</citation>
+a. Shifting from caregiver-patient to balanced spousal relationships
+b. Reducing over-protective behaviors
+c. Open communication about changing abilities
+d. Professional counseling and cognitive-behavioral therapy
+3. Caregiver Support and Education <citation>id_61, id_66, id_68</citation>
+a. Pre-operative education and expectation setting
+b. Structured psychosocial interventions
+c. Self-help groups and peer support networks
+d. Caregiver self-care and stress management
+E. Comprehensive Support Systems
+1. Healthcare Team Coordination <citation>id_39, id_46, id_61, id_72</citation>
+a. Multidisciplinary follow-up care
+b. Specialized Parkinson’s nurses
+c. Home-health nursing services
+d. Telemedicine and remote programming options
+28

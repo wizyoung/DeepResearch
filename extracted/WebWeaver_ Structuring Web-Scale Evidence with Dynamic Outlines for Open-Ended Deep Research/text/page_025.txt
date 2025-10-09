@@ -1,0 +1,50 @@
+a. Medication wearing-off periods
+b. Levodopa-induced dyskinesia
+c. Increased fall risk
+d. Emotional and mood changes
+3. Functional Impact Assessment <citation>id_6, id_20, id_22</citation>
+a. Loss of independence in daily activities
+b. Need for assistance with dressing, eating, bathing
+c. Occupational and social limitations
+D. Advanced Stage Warning Signs (Stages 4-5)
+1. Severe Motor Impairment <citation>id_5, id_6, id_9, id_22</citation>
+a. Major mobility loss requiring assistive devices
+b. Severe postural deformities
+c. Inability to live independently
+d. Wheelchair or bed confinement
+2. Complex Non-Motor Complications <citation>id_5, id_16, id_19, id_22</citation>
+a. Cognitive decline and dementia
+b. Hallucinations and delusions
+c. Severe autonomic dysfunction
+d. Chronic pain and sexual dysfunction
+3. End-Stage Considerations <citation>id_6, id_9, id_20</citation>
+a. Complete dependency for daily activities
+b. Risk of aspiration and respiratory complications
+c. Need for constant supervision and care
+II. Critical Warning Signs Requiring Immediate Medical Intervention
+A. Emergency Situations for Family Members
+1. Respiratory and Swallowing Emergencies <citation>id_25, id_26, id_29, id_31, id_32, id_35,
+id_36</citation>
+a. Sudden choking or difficulty swallowing
+b. Aspiration risk with coughing while eating
+c. Severe voice changes or stridor
+d. Respiratory difficulty or shortness of breath
+2. Neurological Crisis Signs <citation>id_24, id_26, id_28, id_32, id_33, id_35</citation>
+a. Sudden confusion, delirium, or marked cognitive decline
+b. New or worsening hallucinations, delusions, or paranoid thoughts
+c. Abrupt neurological deficits (weakness, speech changes)
+d. Loss of consciousness or seizures
+3. Medication-Related Emergencies <citation>id_24, id_28, id_33</citation>
+a. Abrupt stopping or alteration of medications
+b. Exposure to dopamine-blocking drugs
+c. Missed or delayed essential medication doses
+d. Signs of serotonin syndrome
+4. Motor System Crisis <citation>id_25, id_28, id_31, id_34</citation>
+a. Sudden severe rigidity or immobility
+b. Frequent falls or freezing episodes
+c. Rapid loss of walking ability
+d. Severe dyskinesia with complications
+B. Cardiovascular and Autonomic Emergencies
+1. Circulatory Complications <citation>id_26, id_28, id_31, id_32, id_34, id_36</citation>
+a. Severe orthostatic hypotension causing fainting
+25

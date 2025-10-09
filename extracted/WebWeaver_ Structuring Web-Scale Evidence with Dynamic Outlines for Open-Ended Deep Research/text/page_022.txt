@@ -1,0 +1,50 @@
+1. Activity Modifications <citation>id_47, id_51, id_52, id_65, id_67</citation>
+a. Gradual resumption of normal activities
+b. Continued use of mobility aids to prevent falls
+c. Avoidance of high-risk activities (deep water diving, extreme heat)
+d. Regular exercise program (minimum 2.5 hours weekly)
+2. Device Safety and Maintenance <citation>id_51, id_52, id_69</citation>
+a. Protection from electromagnetic interference
+b. Carrying handheld controller at all times
+c. Informing healthcare providers about implanted device
+d. Regular battery monitoring and replacement
+B. Psychosocial Support and Adaptation
+1. Identity and Role Adjustment <citation>id_54, id_66, id_68</citation>
+a. Managing "biographical disruption" from rapid symptom relief
+b. Negotiating new caregiver-patient role boundaries
+c. Addressing "burden of normality" phenomenon
+d. Reclaiming personal interests and autonomy
+2. Family Relationship Dynamics <citation>id_54, id_58, id_66, id_68</citation>
+a. Shifting from caregiver-patient to balanced spousal relationships
+b. Reducing over-protective behaviors
+c. Open communication about changing abilities
+d. Professional counseling and cognitive-behavioral therapy
+C. Comprehensive Support Systems
+1. Healthcare Team Coordination <citation>id_39, id_46, id_61, id_72</citation>
+a. Multidisciplinary follow-up care
+b. Specialized Parkinson’s nurses
+c. Home-health nursing services
+d. Telemedicine and remote programming options
+2. Family and Caregiver Support <citation>id_58, id_61, id_63, id_66, id_68</citation>
+a. Pre-operative education and realistic expectation setting
+b. Structured psychosocial interventions
+c. Self-help groups and peer support networks
+d. Caregiver self-care and stress management
+D. Practical Daily Living Strategies
+1. Routine and Symptom Management <citation>id_63, id_65, id_67</citation>
+a. Structured daily routines and symptom diaries
+b. Medication schedule adherence
+c. Regular physical activity (walking, tai chi, dancing)
+d. Comfort measures (leg massages, voice training)
+2. Nutritional and Lifestyle Support <citation>id_67</citation>
+a. Mediterranean diet implementation
+b. Adequate rest and sleep hygiene
+c. Intellectual activities and cognitive stimulation
+d. Consultation with specialized healthcare providers
+E. Long-term Monitoring and Adjustment
+1. Ongoing Assessment Needs <citation>id_47, id_52, id_69</citation>
+a. Regular follow-up visits (monthly for first six months)
+b. Symptom tracking and device optimization
+c. Monitoring for complications or side effects
+d. Battery replacement planning (every 3-5 years)
+22

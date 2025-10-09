@@ -1,0 +1,50 @@
+b. Signs of urinary tract infection
+c. Post-surgical complications
+d. Severe constipation or bowel impaction
+C. Psychiatric and Behavioral Emergencies
+1. Mental Health Crises <citation>id_28, id_32, id_33, id_36</citation>
+a. Severe depression or suicidal thoughts
+b. Violent behaviors during REM sleep disorder
+c. Severe impulse-control behaviors
+d. Acute psychosis with agitation or aggression
+2. Device-Related Emergencies <citation>id_28, id_34</citation>
+a. Sudden malfunction of implanted devices
+b. DBS system problems (infection, battery failure)
+c. Unexpected sleep attacks during critical activities
+III. Deep Brain Stimulation (DBS) Surgery: Comprehensive Care Framework
+A. Pre-Operative Considerations and Evaluation
+1. Candidate Selection Criteria <citation>id_45, id_56</citation>
+a. Minimum four years of Parkinson’s disease
+b. Continued medication benefit with motor complications
+c. Absence of dementia or severe cognitive impairment
+d. Realistic expectations about outcomes
+2. Pre-Surgical Assessment Process <citation>id_39, id_45, id_56</citation>
+a. Multidisciplinary team evaluation
+b. Neurological and neurosurgical consultation
+c. Cognitive testing and brain imaging
+d. Medication review and optimization
+B. Surgical Procedure and Immediate Post-Operative Care
+1. Surgical Process <citation>id_45, id_49, id_51, id_56</citation>
+a. Electrode implantation in target brain regions
+b. Pulse generator placement under collarbone
+c. Brief hospital stay (1-2 days)
+d. Low mortality rate (<0.5%) and modest complication rates (4-7%)
+2. Initial Recovery Phase <citation>id_41, id_47, id_49, id_51, id_52, id_65</citation>
+a. Expected post-operative signs (bruising, swelling, tenderness)
+b. Temporary "honeymoon" or microlesion effect
+c. Activity restrictions (4-6 weeks)
+d. Wound care and infection prevention
+C. Device Programming and Optimization
+1. Programming Timeline <citation>id_41, id_45, id_46, id_47, id_51, id_56</citation>
+a. Initial activation 2-4 weeks post-surgery
+b. Optimization period of 4-6 months
+c. Multiple programming visits required
+d. Ongoing adjustments every 6 months
+2. Expected Outcomes and Adjustments <citation>id_46, id_51, id_53, id_56</citation>
+a. Significant motor symptom improvement (= 32%)
+b. Medication reduction (up to 48%)
+c. Functional independence gains
+d. Possible side effects requiring management
+IV. Daily Life Adjustments and Support Strategies for DBS Patients
+A. Physical Care and Safety Measures
+21

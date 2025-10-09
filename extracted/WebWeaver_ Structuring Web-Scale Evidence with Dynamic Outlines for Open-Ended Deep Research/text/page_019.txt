@@ -1,0 +1,58 @@
+possibly cognitive-behavioural therapy—to help patients and partners negotiate new role
+boundaries, regain autonomy, and manage the "burden of normality" that can follow sudden
+functional gains. Daily-life adjustments reported by patients and spouses include shifting from a
+combined caregiver-patient identity to a more balanced spousal relationship, reclaiming personal
+interests, reducing over-protective behaviours, and actively addressing personal health and social
+needs. Pre- and post-DBS counseling, regular multidisciplinary follow-up, and interventions that
+foster positive psychology (e.g., character-strength exercises) are recommended to smooth these
+transitions and support long-term quality of life.
+</id_54>
+...
+</tool_response>
+Step 5
+<write_outline>
+Parkinson’s Disease: Health Warning Signs, Family Alert Systems, and Post-DBS Care Strategies
+I. Understanding Parkinson’s Disease Progression and Warning Signs
+A. Disease Staging Systems
+1. Hoehn and Yahr Scale Classifications <citation>id_2, id_6, id_9, id_12, id_13, id_14, id_15,
+id_17, id_20, id_21</citation>
+a. Stage 0: No detectable disease
+b. Stage 1.0: Unilateral motor symptoms with minimal functional impact
+c. Stage 1.5: Unilateral involvement with axial symptoms
+d. Stage 2.0: Bilateral symptoms with preserved balance
+e. Stage 2.5: Mild bilateral disease with normal pull-test recovery
+f. Stage 3.0: Bilateral disease with postural instability but retained independence
+g. Stage 4.0: Severe disability requiring assistance but can still walk/stand
+h. Stage 5.0: Wheelchair-bound or bedridden without assistance
+2.
+Movement
+Disorder
+Society-Unified
+Parkinson’s
+Disease
+Rating
+Scale
+(MDS-
+UPDRS)<citation>id_3</citation>
+a. Four-domain assessment approach
+b. Motor and non-motor impact evaluation
+c. Replacement for older staging systems
+B. Early Stage Warning Signs (Stages 1-2)
+1. Motor Symptoms <citation>id_2, id_5, id_7, id_18, id_22</citation> a. Subtle unilateral tremor
+(often starting in finger)
+b. Micrographia (small handwriting)
+c. Bradykinesia (slowed movements)
+d. Mild rigidity and stiffness
+e. Reduced arm swing
+f. Facial masking (reduced expression)
+g. Shuffling gait with irregular stride
+2. Non-Motor Early Indicators <citation>id_3, id_5, id_7, id_18</citation>
+a. Hyposmia (loss of smell)
+b. Constipation
+c. Sleep disturbances and REM sleep behavior disorder
+d. Depression and anxiety
+e. Subtle cognitive changes
+f. Autonomic dysfunction (blood pressure fluctuations)
+g. Unexplained weight loss
+C. Progressive Stage Warning Signs (Stages 2-3)
+19

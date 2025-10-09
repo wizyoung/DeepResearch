@@ -1,0 +1,256 @@
+answers are inherently non-verifiable, cannot be reliably evaluated using rule-based F1/EM metrics,
+despite the brevity of the responses, and that the final evaluation relies on LLM-as-Judge Zheng et al.
+(2023) which the judge model is Mj, we opt to employ model-based prompt evaluation as the answer
+reward signal Seed et al. (2025); Xu et al. (2025); Liu et al. (2025b). The scoreanswer is also binary, assigned
+as 1 only when the response is judged as correct by the LLMs. The final reward function is:
+R( ˆyi, y) = 0.1 ∗scoreformat + 0.9 ∗scoreanswer
+(5)
+where ˆyi denotes the model prediction and y is the reference answer.
+4
+Experiments
+Table 1: Main results on GAIA and WebWalkerQA benchmarks. We discuss the reported results of
+baselines and concurrent works in App. C.1. “-” means results that are either not reproducible or not
+reported. The best results among all frameworks are in bolded.
+GAIA
+WebWalkerQA
+Backbone
+Framework
+Level 1
+Level 2
+Level 3
+Avg.
+Easy
+Medium
+Hard
+Avg.
+No Agency
+Qwen-2.5-7B
+Base
+12.8
+3.8
+0.0
+6.8
+1.25
+0.8
+0.7
+0.8
+Qwen-2.5-32B
+Base
+20.5
+9.6
+8.3
+13.6
+3.8
+2.5
+3.3
+3.1
+RAG
+12.8
+11.8
+8.3
+11.8
+23.1
+14.3
+11.3
+15.3
+Qwen-2.5-72B
+Base
+20.5
+13.5
+0.0
+14.6
+9.4
+7.1
+3.3
+6.3
+GPT-4o
+Base
+23.1
+15.4
+8.3
+17.5
+6.7
+6.0
+4.2
+5.5
+QwQ-32B
+Base
+30.8
+15.4
+25.0
+22.3
+7.5
+2.1
+4.6
+4.3
+RAG
+33.3
+36.5
+8.3
+32.0
+36.9
+26.1
+33.5
+31.2
+DeepSeek-R1-671B
+Base
+43.6
+26.9
+8.3
+31.1
+5.0
+11.8
+11.3
+10.0
+Close-Sourced Agentic Frameworks
+OpenAI DR
+74.3
+69.1
+47.6
+67.4
+-
+-
+-
+-
+Open-sourced Agentic Frameworks
+Qwen-2.5-7B
+Search-o1
+23.1
+17.3
+0.0
+17.5
+-
+-
+-
+-
+R1-Searcher
+28.2
+19.2
+8.3
+20.4
+-
+-
+-
+-
+Qwen-2.5-32B
+Search-o1
+33.3
+25.0
+0.0
+28.2
+-
+-
+-
+-
+QwQ-32B
+Search-o1
+53.8
+34.6
+16.7
+39.8
+43.1
+35.0
+27.1
+34.1
+WebThinker-Base
+53.8
+44.2
+16.7
+44.7
+47.2
+41.1
+39.2
+41.9
+WebThinker-RL
+56.4
+50.0
+16.7
+48.5
+58.8
+44.6
+40.4
+46.5
+Simple DS
+-
+-
+-
+50.5
+-
+-
+-
+-
+ReAct Agentic Frameworks
+Qwen-2.5-7B
+Vanilla ReAct
+28.2
+15.3
+0.0
+18.4
+28.1
+31.2
+16.0
+24.2
+WebDancer
+41.0
+30.7
+0.0
+31.0
+40.6
+44.1
+28.2
+36.0
+Qwen-2.5-32B
+Vanilla ReAct
+46.1
+26.9
+0.0
+31.0
+35.6
+38.7
+22.5
+31.9
+WebDancer
+46.1
+44.2
+8.3
+40.7
+44.3
+46.7
+29.2
+38.4
+QwQ-32B
+Vanilla ReAct
+48.7
+34.6
+16.6
+37.8
+35.6
+29.1
+13.2
+24.1
+WebDancer
+61.5
+50.0
+25.0
+51.5
+52.5
+59.6
+35.4
+47.9
+GPT-4o
+Vanilla ReAct
+51.2
+34.6
+8.3
+34.6
+34.6
+42.0
+23.9
+33.8
+4.1
+Experimental Setup
+We evaluate our approach on two established deep information-seeking benchmarks: GAIA and Web-
+WalkerQA. In this work, we adopt the LLM-as-Judges paradigm to evaluate both tasks using the Pass@1
+metric, following Team (2025b). The details of the datasets and baselines are introduced in App. E.1 and
+App. E.2, respectively. The implementation details are shown in App. E.3. Qwen-7B and Qwen-32B are
+7

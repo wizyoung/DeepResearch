@@ -1,0 +1,66 @@
+the easy, medium, and hard levels, respectively. Similarly, for multi-source questions, multi_source2−4,
+multi_source4−6, and multi_source6−8 correspond to the easy, medium, and hard levels, respectively. The
+data statistics for the different data types are presented in Table 2.
+Domain
+WebWalkerQA encompasses four real-world domains: conference, organization, education,
+and game. These domains are selected because they provide authoritative information relevant to their
+respective fields, and their pages contain rich clickable content, offering substantial depth for exploration.
+39.5%
+60.5%
+Language Distribution
+Languages
+English
+Chinese
+24.0%
+46.3%
+7.9%
+21.9%
+Domain Distribution
+Domains
+Conference
+Education
+Organization
+Game
+Figure 3: The language and domain distribution.
+Language
+WebWalkerQA is a bilingual dataset that
+includes both Chinese and English3, reflecting the
+most widely used and universal languages in real-
+world web environments.
+The statistics of WebWalkerQA on domain and lan-
+guage are illustrated in Figure 3. The proportions of
+the conference, organization, education, and game
+domains are 24.0%, 7.9%, 46.3%, and 24.0%, respec-
+tively. In terms of language distribution, Chinese and English account for 60.5%, 39.5%, respectively.
+WebWalkerQA features a diverse distribution of languages and domains to ensure a comprehensive
+evaluation.
+3.3
+Web Traversal Task and Evaluation
+Formally, given an initial website URL Uroot and a query Q, which needs to be answered by exploring
+the website. The goal of this task is to gather enough information through page traversal to ultimately
+answer the query Q. The task is to navigate the website to find the corresponding information.
+WebWalkerQA can be evaluated from both performance and efficiency perspectives. using question-
+answering accuracy (acc.) as the performance metric and the action count (A.C.) of successful agentic
+executions answering correctly as the efficiency metric. Due to the varying lengths of generated text, it is
+challenging to perform exact match evaluation, even though we have controlled for short answers. We
+use GPT-4 as the evaluator, which determines the correctness of responses by comparing the predicted
+answer with the ground truth using CoT prompting strategy (Wei et al., 2022)4.
+4
+WebWalker
+We introduce WebWalker, a multi-agent framework designed to interact with web environments to
+answer queries. The WebWalker framework consists of two agents: an explorer agent and a critic agent.
+As illustrated in Figure 4, the explorer agent traverses the web pages in Thought-Action-Observation
+(T , A, O) paradigms. The critic agent updates the memory until sufficient information is accumulated
+to effectively address the query. The details regarding prompts for both agents are presented in Ap-
+pendix E.3.
+4.1
+Think then Explore
+The explorer agent explores the subpages by interacting with HTML buttons on the page. At time step t,
+the explorer agent receives an observation Ot from the web environment and takes an action At, following
+the policy π(At|Ht). The observation Ot = (pt, lt) consists of the information from the current page pt
+and a set of clickable sublinks lt = {buttoni}K
+i=1, where each buttoni describes HTML button information
+3Classification based on the language of the root webpages.
+4https://api.python.langchain.com/en/latest/langchain/evaluation.html, Details of the prompt for the
+evaluator are provided in Appendix F
+5

@@ -1,0 +1,44 @@
+Search
+Scholar
+Browsing
+Python
+Environment
+QUESTION
+QUESTION
+QUESTION
+Report
+Action
+Tool Response
+Report
+Action
+Tool Response
+Report
+Action
+Tool Response
+...
+...
+...
+...
+...
+Final Report + Answer
+Final Answer
+Parallel Search
+Integrative Synthesis
+Synthesis Agent
+Figure 4: Illustration of Reason-Synthesis Framework
+yields a set of final reports and their corresponding predicted answers, one from each agent. This
+collection can be formally expressed as:
+M = {(Final_Reportu, Answeru) : u ∈[1, n]}
+(Final_Reportu, Answeru) = IterResearchu(q)
+(6)
+Integrative Synthesis
+The Integrative Synthesis phase employs a single Synthesis Agent to consolidate
+the findings from all Research Agents and produce a final, reasoned conclusion. It takes the complete set
+of reports and answers as input to generate the final answer, represented as:
+Final_Answer = Synthesis(M)
+(7)
+It is noted that each report from IterResearch concisely encapsulates its entire reasoning path. Conse-
+quently, the Synthesis Agent can assess a broader range of solution strategies under a limited context,
+fully harnessing the power of test-time scaling. In our experiments, we employ Qwen3-235B-A22B as our
+Synthesis Agent.
+9

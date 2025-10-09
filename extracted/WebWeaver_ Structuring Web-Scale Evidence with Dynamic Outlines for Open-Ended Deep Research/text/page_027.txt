@@ -1,0 +1,50 @@
+d. Low mortality rate (<0.5%) and modest complication rates (4-7%)
+2. Initial Recovery Phase <citation>id_41, id_47, id_49, id_51, id_52, id_65</citation>
+a. Expected post-operative signs (bruising, swelling, tenderness)
+b. Temporary "honeymoon" or microlesion effect
+c. Activity restrictions (4-6 weeks)
+d. Wound care and infection prevention
+3. Early Post-Operative Monitoring <citation>id_65, id_88</citation>
+a. Incision care and healing assessment
+b. Medication resumption protocols
+c. Activity limitation guidelines
+d. Signs requiring immediate medical attention
+C. Device Programming and Optimization
+1. Programming Timeline <citation>id_41, id_45, id_46, id_47, id_51, id_56</citation>
+a. Initial activation 2-4 weeks post-surgery
+b. Optimization period of 4-6 months
+c. Multiple programming visits required
+d. Ongoing adjustments every 6 months
+2. Expected Outcomes and Adjustments <citation>id_46, id_51, id_53, id_56</citation>
+a. Significant motor symptom improvement (= 32%)
+b. Medication reduction (up to 48%)
+c. Functional independence gains
+d. Possible side effects requiring management
+3. Programming Process and Patient Education <citation>id_80, id_86, id_90</citation>
+a. Patient-controlled adjustments with handheld programmer
+b. Battery monitoring and replacement scheduling
+c. Understanding normal sensations vs. concerning symptoms
+d. Communication protocols with programming team
+IV. Daily Life Adjustments and Support Strategies for DBS Patients
+A. Physical Care and Safety Measures
+1. Activity Modifications <citation>id_47, id_51, id_52, id_65, id_67</citation>
+a. Gradual resumption of normal activities
+b. Continued use of mobility aids to prevent falls
+c. Avoidance of high-risk activities (deep water diving, extreme heat)
+d. Regular exercise program (minimum 2.5 hours weekly)
+2. Device Safety and Maintenance <citation>id_51, id_52, id_69, id_77, id_88</citation>
+a. Protection from electromagnetic interference
+b. Carrying handheld controller at all times
+c. Informing healthcare providers about implanted device
+d. Regular battery monitoring and replacement
+3. Environmental Safety Considerations <citation>id_88, id_90</citation>
+a. Contraindicated therapies and equipment
+b. Safe vs. unsafe daily activities
+c. Travel and security considerations
+d. Workplace and recreational restrictions
+B. Medication Management Post-DBS
+1. Immediate Post-Operative Medication Protocol <citation>id_84, id_88, id_93</citation>
+a. Continuation of pre-surgical regimen initially
+b. Gradual, systematic reduction approach
+c. Monitoring for withdrawal symptoms
+27

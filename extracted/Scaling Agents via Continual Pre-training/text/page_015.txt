@@ -1,0 +1,81 @@
+(a) Model Scaling
+1B
+4B
+30B-A3B
+Model Size (Billion Parameters)
+15%
+20%
+25%
+30%
+35%
+40%
+45%
+50%
+Average Accuracy (%)
+DeepSeek V3.1
+Kimi K2
+20.4%
+32.7%
+48.9%
+Smaller
+Better
+(b) Data Scaling
+0B
+15B
+50B
+65B
+210B
+315B
+Training Tokens
+54
+56
+58
+60
+62
+64
+Avg. Pass@3 (%)
+Note: X-axis uses logarithmic scale
+54.2
+58.0
+59.3
+61.1
+61.2
+62.2
+Performance Trend Curve
+Figure 6: Scaling Law Exploration for Agentic Capabilities. (a) Performance across model sizes ranging
+from 1B to 30B-A3B parameters. (b) Impact of training data volume from 0B to 315B samples on task
+performance. Both axes are in log scale.
+3.5.1
+Scaling with Model Size
+Experiment Design. We investigate how model scale influences agentic capabilities by evaluating models
+with 1B, 4B, and 30B parameters on deep research benchmarks. Additionally, we compare our models
+with two larger-scale baseline models (DeepSeek-V3.1 and Kimi-K2) to assess the efficiency of our agentic
+continual pre-training approach across different model scales.
+Observation Results. Our experimental results reveal that model scale plays a crucial role in agentic
+performance, with our approach demonstrating superior scaling efficiency: (1) Consistent scaling
+benefits. Model size shows a strong positive correlation with agentic performance. Average accuracy
+increases from 20.4% for the 1B model to 32.7% for the 4B model and further to 48.9% for the 30B model,
+indicating that larger models possess enhanced capacity for complex agentic behaviors such as effective
+tool use and multi-step reasoning. (2) Superior scaling efficiency. The AgentFounder-30B model achieves
+48.9% accuracy, exceeding the performance of two larger baseline models, DeepSeek-V3.1 (43.0%) and
+Kimi-K2 (29.6%), despite their greater size. This suggests that our agentic continual pre-training approach
+enables more effective utilization of model capacity for agentic tasks. These results demonstrate that
+combining agentic continual pre-training with appropriate model scaling provides a strong foundation
+for building high-performance deep research agents.
+3.5.2
+Scaling with Data Volume
+We investigate the scaling properties of Agentic CPT and validate the effectiveness of our two-stage
+training strategy across varying data volumes.
+Experiment Design. We train AgentFounder models with data volumes ranging from 0B to 315B tokens,
+using Qwen3-30B-A3B-Base as the initialization checkpoint. We implement our two-stage training
+paradigm, where Stage 2 incorporates 128K context window training at 65B and 315B token checkpoints.
+Performance is evaluated using the average Pass@3 metric across multiple agentic benchmarks to assess
+scaling behavior and training effectiveness.
+Observation Results. As shown in the scaling curve, our analysis reveals three key findings:
+(1) Logarithmic scaling law holds for agentic capabilities. The relationship between training tokens
+and performance exhibits logarithmic characteristics, with the most substantial improvements (3.8%)
+occurring within the initial 15B tokens, demonstrating that agentic behaviors can be efficiently acquired
+through targeted pre-training.
+(2) Two-stage CPT with extended context provides consistent improvements. Stage 2 CPT with 128K
+context windows delivers notable gains at both 65B (+1.8% over 50B) and 315B (+1.0% over 210B),
+15

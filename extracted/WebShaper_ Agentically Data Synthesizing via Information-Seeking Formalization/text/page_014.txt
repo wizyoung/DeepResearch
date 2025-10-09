@@ -1,0 +1,57 @@
+These findings underscore WebShaper’s unique ability to manage intricate reasoning chains, with
+statistically significantly higher proportions of multi-hop reasoning trajectories across all modalities.
+The sustained performance in extended tool call sequences suggests superior architectural capacity for
+managing complex task decompositions compared to existing benchmarks.
+4.3.7
+Case Study
+Question: What is the title of the section, where the section is written by an author who also authored a 
+scholarly article analyzing contact between Medieval Norse and Native North Americans published in a peer-
+reviewed archaeology journal, which additionally published another article that analyzes Lake Mohave artifacts 
+and Pleistocene lake levels?
+Answer: Thule Prehistory of Canada.
+[ [V@X, hasTitle, V@T], [V@X, writtenBy, V@Y], 
+[V@Y, hasAuthor, V@K], [V@K, publishIn, V@N], [V@N, publish, V@M], 
+[V@K, analyzeContactBetween, C@Medieval Norse and Native North Americans],  
+[V@N, isA, C@A peer-reviewed archaeology journal], 
+[V@M, analyze, C@Lake Mohave artifacts and Pleistocene lake level] ]
+T
+X
+K
+Y
+N
+M
+Question In Natural Language
+Question In Formalization
+Question In Graph
+Target
+Variable
+Constant
+Figure 9: Case studies of our synthesized data. We show a question in natural language, our formalization,
+and a graph respectively.
+We present a representative case study in Figure 9. Compared with linear structure and sequential
+structure, our synthesized data has no problems of redundancy and reasoning shortcuts. The model
+should strictly seek information and reason alongside all the variables to find the answer. There are no
+constants directly connected to the target variable T or variables close to it. Besides, there are no constants
+connected to other constants. We show more cases in the Appendix C.
+Moreover, R-Union effects well in our data. The underlined FP is a summarization of distributed
+web contents, leading to more difficulty in resolving the variables K, N, and M. Benefiting from the
+formalization, our data contains a variety of IS forms, which can fully stimulate the different IS capabilities
+of the model.
+5
+Related Work
+5.1
+Information-Seeking Data Synthesis
+Recent advances in information-seeking agents aim to integrate web interaction into LLMs’ reasoning (Li
+et al., 2025c; Song et al., 2025; Jin et al., 2025; Shi et al., 2025b; Chen et al., 2025; Zhang et al., 2025; Wu et al.,
+2025c). While these works exhibit promising capabilities, they predominantly depend on limited or overly
+simplistic datasets (Yang et al., 2018; Joshi et al., 2017; Kwiatkowski et al., 2019). Concurrently, several
+recent benchmarks, such as GAIA (Mialon et al., 2023), BrowseComp (Wei et al., 2025), and BrowseComp-
+zh (Zhou et al., 2025), provide only test sets, which restricts their applicability for training agents. Early
+efforts, such as WebWalkerQA (Wu et al., 2025b), explored simulating human-like web navigation to
+generate QA pairs by constructing linear information chains. CRAWLQA within WebDancer (Wu et al.,
+2025a) expands simple questions to more complex ones by aggregating external information, while
+SailorFog-QA within WebSailor (Li et al., 2025a) leverages entity coreference networks to support fuzzy
+reasoning. These methods are predominantly information-driven, focusing on strategies for retrieving
+and connecting knowledge. In contrast, our approach is formalization-driven, emphasizing the structural
+representation and principled modeling of the QA process.
+14

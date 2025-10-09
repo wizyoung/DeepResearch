@@ -1,0 +1,43 @@
+Jiawei Gu, Ziting Xian, Yuanzhen Xie, Ye Liu, Enjie Liu, Ruichao Zhong, Mochi Gao, Yunzhi Tan, Bo Hu,
+and Zang Li. Toward structured knowledge reasoning: Contrastive retrieval-augmented generation on
+experience. arXiv preprint arXiv:2506.00842, 2025.
+Daya Guo, Dejian Yang, Haowei Zhang, Junxiao Song, Ruoyu Zhang, Runxin Xu, Qihao Zhu, Shirong Ma,
+Peiyi Wang, Xiao Bi, et al. Deepseek-r1: Incentivizing reasoning capability in llms via reinforcement
+learning. arXiv preprint arXiv:2501.12948, 2025.
+Wenyi Hong, Weihan Wang, Qingsong Lv, Jiazheng Xu, Wenmeng Yu, Junhui Ji, Yan Wang, Zihan Wang,
+Yuxiao Dong, Ming Ding, et al. Cogagent: A visual language model for gui agents. In Proceedings of the
+IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 14281–14290, 2024.
+Anwen Hu, Yaya Shi, Haiyang Xu, Jiabo Ye, Qinghao Ye, Ming Yan, Chenliang Li, Qi Qian, Ji Zhang, and
+Fei Huang. mplug-paperowl: Scientific diagram analysis with the multimodal large language model.
+In Proceedings of the 32nd ACM International Conference on Multimedia, pp. 6929–6938, 2024.
+Mengkang Hu, Yuhang Zhou, Wendong Fan, Yuzhou Nie, Bowei Xia, Tao Sun, Ziyu Ye, Zhaoxuan Jin,
+Yingru Li, Qiguang Chen, et al. Owl: Optimized workforce learning for general multi-agent assistance
+in real-world task automation. arXiv preprint arXiv:2505.23885, 2025.
+Mingxin Huang, Yongxin Shi, Dezhi Peng, Songxuan Lai, Zecheng Xie, and Lianwen Jin. Ocr-reasoning
+benchmark: Unveiling the true capabilities of mllms in complex text-rich image reasoning. arXiv
+preprint arXiv:2505.17163, 2025.
+Dongzhi Jiang, Renrui Zhang, Ziyu Guo, Yanmin Wu, Jiayi Lei, Pengshuo Qiu, Pan Lu, Zehui Chen,
+Chaoyou Fu, Guanglu Song, et al. Mmsearch: Benchmarking the potential of large models as multi-
+modal search engines. arXiv preprint arXiv:2409.12959, 2024.
+Jina.ai. Jina, 2025. URL https://jina.ai/.
+Kuan Li, Zhongwang Zhang, Huifeng Yin, Liwen Zhang, Litu Ou, Jialong Wu, Wenbiao Yin, Baixuan Li,
+Zhengwei Tao, Xinyu Wang, et al. Websailor: Navigating super-human reasoning for web agent. arXiv
+preprint arXiv:2507.02592, 2025a.
+Xiaoxi Li, Jiajie Jin, Guanting Dong, Hongjin Qian, Yutao Zhu, Yongkang Wu, Ji-Rong Wen, and Zhicheng
+Dou. Webthinker: Empowering large reasoning models with deep research capability. arXiv preprint
+arXiv:2504.21776, 2025b.
+Yangning Li, Yinghui Li, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinran Zheng, Hui Wang, Hai-Tao Zheng,
+Philip S. Yu, Fei Huang, and Jingren Zhou. Benchmarking multimodal retrieval augmented generation
+with dynamic vqa dataset and self-adaptive planning agent, 2025c. URL https://arxiv.org/abs/24
+11.02937.
+Yuxuan Liu, Tianchi Yang, Shaohan Huang, Zihan Zhang, Haizhen Huang, Furu Wei, Weiwei Deng,
+Feng Sun, and Qi Zhang. Calibrating llm-based evaluator. In Nicoletta Calzolari, Min-Yen Kan,
+Véronique Hoste, Alessandro Lenci, Sakriani Sakti, and Nianwen Xue (eds.), Proceedings of the 2024 Joint
+International Conference on Computational Linguistics, Language Resources and Evaluation, LREC/COLING
+2024, 20-25 May, 2024, Torino, Italy, pp. 2638–2656. ELRA and ICCL, 2024. URL https://aclanthology
+.org/2024.lrec-main.237.
+Thomas Mensink, Jasper Uijlings, Lluis Castrejon, Arushi Goel, Felipe Cadar, Howard Zhou, Fei Sha,
+André Araujo, and Vittorio Ferrari. Encyclopedic vqa: Visual questions about detailed properties of
+fine-grained categories. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pp.
+3113–3124, 2023.
+24

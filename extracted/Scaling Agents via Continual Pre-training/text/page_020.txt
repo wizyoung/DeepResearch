@@ -1,0 +1,49 @@
+A
+Experimental Setup Details
+A.1
+Tools
+In this work, we utilize five different tools for our AgentFounder model, namely Search, Visit, Python
+Interpreter, Google Scholar, and File Parser:
+• Search leverages the Google search engine for large-scale information retrieval. The tool accepts a
+list of one or more search queries to be executed concurrently. For each query, it returns the top-10
+ranked results, with each result comprising a title, a descriptive snippet, and its corresponding
+URL.
+• Visit is designed for targeted information extraction from web pages. The tool takes as input
+a set of web pages, where each page is paired with a dedicated information-seeking goal. The
+process begins by employing Jina (Jina.ai, 2025) to retrieve the full content of a given web page.
+Subsequently, a summary model processes this content to extract only the information pertinent
+to that page’s specific goal.
+• Python Interpreter is used to execute Python code within a sandboxed environment. The input
+is a string of Python code, which must be enclosed within <code> tags for proper execution. The
+tool runs the provided code and captures its standard output; therefore, any results or values
+intended to be seen must be explicitly passed to the print() function. This capability enables
+dynamic computation, data manipulation, and the use of various Python libraries in a secure
+and isolated manner.
+• Google Scholar is used to retrieve information from academic publications. The input consists
+of a list of one or more search queries, allowing for multiple, distinct searches within a single
+tool call. The tool leverages the Google Scholar search engine to execute each query and gather
+relevant scholarly literature, such as articles, papers, and citations.
+• File Parser answers user queries by analyzing a mix of documents, web pages, and multimedia
+files (e.g., PDF, DOCX, MP4) from local or URL sources. It works in two steps: first, it converts
+all input into plain text, transcribing audio/video content when necessary. Second, a summary
+model reads this unified text to generate a direct answer to the user’s question.
+B
+Additional Experimental Results
+B.1
+Quality Analysis of FAS data on Planning Action
+Experiment Design. We evaluate the quality distribution and filtering effectiveness of FAS planning
+action data. Starting with FAS synthesized trajectories, we apply a prompt-based weak supervision filter
+that analyzes the original question, generated trajectory, and metadata to produce binary accept/reject
+decisions with detailed rejection reasons. We measure the impact on data quality by comparing pre- and
+post-filtering accuracy rates and analyzing error type distributions.
+Observation Results. As shown in our analysis, the filtering mechanism significantly enhances FAS
+planning action data quality: (1) Filtering achieves substantial quality improvement. While initial
+FAS generation yields balanced correct/incorrect trajectories (50%/50%), our filter removes 43.5% of
+problematic samples, increasing retained trajectory accuracy from 50% to 82%. This confirms FAS
+effectively generates diverse planning actions requiring quality control for high-fidelity selection. (2)
+Semantic errors dominate rejection patterns. Content Inconsistency accounts for 26.2% of rejections,
+followed by Search Necessity (6.9%) and Logic Discontinuity (5.7%). The concentration in semantic rather
+than syntactic errors (Invalid Tool: 1.2%) indicates FAS maintains structural validity while requiring
+refinement in semantic alignment. (3) Quality improvement justifies volume reduction. Though
+absolute correct data proportion slightly decreases (50% →46.3%), the 82% accuracy among retained
+20

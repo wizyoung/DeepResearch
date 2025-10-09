@@ -1,0 +1,128 @@
+Table 2: SFT Data Comparison on GAIA benchmarks. The best results among all backbones are in
+bolded.
+GAIA
+Backbone
+Dataset
+Level 1
+Level 2
+Level 3
+Avg.
+Qwen-2.5-32B
+WebWalkerQA
+43.5
+30.7
+0.0
+32.0
+E2HQA
+56.4
+36.5
+0.0
+39.8
+MHQA
+43.5
+36.5
+8.3
+35.9
+WebShaper
+56.4
+40.3
+16.6
+43.6
+Qwen-2.5-72B
+WebWalkerQA
+53.8
+36.5
+0.0
+38.8
+E2HQA
+61.5
+38.4
+16.6
+44.6
+MHQA
+56.4
+44.2
+0.0
+43.6
+WebShaper
+56.4
+48.0
+0.0
+45.6
+QwQ-32B
+WebWalkerQA
+66.6
+38.4
+8.3
+45.6
+E2HQA
+58.9
+42.3
+16.6
+45.6
+MHQA
+51.2
+44.2
+0.0
+41.7
+WebShaper
+69.2
+50.0
+16.6
+53.3
+4.3.3
+RL Stimulation
+We compare GAIA performances between models trained after SFT and reinforcement learning. RL
+models are trained based on the SFT results. As illustrated in Figure 6a and 6b, our experimental results
+demonstrate significant performance improvements across both Qwen2.5-32B and Qwen2.5-72B models
+after RL training on both GAIA and WebWalkerQA. The Pass@1 metric shows notable enhancements of
++7.8 points for the 32B model and an even more pronounced +13.5 points increase for the 72B variant on
+GAIA. On WebWalkerQA, WebShaper also improves IS capability on a large scale. This substantial gain
+highlights the critical role of RL in activating advanced information-seeking capabilities within LLM.
+44.6
+46.6
+52.4
+60.1
+30
+40
+50
+60
+70
+Qwen2.5-32B
+Qwen2.5-72B
+Scores
+Pass@1-SFT
+Pass@1-RL
++7.8
++13.5
+(a) GAIA.
+44.6
+46.4
+51.3
+52.2
+30
+40
+50
+60
+Qwen2.5-32B
+Qwen2.5-72B
+Scores
+Pass@1-SFT
+Pass@1-RL
++6.7
++5.8
+(b) WebWalkerQA.
+Figure 6: Comparison with SFT and RL.
+The breadth and complexity of tasks introduced by our task formalization stimulate dynamic IS strategies
+during RL. Unlike generic datasets, our carefully curated scenarios require the model to iteratively query
+relevant information, effectively "training" it to prioritize contextually aligned knowledge fragments.
+4.3.4
+Formalization
+In this part, we validate whether our formalization truly improves the dataset. We compare our dataset
+to a variation that uses natural language during the data synthesis. This variation takes the current
+question in each iteration and also uses the Expander agent to expand it to a new question. The Expander
+process in natural language as well. We SFT Qwen2.5-32B, Qwen2.5-72B, and QwQ on both datasets. The
+other training setting remains the same. We compare the training results with the variation as shown in
+Figure 7a.
+FL excels NL in all base model backbones. These results indicate that our formalization language can
+12

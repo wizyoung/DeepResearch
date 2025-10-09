@@ -1,0 +1,42 @@
+Tom Kwiatkowski, Jennimaria Palomaki, Olivia Redfield, Michael Collins, Ankur Parikh, Chris Alberti,
+Danielle Epstein, Illia Polosukhin, Jacob Devlin, Kenton Lee, et al. Natural questions: a benchmark
+for question answering research. Transactions of the Association for Computational Linguistics, 7:453–466,
+2019.
+Kuan Li, Liwen Zhang, Yong Jiang, Pengjun Xie, Fei Huang, Shuai Wang, and Minhao Cheng. Lara:
+Benchmarking retrieval-augmented generation and long-context llms–no silver bullet for lc or rag
+routing. arXiv preprint arXiv:2502.09977, 2025a.
+Xiaoxi Li, Guanting Dong, Jiajie Jin, Yuyao Zhang, Yujia Zhou, Yutao Zhu, Peitian Zhang, and Zhicheng
+Dou. Search-o1: Agentic search-enhanced large reasoning models. arXiv preprint arXiv:2501.05366,
+2025b.
+Xiaoxi Li, Jiajie Jin, Guanting Dong, Hongjin Qian, Yutao Zhu, Yongkang Wu, Ji-Rong Wen, and
+Zhicheng Dou. Webthinker: Empowering large reasoning models with deep research capability.
+CoRR, abs/2504.21776, 2025c. doi: 10.48550/ARXIV.2504.21776. URL https://doi.org/10.48550/a
+rXiv.2504.21776.
+Yuxuan Liu, Tianchi Yang, Shaohan Huang, Zihan Zhang, Haizhen Huang, Furu Wei, Weiwei Deng,
+Feng Sun, and Qi Zhang. Calibrating llm-based evaluator. In Nicoletta Calzolari, Min-Yen Kan,
+Véronique Hoste, Alessandro Lenci, Sakriani Sakti, and Nianwen Xue (eds.), Proceedings of the 2024 Joint
+International Conference on Computational Linguistics, Language Resources and Evaluation, LREC/COLING
+2024, 20-25 May, 2024, Torino, Italy, pp. 2638–2656. ELRA and ICCL, 2024. URL https://aclanthology
+.org/2024.lrec-main.237.
+Grégoire Mialon, Clémentine Fourrier, Thomas Wolf, Yann LeCun, and Thomas Scialom. Gaia: a
+benchmark for general ai assistants. In The Twelfth International Conference on Learning Representations,
+2023.
+OpenAI. Hello GPT-4o, 2024. URL https://openai.com/index/hello-gpt-4o/.
+OpenAI. Deep research system card, 2025a. URL https://cdn.openai.com/deep-research-system-c
+ard.pdf.
+OpenAI. Introducing openai gpt-4.1, 2025b. URL https://openai.com/index/gpt-4-1/.
+OpenAI. Introducing openai o3 and o4-mini, 2025c. URL https://openai.com/index/introducing-o
+3-and-o4-mini/.
+OpenAI. Introducing simpleqa, 2025d. URL https://openai.com/index/introducing-simpleqa/.
+Qwen Team. QwQ-32B: Embracing the power of reinforcement learning, March 2025. URL https:
+//qwenlm.github.io/blog/qwq-32b/.
+Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan
+Zhang, YK Li, Y Wu, et al. Deepseekmath: Pushing the limits of mathematical reasoning in open
+language models. arXiv preprint arXiv:2402.03300, 2024.
+Guangming Sheng, Chi Zhang, Zilingfeng Ye, Xibin Wu, Wang Zhang, Ru Zhang, Yanghua Peng, Haibin
+Lin, and Chuan Wu. Hybridflow: A flexible and efficient rlhf framework. In Proceedings of the Twentieth
+European Conference on Computer Systems, pp. 1279–1297, 2025.
+Mohammad Shoeybi, Mostofa Patwary, Raul Puri, Patrick LeGresley, Jared Casper, and Bryan Catanzaro.
+Megatron-lm: Training multi-billion parameter language models using model parallelism. arXiv
+preprint arXiv:1909.08053, 2019.
+21

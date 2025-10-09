@@ -1,0 +1,130 @@
+RACE
+FACT
+Agent systems
+Overall
+Comp.
+Insight
+Inst.
+Read.
+Eff. c.
+C. acc.
+WebShaper (32B)
+34.93
+31.58
+26.17
+44.81
+40.38
+-
+-
+langchain-open-deep-research
+43.44
+42.97
+39.17
+48.09
+45.22
+doubao-research
+44.34
+44.84
+40.56
+47.95
+44.69
+52.62
+52.86
+kimi-research
+44.64
+44.96
+41.97
+47.14
+45.59
+-
+-
+Claude-research
+45.00
+45.34
+42.79
+47.58
+44.66
+-
+-
+openai-deepresearch
+46.45
+46.46
+43.73
+49.39
+47.22
+39.79
+75.01
+Gemini-2.5-pro-deepresearch
+49.71
+49.51
+49.45
+50.12
+50.00
+165.34
+78.3
+WebWeaver (qwen3-30b-a3b-instruct-2507)
+46.77
+45.15
+45.78
+49.21
+47.34
+26.74
+25.00
+WebWeaver (gpt-oss-120b)
+48.11
+48.03
+47.20
+48.94
+48.11
+64.88
+66.14
+WebWeaver (qwen3-235b-a22b-instruct-2507)
+50.62
+51.29
+51.00
+49.98
+48.89
+166.73
+78.25
+WebWeaver (Claude-sonnet-4-20250514)
+50.58
+51.45
+50.02
+50.81
+49.79
+200.75
+93.37
+Table 1: Performance of agents on DeepResearch Bench in terms of comprehensiveness (Comp.), insight,
+instruction-following (Inst.), readability (Read.), effective citations (Eff. c.), and citation accuracy (C.
+acc.). The best results are highlighted with green color, and the second-best results are highlighted with
+underlines.
+Metric.
+We use the official evaluation metrics with the recommended judge LLMs for each benchmark.
+• DeepResearch Bench. This benchmark utilizes two suites of metrics to evaluate different aspects
+of the system’s output: 1) RACE (Report Quality): It assesses the quality of the final generated
+report with a reference report across four dimensions, namely Comprehensiveness (Comp.),
+Insight/Depth (Insight), Instruction-Following (Inst.), and Readability (Read.). An overall score
+is then calculated as a weighted summation of these components. 2) FACT (Web Retrieval):
+It measures the effectiveness and reliability of the information retrieval process. This includes
+Citation Accuracy (C. Acc.) and the Average Effective Citations per Task (Eff. c.). We adopt
+Gemini-2.5-pro as the judgement model by following the benchmark.
+• DeepConsult. Performance on this benchmark is determined through a pairwise comparison
+against the openai-deepsearch baseline. The primary metrics are the win rate, tie rate, and loss
+rate, which are supplemented by a reported average quality score. The judgement model is
+gpt-4.1-20250414.
+• DeepResearchGym. An LLM acts as a judge to assess the generated report on several quality
+dimensions, including clarity, insightfulness, depth, balance, breadth, support, and an average
+quality score. The judgement model is gpt-4.1-mini-20250414.
+Compared systems.
+We benchmark the performance of WebWeaver against a range of state-of-the-art
+DeepResearch systems. These systems are categorized into two groups:
+• Open-Source Systems: For open-source counterparts, we compare against WebShaper-32B (Tao
+et al., 2025) and langchain-open-deep-research (LangChain, Inc., 2023).
+• Proprietary Systems: We include several leading commercial systems: doubao-research (Research,
+2025a), kimi-research (Research, 2025d), Claude-research (anthropic, 2025), openai-deepresearch
+(OpenAI, 2025a), and Gemini-2.5-pro-deepresearch (Research, 2025b).
+Implementation details.
+The WebWeaver is compatible with various advanced LLMs. In the experi-
+ments, we utilize the following models: Qwen3-30b-a3b-instruct-2507 (Yang et al., 2025), GPT-oss-120b
+(Agarwal et al., 2025), Qwen3-235b-a22b-instruct-2507 (Yang et al., 2025), and Claude-sonnet-4-20250514
+7

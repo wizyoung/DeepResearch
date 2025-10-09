@@ -1,0 +1,28 @@
+begun to expand the evaluation space. MMT-Bench offers large-scale coverage of planning-oriented tasks
+across multiple domains, yet its multiple-choice format restricts the assessment of procedural reasoning
+and rich textual outputs (Ying et al., 2024). MicroVQA and Open3DVQA explore domain-specific and
+spatial reasoning, but are constrained by limited scale, manual curation, or lack of complex planning
+structure (Burgess et al., 2025; Zhang et al., 2025). Similarly, Dyn-VQA introduces adaptive query tasks
+but remains narrow in multimodal scope and size (Li et al., 2025c; Chen et al., 2025). While datasets
+such as MMMU and MMMU-Pro further surface performance limitations of current MLLMs on domain-
+specific and multi-image tasks, no existing benchmark comprehensively supports multi-step reasoning,
+cross-modal integration, large scale, and full automation with rigorous quality control (Yue et al., 2024a;b).
+To address these gaps, we introduce a large-scale, automated VQA benchmark designed to advance
+planning-oriented, multi-hop, and context-rich multimodal reasoning. Our dataset enables scalable
+evaluation of MLLMs’ capabilities in goal-directed, flexible agent behavior, setting a new standard for
+future research in this area.
+6
+Conclusion
+In this work, we explore the underdeveloped landscape of multimodal DeepResearch by designing a
+unified framework WebWatcher that combines complex vision-language reasoning and multi-tool interac-
+tion. We present BrowseComp-VL, a challenging dataset tailored for in-depth multimodal reasoning and
+strategic planning, and introduce a scalable pipeline to transform complex textual QA examples into VQA.
+To equip agents with robust tool-use capabilities, we further develop an automated trajectory generation
+pipeline grounded in action-observation traces, enabling high-quality supervision for cold start and
+GRPO. Finally, we enhance evaluation through a test-time scaling strategy. WebWatcher establishes a
+strong foundation for future multimodal DeepResearch agents capable of solving real-world problems
+with autonomy, flexibility, and deep reasoning.
+7
+Acknowledgment
+We sincerely thank Kuan Li for providing the LaTeX template used in the preparation of this paper.
+13

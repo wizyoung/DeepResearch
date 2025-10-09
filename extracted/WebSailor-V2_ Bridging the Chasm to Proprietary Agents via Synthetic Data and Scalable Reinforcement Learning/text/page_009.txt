@@ -1,0 +1,72 @@
+relatively small-scale models. As evidenced in Table 1, our model after SFT alone already exhibits
+formidable capabilities, achieving a score of 24.4 on BrowseComp-EN and 23.9 on HLE, surpassing many
+fully-trained open-source agents. This strong initial policy is not merely an intermediate checkpoint
+but a critical prerequisite for the success of reinforcement learning. The complex, open-ended nature of
+these tasks means that rewards are often sparse. Without a competent initial policy from SFT, an agent
+would struggle to conduct meaningful exploration, rarely completing tasks successfully and thus failing
+to receive the positive feedback needed for learning. The SFT phase ensures the agent starts with a robust
+enough policy to explore the problem space effectively, providing a sufficiently dense reward signal for
+the RL algorithm to stabilize and converge towards a superior final policy.
+5.3
+More Comparison with Proprietary Agents in Deep-research Task
+webSailor-V2-30B-A3B
+Gemini-2.5-pro-DeepResearch
+Openai-Deepresearch
+Claude-Research
+Kimi-Researcher
+Doubao-DeepResearch
+Perplexity-Research
+Grok-Deeper-Search
+35
+40
+45
+50
+Overall Performance
+47.7
+49.7
+46.5
+45.0 44.6 44.3
+40.5
+38.2
+Figure 3: Comparisons with proprietary agents. The
+metric here is the overall score defined in DeepRe-
+search Bench.
+The evaluation of proprietary agents presents con-
+siderable difficulties, particularly for those avail-
+able exclusively through web interfaces. To pro-
+vide a comprehensive validation that WebSailor-
+V2, based on Qwen3-30B-A3B, achieves perfor-
+mance on par with significantly larger proprietary
+agents, we selected the DeepResearch Bench for
+a comparative analysis. This benchmark’s offi-
+cial leaderboard features an extensive comparison
+against closed-source agents and is designed to
+assess multi-faceted capabilities, including both
+information retrieval and report generation.
+The results from the DeepResearch Bench, shown
+in Figure 3, further underscore the exceptional ca-
+pabilities of our model. WebSailor-V2, built upon
+the Qwen3-30B-A3B model, achieves a remarkable
+score of 48.9, placing it second only to the state-of-
+the-art proprietary agent, Gemini-2.5-pro-DeepResearch, which scored 49.7. We attribute this marginal
+performance gap not to a deficiency in research capability, but primarily to our training focus. Our
+pipeline is intentionally designed to maximize the agent’s core information retrieval and synthesis
+abilities, with less emphasis placed on optimizing the stylistic quality of the final report generation.
+Consequently, we believe this small difference reflects an area for targeted improvement in the final
+presentation layer, rather than a fundamental limitation in the agent’s capacity for deep research.
+5.4
+Detailed Analyses
+Training dynamics.
+The training dynamics of our RL process are depicted in Figure 4. As illustrated,
+the training reward exhibits a clear and significant upward trend as the number of training steps increases,
+indicating that the agent is effectively learning and refining its policy within the training distribution.
+This improvement successfully translates to our validation benchmarks, where performance on both
+BrowseComp-EN and BrowseComp-ZH shows a corresponding, albeit oscillating, upward trajectory.
+However, we observe a noteworthy divergence in learning patterns between difficult and simpler
+benchmarks. On challenging benchmarks like BrowseComp, both pass@1 and pass@3 scores demonstrate
+a distinct and concurrent rise (shown in Fig. 6). This suggests that for complex tasks, RL is genuinely
+expanding the model’s fundamental problem-solving capabilities, increasing the overall likelihood of
+finding a correct solution path within a few attempts. In contrast, for simpler benchmarks such as
+xbench-DeepSearch and GAIA, we see a significant improvement in pass@1, while the gains in pass@3
+are marginal. This indicates that for tasks already well within the model’s base capabilities, the primary
+9

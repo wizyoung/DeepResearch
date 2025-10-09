@@ -1,0 +1,50 @@
+Visit results are omitted
+</tool_response>
+Step 18
+<think>
+Great! This gives us the revenue concentration.
+Now we need to verify the other year: maybe 2004 had three customers contributed between
+27% and 74%? Wait the clue: "In a single fiscal year between Jan 1, 2004, and Dec 31, 2006,
+three customers contributed between 27% and 74% of its revenue." Actually the phrase: "three
+customers contributed between 27% and 74% of its revenue" – it’s ambiguous: maybe that in
+some fiscal year three customers contributed 27% and 74% (range?). Or maybe there is a single
+fiscal year where the three customers’ combined contribution fell somewhere between 27% and
+74%. The range suggests that the figure could be anywhere within that range, but not exact. For
+FormFactor, we see four customers contributed 72.8% in 2005, which falls within the range 55-89%
+for four customers; also four customers contributed 64.8% in 2004, within 55-89%; and in 2003
+they contributed 66.2% as well. However, the clue mentions one year with three customers, not
+four. But maybe there is a year with three customers? Let’s check the 2006 or 2003? The PDF
+shows 2005 and 2004 have four customers. Could there be a year earlier like 2003 where only
+three customers accounted for some percentage? Let’s open the 2004 annual report (maybe the
+2003 10-K). Alternatively check 2006 10-K.
+</think>
+<tool_call>
+{"name": "visit", "arguments": {"url": ["https://www.annualreports.com/HostedData/Annual
+ReportArchive/f/NASDAQ_FORM_2004.pdf"], "goal": "Find revenue concentration for fiscal
+2004"}}
+</tool_call>
+<tool_response>
+Visit results are omitted
+</tool_response>
+Step 19
+<think>
+Thus, 2004 has four customers contributing 64.8% of revenue.
+Now the clue says "In a single fiscal year between January 1, 2004, and December 31, 2006, three
+customers contributed between 27% and 74% of its revenue." This could refer to a year where
+three customers accounted for something within that range. Possibly 2005 had three customers?
+Actually 2005 had four customers; but perhaps there is another year where only three customers
+contributed? Let’s check 2006 10-K.
+Search "FormFactor 2006 10-K revenue concentration".
+</think>
+<tool_call>
+{"name": "search", "arguments": {"query": [""FormFactor" "2006" "four customers" "revenue"",
+""FormFactor" "2006" "revenue" "customers""]}}
+</tool_call>
+<tool_response>
+Search results are omitted
+</tool_response>
+Step 20
+<think>
+Let’s open the PDF for 2011 but it mentions fiscal 2006. Probably the 2011 annual report includes
+2006 data.
+21

@@ -1,0 +1,42 @@
+Sunghee Jung, Donghun Lee, Shinbok Lee, Gaeun Seo, Daniel Lee, Byeongil Ko, Junrae Cho, Kihyun
+Kim, Eunggyun Kim, and Myeongcheol Shin. Diatool-dpo: Multi-turn direct preference optimization
+for tool-augmented large language models. arXiv preprint arXiv:2504.02882, 2025.
+Kuan Li, Zhongwang Zhang, Huifeng Yin, Liwen Zhang, Litu Ou, Jialong Wu, Wenbiao Yin, Baixuan Li,
+Zhengwei Tao, Xinyu Wang, et al. Websailor: Navigating super-human reasoning for web agent. arXiv
+preprint arXiv:2507.02592, 2025.
+Weiwen Liu, Xu Huang, Xingshan Zeng, Xinlong Hao, Shuai Yu, Dexun Li, Shuai Wang, Weinan Gan,
+Zhengying Liu, Yuanqing Yu, et al. Toolace: Winning the points of llm function calling. arXiv preprint
+arXiv:2409.00920, 2024a.
+Zuxin Liu, Thai Hoang, Jianguo Zhang, Ming Zhu, Tian Lan, Juntao Tan, Weiran Yao, Zhiwei Liu,
+Yihao Feng, Rithesh RN, et al. Apigen: Automated pipeline for generating verifiable and diverse
+function-calling datasets. Advances in Neural Information Processing Systems, 37:54463–54482, 2024b.
+Jiarui Lu, Thomas Holleis, Yizhe Zhang, Bernhard Aumayer, Feng Nan, Felix Bai, Shuang Ma, Shen Ma,
+Mengyu Li, Guoli Yin, et al. Toolsandbox: A stateful, conversational, interactive evaluation benchmark
+for llm tool use capabilities. arXiv preprint arXiv:2408.04682, 2024.
+Meriem Mastouri, Emna Ksontini, and Wael Kessentini. Making rest apis agent-ready: From openapi to
+model context protocol servers for tool-augmented llms. arXiv preprint arXiv:2507.16044, 2025.
+OpenAI. Introducing gpt-5, 2025a. URL https://openai.com/index/introducing-gpt-5/.
+OpenAI. Introducing openai o3 and o4-mini, 2025b. URL https://openai.com/index/introducing-o
+3-and-o4-mini/.
+Akshara Prabhakar, Zuxin Liu, Ming Zhu, Jianguo Zhang, Tulika Awalgaonkar, Shiyu Wang, Zhiwei Liu,
+Haolin Chen, Thai Hoang, Juan Carlos Niebles, et al. Apigen-mt: Agentic pipeline for multi-turn data
+generation via simulated agent-human interplay. arXiv preprint arXiv:2504.03601, 2025a.
+Akshara Prabhakar, Zuxin Liu, Ming Zhu, Jianguo Zhang, Tulika Awalgaonkar, Shiyu Wang, Zhiwei Liu,
+Haolin Chen, Thai Hoang, Juan Carlos Niebles, et al. Apigen-mt: Agentic pipeline for multi-turn data
+generation via simulated agent-human interplay. arXiv preprint arXiv:2504.03601, 2025b.
+Cheng Qian, Emre Can Acikgoz, Qi He, Hongru Wang, Xiusi Chen, Dilek Hakkani-Tür, Gokhan Tur, and
+Heng Ji. Toolrl: Reward is all tool learning needs. arXiv preprint arXiv:2504.13958, 2025.
+Yujia Qin, Shihao Liang, Yining Ye, Kunlun Zhu, Lan Yan, Yaxi Lu, Yankai Lin, Xin Cong, Xiangru Tang,
+Bill Qian, et al. Toolllm: Facilitating large language models to master 16000+ real-world apis. arXiv
+preprint arXiv:2307.16789, 2023.
+Yujia Qin, Shengding Hu, Yankai Lin, Weize Chen, Ning Ding, Ganqu Cui, Zheni Zeng, Xuanhe Zhou,
+Yufei Huang, Chaojun Xiao, et al. Tool learning with foundation models. ACM Computing Surveys, 57
+(4):1–40, 2024.
+Timo Schick, Jane Dwivedi-Yu, Roberto Dessì, Roberta Raileanu, Maria Lomeli, Eric Hambro, Luke Zettle-
+moyer, Nicola Cancedda, and Thomas Scialom. Toolformer: Language models can teach themselves to
+use tools. Advances in Neural Information Processing Systems, 36:68539–68551, 2023.
+David Silver and Richard S Sutton. Welcome to the era of experience. Google AI, 1, 2025.
+Yifan Song, Weimin Xiong, Dawei Zhu, Wenhao Wu, Han Qian, Mingbo Song, Hailiang Huang, Cheng
+Li, Ke Wang, Rong Yao, et al. Restgpt: Connecting large language models with real-world restful apis.
+arXiv preprint arXiv:2306.06624, 2023.
+12

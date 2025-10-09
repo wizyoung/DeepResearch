@@ -1,0 +1,45 @@
+Figure 5: Comparison of high-orider action synthesis data and the original trajectory.
+2.3
+High-order Action Synthesis with Supervisory Signal
+Trajectory-Reuse Challenging. During the post-training phase of agent models, both reject sampling
+fine-tuning and RL generate substantial volumes of trajectory data. However, these methods rely heavily
+on trajectory-level delayed feedback for quality assessment, which results in numerous trajectories being
+either discarded entirely or utilized only once when they fail to meet stringent quality thresholds. This
+coarse-grained evaluation approach leads to significant waste of the learning signals embedded within
+real trajectories. While step-level evaluation could theoretically provide better leverage of these signals,
+precisely assessing intermediate steps remains challenging. Naively incorporating such uncertain reward
+signals into SFT or RL training risks model collapse. Therefore, effectively reusing sub-optimal trajectories
+while maintaining training stability remains a key challenge.
+Insights. We recognize that each step in a trajectory is supported by high-quality context including the
+original question, prior steps, and their real feedback. This context defines a distinct reasoning state with
+a broad space of feasible reasoning–action options. Thus, every step is fundamentally a hidden decision
+process. However, although agents often generate multiple candidates within a single reasoning–action
+turn (e.g., alternative queries or exploration directions), these candidates remain internal branches of
+the same path, and supervision mainly rewards reproducing the full trajectory. Consequently, models
+learn to imitate a sequence rather than to perform decision-making at critical steps. We therefore shift the
+objective from trajectory imitation to step-wise decision-making, explicitly exploiting the choice space at
+each step to move from trajectory reproduction to decision-based reasoning.
+To this end, we introduce High-order Action Synthesis (HAS), a multi-decision action synthesis method
+through step-level scaling. The core idea is to expand the reasoning-and-action option set at each step to
+fully explore the local action space, then transform the original trajectory and explored reasoning-action
+space into decision processing with feedback. Specifically, given a problem Q and an agent trajectory
+T = {(S1, R1), . . . , (SK, RK)}, where Sk represents the “reasoning and tool invocation” at the k-th step and
+Rk denotes the corresponding tool/environment response, the entire trajectory carries a binary judgment
+J ∈{0, 1} indicating failure and success respectively. HAS comprises two components:
+(1) Step-level Scaling. For any step Sk, we denote its conditional context as Ck = (Q, S1, R1, . . . , Sk−1, Rk−1).
+Without actual tool execution, we employ LLMs to generate N alternative “thought and invocation” can-
+didates for context Ck: Ak = {S(1)
+k , . . . , S(N)
+k
+}. We merge the original step S(0)
+k
+≡Sk with these candidates
+to obtain N + 1 feasible steps, then randomly shuffle them to form sequence ˜Ak while recording the
+original step’s position nk in the sequence. This expansion explores different decision possibilities at
+the cognitive level, enriching the original trajectory into a decision space with (N + 1) × K potential
+reasoning-actions.
+(2) Contrastive Decision-Action Synthesis. We transform the trajectory with expanded options into a
+progressive decision-making process. As illustrated in Figure 5, starting from problem Q for each step,
+we explicitly simulate a multi-option selection and decision process. For the k-th step, we enumerate
+each option in ˜Ak and insert a local action decision statement: “I will choose option nk”, immediately
+8

@@ -1,0 +1,109 @@
+7B
+32B
+QwQ
+7B
+32B
+QwQ
+7B
+32B
+QwQ
+0
+10
+20
+30
+40
+50
+60
+Score (%)
++7.70
++5.80
++1.95
++2.90
++5.80
++0.97
++2.67
++8.68
++1.74
+Metric - Method
+Pass@1 - SFT
+Pass@1 - RL
+Pass@3 - SFT
+Pass@3 - RL
+Cons@3 - SFT
+Cons@3 - RL
+Figure 4: Detailed evaluation results using Pass@1, Pass@3 and Cons@3 metric on GAIA benchmark.
+effectiveness of the constructed datasets. In long-CoT, hallucinations often arise when the model attempts
+to answer by simulating observations, primarily due to its exclusive reliance on internal reasoning
+mechanisms. Li et al. (2025a) Final performs better than all under low-data regimes, emphasizing the
+value of robust filtering.
+SFT for cold start is essential, as the agent tasks demand strong multi-step multi-tool instruction-
+following capabilities. We empirically investigate this by comparing performance under a single
+reinforcement learning setting using QwQ. The results show that the Pass@3 performance is significantly
+limited, achieving only 5% on the GAIA. For the RL phase, both Pass@3 and Cons@3 show consistent
+improvements as the number of training steps increases, as illustrated in Figure 5(a).
+Table 3: Results on CoT knowledge transfer.
+Inv. denotes invalid rate. R. refers to whether
+the model is a reasoning model.
+Model
+R.
+Short-Cot
+Long-Cot
+Pass@3
+Cons@3
+Inv.
+Pass@3
+Cons@3
+Inv.
+Qwen2.5-7B
+✘
+33.98
+22.33
+0.65%
+35.92
+21.00
+21.36%
+Qwen2.5-32B
+✘
+42.72
+24.33
+4.20%
+45.63
+30.00
+13.59%
+QwQ-32B
+✔
+44.66
+28.33
+0.97%
+58.25
+39.66
+13.27%
+The thinking pattern knowledge used by strong rea-
+soner models is struggle transferable to those of small
+instruction models. As shown in Table 3, reasoning
+models trained on trajectories synthesized by reason-
+ing models significantly enhance their reasoning per-
+formance Gou et al. (2023). For non-reasoning models,
+Long-CoT also demonstrates good performance, but it in-
+troduces additional issues, such as a higher invalid rate,
+often manifested as repetition, leading to exceeding
+the model’s context length, particularly in smaller-scale models. These reasoning patterns do not easily
+transfer to instruction-tuned models, which are generally optimized for task-following behavior rather
+than deep reasoning. This observation aligns with the findings in Li et al. (2025b); Yin et al. (2025),
+which highlight the brittleness of cross-model reasoning knowledge transfer. 2 As such, direct transfer of
+reasoning capabilities from reasoner models to instruction models remains a non-trivial challenge.
+RL enables longer reasoning processes and supports more complex agentic action. As demonstrated by
+the results on Qwen-32B in Figure 5(b), we observe that SFT leads to more frequent action generation and
+extended reasoning sequences, largely due to the nature of our training data (App. E.1). RL frameworks
+facilitate the emergence of more sophisticated reasoning strategies by allowing models to optimize
+over sequences of decisions, rather than single-step outputs. This enables models to learn from delayed
+rewards and engage in deeper exploration of action spaces, leading to more coherent and longer reasoning
+trajectories. Moreover, RL encourages agentic behaviors where models autonomously decide intermediate
+steps, subgoals, or tools to achieve final objectives, as shown in App. F. Such capabilities are particularly
+useful in complex environments where straightforward task-following fails to generalize.
+Web agent executes in a dynamic, evolving environment that inherently resists stabilization. As shown
+in Figure 5(c), adjusting the decoding temperature had minimal impact on final performance, indicating
+that decoding variability alone does not account for agent instability. Instead, we attribute much of
+2We also experiment with mixing short-CoTs and long-CoTs, but observe no significant performance improve-
+ments.
+9

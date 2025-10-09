@@ -1,0 +1,20 @@
+all the evidence into LLMs. In contrast, our approach uniquely enables the outline to be dynamically
+optimized in tandem with the evidence acquisition process, allowing for a comprehensive, source-
+grounded research outline. Furthermore, our proposed hierarchical writing process with only relevant
+evidence also mitigates the long-context issues from the brute-force writing strategy.
+6
+Conclusion
+In this paper, we introduced WebWeaver, a novel dual-agent framework designed to overcome the
+fundamental flaws of static, machine-like pipelines in open-ended deep research (OEDR). By emulating
+the human cognitive process that integrates the planner’s dynamic research cycle with the writer’s
+hierarchical retrieval and writing process, WebWeaver consistently outperforms both proprietary and
+open-source systems, establishing a new state-of-the-art.
+Beyond its superior performance, the true significance of WebWeaver lies in the new paradigm it offers
+the community for tackling complex, information-intensive tasks. It reframes the intractable challenge of
+long-context reasoning, demonstrating that it can be successfully deconstructed into a structured problem
+of system-level information management, orchestrated through a series of precise actions. Both the
+planner and writer are embodiments of this principle: they use tools to dynamically explore, structure,
+and write, rather than passively processing it in a single pass. This work does not just present a better
+agent system; it presents a new blueprint for building the agent system that masters intensive knowledge
+through deliberate actions, not just brute-force attention.
+13

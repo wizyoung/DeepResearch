@@ -1,0 +1,42 @@
+Grégoire Mialon, Clémentine Fourrier, Thomas Wolf, Yann LeCun, and Thomas Scialom. Gaia: a
+benchmark for general ai assistants. In The Twelfth International Conference on Learning Representations,
+2023.
+Moonshot AI. Kimi-researcher: End-to-end rl training for emerging agentic capabilities. https://moon
+shotai.github.io/Kimi-Researcher/, June 2025. Accessed: 2025-09-10.
+OpenAI. Introducing openai o3 and o4-mini, 2025a. URL https://openai.com/index/introducing-o
+3-and-o4-mini/.
+OpenAI. Introducing deep research, February 2025b. URL https://openai.com/index/introducing-d
+eep-research/.
+Long Ouyang, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong Zhang,
+Sandhini Agarwal, Katarina Slama, Alex Ray, et al. Training language models to follow instructions
+with human feedback. Advances in neural information processing systems, 35:27730–27744, 2022.
+Jupinder Parmar, Sanjev Satheesh, Mostofa Patwary, Mohammad Shoeybi, and Bryan Catanzaro. Reuse,
+don’t retrain: A recipe for continued pretraining of language models, 2024. URL https://arxiv.org/
+abs/2407.07263.
+Perplexity AI. Introducing perplexity deep research. https://www.perplexity.ai/hub/blog/introdu
+cing-perplexity-deep-research, February 2025. Accessed: 2025-09-10.
+Thinh Pham, Nguyen Nguyen, Pratibha Zunjare, Weiyuan Chen, Yu-Min Tseng, and Tu Vu. Sealqa:
+Raising the bar for reasoning in search-augmented language models. arXiv preprint arXiv:2506.01062,
+2025.
+Long Phan, Alice Gatti, Ziwen Han, Nathaniel Li, Josephina Hu, Hugh Zhang, Chen Bo Calvin Zhang,
+Mohamed Shaaban, John Ling, Sean Shi, et al. Humanity’s last exam. arXiv preprint arXiv:2501.14249,
+2025.
+Zile Qiao, Guoxin Chen, Xuanzhong Chen, Donglei Yu, Wenbiao Yin, Xinyu Wang, Zhen Zhang, Baixuan
+Li, Huifeng Yin, Kuan Li, Rui Min, Minpeng Liao, Yong Jiang, Pengjun Xie, Fei Huang, and Jingren
+Zhou. WebResearcher: Unleashing unbounded reasoning capability in Long-Horizon Agents, 2025.
+Yujia Qin, Shengding Hu, Yankai Lin, Weize Chen, Ning Ding, Ganqu Cui, Zheni Zeng, Xuanhe Zhou,
+Yufei Huang, Chaojun Xiao, et al. Tool learning with foundation models. ACM Computing Surveys, 57
+(4):1–40, 2024.
+Timo Schick, Jane Dwivedi-Yu, Roberto Dessì, Roberta Raileanu, Maria Lomeli, Luke Zettlemoyer, Nicola
+Cancedda, and Thomas Scialom. Toolformer: Language models can teach themselves to use tools.
+CoRR, abs/2302.04761, 2023.
+Haizhou Shi, Zihao Xu, Hengyi Wang, Weiyi Qin, Wenyuan Wang, Yibin Wang, Zifeng Wang, Sayna
+Ebrahimi, and Hao Wang. Continual learning of large language models: A comprehensive survey.
+ACM Computing Surveys, 2024.
+Huatong Song, Jinhao Jiang, Yingqian Min, Jie Chen, Zhipeng Chen, Wayne Xin Zhao, Lei Fang, and
+Ji-Rong Wen. R1-searcher: Incentivizing the search capability in llms via reinforcement learning. arXiv
+preprint arXiv:2503.05592, 2025.
+Zhengwei Tao, Jialong Wu, Wenbiao Yin, Junkai Zhang, Baixuan Li, Haiyang Shen, Kuan Li, Liwen Zhang,
+Xinyu Wang, Yong Jiang, et al. Webshaper: Agentically data synthesizing via information-seeking
+formalization. arXiv preprint arXiv:2507.15061, 2025.
+30

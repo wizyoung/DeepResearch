@@ -1,0 +1,45 @@
+Qiying Yu, Zheng Zhang, Ruofei Zhu, Yufeng Yuan, Xiaochen Zuo, Yu Yue, Tiantian Fan, Gaohong Liu,
+Lingjun Liu, Xin Liu, et al. Dapo: An open-source llm reinforcement learning system at scale. arXiv
+preprint arXiv:2503.14476, 2025.
+Yuanqing Yu, Zhefan Wang, Weizhi Ma, Zhicheng Guo, Jingtao Zhan, Shuai Wang, Chuhan Wu, Zhiqiang
+Guo, and Min Zhang. Steptool: A step-grained reinforcement learning framework for tool learning in
+llms. arXiv preprint arXiv:2410.07745, 2024.
+Yang Yue, Zhiqi Chen, Rui Lu, Andrew Zhao, Zhaokai Wang, Yang Yue, Shiji Song, and Gao Huang. Does
+reinforcement learning really incentivize reasoning capacity in llms beyond the base model?, 2025.
+URL https://arxiv.org/abs/2504.13837.
+Aohan Zeng, Mingdao Liu, Rui Lu, Bowen Wang, Xiao Liu, Yuxiao Dong, and Jie Tang. Agenttuning:
+Enabling generalized agent abilities for llms. In Findings of the Association for Computational Linguistics
+ACL 2024, pp. 3053–3077, 2024.
+Chaoyun Zhang, Shilin He, Liqun Li, Si Qin, Yu Kang, Qingwei Lin, and Dongmei Zhang. Api agents vs.
+gui agents: Divergence and convergence. arXiv preprint arXiv:2503.11069, 2025a.
+Chong Zhang, Yue Deng, Xiang Lin, Bin Wang, Dianwen Ng, Hai Ye, Xingxuan Li, Yao Xiao, Zhanfeng
+Mo, Qi Zhang, et al. 100 days after deepseek-r1: A survey on replication studies and more directions
+for reasoning language models. arXiv preprint arXiv:2505.00551, 2025b.
+Dingchu Zhang, Yida Zhao, Jialong Wu, Baixuan Li, Wenbiao Yin, Liwen Zhang, Yong Jiang, Yufeng Li,
+Kewei Tu, Pengjun Xie, and Fei Huang. Evolvesearch: An iterative self-evolving search agent, 2025c.
+URL https://arxiv.org/abs/2505.22501.
+Shaokun Zhang, Yi Dong, Jieyu Zhang, Jan Kautz, Bryan Catanzaro, Andrew Tao, Qingyun Wu, Zhiding
+Yu, and Guilin Liu. Nemotron-research-tool-n1: Tool-using language models with reinforced reasoning.
+arXiv preprint arXiv:2505.00024, 2025d.
+Yuxiang Zhang, Yuqi Yang, Jiangming Shu, Xinyan Wen, and Jitao Sang. Agent models: Internalizing
+chain-of-action generation into reasoning models. arXiv preprint arXiv:2503.06580, 2025e.
+Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu, Yonghao Zhuang, Zi Lin,
+Zhuohan Li, Dacheng Li, Eric Xing, et al. Judging llm-as-a-judge with mt-bench and chatbot arena.
+Advances in Neural Information Processing Systems, 36:46595–46623, 2023.
+Yuxiang Zheng, Dayuan Fu, Xiangkun Hu, Xiaojie Cai, Lyumanshan Ye, Pengrui Lu, and Pengfei Liu.
+Deepresearcher: Scaling deep research via reinforcement learning in real-world environments, 2025.
+URL https://arxiv.org/abs/2504.03160.
+Peilin Zhou, Bruce Leon, Xiang Ying, Can Zhang, Yifan Shao, Qichen Ye, Dading Chong, Zhiling Jin,
+Chenxuan Xie, Meng Cao, et al. Browsecomp-zh: Benchmarking web browsing ability of large language
+models in chinese. arXiv preprint arXiv:2504.19314, 2025.
+Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, Tiannan Wang, Shi Qiu, Jintian Zhang,
+Jing Chen, Ruipu Wu, Shuai Wang, Shiding Zhu, Jiyu Chen, Wentao Zhang, Xiangru Tang, Ningyu
+Zhang, Huajun Chen, Peng Cui, and Mrinmaya Sachan. Agents: An open-source framework for
+autonomous language agents. 2023. URL https://arxiv.org/abs/2309.07870.
+Wangchunshu Zhou, Yixin Ou, Shengwei Ding, Long Li, Jialong Wu, Tiannan Wang, Jiamin Chen, Shuai
+Wang, Xiaohua Xu, Ningyu Zhang, Huajun Chen, and Yuchen Eleanor Jiang. Symbolic learning enables
+self-evolving agents. 2024. URL https://arxiv.org/abs/2406.18532.
+Yuxin Zuo, Kaiyan Zhang, Shang Qu, Li Sheng, Xuekai Zhu, Biqing Qi, Youbang Sun, Ganqu Cui, Ning
+Ding, and Bowen Zhou. Ttrl: Test-time reinforcement learning, 2025. URL https://arxiv.org/abs/
+2504.16084.
+16

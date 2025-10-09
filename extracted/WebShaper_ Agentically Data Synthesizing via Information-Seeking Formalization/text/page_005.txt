@@ -1,0 +1,49 @@
+R(V) = R1(S1) ∩R2(S2) ∩· · · ∩Rn(Sn)
+(4)
+where Ri are about different relations. For example, if R1 is about playAt and R2 is about bornIn, then
+R1({2000}) ∩R2({90s}) stands for players playing in 2000 and born in 90s.
+Based on R-Union and Intersection operations, we introduce IS task formalization. First, we define T as a
+target set:
+T =
+p\
+i=1
+(Ri(Si,1) ∪Ri(Si,2) ∪. . . Ri(Si,ti))).
+(5)
+Si,j ⊂E is an entity set. More generally, T can be recursivelly derived by replacing Si,j with other target
+set as:
+T = R1(T1) ∩R2(T2) ∩. . . ∩Rk(Tk)
+(6)
+An IS task is to find what entities a questioned T contains:
+q(T) ≜?T
+(7)
+Therefore, the question example in Eq. (1) can be formalized as:
+q(T) ≜?T =RplayIn(T1) ∩(RplayAt({2004}) ∪RplayAt({2005})) ∩
+1999
+[
+1900
+RbornIn({y}))
+T1 = R f oundIn({1996}) ∩RisA({East German f ootball team})
+(8)
+3
+Data Synthesis
+In this section, we describe the process of our data synthesis with our task formalization. As Eq. (5-7)
+shows, an IS task is recursively composited by knowledge projections. In order to better fit the IS task
+formalization, we start with constructing a seed task, followed by a multi-step expansion approach.
+This expansion process is built upon our formalization. We then introduce an agentic Expander. It can
+understand the task formalization with our KP representation. At each expansion step, we implement
+the layer-wise expansion to reduce redundancy and reasoning shortcuts. The Expander autonomously
+retrieves knowledge from the internet, constructs and validates the new FPs to obtain the new question.
+We elaborate on this process in the following sections.
+3.1
+Seed Question Construction
+The first stage of our data synthesis pipeline involves acquiring a substantial volume of diverse and non-
+trivial seed questions. To enhance acquisition efficiency, we constructed an offline Wikipedia database
+by downloading all URLs corresponding to Wikipedia articles while preserving the hyperlinks between
+them. Subsequently, we perform random walks across these articles through their preserved connections.
+By aggregating the content from articles traversed during these random walks, we utilize an LLM
+to generate synthetic data instances. Critically, the generated question-answer pairs must be entirely
+grounded in the content from the collected articles, without relying on external knowledge sources.
+However, the resulting seed questions could be noisy and contain hallucinations. We launch a filtering
+process. We complete all the seed questions by WebDancer framework (Wu et al., 2025a) based on the
+QwQ model (Team, 2025). We perform 5 times rollouts for each question and keep the data where there
+5

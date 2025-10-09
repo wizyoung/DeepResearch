@@ -1,0 +1,41 @@
+solutions can often be found through a structured sequence of queries or even from a model’s parametric
+knowledge alone. More recent benchmarks have raised the complexity. GAIA (Mialon et al., 2023),
+while a generalist multimodal benchmark, introduces information-seeking challenges that approach
+complex multi-hop QA. Similarly, Xbench-DeepSearch (Xbench-Team, 2025) specifically targets agents’
+deep search and tool-use capabilities through professionally annotated, dynamic tasks. At the apex of
+this evolution lie benchmarks like BrowseComp-en/zh (Wei et al., 2025; Zhou et al., 2025), which embody
+the Level 3 complexity central to our work. These tasks are characterized by intricately coupled entities
+and deliberate information obfuscation, creating high initial uncertainty that is exceptionally difficult to
+reduce. Success on BrowseComp requires the kind of sophisticated, non-linear exploration and synthesis
+that defines superhuman reasoning, making it the ideal proving ground for advanced web agents.
+Web agents
+The development of autonomous web agents has witnessed significant progress from
+both proprietary and open-source communities (Zhang et al., 2025a). Proprietary systems like Deep-
+Research (OpenAI, 2025a), Doubao with Deep Think (Doubao, 2025), and Grok-3 (x.ai, 2025) have
+demonstrated superhuman performance in complex web navigation and information synthesis tasks, but
+their internal architectures and training methodologies remain opaque, impeding collaborative research.
+In contrast, open-source projects such as WebDancer (Wu et al., 2025a), WebThinker (Li et al., 2025c), and
+R1-Searcher (Song et al., 2025), adopting the ReAct framework (Yao et al., 2023), have made strides in
+simpler tasks yet face a substantial performance gap in benchmarks requiring sophisticated non-linear
+reasoning. In terms of training methodologies, the foundational principles of training dynamics outlined
+by (Xu et al., 2019; 2024; 2025) offer crucial insights, informing hyperparameter tuning and algorithmic
+design by highlighting the decisive impact of the training approach on models’ generalization ability.
+However, while many studies use Supervised Fine-Tuning (SFT) following the ReAct paradigm, pure
+SFT agents struggle with generalization in adaptive contexts (Zheng et al., 2025; Zhang et al., 2025b).
+Reinforcement learning-based methods Song et al. (2025); Zheng et al. (2025) hold promise for advanced
+search strategies via learned exploration policies but encounter challenges in training stability and sample
+efficiency.
+7
+Conclusion
+In this work, we propose WebSailor. From the perspective of uncertainty reduction in information seeking,
+we analyze why previous open-source web agents have not reached the level of proprietary systems.
+Our contributions span from QA construction, comprehensive training data synthesis, RFT cold start, to
+improved efficiency in RL algorithms, leading to a full agentic post-training pipeline. WebSailor demon-
+strates strong performance on both simple and complex information seeking benchmarks, exhibiting
+reasoning and tool-use capabilities that surpass human levels.
+We believe that the key to agentic post-training lies in further defining more complex tasks with higher
+uncertainty, as well as achieving more effective and efficient RL training. In the future, we will continue to
+explore how to further enhance agent capabilities based on open-source models, not only in the domain
+of information seeking, but also in pursuing the goal of general “superhuman” performance across more
+dimensions.
+13

@@ -1,0 +1,157 @@
+Planning statistics
+Writing statistics
+# Search
+step
+# Outline
+token
+# Outline
+optimization
+# Saved
+page
+# Search
+query
+# Evidence
+token
+# Summary
+token
+# Output
+token
+# Writing
+step
+DeepResearch Bench
+15.71
+4876.21
+2.16
+112.25
+20.24
+67237
+14980
+26127
+24.78
+DeepResearchGym
+16.65
+3732.87
+2.20
+102.55
+21.93
+66301
+12543
+26004
+24.71
+Table 3: The planning and writing statistics of Claude-sonnet-4-20250514 on DeepResearch Bench and
+DeepResearchGym.
+1 round
+15.0%
+2 rounds
+59.0%
+3 rounds
+21.0%
+4 rounds
+5.0%
+DeepResearch Bench
+1 round
+13.1%
+2 rounds
+57.6%
+3 rounds
+25.3%
+4 rounds
+4.0%
+DeepResearchGym
+Figure 4: Statistics of outline optimization of Claude-sonnet-4-20250514 on DeepResearch Bench and
+DeepResearchGym.
+involves an extensive exploratory phase with nearly 16 search steps and 21 unique search queries, proving
+that a simple, linear search is insufficient. The critical finding is that the outline undergoes more than two
+optimization cycles on average, expanding into a complex 4k-token outline. This empirically invalidates
+static-outline approaches and shows the tangible benefit of our iterative process: it produces a richer,
+more comprehensive plan that adapts to discovery. This deep planning phase amasses a staggering
+amount of information—over 100 saved pages, culminating in 67k evidence tokens and 15k summary
+tokens. This sheer volume makes a single-context approach computationally hard, thus mandating
+our memory-centric architecture with targeted retrieval as a foundational requirement, not just an
+optimization. Finally, the writer’s process of composing a 26k-token report in 25 discrete writing steps
+validates that our hierarchical synthesis is a practical way to maintain coherence over long outputs. In
+essence, the statistics of searching and writing affirm that each component of WebWeaver is a necessary
+and beneficial response to the inherent challenges of OEDR.
+overall scores Comprehensiveness
+Insight
+Instruction following
+Readability
+Evaluation Metrics
+45
+46
+47
+48
+49
+50
+51
+52
+Scores
+48.15
+48.85
+46.33
+49.24
+48.73
+49.26
+50.50
+47.91
+49.65
+48.72
+49.55
+50.82
+48.35
+49.84
+48.58
+DeepResearch Bench
+Rounds
+Round 1
+Round 2
+Round 3
+Figure 5: End-to-end scores with varying rounds
+of outline optimization on Deepresearch Bench.
+overall scores
+Clarity
+Depth
+Balance
+Breadth
+Support Insightfulness
+Evaluation Metrics
+88
+90
+92
+94
+96
+98
+100
+Scores
+95.68
+91.36
+99.55
+93.18
+99.09
+95.91
+95.00
+96.00
+92.67
+99.33
+92.00
+99.33
+97.33
+95.33
+96.32
+90.42
+100.00
+94.17
+99.58
+98.33
+95.42
+DeepResearchGym
+Rounds
+Round 1
+Round 2
+Round 3
+Figure 6: End-to-end scores with varying rounds
+of outline optimization on DeepresearchGym.
+End-to-end benchmark comparison for varying rounds of outlines. To isolate and quantify the benefits
+of outline optimization, as reported in Fig. 5, 6, we conducted an ablation study by evaluating the
+end-to-end benchmark performance. We collect the samples with three-round outline optimization from
+9

@@ -1,0 +1,63 @@
+multiple think-act-observe cycles. Concretely, at each iteration t, the language model takes as input the
+accumulated context history and generates:
+• a Thought: the agent’s intermediate reasoning or plan, enclosed in <think>...</think>;
+• an Action: the tool invocation wrapped in <tool_call>...</tool_call> and the final answer
+enclosed in <answer>...</answer>;
+• an Observation: the returned result from the environment, within <tool_response>...</
+tool_response> tags.
+The action space T includes a discrete set of tool-use actions tl, allowing the agent to retrieve external
+information, navigate webpages, and perform computations, etc. Crucially, the Finish action signals task
+completion by returning a final answer and terminating the reasoning episode.
+Formally, a trajectory of length L is denoted as
+τ = {(t0, o0), (t1, o1), . . . , (tL, oL)} ,
+(1)
+where each action ti ∈T and each observation oi reflects the resulting environment feedback after tool
+execution. The trajectory serves as a content-grounded demonstration of planning and tool selection.
+3.1.3
+Trajectory Filtering and Quality Assurance
+To ensure robust and instructive supervision, we apply three-stage trajectory selection:
+(1) Final Answer Matching We retain trajectory τ where the final answer matches the ground truth
+a, ensuring that the entire sequence of tool-use steps leads to a correct and complete solution.
+(2) Step-by-Step Consistency Check We use GPT-4o to verify the logical consistency of each inter-
+mediate step in trajectory τ. Each pair (tl, ol) is reviewed to ensure the tool call and observation
+align with the context and reasoning goal. Trajectories with hallucinated content, contradictions,
+or unjustified tool calls are discarded. This avoids the common failure mode where correct
+answers are reached by lucky guessing rather than meaningful tool use.
+(3) Minimum Tool Usage Requirement To encourage multi-step reasoning rather than shortcutting,
+we remove τ with fewer than three tool calls. This ensures that training data reflects substantive,
+process-driven interactions rather than trivial or one-step completions.
+3.2
+Supervised Fine-Tuning as Cold Start
+After filtering, the resulting dataset consists of K high-quality tool-use trajectories. For each step l of the
+i-th trajectory, WebWatcher is trained to predict the correct tool-use action t(i)
+l , based on the input image
+I(i), question q(i), and all previous actions and observations (t(i)
+<l, o(i)
+<l). As shown in Eq. 2, SFT maximizes
+the log-likelihood of the target action t(i)
+l :
+max
+θ
+K
+∑
+i=1
+Li
+∑
+l=1
+log Pθ
+
+t(i)
+l |I(i), q(i), t(i)
+<l, o(i)
+<l
+
+,
+(2)
+where θ denotes model parameters.
+As a cold-start stage, SFT teaches the agent to use tools meaningfully and follow structured, multi-step
+reasoning processes.
+3.3
+Reinforcement Learning
+With SFT providing a cold-start initialization, we employ Group-Relative Policy Optimization (GRPO) (Guo
+et al., 2025), a ranking-based variant of PPO, to further refine decision-making and adapt to complex
+7

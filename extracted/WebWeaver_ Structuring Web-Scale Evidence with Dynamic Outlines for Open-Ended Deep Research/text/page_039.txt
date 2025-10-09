@@ -1,0 +1,45 @@
+References
+Sandhini Agarwal, Lama Ahmad, Jason Ai, Sam Altman, Andy Applebaum, Edwin Arbus, Rahul K
+Arora, Yu Bai, Bowen Baker, Haiming Bao, et al. gpt-oss-120b & gpt-oss-20b model card. arXiv preprint
+arXiv:2508.10925, 2025.
+anthropic. Meet claude, 2025. URL https://www.anthropic.com/claude.
+Yushi Bai, Jiajie Zhang, Xin Lv, Linzhi Zheng, Siqi Zhu, Lei Hou, Yuxiao Dong, Jie Tang, and Juanzi
+Li.
+Longwriter: Unleashing 10,000+ word generation from long context llms.
+arXiv preprint
+arXiv:2408.07055, 2024.
+Yushi Bai, Jiajie Zhang, Xin Lv, Linzhi Zheng, Siqi Zhu, Lei Hou, Yuxiao Dong, Jie Tang, and Juanzi Li.
+Longwriter: Unleashing 10, 000+ word generation from long context llms. In The Thirteenth International
+Conference on Learning Representations, ICLR 2025, Singapore, April 24-28, 2025. OpenReview.net, 2025.
+URL https://openreview.net/forum?id=kQ5s9Yh0WI.
+João Coelho, Jingjie Ning, Jingyuan He, Kangrui Mao, Abhijay Paladugu, Pranav Setlur, Jiahe Jin, Jamie
+Callan, João Magalhães, Bruno Martins, et al. Deepresearchgym: A free, transparent, and reproducible
+evaluation sandbox for deep research. arXiv preprint arXiv:2505.19253, 2025.
+Deep Consult. Deep consult. 2025. URL https://github.com/Su-Sea/ydc-deep-research-evals.
+Google DeepMind. Gemini 2.5, 2025. URL https://blog.google/technology/google-deepmind/gemi
+ni-model-thinking-updates-march-2025/.
+Mingxuan Du, Benfeng Xu, Chiwei Zhu, Xiaorui Wang, and Zhendong Mao. Deepresearch bench: A
+comprehensive benchmark for deep research agents. arXiv preprint arXiv:2506.11763, 2025.
+Runnan Fang, Shihao Cai, Baixuan Li, Jialong Wu, Guangyu Li, Wenbiao Yin, Xinyu Wang, Xiaobin Wang,
+Liangcai Su, Zhen Zhang, Shibin Wu, Zhengwei Tao, Yong Jiang, Pengjun Xie, Fei Huang, and Jingren
+Zhou. Towards general agentic intelligence via environment scaling, 2025.
+google. Try deep research and our new experimental model in gemini, your ai assistant, 2025. URL
+https://blog.google/products/gemini/google-gemini-deep-research/.
+Rujun Han, Yanfei Chen, Zoey CuiZhu, Lesly Miculicich, Guan Sun, Yuanjun Bi, Weiming Wen, Hui Wan,
+Chunfeng Wen, Solène Maître, George Lee, Vishy Tirumalashetty, Emily Xue, Zizhao Zhang, Salem
+Haykal, Burak Gokturk, Tomas Pfister, and Chen-Yu Lee. Deep researcher with test-time diffusion.
+CoRR, abs/2507.16075, 2025. doi: 10.48550/ARXIV.2507.16075. URL https://doi.org/10.48550/arX
+iv.2507.16075.
+Juyong Jiang, Fan Wang, Jiasi Shen, Sungju Kim, and Sunghun Kim. A survey on large language models
+for code generation. arXiv preprint arXiv:2406.00515, 2024.
+LangChain, Inc. LangChain: Building applications with LLMs through composability, 2023. URL
+https://python.langchain.com/.
+Kuan Li, Zhongwang Zhang, Huifeng Yin, Rui Ye, Yida Zhao, Liwen Zhang, Litu Ou, Dingchu Zhang,
+Xixi Wu, Jialong Wu, Xinyu Wang, Zile Qiao, et al. Websailor-v2: Bridging the chasm to proprietary
+agents via synthetic data and scalable reinforcement learning, 2025a.
+Kuan Li, Zhongwang Zhang, Huifeng Yin, Liwen Zhang, Litu Ou, Jialong Wu, Wenbiao Yin, Baixuan
+Li, Zhengwei Tao, Xinyu Wang, Weizhou Shen, Junkai Zhang, Dingchu Zhang, Xixi Wu, Yong Jiang,
+Ming Yan, Pengjun Xie, Fei Huang, and Jingren Zhou. Websailor: Navigating super-human reasoning
+for web agent. CoRR, abs/2507.02592, 2025b. doi: 10.48550/ARXIV.2507.02592. URL https:
+//doi.org/10.48550/arXiv.2507.02592.
+39

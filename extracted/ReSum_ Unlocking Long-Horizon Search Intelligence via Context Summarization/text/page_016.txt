@@ -1,0 +1,8 @@
+Prompt for Summary-conditioned Reasoning
+Question {Question}
+Below is a summary of the previous conversation. This summary condenses key information
+from earlier steps, so please consider it carefully. Assess whether the summary provides enough
+information to answer the question and use it as the basis for further reasoning and information
+gathering to answer the question.
+Summary: {Summary}
+16

@@ -1,0 +1,50 @@
+FormFactor is a publicly traded company on NASDAQ: ticker FORM. It was incorporated in
+Delaware? Let’s check.
+</think>
+<tool_call>
+{"name": "search", "arguments": {"query": [""FormFactor" "incorporated in Delaware""]}}
+</tool_call>
+<tool_response>
+Search results are omitted
+</tool_response>
+Step 11
+<think>
+That matches the incorporation and founding date range: incorporated in Delaware in 1993,
+founded between 1988-1995.
+Now need to verify the revenue concentration data for fiscal years 2004-2006.
+Search FormFactor 2005 10-K "customers accounted for" etc.
+</think>
+<tool_call>
+{"name": "search", "arguments": {"query": [""FormFactor" "three customers" "revenue" 2005",
+""FormFactor" "customers accounted for" 2005", ""FormFactor" "Revenue" "customer" 2006"]}}
+</tool_call>
+<tool_response>
+Search results are omitted
+</tool_response>
+Step 12
+<think>
+Let’s open the 2005 annual report PDF for FormFactor.
+</think>
+<tool_call>
+{"name": "visit", "arguments": {"url": ["https://www.annualreports.com/HostedData/AnnualRe
+portArchive/f/NASDAQ_FORM_2005.pdf"], "goal": "Find revenue concentration: number of
+customers and % of revenue in fiscal 2005"}}
+</tool_call>
+<tool_response>
+Visit results are omitted
+</tool_response>
+Step 13
+<think>
+Let’s try another source: maybe the 10-K filing for 2005. Use SEC filing.
+</think>
+<tool_call>
+{"name": "visit", "arguments": {"url": ["https://www.sec.gov/Archives/edgar/data/1039399/000
+0950134-05-004796.txt"], "goal": "Find revenue concentration information (customers) for fiscal
+2005 and 2004"}}
+</tool_call>
+<tool_response>
+Visit results are omitted
+</tool_response>
+Step 14
+<think>
+19

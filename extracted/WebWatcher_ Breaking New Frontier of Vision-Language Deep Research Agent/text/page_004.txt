@@ -1,0 +1,59 @@
+Q:In the image, a significant railw
+ay station in a northern Indian sta
+te serves as a key junction for a m
+ajor rail network. The headquarte
+rs of the national rail service prov
+ider is situated in the capital city,
+and its governing board oversees
+the entire rail network. When did
+the construction of the railway li
+ne extending from this station to
+wards a nearby town commence?
+A: 1980
+Q: Which game mode 
+in this game features a 
+scenario absent from 
+the Skill Points Daily 
+Scenarios but present 
+in Challenge Road? 
+A: Fierce Battle
+Figure 3: Domain Distribution for Level 1 and Level 2.
+2
+Data Preparation
+In this section, we introduce our dataset construction methodology, emphasizing high data quality,
+multi-step multimodal reasoning, and robust compatibility with web-based agent paradigms.
+2.1
+Data Overview
+Our dataset BrowseComp-VL is designed for advanced multi-modal reasoning agents operating in
+real-world web environments. Each example comprises a factual image, an associated question requiring
+cross-modal reasoning, and auxiliary metadata about the underlying entities and relations. As shown in
+Fig.3, BrowseComp-VL is organized into 5 major domains comprising 17 fine-grained subfields, which is
+detailed in Appendix B. The major domains include Entertainment, Humanities, Technology, Natural Science
+and Other. Additionally, we define two difficulty levels to encourage a spectrum of reasoning abilities:
+• Level 1: Questions require multi-hop reasoning but still reference explicit entities. While the
+answers can be obtained through iterative retrieval steps, the reasoning process remains non-
+trivial due to the need for integrating information across multiple sources. In total, this level
+contains 199 VQA pairs.
+• Level 2: Questions are constructed with intentionally obscured or fuzzified entities and attributes.
+For example, concrete dates are replaced with vague periods, names are masked, and quantitative
+properties are fuzzed up. This design introduces substantial uncertainty, requiring the agent to
+plan, compare, and synthesize information rather than perform direct retrieval. Altogether, we
+provide 200 VQA pairs at this level.
+Prompting LLMs to generate VQA questions directly from images is a common practice, but it often yields
+shallow, single-hop queries that lack ambiguity, structured planning, and deeper reasoning. Moreover,
+most existing VQA datasets focus on perception and rarely combine rich textual information with
+knowledge-intensive, multi-step reasoning. To address this limitation, we first build a diverse set of
+challenging textual QA pairs focused on multi-hop reasoning and knowledge-intensive questions. Then
+we transform these into VQA tasks by grounding them in relevant visual content. This pipeline yields
+high-quality multimodal data maintained both visual richness and textual reasoning complexity.
+2.2
+VQA Pairs Construction
+2.2.1
+Generate QA
+Level 1
+Inspired by the CRAWL-QA from WebDancer (Wu et al., 2025a), we increase the depth and
+breadth of reasoning by collecting root URLs from authoritative and knowledge-rich sources such as arXiv,
+GitHub, and Wikipedia. To emulate human-like browsing behavior, we recursively traverse accessible
+hyperlinks within each root domain. GPT-4o is then used to synthesize question-answer pairs from the
+aggregated content.
+4

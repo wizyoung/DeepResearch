@@ -1,0 +1,48 @@
+reasoning process. The agent analyzes the current state (workspace), evaluates the outcome of
+its previous action, reflects on the research progress, and formulates a plan for its next action.
+This component ensures the agent’s decision-making is transparent and interpretable for current
+state, and is not directly used in subsequent rounds to prevent clutter.
+• Report : The centerpiece of our paradigm, this component represents the agent’s evolving
+central memory. Rather than appending raw data, the agent synthesizes new findings with
+existing knowledge to produce a coherent, high-density summary. This updated report captures
+all critical information discovered to date and serves as the primary component for constructing
+the next round’s workspace.
+• Action : The agent’s concrete action for the current round, which takes one of two forms:
+– Tool Call: A specific command to interact with the external Environment, such as invoking a
+search engine or a code interpreter, to gather new information.
+– Final Answer: A terminal action, generated when the agent determines it has sufficient
+evidence to resolve the initial Question. This concludes the research process.
+Our IterResearch paradigm fundamentally reimagines deep research as an iterative synthesis process
+rather than linear accumulation. The complete research unfolds through discrete rounds: starting from
+just the research question, the agent generates its initial Think-Report-Action triplet; in subsequent
+rounds, it reconstructs a focused workspace from the question, previous report, and latest tool response,
+then produces an updated synthesis. This Report synthesis is the cornerstone of our approach—the agent
+doesn’t merely append new findings but actively integrates them with existing knowledge, resolving
+conflicts and updating conclusions to maintain a coherent, high-density summary that captures all critical
+discoveries while filtering out noise. The process continues until the agent determines sufficient evidence
+has been gathered, producing a Final Answer.
+This iterative paradigm provides structural advantages that compound over long-horizon research. By
+maintaining a constant-size workspace regardless of research depth, IterResearch preserves full reasoning
+capacity throughout the entire process—where mono-contextual systems suffer from diminishing returns
+as contexts bloat, our approach maintains consistent performance whether conducting ten or hundred
+rounds of investigation. The periodic synthesis acts as an intelligent filter, preserving signal while
+eliminating noise, enabling error recovery through report revision, and ensuring monotonic information
+gain. Through this disciplined state maintenance centered on evolving reports, IterResearch transforms
+deep research from exhaustive single-pass accumulation into iterative refinement, achieving theoreti-
+cally unbounded research depth while maintaining both efficiency and quality—capabilities that are
+fundamentally impossible under the mono-contextual paradigm.
+3
+A Scalable Data Engine for Advancing Agentic Intelligence
+The advancement of agentic intelligence, characterized by capabilities of complex reasoning and au-
+tonomous tool use, is fundamentally constrained by the quality and complexity of their training data.
+To address this limitation, we introduce a scalable data engine designed to synthesize a large-scale,
+high-quality dataset that systematically probes and extends the capabilities of current models. Our engine
+leverages a collaborative multi-agent framework organized into a three-stage iterative workflow: (1)
+seed data generation, (2) iterative complexity escalation, and (3) rigorous quality control. As depicted in
+Figure 3, this process orchestrates a team of specialized agents to generate progressively more challenging
+tasks.
+3.1
+Stage 1: Seed Data Generation
+The process initiates with a diverse, multidisciplinary corpus of contemporary documents, including
+webpages, academic papers, and e-books. A Summary Agent preprocesses this corpus by paraphrasing
+5

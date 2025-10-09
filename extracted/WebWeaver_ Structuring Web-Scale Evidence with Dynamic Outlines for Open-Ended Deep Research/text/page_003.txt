@@ -1,0 +1,65 @@
+Search
+Planner
+Query
+Planner
+Report 
+generation
+Section 1
+Section 2
+Report 
+generation
+Search
+Query
+(a) Search then generate
+(b) Outline-guided search then generate
+(c) WebWeaver (ours)
+Query
+Planner
+Search
+Writer
+Retrieve
+Section 1
+Section 2
+Report
+Hierarchical 
+Writing
+Memory bank
+Static Outline
+Section 1
+Section 2
+Outline
+Outline 
+Optimization
+Report
+Figure 2: Paradigm comparison: (a) the search-then-generate paradigm first gathers information and
+then directly generates a report; (b) the paradigm initializes a static outline and then performs targeted
+searches for the outline; (c) WebWeaver not only enables a dynamic research cycle where the outline
+and search strategy co-evolve but allows hierarchical and attentional writing by retrieving only relevant
+evidence.
+targeted retrieval of only the relevant evidence from a structured memory bank for each subtask. This
+synergistic division of labor enables our agent to navigate complex information landscapes and produce
+reports that are both comprehensive in scope and meticulous in their evidentiary grounding.
+Extensive experiments demonstrate that WebWeaver achieves state-of-the-art (SOTA) performance and
+outperforms both the proprietary and open-source agent systems on three recent and challenging open-
+ended deep research benchmarks. Detailed discussion is produced to demonstrate the effectiveness of
+outline optimization and memory-grounded synthesis. Critically, to enhance the performance of the
+smaller models for practical use, we construct a high-quality SFT dataset, WebWeaver-3k, generated
+by our framework. The supervised finetuning experiments with WebWeaver-3k demonstrate that the
+complex skills of thinking, searching, and writing can be distilled and taught, enabling smaller, accessible
+models to achieve the expert-level performance previously confined to large-scale proprietary systems.
+2
+Preliminaries
+Problem definition. We consider the open-ended research question without the ground-truth answers.
+Given an open-ended question, the agents need to search relevant information and finally output a
+report or article. To achieve this, we implement a planning agent for collecting information, a memory to
+store materials, and a writing agent for report generation. For both the planning and writing agents, we
+adopt ReAct (Yao et al., 2023) as the agent’s framework. Upon receiving a question, the agents perform
+several iterations of thought-action-observation. Specifically, in each iteration, based on the existing context,
+the LLM generates a thought and executes a parsable action, then awaits the environment to return an
+observation. The planning and writing stages terminate with the output token of “<terminate>”. A
+complete trajectory with T iterations can be defined as
+HT = (τ0, a0, o0, . . . , τi, ai, oi, . . . , τT, aT),
+(1)
+where τi, ai, oi represent thought, action, and observation sampled from the planning or writing policy
+based on all previous context in the i-th round, respectively.
+3

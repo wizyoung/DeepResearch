@@ -1,0 +1,79 @@
+[
+  {
+    "index": 1,
+    "title": "WebWalker: Benchmarking LLMs in Web Traversal",
+    "url": "https://arxiv.org/pdf/2501.07572",
+    "safe_title": "WebWalker_ Benchmarking LLMs in Web Traversal",
+    "pdf_path": "/workspace/raw_pdfs/WebWalker_ Benchmarking LLMs in Web Traversal.pdf"
+  },
+  {
+    "index": 2,
+    "title": "WebDancer: Towards Autonomous Information Seeking Agency",
+    "url": "https://arxiv.org/pdf/2505.22648",
+    "safe_title": "WebDancer_ Towards Autonomous Information Seeking Agency",
+    "pdf_path": "/workspace/raw_pdfs/WebDancer_ Towards Autonomous Information Seeking Agency.pdf"
+  },
+  {
+    "index": 3,
+    "title": "WebSailor: Navigating Super-human Reasoning for Web Agent",
+    "url": "https://arxiv.org/pdf/2507.02592",
+    "safe_title": "WebSailor_ Navigating Super-human Reasoning for Web Agent",
+    "pdf_path": "/workspace/raw_pdfs/WebSailor_ Navigating Super-human Reasoning for Web Agent.pdf"
+  },
+  {
+    "index": 4,
+    "title": "WebShaper: Agentically Data Synthesizing via Information-Seeking Formalization",
+    "url": "https://arxiv.org/pdf/2507.15061",
+    "safe_title": "WebShaper_ Agentically Data Synthesizing via Information-Seeking Formalization",
+    "pdf_path": "/workspace/raw_pdfs/WebShaper_ Agentically Data Synthesizing via Information-Seeking Formalization.pdf"
+  },
+  {
+    "index": 5,
+    "title": "WebWatcher: Breaking New Frontier of Vision-Language Deep Research Agent",
+    "url": "https://arxiv.org/pdf/2508.05748",
+    "safe_title": "WebWatcher_ Breaking New Frontier of Vision-Language Deep Research Agent",
+    "pdf_path": "/workspace/raw_pdfs/WebWatcher_ Breaking New Frontier of Vision-Language Deep Research Agent.pdf"
+  },
+  {
+    "index": 6,
+    "title": "WebResearcher: Unleashing unbounded reasoning capability in Long-Horizon Agents",
+    "url": "https://arxiv.org/pdf/2509.13309",
+    "safe_title": "WebResearcher_ Unleashing unbounded reasoning capability in Long-Horizon Agents",
+    "pdf_path": "/workspace/raw_pdfs/WebResearcher_ Unleashing unbounded reasoning capability in Long-Horizon Agents.pdf"
+  },
+  {
+    "index": 7,
+    "title": "ReSum: Unlocking Long-Horizon Search Intelligence via Context Summarization",
+    "url": "https://arxiv.org/pdf/2509.13313",
+    "safe_title": "ReSum_ Unlocking Long-Horizon Search Intelligence via Context Summarization",
+    "pdf_path": "/workspace/raw_pdfs/ReSum_ Unlocking Long-Horizon Search Intelligence via Context Summarization.pdf"
+  },
+  {
+    "index": 8,
+    "title": "WebWeaver: Structuring Web-Scale Evidence with Dynamic Outlines for Open-Ended Deep Research",
+    "url": "https://arxiv.org/pdf/2509.13312",
+    "safe_title": "WebWeaver_ Structuring Web-Scale Evidence with Dynamic Outlines for Open-Ended Deep Research",
+    "pdf_path": "/workspace/raw_pdfs/WebWeaver_ Structuring Web-Scale Evidence with Dynamic Outlines for Open-Ended Deep Research.pdf"
+  },
+  {
+    "index": 9,
+    "title": "WebSailor-V2: Bridging the Chasm to Proprietary Agents via Synthetic Data and Scalable Reinforcement Learning",
+    "url": "https://arxiv.org/pdf/2509.13305",
+    "safe_title": "WebSailor-V2_ Bridging the Chasm to Proprietary Agents via Synthetic Data and Scalable Reinforcement Learning",
+    "pdf_path": "/workspace/raw_pdfs/WebSailor-V2_ Bridging the Chasm to Proprietary Agents via Synthetic Data and Scalable Reinforcement Learning.pdf"
+  },
+  {
+    "index": 10,
+    "title": "Scaling Agents via Continual Pre-training",
+    "url": "https://arxiv.org/pdf/2509.13310",
+    "safe_title": "Scaling Agents via Continual Pre-training",
+    "pdf_path": "/workspace/raw_pdfs/Scaling Agents via Continual Pre-training.pdf"
+  },
+  {
+    "index": 11,
+    "title": "Towards General Agentic Intelligence via Environment Scaling",
+    "url": "https://arxiv.org/pdf/2509.13311",
+    "safe_title": "Towards General Agentic Intelligence via Environment Scaling",
+    "pdf_path": "/workspace/raw_pdfs/Towards General Agentic Intelligence via Environment Scaling.pdf"
+  }
+]

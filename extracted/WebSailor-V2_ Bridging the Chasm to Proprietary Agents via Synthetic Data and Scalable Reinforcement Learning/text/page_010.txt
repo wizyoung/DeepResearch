@@ -1,0 +1,153 @@
+role of RL is to enhance sampling efficiency—teaching the agent to more reliably select the optimal path
+on its first attempt (Yue et al., 2025). For these simpler problems, the model is already likely to find a
+solution, so RL’s main contribution is making that initial attempt more robust. This also implies that
+for truly difficult problems, even pass@3 may not be sufficient to fully reflect the upper bounds of the
+model’s enhanced capabilities.
+0
+50
+100
+Step
+24
+26
+28
+30
+32
+34
+36
+Accuracy (%)
+BrowseComp-EN | Avg Pass@1
+0
+50
+100
+Step
+28
+31
+34
+37
+40
+43
+46
+Accuracy (%)
+BrowseComp-ZH | Avg Pass@1
+0
+50
+100
+Step
+0.50
+0.56
+0.62
+0.68
+0.74
+0.80
+Reward Value
+RL Rewards Curve
+Original Rewards
+EMA Smoothed Rewards
+Figure 4: Training dynamics of our RL.
+16k
+32k
+48k
+64k
+96k
+128k
+Context Length
+0
+5
+10
+15
+20
+25
+30
+35
+Avg Pass@1 (%)
+DeepSeek-V3.1 (671B)
+GLM-4.5 (355B)
+Kimi-K2 (1T)
+Accuracy vs. Context Budget
+WebSailor-V2-30B-A3B (Ours)
+10
+20
+40
+60
+80
+100
+Number of Tool Calls
+0
+5
+10
+15
+20
+25
+30
+35
+DeepSeek-V3.1 (671B)
+GLM-4.5 (355B)
+Kimi-K2 (1T)
+Accuracy vs. Tool Call Budget
+WebSailor-V2-30B-A3B (Ours)
+Figure 5: Effects of context and tool call budget for agent.
+BC-EN
+BC-ZH
+xbench-DS
+GAIA
+Benchmarks
+0
+6
+12
+18
+Improved Accuracy (%)
+10.9
+15.8
+12.0
+8.1
+7.5
+12.2
+3.0
+2.9
+Accuracy Improvements by RL
+Pass@1
+Pass@3
+Figure 6: Accuracy improvements by
+RL across four benchmarks.
+0
+20
+40
+60
+80
+100
+120
+140
+Step
+0.5
+0.7
+0.9
+1.1
+Entropy
+RL Entropy Curve
+Original Entropy
+EMA Smoothed
+Figure 7: Training entropy dynamics
+Entropy
+dynamics.
+The
+entropy
+dynamics,
+shown in Fig. 7, provide further insights into the
+learning process. We find that the policy entropy
+remains at a consistently high level throughout the
+training process, indicating that the agent main-
+tains a strong capacity for exploration and avoids
+premature convergence to a deterministic policy.
+This behavior contrasts sharply with trends ob-
+served in tasks like mathematical RL training,
+where entropy often decreases significantly as the
+model learns to exploit a narrow set of solution
+paths. In our case, the entropy oscillates without a
+clear upward or downward trend. Consequently,
+our algorithm design intentionally omits any explicit entropy regularization or bonus, as the agent
+naturally sustains sufficient exploration. We hypothesize that this sustained high entropy is a direct
+consequence of the environment’s non-stationary nature. Unlike closed-world problems, the observations
+returned by web tools (e.g., search results, webpage content) do not follow a fixed distribution. This
+inherent stochasticity and complexity of the real-world web environment prevent the policy from fully
+converging to a stable, low-entropy state, instead fostering a more robust and adaptive policy.
+10

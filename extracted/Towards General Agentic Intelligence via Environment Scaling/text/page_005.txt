@@ -1,0 +1,57 @@
+3.1
+Human–Agent Interplay for Experience Collection
+Interplay
+Motivated by Yao et al. (2024), once we have constructed an agentic task, we proceed to
+perform human-agent interplay in the environment. Specifically, we instantiate a simulated user tasked
+with fulfilling a given overall intent. The agent then leverages domain-specific tools to address the user’s
+needs, continuing the interaction until the simulated user deems the task complete. This setup enables
+us to conduct end-to-end simulation, encompassing user simulation, agent, and environment, yielding
+a highly scalable framework. Each completed interaction trace constitutes an agent experience, which
+can subsequently be used for training. Importantly, since we possess both the gold tool sequences and
+arguments for the overall intent and the final environment state, we can apply these as supervision
+signals for experience filtering.
+Filtering
+We adopt a three-stage funnel-based trajectory filtering framework consisting of validity control,
+environment state alignment, and function calling exact match.
+• Validity control, removes invalid interaction trajectories to ensure well-formed alternating user
+assistant exchanges. Additionally, we apply an n-gram-based filtering procedure to eliminate
+severely repetitive reasoning segments. In such cases, we discard these data points.
+• Environment state alignment retains only those trajectories whose final database state matches the
+golden state after the interplay, thereby validating the effectiveness of write operations. The
+filtering granularity at this stage is the database/environment level.
+• Function calling exact match serves as the most stringent filtering stage, where the granularity is
+the tool sequence. Since a tool sequence consisting entirely of read operations without any write
+operations would cause state-based filtering to fail, we adopt a stricter exact match approach
+for filtering in such cases. A trajectory is preserved only if the sequence of invoked tools and
+arguments exactly matches the overall intent, ensuring high-fidelity supervision.
+It is worth noting that we do not filter out trajectories in which tool calls return errors. Thanks to the
+aforementioned filtering framework, such trajectories may still accomplish the intended goal despite
+intermediate failures. Retaining them in the training data helps improve the robustness of the model.
+3.2
+Agentic Experience Learning
+Agentic Fine-tuning Given agent-human interplay experience trajectory H = (h0, a1, . . . , an−1, hn, a0),
+where each human instruction is denoted by ht at t-round interaction, and each assistant turn at is
+decomposed as at = (τt, ρt, yt). Here, τt represents the function call tokens, ρt the tool response tokens,
+and yt the assistant response tokens. Our training objective is to optimize only the tool calls and assistant
+responses, while human instructions hi and tool responses ρt are excluded from the loss. Formally, given
+an autoregressive model pθ(xk | x<k), we define the loss as
+L(θ) = −
+1
+∑|H|
+k=1 I[ki ∈T ]
+|H|
+∑
+k=1
+I[xk ∈T ] · log πθ (xi | x<k) ,
+(2)
+where xk denotes the k-th token in the trajectory, πθ is the model distribution, I[·] is the indicator function,
+T is the set of tokens belonging to tool calls τ or assistant responses y. In practice, all tokens in ρi and
+hi are masked out from supervision but remain visible in the context x<k. This ensures that the model
+conditions on tool responses and human instructions, while gradients are only propagated through
+assistant-generated tool calls and natural-language responses.
+Two-stage Experience Learning
+In the first phase, the agent is trained to acquire fundamental skills for
+tool usage and user interaction. We focus on general domains where a broad set of tools and tasks are
+available, allowing the agent to develop a robust understanding of when and how to invoke function
+calls, as well as how to integrate tool outputs into coherent user-facing responses. This stage emphasizes
+5

@@ -1,0 +1,42 @@
+Huatong Song, Jinhao Jiang, Yingqian Min, Jie Chen, Zhipeng Chen, Wayne Xin Zhao, Lei Fang, and
+Ji-Rong Wen. R1-searcher: Incentivizing the search capability in llms via reinforcement learning. arXiv
+preprint arXiv:2503.05592, 2025.
+Chuanneng Sun, Songjun Huang, and Dario Pompili. Llm-based multi-agent reinforcement learning:
+Current and future directions. arXiv preprint arXiv:2405.11106, 2024.
+Yiyou Sun, Georgia Zhou, Hao Wang, Dacheng Li, Nouha Dziri, and Dawn Song. Climbing the ladder of
+reasoning: What llms can-and still can’t-solve after sft? arXiv preprint arXiv:2504.11741, 2025.
+Gokul Swamy, Sanjiban Choudhury, Wen Sun, Zhiwei Steven Wu, and J Andrew Bagnell. All roads lead
+to likelihood: The value of reinforcement learning in fine-tuning. arXiv preprint arXiv:2503.01067, 2025.
+Harsh Trivedi, Niranjan Balasubramanian, Tushar Khot, and Ashish Sabharwal. Musique: Multihop ques-
+tions via single-hop question composition. Transactions of the Association for Computational Linguistics,
+10:539–554, 2022.
+Minzheng Wang, Longze Chen, Fu Cheng, Shengyi Liao, Xinghua Zhang, Bingli Wu, Haiyang Yu, Nan
+Xu, Lei Zhang, Run Luo, Yunshui Li, Min Yang, Fei Huang, and Yongbin Li. Leave no document
+behind: Benchmarking long-context llms with extended multi-doc QA. In Yaser Al-Onaizan, Mohit
+Bansal, and Yun-Nung Chen (eds.), Proceedings of the 2024 Conference on Empirical Methods in Natural
+Language Processing, EMNLP 2024, Miami, FL, USA, November 12-16, 2024, pp. 5627–5646. Association
+for Computational Linguistics, 2024. URL https://aclanthology.org/2024.emnlp-main.322.
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Fei Xia, Ed Chi, Quoc V Le, Denny Zhou,
+et al. Chain-of-thought prompting elicits reasoning in large language models. Advances in neural
+information processing systems, 35:24824–24837, 2022.
+Jason Wei, Nguyen Karina, Hyung Won Chung, Yunxin Joy Jiao, Spencer Papay, Amelia Glaese, John
+Schulman, and William Fedus. Measuring short-form factuality in large language models. arXiv
+preprint arXiv:2411.04368, 2024.
+Jason Wei, Zhiqing Sun, Spencer Papay, Scott McKinney, Jeffrey Han, Isa Fulford, Hyung Won Chung,
+Alex Tachard Passos, William Fedus, and Amelia Glaese. Browsecomp: A simple yet challenging
+benchmark for browsing agents. arXiv preprint arXiv:2504.12516, 2025.
+Thaddäus Wiedemer, Prasanna Mayilvahanan, Matthias Bethge, and Wieland Brendel. Compositional
+generalization from first principles. Advances in Neural Information Processing Systems, 36:6941–6960,
+2023.
+Tom D Wilson. Models in information behaviour research. Journal of documentation, 55(3):249–270, 1999.
+Jialong Wu, Baixuan Li, Runnan Fang, Wenbiao Yin, Liwen Zhang, Zhengwei Tao, Dingchu Zhang, Zekun
+Xi, Yong Jiang, Pengjun Xie, et al. Webdancer: Towards autonomous information seeking agency. arXiv
+preprint arXiv:2505.22648, 2025a.
+Jialong Wu, Wenbiao Yin, Yong Jiang, Zhenglin Wang, Zekun Xi, Runnan Fang, Linhai Zhang, Yulan He,
+Deyu Zhou, Pengjun Xie, and Fei Huang. Webwalker: Benchmarking llms in web traversal, 2025b.
+URL https://arxiv.org/abs/2501.07572.
+x.ai. Grok 3 beta — the age of reasoning agents, 2025. URL https://x.ai/news/grok-3.
+Xbench-Team. Xbench-deepsearch, 2025. URL https://xbench.org/agi/aisearch.
+Zhi-Qin John Xu, Yaoyu Zhang, Tao Luo, Yanyang Xiao, and Zheng Ma. Frequency principle: Fourier
+analysis sheds light on deep neural networks. arXiv preprint arXiv:1901.06523, 2019.
+22

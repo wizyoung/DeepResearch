@@ -1,0 +1,38 @@
+• If the standard answer has extra detail, the prediction only needs the part asked by the
+question.
+• If missing details can be inferred from the question, treat as [Correct].
+Now evaluate:
+Question: {question}
+Standard Answer: {target}
+Predicted Answer: {predicted_answer}
+Return: A, B, or C
+This prompt is used to guide GPT-4o in verifying whether a given trajectory is logically sound and
+consistent with the task requirements.
+Prompt: Tool Call Rationality Evaluation
+Role: You are a professional AI interaction quality assessor. Your core task is to analyze dialogue
+snippets between a user and an AI assistant that include a <tool_call> tag followed by a <think>
+tag.
+Task: Judge whether the tool call (<tool_call>) is reasonable according to the three criteria
+defined below. “Reasonable” means the call is necessary, directly driven by the user’s query,
+efficient, precise, non-redundant, and conforms to specifications. Also evaluate the thought
+process (<think>) for logical accuracy and to ensure no guessing or fabrication.
+Evaluation Criteria:
+1. Information Non-Redundancy: The requested information or action in the tool call is not
+already provided or easily derivable from prior dialogue, the user’s current question, or
+the assistant’s previous answers. Check: Is there any overlap or repeated request?
+2. Goal Alignment: The tool call’s purpose and expected result directly serve the user’s
+explicit intent or core need in this turn. Check: Does it advance the user’s main objective?
+3. Logical Reasoning and Accuracy: The assistant’s thought process shows clear, correct
+logic and reliable grounding—no unfounded guesses or fabrications. The <think> section
+should be concise. Check: Is the reasoning well-structured and evidence-based?
+Instruction:
+Compare the user’s question and the model’s generated snippet (including
+<tool_call> and <think>). If all criteria are met, output:
+A
+Otherwise (any criterion unmet or room for improvement), output:
+B
+User Question: {query}
+Model Generation: {model_gen}
+D
+Experimental Details
+16

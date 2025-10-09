@@ -1,0 +1,49 @@
+text-only validation subset. We exclude simpler benchmarks such as SimpleQA (Wei et al., 2024),
+WebWalkerQA (Wu et al., 2025b), and xBench-DeepSearch (Xbench-Team, 2025), where most cases can be
+resolved within standard context limits, rendering the ReAct paradigm more suitable.
+Evaluation: We consistently use Qwen2.5-72B-Instruct as the scoring model to assess whether the
+predicted answer aligns with the ground truth. Specifically, we report the average Pass@1 over all test
+samples, as well as Pass@3 across three rollouts for each sample. Unless otherwise stated, we set the
+maximum tool call budget to 60 for all inference paradigms to ensure a fair comparison.
+Baselines & Implementations: We assess ReSum’s effectiveness under two settings: training-free and
+training-required. In the training-free setting, we directly apply the ReSum paradigm to various web
+agents without additional training. We compare its performance against ReAct and a simple baseline,
+Recent History, which maintains only the most recent 22k tokens of the conversation history by truncating
+older messages when context limit is exceeded. In the training-required setting, we compare ReSum-
+GRPO with the standard GRPO algorithm. Specifically, we evaluate both ReSum and ReAct paradigms
+on different RL-trained web agents to check whether ReSum-GRPO enhances the agents’ proficiency with
+ReSum. For ReSum inference, summarization is consistently triggered when the conversation history
+exceeds the context window, and leverages ReSumTool-30B unless specifically stated.
+Choice of Web Agents: We conduct experiments on open-source web agents of varying scales to ensure
+a comprehensive evaluation, including WebSailor-3B2, WebSailor-7B3, and WebSailor-30B-A3B4. Note
+that all these agents are constrained by a 32k token context limit.
+4.2
+Performance of the Training-free ReSum
+Settings: We evaluate different inference paradigms on web agents, including ReAct, ReSum, and Recent
+History. All agents run under our unified inference framework with curated prompts. For summarization,
+we evaluate four off-the-shelf LLMs of varying scales, Qwen3-30B-A3B-Thinking (denoted as Qwen3-
+30B), GPT-OSS-120B, Qwen3-235B, and DeepSeek-R1-671B, alongside our developed ReSumTool-30B
+which leverages Qwen3-30B as the base. To contextualize performance, we also report results of leading
+pre-trained models like OpenAI-o3 (OpenAI, 2025b) and Kimi-K2 (Team et al., 2025) paired with search
+and visit tools. Quantitative results are presented in Table 1, revealing the following key findings5:
+ReSum paradigm consistently outperforms ReAct due to extended exploration opportunities. The
+ReSum paradigm demonstrates superior performance across all agents and benchmarks, achieving
+substantial improvements over the ReAct baseline. This enhancement stems from ReSum’s ability to
+maintain coherent exploration through intelligent context compression, enabling agents to solve complex
+queries without context constraints. While the Recent History baseline also provides extended exploration,
+simple truncation disrupts context continuity and fails to preserve valuable information for continued
+reasoning.
+For context summarization, our developed ReSumTool-30B achieves comparable performance to larger
+models while maintaining deployment efficiency. ReSumTool-30B consistently outperforms its base
+model Qwen3-30B across configurations when serving as the summary tool. Remarkably, ReSumTool-30B
+often matches or exceeds the performance of significantly larger models when used for summarization: on
+BrowseComp-zh with WebSailor-3B, it achieves 13.7% Pass@1, outperforming both Qwen3-235B (11.1%)
+and DeepSeek-R1-671B (13.0%) when they serve as summary tools. This demonstrates the effectiveness
+of our targeted training.
+2https://huggingface.co/Alibaba-NLP/WebSailor-3B
+3https://huggingface.co/Alibaba-NLP/WebSailor-7B
+4This is a reproduced version using the same training data as the WebSailor series, with rejection sampling
+fine-tuning (RFT) applied to Qwen3-30B-A3B-Base model for 2 epochs.
+5We attribute the performance gap between our reproduced WebSailor-3B/7B and the official WebSailor technical
+report (Li et al., 2025a) to implementation differences and prompt variations.
+7

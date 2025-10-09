@@ -1,0 +1,160 @@
+DeepConsult
+DeepResearchGym
+Agent systems
+win
+tie
+lose
+Avg. score
+Cla.
+Depth
+Bal.
+Brea.
+Sup.
+Ins.
+Avg. score
+WebShaper (32B)
+3.25
+3.75
+93.00
+1.63
+64.70
+63.00
+59.30
+66.50
+9.40
+59.90
+53.80
+doubao-research
+29.95
+40.35
+29.70
+5.42
+68.85
+93.12
+83.96
+93.33
+84.38
+83.12
+84.46
+Claude-research
+25.00
+38.89
+36.11
+4.60
+86.67
+96.88
+84.41
+96.56
+26.77
+90.22
+80.25
+openai-deepresearch
+0.00
+100.00
+0.00
+5.00
+84.90
+98.10
+89.80
+97.40
+88.40
+89.00
+91.27
+Gemini-2.5-pro-deepresearch
+61.27
+31.13
+7.60
+6.70
+90.71
+99.90
+93.37
+99.69
+95.00
+97.45
+96.02
+WebWeaver (qwen3-30b-a3b-instruct-2507)
+28.65
+34.90
+36.46
+4.57
+71.88
+85.51
+75.80
+84.78
+63.77
+81.88
+77.27
+WebWeaver (qwen3-235b-a22b-instruct-2507)
+54.74
+28.61
+16.67
+6.47
+89.16
+97.58
+87.68
+96.21
+95.26
+92.85
+93.14
+WebWeaver (gpt-oss-120b)
+65.31
+11.22
+23.47
+6.64
+89.78
+100.00
+91.91
+99.66
+94.94
+95.06
+95.07
+WebWeaver (Claude-sonnet-4-20250514)
+66.86
+10.47
+22.67
+6.96
+90.50
+99.87
+94.30
+100.00
+98.73
+97.22
+96.77
+Table 2: Performance of agents on DeepConsult in terms of win rate and average scores and on DeepRe-
+searchGym in terms of clarity (Cla.), depth, balance (Bal.), breadth (Brea.), support (Sup.), and insightful-
+ness (Ins.). The best results are highlighted with green color, and the second-best results are highlighted
+with underlines.
+(anthropic, 2025). We adopt Claude-sonnet-4-20250514 as the default agent model for ablation studies and
+discussion without any statements. We use GPT-oss-120b to select relevant URLs, perform query-relevant
+summaries, and extract evidence for the search action. We present the case studies in Appendix B.
+4.2
+Main Results
+Results on DeepResearch Bench. As presented in Table 1, our WebWeaver framework establishes a
+new state-of-the-art, consistently outperforming existing agents. This superior performance is a direct
+result of our dual-agent, iterative methodology. The high scores in comprehensiveness (Comp.) and
+insight stem from the planner’s dynamic research cycle, which iteratively expands the report’s scope
+based on emergent findings, unlike the rigid outline-first approaches. This process naturally leads to
+a higher number of effective citations (Eff. c.), as the planner is intrinsically motivated to seek more
+evidence to ensure that each section is well-supported. Furthermore, the remarkable citation accuracy
+(C. acc.) of 93.37% is achieved by the strong synergy between our agents: the planner embeds specific
+citation IDs into the outline, and the writer’s hierarchical synthesis process uses this structure for targeted
+retrieval. By focusing only on relevant evidence for each section, it drastically reduces context-bleeding
+and hallucinations, which also contributes to the enhanced readability (Read.) and Instruction-following
+(Inst.) scores. This demonstrates that by emulating human research patterns, our framework produces
+not just more thorough but also significantly more reliable and well-structured reports.
+Results on DeepConsult and DeepResearchGym. To validate the generalizability of our framework,
+we further evaluated WebWeaver on the DeepConsult and DeepResearchGym benchmarks, with results
+presented in Table 2. Our method demonstrates clear superiority on both, achieving the highest win rate
+(66.86%) on DeepConsult and the top average score (96.77) on DeepResearchGym. This success is rooted
+in our core design. The near-perfect scores in Depth (100.00) and Breadth (100.00) are a direct result of the
+planner’s iterative research cycle, which relentlessly expands the report’s scope beyond the limits of static
+planning. Concurrently, the writer’s hierarchical synthesis process ensures these comprehensive findings
+are well-organized, leading to outstanding scores in balance (94.30) and support (98.73). In essence, the
+quantitative dominance in structural metrics like depth and breadth on DeepResearchGym provides a
+clear explanation for the qualitative victories on DeepConsult, proving that our human-inspired, iterative
+process is a fundamentally more robust strategy for complex information synthesis tasks.
+4.3
+Analysis
+Statistics of planning and writing. The statistics in Table 3 provide a compelling quantitative narrative
+that not only justifies but also demonstrates the benefits of WebWeaver’s design. The planning task
+8

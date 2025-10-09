@@ -1,0 +1,36 @@
+D.1
+Tool Definition
+In the ReAct framework, each tool is defined through a structured prompt that specifies both its callable
+format and its semantic capability. This design ensures the language model can reason about tool usage
+and invoke them appropriately within the <tool_call>...</tool_call> block during interaction. In
+detail, our tools are defined as follows.
+Tool: Code Interpreter
+Description: Executes Python code for calculation, data analysis, or content extraction.
+Arguments:
+• code (string): The Python code to execute. (Required)
+Tool: Web Text Search
+Description: Retrieves the top 10 text excerpts from Google’s text search engine using one or more
+search queries.
+Arguments:
+• queries (array of strings): List of search queries. (Required)
+Tool: Web Image Search
+Description: Retrieves top 10 images and descriptions from Google’s image search using a given
+image URL. Should only be used once.
+Arguments:
+• image_urls (array of strings): List of image URLs to search with. (Required)
+Tool: Visit
+Description: Visits a given webpage and returns a summary based on a specified goal.
+Arguments:
+• url (string): The target webpage URL. (Required)
+• goal (string): The goal or information the agent seeks from the webpage. (Required)
+Tool: OCR
+Description: Extracts text content from a given image using an internal OCR engine. Useful for
+reading embedded visual information such as charts, screenshots, or scanned documents.
+Arguments:
+• image_url (string): The URL of the image to extract text from. (Required)
+D.2
+ReAct Trajectories
+Our ReAct framework is implemented through Qwen-Agent 1, and we limit the number of tool calls to
+no more than 15. A complete trajectory follows the format below:
+1https://github.com/QwenLM/Qwen-Agent/
+17

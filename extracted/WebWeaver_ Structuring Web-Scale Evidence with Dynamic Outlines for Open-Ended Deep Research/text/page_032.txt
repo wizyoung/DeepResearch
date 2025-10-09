@@ -1,0 +1,50 @@
+<td><cite id="id_13,id_17">Bilateral involvement without impairment of balance</cite></td>
+<td><cite id="id_2,id_6">Daily activities become more difficult but independent living realis-
+tic</cite></td>
+<td>Tremor and stiffness on both sides, speech difficulties</td>
+</tr>
+<tr>
+<td>Stage 2.5</td>
+<td><cite id="id_15,id_21">Mild bilateral disease with recovery on pull test (taking ≥3 steps to
+recover balance)</cite></td>
+<td>Mild balance impairment</td>
+<td>Slight unsteadiness, requires multiple steps to recover balance</td>
+</tr> <tr> <td>Stage 3.0</td>
+<td><cite id="id_13,id_20">Mild to moderate bilateral disease with impaired postural reflexes;
+physically independent</cite></td>
+<td><cite id="id_2,id_6">Falls become frequent, assistance needed for some activities</cite></td>
+<td>Loss of balance when pulled backward, increased fall risk</td>
+</tr> <tr> <td>Stage 4.0</td>
+<td><cite id="id_13,id_20">Severe disability; still able to walk or stand unassisted but markedly
+incapacitated</cite></td>
+<td><cite id="id_2,id_6">Cannot live independently, requires walker or assistance</cite></td>
+<td>Need for assistive devices, inability to live alone safely</td>
+</tr> <tr> <td>Stage 5.0</td>
+<td><cite id="id_13,id_21">Wheelchair bound or bedridden unless aided</cite></td> <td><cite
+id="id_2,id_6">Around-the-clock nursing care required, up to 50% experience hallucinations and
+delusions</cite></td>
+<td>Inability to stand or walk, cognitive disturbances, complete dependency</td> </tr>
+</tbody>
+</table>
+This staging system reveals several critical insights for families. **The transition from Stage 2 to
+Stage 3 marks a pivotal point** where balance problems emerge, fundamentally changing the
+patient’s safety profile and care needs. <cite id="id_20">Loss of balance, with the inability to
+make the rapid, automatic and involuntary movements necessary to protect against falling, is
+one of the most troubling and dangerous aspects of Parkinsonism and one of the least easily
+treated</cite>. Understanding this progression helps families anticipate when environmental
+modifications and increased supervision become essential.
+**The distinction between Stage 3 and Stage 4 centers on independence**. <cite id="id_20">The
+most important factor identifying Stage III (as opposed to stage IV) is that the patient is still fully
+independent in all activities of daily living (dressing, hygiene, eating, etc.), while Stage IV patients
+are unable to lead an independent life because of the need for help with some activities of daily
+living</cite>. This transition signals when families must consider more intensive caregiving
+arrangements or assisted living options.
+</write>
+Step 3
+<think>
+Now I need to continue with information about the MDS-UPDRS system and disease progression
+timeline. Let me retrieve more specific information about these aspects.
+</think>
+<tool_call>
+{"name": "search", "arguments": {"url_id": ["id_3", "id_16", "id_17", "id_19"], "goal": "Gather
+32

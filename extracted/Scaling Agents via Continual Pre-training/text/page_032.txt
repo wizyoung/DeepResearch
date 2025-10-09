@@ -1,0 +1,12 @@
+Renjie Zheng, Mingbo Ma, and Liang Huang. Multi-reference training with pseudo-references for neural
+translation and text generation. arXiv preprint arXiv:1808.09564, 2018.
+Junting Zhou, Wang Li, Yiyan Liao, Nengyuan Zhang, Tingjia Miaoand Zhihui Qi, Yuhan Wu, and Tong
+Yang. Academicbrowse: Benchmarking academic browse ability of llms. arXiv preprint arXiv:2506.13784,
+2025a.
+Peilin Zhou, Bruce Leon, Xiang Ying, Can Zhang, Yifan Shao, Qichen Ye, Dading Chong, Zhiling Jin,
+Chenxuan Xie, Meng Cao, et al. Browsecomp-zh: Benchmarking web browsing ability of large language
+models in chinese. arXiv preprint arXiv:2504.19314, 2025b.
+Ça˘gatay Yıldız, Nishaanth Kanna Ravichandran, Nitin Sharma, Matthias Bethge, and Beyza Ermis.
+Investigating continual pretraining in large language models: Insights and implications, 2025. URL
+https://arxiv.org/abs/2402.17400.
+32

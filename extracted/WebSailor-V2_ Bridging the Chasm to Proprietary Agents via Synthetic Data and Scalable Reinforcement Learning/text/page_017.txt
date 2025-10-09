@@ -1,0 +1,50 @@
+<tool_call>
+{"name": "search", "arguments": {"query": [""National Interstate Corporation" incorporated in
+Delaware"]}}
+</tool_call>
+<tool_response>
+Search results are omitted
+</tool_response>
+Step 7
+<think>
+Thus maybe it’s not National Interstate Corp. Let’s keep searching.
+Also consider the founder change: The founder changed role effective beginning of fiscal Q3
+2007-2008. That may refer to a different company.
+Another candidate: "Roper Technologies"? Founder? Not sure.
+Maybe a small biotech like "Cerus Corporation"? Or "Bio-Rad"? Or "Illumina"? No.
+Let’s think about companies founded between 1988 and 1995.
+List of publicly traded companies founded within that period:
+- Netflix (founded 1997, out) - Salesforce (1999) - Intuit (1983) - Dell (1984) - HP (1939) - Apple
+(1976) - IBM (1911) - AMD (1969) - Qualcomm (1985) - Juniper Networks (1996) - Akamai (1998)
+- Red Hat (1993) but now part of IBM. - Goodyear? No. - MicroStrategy (1989) but maybe. -
+VeriSign (1995). - Workday (2005). - Splunk (2003). - Etsy (1999). - PayPal (1998). - eBay (1996). -
+Google (1998). - Many others.
+But need founder stepping down as CEO effective Q3 2007-2008 and new CEO appointed. Also
+customers contributions to revenue percentages are relatively high (27% to 74% from three
+customers; and 55% to 89% from four customers). That suggests maybe a B2B or service provider
+with few large clients, possibly a contract manufacturer, a semiconductor foundry, or a defense
+contractor.
+Maybe the company is "Qualcomm"? But Qualcomm’s customers are many.
+Alternatively, a "contract research organization" or "clinical trials" firm.
+Could be "Perrigo"? Not sure.
+Maybe the company is "Voya Financial"? Not likely.
+Another possibility: "Avid Technology" (AVDL). Founded 1987.
+Or "VeriSign". Founded 1995. Founder is Jim Bidzos? Actually the founder is Dr. Roger D.
+Dierking? Not sure. Not aware of a CEO change at that time.
+We might need to search for "class action former employee settlement $1.5 million 2015" plus
+"NATL"? But NATL had a class action? Not sure.
+Better to systematically examine each clue and search for relevant combos.
+Clue 1: "In a single fiscal year between Jan 1, 2004 and Dec 31, 2006, three customers contributed
+between 27% and 74% of its revenue. In a different fiscal year, between Jan 1, 2004 and Dec 31,
+2006, four customers accounted for between 55% and 89% of its revenue."
+Interpretation: In one year there were three major customers that contributed some portion of
+revenue between 27% and 74%. This is a range because maybe we don’t have exact numbers. In
+another year there were four customers that contributed between 55% and 89% of revenue. So
+these percentages could be for the same company across years.
+Thus the company had heavy reliance on few customers.
+This is typical for companies that sell to government agencies (e.g., defense contractors), or to big
+telecoms (e.g., chip manufacturers selling to phone makers). Could be an aerospace parts supplier
+(e.g., "Spirit AeroSystems").
+Clue 2: "In a month that falls between Jan 1, 2011, and Dec 31, 2019, a former employee of the
+same company filed a class action lawsuit. The court later certified the plaintiff’s class. The
+17

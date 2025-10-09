@@ -1,0 +1,50 @@
+A
+Agent Details
+Following Wu et al. (2025a), WebComposer uses two tools, search and visit, which are regarded as
+fundamental to the information seeking process (Zhu et al., 2025):
+• Search interfaces with the Google search engine to retrieve relevant documents given natural
+language queries. It supports multiple queries in parallel and returns the top-10 results for each
+query, where each result includes a title, a snippet, and the corresponding URL.
+• Visit enables targeted extraction from specific web pages. Each page is paired with a designated
+visit goal. The full content of the page is first retrieved using Jina (Jina.ai, 2025), after which a
+summarization model (Qwen-2.5-72B in our implementation) extracts information relevant to
+the specified goal.
+B
+Training Details
+B.1
+SFT
+For SFT, we use a batch size of 32 and a learning rate of 5e-6, warmup plus cosine decay schedule. We
+also apply a weight decay of 0.1.
+B.2
+RL
+For RL training (Sheng et al., 2025), each group consists of 8 rollouts. The temperature is 1.0, topp = 1.0,
+the batch size is 128, the mini batch size is 32, and the learning rate is 1e-6.
+C
+Case Study
+Question: “Strange Stories from a Chinese Studio” is a collection of classical Chinese short stories written by the 
+Qing Dynasty novelist Pu Songling. The earliest manuscript copies were already in circulation during the Kangxi 
+reign of the Qing Dynasty, and the collection comprises over four hundred short stories in total. In Volume Ten of 
+“Strange Stories from a Chinese Studio,” there is a story titled “The Green-Clothed Girl.” In this story, how many 
+sentences did the scholar Yu Jing speak with her?
+Question In Natural Language
+Question In Formalization
+Question In Graph
+Target
+Variable
+Constant
+[ [C@SSCS, isA, C@Classic story], [C@SSCS, writtenBy, C@Pu Songling],
+[C@SSCS, inCirculation, C@Qing Dynasty],
+[C@SSCS, comprises, C@over 400 stories],
+[V@X, isInTenVolume, C@SSCS],
+[V@X, isTitled, C@The Green-Clothed GirlS],
+[V@X, hasSentences, V@T],
+[V@T, happenedBetween, C@Yu Jing_The Green-Clothed Girl] ]
+T
+X
+Figure 10: Case comparison. “SSCS” stands for "Strange Stories from a Chinese Studio".
+We compare a representative example shown by KIMI-Researcher (Kimi, 2025), illustrated in Figure 10.
+The case includes redundant information, such as multiple constants connected to “SSCS”, which
+contribute little to answering the question. Additionally, a reasoning shortcut is observed that directly
+connects to the target variable. Despite the apparent complexity, the underlying reasoning structure is
+relatively simple, consisting of a single-hop reasoning path.
+19

@@ -1,0 +1,51 @@
+A
+Limitations
+Although our proposed framework has demonstrated promising results, several limitations remain,
+which point to ongoing efforts and potential directions for future work.
+Tool Number and Type
+Currently, we integrate only two basic information-seeking tools. To enable
+more advanced and fine-grained retrieval capabilities, we plan to incorporate more sophisticated tools,
+such as browser modeling by abstracting browser functionalities into modular tools, and a Python sandbox
+environment for interacting with external APIs Wei et al. (2025a); Cao et al. (2025); Zhang et al. (2025a).
+This allows the agent to perform more human-like and efficient interactions, paving the way not only for
+tackling more challenging benchmarks but also for progressing toward more general and autonomous
+agency.
+Task Generalization and Benchmarks
+Our current experiments focus on two short-answer information-
+seeking tasks. However, a comprehensive web agent should also be capable of document-level research
+and generation Shao et al. (2024). Extending to such open-domain, long-form writing poses significant
+challenges in reward modeling in agentic tasks, which we are actively investigating, particularly how to
+design more reliable and informative reward signals for long-form generation in open-ended settings Liu
+et al. (2025b).
+Data Utilization
+While we have accumulated a large corpus of QA pairs and corresponding trajectories,
+effectively scaling learning remains a challenge, particularly in the RL stage, where only a small subset
+(e.g., 5,000 pairs) can be utilized due to computational and stability constraints of RL in agentic tasks.
+This underscores the need for more efficient data utilization strategies to fully exploit the richness of the
+collected dataset.
+High Rollout Cost
+The RL phase incurs substantial computational and time overhead, as each rollout
+involves multiple rounds of tool invocations and LLM completions. This high cost not only limits
+scalability but also slows down iterative development and experimentation. A promising direction is to
+develop more efficient mechanisms for integrating tool calls with model completions, which can reduce
+rollout time and cost without sacrificing learning policy.
+Hybrid Thinking
+We consider two types of datasets characterized by short and long CoTs. Currently,
+our models are trained on a single dataset type. In future work, we plan to develop a hybrid reasoning
+agent model capable of dynamically controlling the reasoning length of the agent. Yang et al. (2025)
+Thinking Pattern
+In tool invocation, hallucinations may occur. For example, when dealing with
+mathematical problems, one might erroneously invoke a “calculate” tool that does not actually exist.
+Additionally, over-action may arise during the reasoning process, where redundant actions are performed
+even after the answer has been confirmed.
+B
+Broader Impacts
+Building open-source, autonomous web agents capable of long-term information seeking has the potential
+to greatly benefit scientific research, education, and productivity by democratizing access to complex
+web-based reasoning tools. However, such systems also raise concerns, including the risk of misinfor-
+mation propagation if agents rely on unreliable sources, and the possibility of misuse in automated
+content extraction or surveillance. We emphasize the importance of transparency, source attribution, and
+responsible deployment practices to mitigate potential harms.
+C
+Discussions
+17

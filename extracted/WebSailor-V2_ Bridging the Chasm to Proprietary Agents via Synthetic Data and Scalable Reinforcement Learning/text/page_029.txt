@@ -1,0 +1,44 @@
+Jina.ai. Jina, 2025. URL https://jina.ai/.
+Kimi. Kimi-researcher: End-to-end rl training for emerging agentic, 2025. URL https://moonshotai.g
+ithub.io/Kimi-Researcher/.
+Kuan Li, Liwen Zhang, Yong Jiang, Pengjun Xie, Fei Huang, Shuai Wang, and Minhao Cheng. Lara:
+Benchmarking retrieval-augmented generation and long-context llms–no silver bullet for lc or rag
+routing. arXiv preprint arXiv:2502.09977, 2025a.
+Kuan Li, Zhongwang Zhang, Huifeng Yin, Liwen Zhang, Litu Ou, Jialong Wu, Wenbiao Yin, Baixuan Li,
+Zhengwei Tao, Xinyu Wang, et al. Websailor: Navigating super-human reasoning for web agent. arXiv
+preprint arXiv:2507.02592, 2025b.
+Xiaoxi Li, Jiajie Jin, Guanting Dong, Hongjin Qian, Yutao Zhu, Yongkang Wu, Ji-Rong Wen, and
+Zhicheng Dou. Webthinker: Empowering large reasoning models with deep research capability.
+CoRR, abs/2504.21776, 2025c. doi: 10.48550/ARXIV.2504.21776. URL https://doi.org/10.48550/a
+rXiv.2504.21776.
+Junteng Liu, Yunji Li, Chi Zhang, Jingyang Li, Aili Chen, Ke Ji, Weiyu Cheng, Zijia Wu, Chengyu Du,
+Qidi Xu, et al. Webexplorer: Explore and evolve for training long-horizon web agents. arXiv preprint
+arXiv:2509.06501, 2025a.
+Yuxuan Liu, Tianchi Yang, Shaohan Huang, Zihan Zhang, Haizhen Huang, Furu Wei, Weiwei Deng,
+Feng Sun, and Qi Zhang. Calibrating llm-based evaluator. In Nicoletta Calzolari, Min-Yen Kan,
+Véronique Hoste, Alessandro Lenci, Sakriani Sakti, and Nianwen Xue (eds.), Proceedings of the 2024 Joint
+International Conference on Computational Linguistics, Language Resources and Evaluation, LREC/COLING
+2024, 20-25 May, 2024, Torino, Italy, pp. 2638–2656. ELRA and ICCL, 2024. URL https://aclanthology
+.org/2024.lrec-main.237.
+Zichen Liu, Changyu Chen, Wenjun Li, Penghui Qi, Tianyu Pang, Chao Du, Wee Sun Lee, and Min Lin.
+Understanding r1-zero-like training: A critical perspective. arXiv preprint arXiv:2503.20783, 2025b.
+Rui Lu, Zhenyu Hou, Zihan Wang, Hanchen Zhang, Xiao Liu, Yujiang Li, Shi Feng, Jie Tang, and Yuxiao
+Dong. Deepdive: Advancing deep search agents with knowledge graphs and multi-turn rl. arXiv
+preprint arXiv:2509.10446, 2025.
+Michael Luo, Naman Jain, Jaskirat Singh, Sijun Tan, Ameen Patel, Qingyang Wu, Alpay Ariyak, Colin Cai,
+Tarun Venkat, Shang Zhu, Ben Athiwaratkun, Manan Roongta, Ce Zhang, Li Erran Li, Raluca Ada Popa,
+Koushik Sen, and Ion Stoica. Deepswe: Training a state-of-the-art coding agent from scratch by scaling
+rl, 2025. URL https://pretty-radio-b75.notion.site/DeepSWE-Training-a-Fully-Open-sou
+rced-State-of-the-Art-Coding-Agent-by-Scaling-RL-22281902c1468193aabbe9a8c59bbe33.
+Notion Blog.
+Grégoire Mialon, Clémentine Fourrier, Thomas Wolf, Yann LeCun, and Thomas Scialom. Gaia: a
+benchmark for general ai assistants. In The Twelfth International Conference on Learning Representations,
+2023.
+MiroMind AI Team. Mirothinker: An open-source agentic model series trained for deep research and
+complex, long-horizon problem solving, 2025. URL https://github.com/MiroMindAI/MiroThinker.
+Xuan-Phi Nguyen, Shrey Pandit, Revanth Gangi Reddy, Austin Xu, Silvio Savarese, Caiming Xiong, and
+Shafiq Joty. Sfr-deepresearch: Towards effective reinforcement learning for autonomously reasoning
+single agents. arXiv preprint arXiv:2509.06283, 2025.
+OpenAI. Deep research system card, 2025a. URL https://cdn.openai.com/deep-research-system-c
+ard.pdf.
+29

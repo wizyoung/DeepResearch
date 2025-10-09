@@ -1,0 +1,44 @@
+Hongjin Su, Ruoxi Sun, Jinsung Yoon, Pengcheng Yin, Tao Yu, and Sercan Ö Arık.
+Learn-by-
+interact: A data-centric framework for self-adaptive agents in realistic environments. arXiv preprint
+arXiv:2501.10893, 2025.
+Hao Sun, Zile Qiao, Jiayan Guo, Xuanbo Fan, Yingyan Hou, Yong Jiang, Pengjun Xie, Yan Zhang, Fei
+Huang, and Jingren Zhou. Zerosearch: Incentivize the search capability of llms without searching.
+arXiv preprint arXiv:2505.04588, 2025.
+Zhengwei Tao, Jialong Wu, Wenbiao Yin, Junkai Zhang, Baixuan Li, Haiyang Shen, Kuan Li, Liwen Zhang,
+Xinyu Wang, Yong Jiang, et al. Webshaper: Agentically data synthesizing via information-seeking
+formalization. arXiv preprint arXiv:2507.15061, 2025.
+ByteDance Seed Team. Seed-oss open-source models. https://github.com/ByteDance-Seed/seed-oss,
+2025a.
+Kimi Team, Yifan Bai, Yiping Bao, Guanduo Chen, Jiahao Chen, Ningxin Chen, Ruijue Chen, Yanru Chen,
+Yuankun Chen, Yutian Chen, et al. Kimi k2: Open agentic intelligence. arXiv preprint arXiv:2507.20534,
+2025.
+Qwen Team. Qwen3 technical report, 2025b. URL https://arxiv.org/abs/2505.09388.
+Jialong Wu, Baixuan Li, Runnan Fang, Wenbiao Yin, Liwen Zhang, Zhengwei Tao, Dingchu Zhang, Zekun
+Xi, Gang Fu, Yong Jiang, et al. Webdancer: Towards autonomous information seeking agency. arXiv
+preprint arXiv:2505.22648, 2025a.
+Jialong Wu, Wenbiao Yin, Yong Jiang, Zhenglin Wang, Zekun Xi, Runnan Fang, Linhai Zhang, Yulan
+He, Deyu Zhou, Pengjun Xie, et al. Webwalker: Benchmarking llms in web traversal. arXiv preprint
+arXiv:2501.07572, 2025b.
+Shunyu Yao, Noah Shinn, Pedram Razavi, and Karthik Narasimhan. tau-bench: A benchmark for
+tool-agent-user interaction in real-world domains. arXiv preprint arXiv:2406.12045, 2024.
+Junjie Ye, Zhengyin Du, Xuesong Yao, Weijian Lin, Yufei Xu, Zehui Chen, Zaiyuan Wang, Sining Zhu,
+Zhiheng Xi, Siyu Yuan, Tao Gui, Qi Zhang, Xuanjing Huang, and Jiecao Chen. ToolHop: A query-
+driven benchmark for evaluating large language models in multi-hop tool use. In Wanxiang Che,
+Joyce Nabende, Ekaterina Shutova, and Mohammad Taher Pilehvar (eds.), Proceedings of the 63rd
+Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 2995–3021,
+Vienna, Austria, July 2025a. Association for Computational Linguistics. ISBN 979-8-89176-251-0. doi:
+10.18653/v1/2025.acl-long.150. URL https://aclanthology.org/2025.acl-long.150/.
+Junjie Ye, Changhao Jiang, Zhengyin Du, Yufei Xu, Xuesong Yao, Zhiheng Xi, Xiaoran Fan, Qi Zhang,
+Xuanjing Huang, and Jiecao Chen. Feedback-driven tool-use improvements in large language models
+via automated build environments. arXiv preprint arXiv:2508.08791, 2025b.
+Fan Yin, Zifeng Wang, I Hsu, Jun Yan, Ke Jiang, Yanfei Chen, Jindong Gu, Long T Le, Kai-Wei Chang,
+Chen-Yu Lee, et al. Magnet: Multi-turn tool-use data synthesis and distillation via graph translation.
+arXiv preprint arXiv:2503.07826, 2025.
+Yirong Zeng, Xiao Ding, Yuxian Wang, Weiwen Liu, Wu Ning, Yutai Hou, Xu Huang, Bing Qin, and Ting
+Liu. Boosting tool use of large language models via iterative reinforced fine-tuning. arXiv e-prints, pp.
+arXiv–2501, 2025.
+Jianguo Zhang, Tian Lan, Ming Zhu, Zuxin Liu, Thai Hoang, Shirley Kokane, Weiran Yao, Juntao Tan,
+Akshara Prabhakar, Haolin Chen, et al. xlam: A family of large action models to empower ai agent
+systems. arXiv preprint arXiv:2409.03215, 2024.
+13

@@ -1,0 +1,43 @@
+Rohan Taori, Ishaan Gulrajani, Tianyi Zhang, Yann Dubois, Xuechen Li, Carlos Guestrin, Percy Liang,
+and Tatsunori B Hashimoto. Stanford alpaca: An instruction-following llama model, 2023.
+Kimi Team, Yifan Bai, Yiping Bao, Guanduo Chen, Jiahao Chen, Ningxin Chen, Ruijue Chen, Yanru Chen,
+Yuankun Chen, Yutian Chen, et al. Kimi k2: Open agentic intelligence. arXiv preprint arXiv:2507.20534,
+2025.
+MiroMind AI Team. Mirothinker: An open-source agentic model series trained for deep research and
+complex, long-horizon problem solving. https://github.com/MiroMindAI/MiroThinker, 2025a.
+OpenPangu Team. Openpangu deepdiver-v2: Multi-agent learning for deep information seeking, 2025b.
+URL https://ai.gitcode.com/ascend-tribe/openPangu-Embedded-7B-DeepDiver.
+Denny Vrandeˇci´c and Markus Krötzsch. Wikidata: a free collaborative knowledgebase. Communications
+of the ACM, 57(10):78–85, 2014.
+Jason Wei, Zhiqing Sun, Spencer Papay, Scott McKinney, Jeffrey Han, Isa Fulford, Hyung Won Chung,
+Alex Tachard Passos, William Fedus, and Amelia Glaese. Browsecomp: A simple yet challenging
+benchmark for browsing agents. arXiv preprint arXiv:2504.12516, 2025.
+Jialong Wu, Baixuan Li, Runnan Fang, Wenbiao Yin, Liwen Zhang, Zhengwei Tao, Dingchu Zhang, Zekun
+Xi, Yong Jiang, Pengjun Xie, et al. Webdancer: Towards autonomous information seeking agency. arXiv
+preprint arXiv:2505.22648, 2025a.
+Jialong Wu, Wenbiao Yin, Yong Jiang, Zhenglin Wang, Zekun Xi, Runnan Fang, Linhai Zhang, Yulan He,
+Deyu Zhou, Pengjun Xie, and Fei Huang. Webwalker: Benchmarking llms in web traversal, 2025b.
+URL https://arxiv.org/abs/2501.07572.
+Weiqi Wu, Xin Guan, Shen Huang, Yong Jiang, Pengjun Xie, Fei Huang, Jiuxin Cao, Hai Zhao, and Jingren
+Zhou. Masksearch: A universal pre-training framework to enhance agentic search capability. arXiv
+preprint arXiv:2505.20285, 2025c.
+x.ai. Grok 3 beta — the age of reasoning agents, 2025. URL https://x.ai/news/grok-3.
+xAI. Grok 3 beta — the age of reasoning agents, 2025. URL https://x.ai/news/grok-3.
+Xbench-Team. Xbench-deepsearch, 2025. URL https://xbench.org/agi/aisearch.
+An Yang, Baosong Yang, Beichen Zhang, Binyuan Hui, Bo Zheng, Bowen Yu, Chengyuan Li, Dayiheng
+Liu, Fei Huang, Haoran Wei, et al. Qwen2.5 technical report. arXiv preprint arXiv:2412.15115, 2024.
+An Yang, Anfeng Li, Baosong Yang, Beichen Zhang, Binyuan Hui, Bo Zheng, Bowen Yu, Chang Gao,
+Chengen Huang, Chenxu Lv, et al. Qwen3 technical report. arXiv preprint arXiv:2505.09388, 2025.
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, and Yuan Cao. Re-
+act: Synergizing reasoning and acting in language models. In International Conference on Learning
+Representations (ICLR), 2023.
+Aohan Zeng, Xin Lv, Qinkai Zheng, Zhenyu Hou, Bin Chen, Chengxing Xie, Cunxiang Wang, Da Yin,
+Hao Zeng, Jiajie Zhang, et al. Glm-4.5: Agentic, reasoning, and coding (arc) foundation models. arXiv
+preprint arXiv:2508.06471, 2025.
+Dingchu Zhang, Yida Zhao, Jialong Wu, Baixuan Li, Wenbiao Yin, Liwen Zhang, Yong Jiang, Yufeng Li,
+Kewei Tu, Pengjun Xie, and Fei Huang. Evolvesearch: An iterative self-evolving search agent, 2025a.
+URL https://arxiv.org/abs/2505.22501.
+Wentao Zhang, Liang Zeng, Yuzhen Xiao, Yongcong Li, Ce Cui, Yilei Zhao, Rui Hu, Yang Liu, Yahui
+Zhou, and Bo An. Agentorchestra: A hierarchical multi-agent framework for general-purpose task
+solving, 2025b. URL https://arxiv.org/abs/2506.12508.
+31

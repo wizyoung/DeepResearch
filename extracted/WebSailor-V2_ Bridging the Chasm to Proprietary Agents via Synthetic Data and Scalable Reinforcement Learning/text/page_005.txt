@@ -1,0 +1,57 @@
+Automatic Synthetic Data
+Real Environment
+Simulated Environment
+Search
+Visit
+Python Interpreter
+Google Scholar
+Async Call
+Action
+Collect
+Preservation
+Update
+Utilization
+Rollout Worker
+Trajectory
+Reward Service
+Async Rollout Service
+Observation
+Figure 2: An overview of our Reinforcement Learning framework. The agent is trained in a closed loop
+where the policy is continuously updated through interactions with simulated or real-world environments.
+A key component is the automated data synthesis and filtering pipeline, which dynamically curates
+training data based on the training dynamics.
+4
+Agentic Post-training
+In this section, we will introduce the post-training pipeline, including SFT cold start, simulated and real
+RL environments, and details of the RL training algorithm.
+4.1
+SFT Cold Start
+The initial phase of our agentic post-training pipeline is a SFT stage, designed to equip the base model
+with a robust initial policy before advancing to reinforcement learning. To maintain a controlled and
+high-quality training environment, our SFT dataset is composed entirely of synthetic data generated from
+SailorFog-QA-V2. The trajectories for SFT are constructed by open-source models to solve the generated
+QA tasks with rejection sampling. In a notable departure from the original WebSailor, our agent is built
+upon the Qwen3-30B-A3B-Thinking-2507 (Yang et al., 2025) as the base model, with the context length
+increased to 128k.
+4.2
+Agentic Reinforcement Learning
+Simulated environment.
+Training in simulation environments and then transferring the trained policy
+to the real world, or using simulation environments for algorithm validation, is a very common and
+essential research and development strategy (Da et al., 2025), which has been applied in various do-
+mains (Osi´nski et al., 2020; Haiderbhai et al., 2024; Ho et al., 2021). Relying on real-world web APIs, such
+as those from SerpAPI (SerpAPI, 2025) or Jina (Jina.ai, 2025), introduces significant practical challenges,
+including high costs, limited QPS, and inconsistent outputs. During the initial stages of development,
+conducting algorithm research and data curation in a real environment with finite resources can dras-
+tically slow the development cycle and lead to less-than-solid conclusions from ablation studies. To
+address this, we build a simulated environment using an offline Wikipedia database and a corresponding
+suite of web tools. To populate this environment with high-quality, structurally complex tasks, we
+adapted our SailorFog-QA-V2 generation pipeline to operate on this offline corpus, thereby creating
+a dedicated set of training and testing data tailored to the simulation. This has enabled us to conduct
+high-frequency algorithmic experiments on a highly cost-efficient, fast, and fully controllable platform,
+thereby significantly accelerating our development and iteration process.
+Real environment.
+While the simulated environment is invaluable for rapid prototyping and algorithm
+validation, the ultimate goal is to train the agent in a real-world setting. This transition, however,
+introduces a host of engineering complexities. Our agent’s toolkit is multifaceted, integrating multiple
+5

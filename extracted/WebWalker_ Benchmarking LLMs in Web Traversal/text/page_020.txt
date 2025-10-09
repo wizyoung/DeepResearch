@@ -1,0 +1,49 @@
+CoT-QA Evaluator
+You are a teacher grading a quiz.
+You are given a question, the context the question is about, and the student's answer. You are asked to
+score the student's answer as either CORRECT or INCORRECT, based on the context.
+Write out in a step by step manner your reasoning to be sure that your conclusion is correct. Avoid simply
+stating the correct answer at the outset.
+Example Format:
+QUESTION: question here
+CONTEXT: context the question is about here
+STUDENT ANSWER: student's answer here
+EXPLANATION: step by step reasoning here
+GRADE: CORRECT or INCORRECT here
+Grade the student answers based ONLY on their factual accuracy. Ignore differences in punctuation and
+phrasing between the student answer and true answer. It is OK if the student answer contains more
+information than the true answer, as long as it does not contain any conflicting statements. Begin!
+QUESTION: (*@\textcolor{blue}{\{{query}\}}@*)
+CONTEXT: (*@\textcolor{blue}{\{{answer}\}}@*)
+STUDENT ANSWER: (*@\textcolor{blue}{\{{result}\}}@*)
+EXPLANATION
+GRADE:"""
+Figure 9: The prompt for evaluation.
+"judge": true,
+"answer": "<Generated Answer>"
+}
+Or, if the information is insufficient to answer the query:
+{
+"judge": false
+}
+−Query: (*@\textcolor{blue}{\{Query\}}@*)
+−Accumulated Information: (*@\textcolor{blue}{\{Information\}}@*)
+F
+Details for Evaluation
+F.1
+Evaluator
+The evaluator prompt is shown in Figure 9.
+G
+Case Study
+G.1
+Reasoning Error
+As shown in Table 5, this question requires first locating the webpage related to the Inclusive Connections
+Lounge, followed by a comprehensive understanding of the information on the page to calculate the
+required time. In such cases, it is also necessary to account for the system’s ability to perform time
+calculations or reasoning. Consequently, even when the source page is successfully located, errors might
+still occur if the system fails to process the time correctly.
+G.2
+Time Cut-off
+As shown in Table 6, the cutoff date for o1’s temporal data is October 2023, rendering it unable to provide
+answers regarding web information published beyond this point.
+20

@@ -1,0 +1,62 @@
+Examiner
+Selector
+Level 2
+Level 1
+Example: Born in the place shown in the image, he regularly appeared on the 
+1950s TV series Captain Fortune Show. His birthplace is known for its heritage-
+listed post office and the Hawkesbury Agricultural College (est. 1891). What is the 
+common name of the snake named after him?
+Example：A prominent zoologist, born in the place shown in the 
+image to a reverend's family, became known for his wildlife education 
+on 1950s television. What is the common name of the snake named 
+after him?
+Original question:
+"What species of snake was named
+after James Roy Kinghorn?”
+Answer:
+Australian scrub python
+Image
+Search
+Graph
+I
+II
+III
+IV
+V
+Figure 4: Data generation pipelines.
+Level 2
+Following WebSailor (Li et al., 2025a), we construct queries with fuzzed entities by replacing
+precise references with partial, ambiguous descriptions. Our approach emphasizes situations where
+answers cannot be retrieved through direct lookup, but instead require contextual reasoning and synthesis
+across modalities.
+We design a two-stage generation framework consisting of:
+(1) Nodes Selecting: Given an initial Wikipedia page, we first prompt GPT-4o (OpenAI, 2024) to
+generate a base QA pair grounded in the page content. The title of page serves as the root entity
+node Broot. Starting from Broot, we recursively expand a hyperlink graph by traversing outgoing
+links to construct a tree of depth d and branching factor k, resulting in a total of (kd+1 −1)/(k −1)
+nodes in the entire traversal. In our implementation, we set d = 3 and k = 3 to ensure sufficient
+semantic coverage.
+To generate diverse reasoning paths, we sample multiple subgraphs from the entire tree. We
+randomly select a subset of nodes and continue expansion until a subgraph containing N entities
+is formed. Each subgraph defines a unique reasoning path from Broot to a newly selected target
+entity B, forming a knowledge graph encoding multi-hop relations. These subgraphs serve as
+the foundation for generating distinct QA pairs.
+(2) Query Generating: Based on the selected subgraph and the ground truth, we first prompt
+GPT-4o to generate a standard form that explicitly references entities and relations along the
+reasoning path. Then, it is transformed into a fuzzed version in which key references are replaced
+with partial, ambiguous, or qualitative descriptions. This design encourages diverse reasoning
+patterns, pushing models to infer answers via synthesis rather than surface matching.
+2.2.2
+QA-to-VQA Conversion
+Visual Context Construction for VQA
+To ensure effective visual grounding, we first filter out trivial or
+excessively ambiguous target entities B, such as those that denote temporal references or domain-external
+concepts, which lack sufficient visual grounding. For each retained entity ˆB, we retrieve a set of web
+images I( ˆB) = I ˆB
+1 , I ˆB
+2 , . . . , I ˆB
+K via Google SerpApi (Google, 2025), where K = 2 in our implementation.
+The resulting images I( ˆB) serve as the visual grounding to construct multimodal reasoning examples.
+Unlike synthetic or composited images prevalent in existing VQA benchmarks, our images are strictly
+authentic, thus minimizing noise and maximizing relevance for real-world tasks.
+5

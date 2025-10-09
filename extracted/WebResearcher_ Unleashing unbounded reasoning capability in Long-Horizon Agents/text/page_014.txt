@@ -1,0 +1,66 @@
+mechanism for synthesis or reset. We compare this against two other agents: Mono-Agent + Iter, which
+represents the Mono-Agent architecture enhanced with our iterative research training data but still using
+the linear inference strategy, and WebResearcher, our full model employing the iterative paradigm.
+Table 3: Main results comparing different agents on
+the HLE, BC-EN, and BC-ZH benchmarks.
+Agent
+HLE
+BC-EN
+BC-ZH
+WebResearcher
+28.8
+37.3
+45.2
+Mono-Agent
+18.7
+25.4
+34.6
+Mono-Agent + Iter
+25.4
+30.1
+40.4
+Results and Analysis
+The results, presented in
+Table 3, clearly demonstrate the paradigm’s effi-
+cacy. The Mono-Agent + Iter consistently outper-
+forms the base Mono-Agent across all benchmarks:
+HLE (25.4 vs. 18.7), BC-EN (30.1 vs. 25.4), and
+BC-ZH (40.4 vs. 34.6). This initial improvement
+highlights the benefit of our specialized training
+data.
+However, the most significant finding is the per-
+formance gap between the non-iterative Mono-Agent + Iter and our full WebResearcher agent (e.g., 28.8
+vs. 25.4 on HLE). This delta isolates the impact of the iterative paradigm itself. The inferior performance
+of the linear strategy is attributable to two critical failure modes: 1) Contextual Degradation, where the
+model’s attention is saturated with an excess of low-value historical data, impairing its ability to identify
+salient information; and 2) Irreversible Error Propagation, where early mistakes or noisy observations re-
+main in the context, progressively corrupting subsequent reasoning steps. This is particularly detrimental
+in long-horizon tasks that require numerous steps.
+Conversely, our iterative paradigm directly mitigates these issues. By periodically synthesizing key
+findings and resetting the contextual workspace, our agent maintains a focused and refined context for
+each reasoning cycle. This mechanism is fundamental to sustaining high-level cognitive performance.
+This study provides compelling evidence that the iterative paradigm itself, not merely the training data
+or base model, is the critical driver of WebResearcher’s success in complex, long-horizon research tasks.
+6.2
+Analysis of Tool-Use Behavior
+The core strength of IterResearch lies in its iterative paradigm, which facilitates longer and more complex
+reasoning chains. To substantiate this claim, we conduct an in-depth analysis of its tool-calling behavior
+across diverse benchmarks, demonstrating that IterResearch exhibits highly adaptive and efficient tool-
+use strategies tailored to task-specific demands.
+Our analysis focuses on the frequency and length of tool invocation sequences—specifically involving
+Search (web search), Scholar (academic search), Visit (web page access), and Python (code execution)—on
+the HLE and BrowseComp benchmarks. The tool-use profile of IterResearch shifts dramatically based on
+the nature of the task.
+On the HLE benchmark, which primarily contains questions requiring academic and professional knowl-
+edge, the agent adopts a focused and concise strategy. The Scholar tool is prominently used, constituting
+25.4% of all tool calls, reflecting the need for specialized literature search. The average reasoning chain
+is short, with tasks being resolved in an average of only 4.7 turns. This indicates efficient, targeted
+information retrieval for well-defined problems.
+In stark contrast, on BrowseComp, where tasks necessitate extensive web navigation and information
+integration across multiple pages, the agent’s behavior highlights its capacity for prolonged and complex
+reasoning. The Search (56.5%) and Visit (39.7%) tools become paramount, jointly accounting for over 96%
+of all tool invocations. This strategic shift is mirrored by a significant increase in reasoning complexity:
+the average number of turns skyrockets to 61.4 per task, with the most complex problems requiring over
+200 interaction turns to solve.
+This marked divergence in both tool selection and reasoning chain length underscores IterResearch’s
+14

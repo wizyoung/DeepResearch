@@ -1,0 +1,58 @@
+... Let’s examine context: "the year before a citywide nuisance led authorities to convene transit
+operators"... Now, the event where the buyer placed a perfectly balanced commitment with firm
+orders equal to options might be at the same air show (Paris Air Show). In 2025, Riyadh Air placed
+a perfect balance of 25+25.
+Alternatively, in 2019 (previous Paris Air Show), ASL Aviation placed 10+10... So maybe the
+question expects us to answer about Riyadh Air because it’s the latest.However we need to
+consider that "the year before a citywide nuisance led authorities to convene transit operators"
+indicates that the nuisance event happened the previous year relative to the statement. Then ask:
+which buyer placed a perfectly balanced commitment at the biennial aerospace marketplace? That
+suggests the buyer placed that order at the Paris Air Show 2025 (recent). Therefore Riyadh Air is
+correct .
+Thus answer: Riyadh Air.
+We need to provide answer clearly: The buyer is Riyadh Air, which placed a firm order for 25
+Airbus A350-1000 aircraft with purchase rights for an additional 25 (equal).
+Thus final answer: Riyadh Air.
+</think>
+<answer>
+The question references several interconnected events centered around Paris...:
+1. Biennial Aerospace Marketplace: ...Paris Air Show, officially known as ... attracting manufac-
+turers, airlines, buyers, and aviation professionals from across the world...
+2. Pyramid-Fronted Museum and High Single-Digit Visitor Numbers During Global Athletic
+Celebration: ... In 2024, during the period of the Paris Olympic Games—a major global athletic
+celebration—the Louvre recorded visitor numbers in the high single-digit millions (approximately
+8.7 million visitors in 2023 and similar figures in subsequent months)...
+3. Citywide Nuisance and Convening of Transit Operators: In 2023, Paris experienced a citywide
+debate on electric scooters (e-scooters), which many residents and officials labeled a “nuisance”
+due to safety concerns and congestion...
+Recent Developments at the Paris Air Show
+... Among the many deals announced, Riyadh Air stood out for placing a perfectly balanced
+commitment... This means the number of firm orders equals the number of options, making the
+commitment symmetrical and strategically flexible.
+Key details of Riyadh Air’s order:...
+Historical Context and Other Buyers
+...
+While this demonstrated a similarly balanced
+commitment, the query appears to focus on recent activity aligning with the context provided (i.e.,
+after the citywide e-scooter nuisance debate and Olympic Games).
+Buyer
+Year Announced
+Aircraft Model
+Firm Orders
+Options
+Riyadh Air
+2025
+Airbus A350-1000
+25
+25
+ASL Aviation Holdings DAC
+2019
+Boeing 737-800BCF
+10
+10
+Conclusion
+In summary, the buyer that placed a perfectly balanced commitment with firm orders equal to
+options at the recent Paris Air Show is Riyadh Air...
+<answer>
+✓
+27

@@ -1,0 +1,96 @@
+trained on Short-CoT datasets, while QwQ-32B is trained on Long-CoT datasets. Further analyses are
+shown in Sec. 5.
+4.2
+Experimental Results
+Main Results As shown in Table 1, frameworks without agentic capabilities (No Agency) perform poorly
+on both the GAIA and WebWalkerQA benchmarks, highlighting the necessity of active information-
+seeking and agentic decision-making for these tasks. The closed-source agentic system, OpenAI DR,
+through end-to-end RL training achieves the highest scores. Among Open-sourced frameworks, agentic
+approaches built on top of native strong reasoning models like QwQ-32B consistently outperform their
+non-agentic counterparts, demonstrating the effectiveness of leveraging reasoning-specialized models in
+agent construction. Importantly, under the highly extensible ReAct framework, our proposed WebDancer
+shows substantial gains over the vanilla ReAct baseline across different model scales. Notably, it even
+surpasses the performance of GPT-4o in the best-case scenario. This demonstrates that even within a
+lightweight framework, our method significantly enhances agentic capabilities over the underlying base
+model, validating the strength and generality of our approach.
+Table 2: Results on BrowseComp (En.)
+and BrowseComp-zh (Zh.).
+Framework
+Browsing
+En.
+Zh.
+GPT-4o
+✘
+0.6
+6.2
+✔
+1.9
+-
+QwQ-32B
+✘
+-
+11.1
+WebDancer
+✔
+3.8/7.9
+18.0/31.5
+Results on More Challenging Benchmarks We evaluate our
+approach on two more challenging datasets, BrowseComp
+(En.) Wei et al. and BrowseComp-zh (Zh.) Zhou et al. (2025),
+which are designed to better reflect complex information-
+seeking scenarios using PASS@1/PASS@3.
+As shown in Ta-
+ble 2, WebDancer demonstrates consistently strong perfor-
+mance across both datasets, highlighting its robustness and
+effectiveness in handling difficult reasoning and information-
+seeking tasks.
+5
+Analysis
+Detailed Results We conduct detailed analyses on the GAIA datasets. Given the dynamic and com-
+plex nature of agent environments, as well as the relatively small and variable test set, we further
+conduct a fine-grained analysis of Pass@3 and Cons@3 in Figure 4. The Cons@3 metric is computed
+by evaluating the number of correct responses out of three independent attempts: achieving one cor-
+rect answer yields a score of 1/3, two correct answers yield 2/3, and three correct answers result in
+a full score of 1. For non-reasoning models, RL leads to substantial improvements in both Pass@3
+and Cons@3. Notably, the Pass@1 performance after RL is comparable to the Pass@3 of the SFT base-
+line, consistent with previous findings Yue et al. (2025); Swamy et al. (2025) suggesting that RL can
+sample correct responses more efficiently. For LRMs, while the improvements in Pass@1, Pass@3,
+and Cons@3 after RL are marginal, a noticeable gain in consistency is observed; this may be due to
+sparse reward signals caused by excessively long trajectories Feng et al. (2025); Wei et al. (2025b).
+Open-only
+(1308)
+Crawl-only
+(9662)
+E2H-only
+(2485)
+All
+(17764)
+Final
+(6550)
+Dataset
+0
+10
+20
+30
+40
+50
+60
+Score
+Metric
+PASS@3
+Consistency
+Figure 3: Results on data efficiency using GAIA
+benchmark. Open-only refers to using only chal-
+lenging QA datasets from open-source sources.
+This suggests that continued on-policy optimization
+may yield limited benefits for LRMs in agentic tasks.
+Our best-performing model achieves a Pass@3 score
+of 64.1% on GAIA and 62.0% on WebWalkerQA.
+High-quality trajectory data is crucial for effec-
+tive SFT of agents. We propose two data construc-
+tion strategies, resulting in the creation of datasets
+CRAWLQA and E2HQA. After applying trajectory re-
+jection sampling to the QA data, we further perform
+filtering to enhance data quality. In Figure 3, we con-
+duct ablation studies on the QwQ and evaluate the
+8

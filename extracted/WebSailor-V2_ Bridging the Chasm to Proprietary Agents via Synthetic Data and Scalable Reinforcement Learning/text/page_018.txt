@@ -1,0 +1,51 @@
+settlement was somewhere between 1.2 and 1.9 million dollars." So a moderate-size class action,
+perhaps wage/hours or discrimination, not huge. Settlement $1.2-$1.9M.
+Clue 3: "According to a source published in 2008, the founder of the company changed roles
+within the company, with this change set to take effect at the beginning of the fiscal third quarter,
+which falls between Jan 1, 2007, and Dec 31, 2008. The change also instates a new person as CEO."
+Clue 4: Company formed in Delaware.
+Clue 5: Company founded between 1988 and 1995.
+Thus we need a Delaware-incorporated public company founded
+1990ish, with a founder
+stepping down around mid-2008.
+Now let’s search for "founder steps down as CEO effective July 1 2008".
+</think>
+<tool_call>
+{"name": "search", "arguments": {"query": [""effective July 1, 2008" "CEO" "founder""]}}
+</tool_call>
+<tool_response>
+Search results are omitted
+</tool_response>
+Step 8
+<think>
+No obvious hits.
+Search for "founder will become chairman of the board effective third quarter 2008"
+</think>
+<tool_call>
+{"name": "search", "arguments": {"query": [""founder" "will become" "Chairman" "effective" "third
+quarter" "2008""]}}
+</tool_call>
+<tool_response>
+Search results are omitted
+...
+</tool_response>
+Step 9
+<think>
+Great! This appears promising: "FormFactor Board Appoints Mario Ruscev FormFactor CEO".
+Let’s open.
+</think>
+<tool_call>
+{"name": "visit", "arguments": {"url": ["https://investors.formfactor.com/news-releases/news-
+release-details/formfactor-board-appoints-mario-ruscev-formfactor-ceo"], "goal": "Find details
+about founder role change effective beginning of fiscal third quarter 2008, new CEO appoint-
+ment"}}
+</tool_call>
+<tool_response>
+Visit results are omitted
+</tool_response>
+Step 10
+<think>
+Great! This matches the clue: founder changed roles, effective at beginning of fiscal third quarter
+2008. Founder becomes executive chairman; new CEO appointed.
+Now we need to verify other clues for FormFactor.
+18

@@ -1,0 +1,48 @@
+• Search is used to access the Google search engine for information retrieval. The parameters of
+Search are the search queries. It allows searching multiple queries simultaneously and returns
+the top-10 results for each query. Each result contains a title, a snippet, and the corresponding
+URL.
+• Visit is used to access specific web pages. The input consists of several web pages and their
+corresponding visit goals, with each page having a dedicated goal. First, Jina (Jina.ai, 2025) is
+used to retrieve the full content of the web page, and then a summary model extracts relevant
+information based on the goal. In this work, we use Qwen3-30B-A3B Yang et al. (2025) as the
+summary model.
+• Google Scholar is a specialized search tool that accesses the Google Scholar search engine. It is
+designed for information retrieval within the academic domain, allowing the agent to find and
+access scholarly literature such as articles, theses, books, and conference papers.
+• Python interpreter is a sandboxed environment that allows the agent to write and execute Python
+code. This tool enables the agent to perform complex computational tasks, such as mathematical
+calculations, data analysis, and logical reasoning, by running self-generated code in a secure and
+isolated setting.
+Training hyper-parameters
+We use Megatron (Shoeybi et al., 2019) for SFT and rLLM (Tan et al., 2025)
+for RL training. For SFT, we use a batch size of 64, learning rate of 5e-6 with a minimum of 1e-10, warmup
+plus cosine decay schedule, and a weight decay of 0.1. For RL training, the temperature is 1.0, topp = 1.0,
+the batch size is 128, and the learning rate is 1e-6.
+C
+Case Study
+We present a case from the BrowseComp benchmark, wherein the agent successfully identified the correct
+company after a comprehensive reasoning process spanning 29 steps. This case demonstrates a series of
+advanced reasoning patterns executed through efficient tool invocation.
+1. Clue Decomposition and Structuring: In its initial step, the agent deconstructed the user’s
+unstructured, multi-faceted query into a set of clear, verifiable, and structured conditions. This
+foundational process of decomposition is essential for solving complex problems by breaking
+them down into manageable sub-tasks.
+2. Initial Exploration and Strategy Adjustment: The agent did not arrive at the correct answer
+immediately. Its initial search queries were broad and exploratory, such as "former employee
+class action settlement $1.5 million 2015". These searches returned irrelevant results pertaining to
+companies like McDonald’s and FedEx, which were too generic to be correlated with the other
+specific clues. This demonstrates the agent’s ability to recognize unproductive search paths and
+adjust its strategy accordingly.
+3. Identifying the "Golden Clue": Following the unsuccessful initial attempts, the agent identified
+the need to pivot to a more targeted approach. It reasoned that the most effective strategy was
+to focus on the most unique and easily locatable piece of information: the leadership change.
+Consequently, it constructed a highly precise search query: "founder" "will become" "Chairman"
+"effective" "third quarter" "2008". This query targets a specific corporate event within a narrow
+timeframe, significantly increasing the probability of a relevant hit.
+4. Target Acquisition (The Breakthrough):This precise query successfully identified the target.
+The search results pointed directly to two press releases from FormFactor, Inc., detailing that
+its founder, Igor Khandros, would become Executive Chairman while a new CEO would be
+appointed at the beginning of the third fiscal quarter of 2008. At this juncture, the agent had
+identified a high-potential candidate.
+13

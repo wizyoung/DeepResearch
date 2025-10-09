@@ -1,0 +1,43 @@
+followed by the corresponding real response Rk. Finally, we append the judgment text: “My decision
+is {Correct/Incorrect}” (corresponding to J). The complete synthetic training sample is obtained by
+concatenating the problem, the choice-decision process for each step, and the final judgment text.
+This approach circumvents the risks associated with directly using uncertain step-level rewards while
+enabling the model to learn from diverse reasoning paths, thereby preventing overfitting to specific tra-
+jectory patterns. Through this synthesis strategy, previously underutilized trajectory data is transformed
+into rich training signals, significantly improving the sample efficiency of the agentic learning process.
+3
+Experiments
+In this section, we conduct comprehensive empirical studies to validate the performance of AgentFounder.
+Our experimental design addresses the following research questions:
+• RQ1: How does AgentFounder compare against existing state-of-the-art deep research agents?
+• RQ2: Can agentic CPT effectively enhance diverse post-training methods for agentic alignment?
+• RQ3: What is the effectiveness of our proposed two-stage training strategy in the agentic CPT?
+• RQ4: Which data type (i.e., FAS, HAS) contributes more effectively to agentic CPT?
+• RQ5: Do scaling laws apply to both data volume and model size in agentic CPT?
+3.1
+Experimental Setup
+3.1.1
+Data
+Agentic CPT Data. Our continual pre-training corpus comprises a carefully curated heterogeneous
+mixture of: (1) high-quality web-crawled data filtered for factual accuracy, (2) historical tool invocation
+records, e.g., search results and web page content (3) offline Wikipedia data, and (4) mixed-quality
+discarded trajectories from previous post-training iterations.
+Post-training Data. To better unlock the potential of our foundation models and demonstrate the
+adaptability of AgentFounder-Base across different post-training strategies, we employ three distinct SFT
+configurations:
+• SFT-A: Employs a two-stage training paradigm, first on general conversational data, followed by
+specialized React-style agent trajectories with explicit reasoning chains.
+• SFT-B: An enhanced version of SFT-A that maintains the two-stage training paradigm but
+incorporates a balanced mixture of general conversational data and React-style trajectories in
+each stage.
+• SFT-C: Employs a two-stage training paradigm with general conversational SFT data and React
+with summarized reasoning trajectories.
+For all SFT configurations, the set of the challenging information-seeking questions is constructed
+following the methodology from WebSailor-V2 (Li et al., 2025a), WebResearcher (Qiao et al., 2025),
+WebWeaver (Li et al., 2025f) and AgentScaler (Fang et al., 2025a).
+3.1.2
+Baselines
+We evaluate against three categories of strong agent models:
+• General LLMs with tools: Qwen3-30B-A3B-2507 (Yang et al., 2025), Qwen3-235B-A22B-2507
+(Yang et al., 2025), DeepSeek-R1-0528 (Guo et al., 2025) and Claude-4-Sonnet (Anthropic, 2025).
+9

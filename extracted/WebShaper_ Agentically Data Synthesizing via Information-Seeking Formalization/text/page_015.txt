@@ -1,0 +1,36 @@
+5.2
+Formalization-based Data Synthesis
+Formalization-based data synthesis is common in the study of theorem proving in LLM mathematics.
+DeepSeek-MathProver synthesizes data to train a math theorem prover. It transforms high school and
+undergraduate level math competition problems into formal statements. It then automatically generates
+proofs by an LLM and verify the correctness of these proofs in a Lean 4 environment (Xin et al., 2024).
+After that, DeepSeek-MathProverV2 decomposes the proof into subgoals. Then synthesis training data
+to train a small model for the subgoal proof in formal statements (Ren et al., 2025). Leang et al. (2025)
+synthesizes the training data of Theorem Prover as a Judge based on mathematical formalization. Each
+question needs to go through multiple formal language and natural language conversion and verification
+processes to ensure the validity of the data. They trained the judger on the synthetic data, and then
+used the judger to replace the human evaluation in RLHF (Ouyang et al., 2022), improving the effect of
+DPO Rafailov et al. (2023). Goedel-Prover trains LLMs to convert natural language math problems to
+formal statements in Lean 4. Next, it creates a large dataset of formal proofs by training a series of provers,
+where each new prover can prove statements that could not be proved by previous ones (Lin et al., 2025).
+Another group of related studies is synthesizing training data for knowledge base question answering.
+These methods formalize the KBQA question via propositional logic. LACT constructs the arbitrary
+first-order logical queries similar to Choudhary & Reddy (2023) via binary tree decomposition (Xia et al.,
+2025). This results in an SFT dataset. It then fine-tunes on an easy-to-hard curriculum to stimulate the
+reasoning capability of LLMs. Rather than proposition logics, our work establishes IS formalization via
+set theory.
+6
+Conclusion
+This work presents a paradigm-shifting framework for synthesizing training data WebShaper for
+information-seeking (IS) agents through formalization-driven design. By establishing a set theory-based
+mathematical formalization of IS tasks, we address critical limitations in existing information-driven
+approaches that suffer from structural inconsistencies, task controllability, diversity, and coverage. The
+composition of proposed Knowledge Projections enables precise engineering of reasoning structures and
+complexity. Our agentic Expander module further ensures systematic expansion of formalized tasks with
+a layer-wise expansion paradigm, combining autonomous knowledge retrieval and rigorous validation
+to minimize redundancy and prevent reasoning shortcuts. Experimental results demonstrate that Web-
+Shaper not only achieves state-of-the-art performance on GAIA and WebWalkerQA benchmarks but also
+introduces controllability over task design, enabling deliberate engineering of cognitive challenges for IS
+agents. This formalization-driven paradigm shifts the focus from reactive information organization to
+proactive task specification, opening new avenues for advancing agent capabilities.
+15

@@ -1,0 +1,43 @@
+OpenAI. Introducing openai o3 and o4-mini, 2025b. URL https://openai.com/index/introducing-o
+3-and-o4-mini/.
+OpenPangu Team. Openpangu deepdiver-v2: Multi-agent learning for deep information seeking, 2025.
+URL https://ai.gitcode.com/ascend-tribe/openPangu-Embedded-7B-DeepDiver.
+Bła˙zej Osi´nski, Adam Jakubowski, Paweł Zi˛ecina, Piotr Miło´s, Christopher Galias, Silviu Homoceanu,
+and Henryk Michalewski. Simulation-based reinforcement learning for real-world autonomous driving.
+In 2020 IEEE international conference on robotics and automation (ICRA), pp. 6411–6418. IEEE, 2020.
+Perplexity Team. Perplexity reseaarch, 2025. URL https://www.perplexity.ai/hub/blog/introduci
+ng-perplexity-deep-research.
+Long Phan, Alice Gatti, Ziwen Han, Nathaniel Li, Josephina Hu, Hugh Zhang, Chen Bo Calvin Zhang,
+Mohamed Shaaban, John Ling, Sean Shi, et al. Humanity’s last exam. arXiv preprint arXiv:2501.14249,
+2025.
+Yujia Qin, Yining Ye, Junjie Fang, Haoming Wang, Shihao Liang, Shizuo Tian, Junda Zhang, Jiahao Li,
+Yunxin Li, Shijue Huang, et al. Ui-tars: Pioneering automated gui interaction with native agents. arXiv
+preprint arXiv:2501.12326, 2025.
+Jiahao Qiu, Xuan Qi, Tongcheng Zhang, Xinzhe Juan, Jiacheng Guo, Yifu Lu, Yimin Wang, Zixin Yao,
+Qihan Ren, Xun Jiang, et al. Alita: Generalist agent enabling scalable agentic reasoning with minimal
+predefinition and maximal self-evolution. arXiv preprint arXiv:2505.20286, 2025.
+SerpAPI. Serpapi: Google search api, 2025. URL https://serpapi.com/?gad_source=1&gad_campaign
+id=1061187028&gbraid=0AAAAADD8kqObrG_Yhfov4tkhegHlcAW-v&gclid=CjwKCAjwz5nGBhBBEiwA-W
+6XRPAgJXyoTwlsU-elg7bW5iIjUA8btM6oK3A_sp2D95exzIyaNjNmPRoCw6cQAvD_BwE.
+Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan
+Zhang, YK Li, Y Wu, et al. Deepseekmath: Pushing the limits of mathematical reasoning in open
+language models. arXiv preprint arXiv:2402.03300, 2024.
+Wenxuan Shi, Haochen Tan, Chuqiao Kuang, Xiaoguang Li, Xiaozhe Ren, Chen Zhang, Hanting Chen,
+Yasheng Wang, Lifeng Shang, Fisher Yu, et al. Pangu deepdiver: Adaptive search intensity scaling via
+open-web reinforcement learning. arXiv preprint arXiv:2505.24332, 2025.
+Mohammad Shoeybi, Mostofa Patwary, Raul Puri, Patrick LeGresley, Jared Casper, and Bryan Catanzaro.
+Megatron-lm: Training multi-billion parameter language models using model parallelism. arXiv
+preprint arXiv:1909.08053, 2019.
+Liangcai Su, Zhen Zhang, Guangyu Li, Zhuo Chen, Chenxi Wang, Maojia Song, Xinyu Wang, Kuan Li,
+Jialong Wu, Xuanzhong Chen, Zile Qiao, Zhongwang Zhang, Huifeng Yin, Shihao Cai, Runnan Fang,
+Zhengwei Tao, Wenbiao Yin, et al. Scaling agents via continual pre-training, 2025.
+Richard Sutton. The bitter lesson. Incomplete Ideas (blog), 13(1):38, 2019.
+Sijun Tan, Michael Luo, Colin Cai, Tarun Venkat, Kyle Montgomery, Aaron Hao, Tianhao Wu, Arnav
+Balyan, Manan Roongta, Chenguang Wang, Li Erran Li, Raluca Ada Popa, and Ion Stoica. rllm: A
+framework for post-training language agents. https://pretty-radio-b75.notion.site/rLLM-A
+-Framework-for-Post-Training-Language-Agents-21b81902c146819db63cd98a54ba5f31, 2025.
+Notion Blog.
+Zhengwei Tao, Jialong Wu, Wenbiao Yin, Junkai Zhang, Baixuan Li, Haiyang Shen, Kuan Li, Liwen Zhang,
+Xinyu Wang, Yong Jiang, et al. Webshaper: Agentically data synthesizing via information-seeking
+formalization. arXiv preprint arXiv:2507.15061, 2025.
+30

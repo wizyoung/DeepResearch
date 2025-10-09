@@ -1,0 +1,42 @@
+Case Trajectory in GAIA
+Answer the following questions as best you can.
+Allowed tools: Only use tools listed in {tool_descs}‘ or can be Final Answer: . You must also
+ensure that the Final Answer is accurate and reliable.
+You have access to the following tools:
+{tool_descs}
+Begin!
+Output Format:
+Action: the action to take, should be one of [{tool_names}] Action Input: the input to the action,
+use JSON Schema with explicit parameters, when the action is ’Final Answer’, do not have Action
+Input, directly return the answer
+You may take as many steps as necessary. Always use the tools to gather information before
+making a final answer.
+When you want to make a tool call, please output complete "Action: " and "Action Input: " to
+make the tool call successful and then output "Observation: " to make the tool call successful.
+Question: {query}
+Figure 7: Prompts for ReAct using LRMs.
+F
+Case Study
+As shown in Figure 8, several sophisticated thinking patterns are demonstrated as below:
+• Step-by-step Decomposition WebDancer breaks down a complex problem into smaller, manage-
+able steps with "First ... Then ... Finally".
+• Hypothesis Testing WebDancer proposes hypotheses and verifies their validity. It assumes that
+“Nemo” from Finding Nemo is the orange clownfish (Amphiprion ocellaris). It validates this
+assumption by consulting the USGS database for non-native occurrences.
+• Handling Information Gaps When certain information is missing, WebDancer takes action to fill
+the gap actively.
+• Iterative Reflection After failing to find the ZIP code in the USGS database, WebDancer realizes
+it needs to search for the specific address separately. Through a second search, it successfully
+retrieves the ZIP code. This demonstrates the Agent’s flexibility and adaptability when facing
+uncertainty.
+Case Trajectory in GAIA
+Question: I’m researching species that became invasive after people who kept them as pets
+released them. There’s a certain species of fish that was popularized as a pet by being the main
+character of the movie Finding Nemo. According to the USGS, where was this fish found as a
+nonnative species, before the year 2020? I need the answer formatted as the five-digit zip codes of
+the places the species was found, separated by commas if there is more than one place.
+Step 1
+<think>
+Okay, let’s tackle this question step by step. The user wants to know the zip codes where the fish
+from Finding Nemo, which became invasive after being released by pet owners, was found as a
+21

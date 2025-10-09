@@ -1,0 +1,45 @@
+of the Association for Computational Linguistics: Human Language Technologies, pp. 1022–1032, Online,
+June 2021. Association for Computational Linguistics. doi: 10.18653/v1/2021.naacl-main.80. URL
+https://aclanthology.org/2021.naacl-main.80.
+An Yang, Baosong Yang, Binyuan Hui, Bo Zheng, Bowen Yu, Chang Zhou, Chengpeng Li, Chengyuan
+Li, Dayiheng Liu, Fei Huang, Guanting Dong, Haoran Wei, Huan Lin, Jialong Tang, Jialin Wang,
+Jian Yang, Jianhong Tu, Jianwei Zhang, Jianxin Ma, Jianxin Yang, Jin Xu, Jingren Zhou, and et al.
+Qwen2 technical report. CoRR, abs/2407.10671, 2024. doi: 10.48550/ARXIV.2407.10671. URL
+https://doi.org/10.48550/arXiv.2407.10671.
+Shunyu Yao, Howard Chen, John Yang, and Karthik Narasimhan. Webshop: Towards scalable real-world
+web interaction with grounded language agents. Advances in Neural Information Processing Systems, 35:
+20744–20757, 2022.
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik R Narasimhan, and Yuan Cao.
+React: Synergizing reasoning and acting in language models. In The Eleventh International Conference on
+Learning Representations, 2023. URL https://openreview.net/forum?id=WE_vluYUL-X.
+Ori Yoran, Samuel Joseph Amouyal, Chaitanya Malaviya, Ben Bogin, Ofir Press, and Jonathan Berant.
+AssistantBench: Can web agents solve realistic and time-consuming tasks?
+In Yaser Al-Onaizan,
+Mohit Bansal, and Yun-Nung Chen (eds.), Proceedings of the 2024 Conference on Empirical Methods in
+Natural Language Processing, pp. 8938–8968, Miami, Florida, USA, November 2024. Association for
+Computational Linguistics. URL https://aclanthology.org/2024.emnlp-main.505.
+Zhenrui Yue, Honglei Zhuang, Aijun Bai, Kai Hui, Rolf Jagerman, Hansi Zeng, Zhen Qin, Dong Wang,
+Xuanhui Wang, and Michael Bendersky.
+Inference scaling for long-context retrieval augmented
+generation. arXiv preprint arXiv:2410.04343, 2024.
+Aohan Zeng, Mingdao Liu, Rui Lu, Bowen Wang, Xiao Liu, Yuxiao Dong, and Jie Tang. AgentTuning:
+Enabling generalized agent abilities for LLMs. In Lun-Wei Ku, Andre Martins, and Vivek Srikumar
+(eds.), Findings of the Association for Computational Linguistics: ACL 2024, pp. 3053–3077, Bangkok,
+Thailand, August 2024. Association for Computational Linguistics. doi: 10.18653/v1/2024.findings-acl
+.181. URL https://aclanthology.org/2024.findings-acl.181.
+Chaoyun Zhang, Shilin He, Jiaxu Qian, Bowen Li, Liqun Li, Si Qin, Yu Kang, Minghua Ma, Qingwei
+Lin, Saravan Rajmohan, et al. Large language model-brained gui agents: A survey. arXiv preprint
+arXiv:2411.18279, 2024a.
+Wenqi Zhang, Ke Tang, Hai Wu, Mengna Wang, Yongliang Shen, Guiyang Hou, Zeqi Tan, Peng Li,
+Yueting Zhuang, and Weiming Lu. Agent-pro: Learning to evolve via policy-level reflection and
+optimization. arXiv preprint arXiv:2402.17574, 2024b.
+Ziniu Zhang, Shulin Tian, Liangyu Chen, and Ziwei Liu. Mmina: Benchmarking multihop multimodal
+internet agents, 2024c. URL https://arxiv.org/abs/2404.09992.
+Boyuan Zheng, Boyu Gou, Jihyung Kil, Huan Sun, and Yu Su. Gpt-4v (ision) is a generalist web agent, if
+grounded. In Forty-first International Conference on Machine Learning, 2024a.
+Boyuan Zheng, Boyu Gou, Scott Salisbury, Zheng Du, Huan Sun, and Yu Su. WebOlympus: An open
+platform for web agents on live websites. In Delia Irazu Hernandez Farias, Tom Hope, and Manling
+Li (eds.), Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing: System
+Demonstrations, pp. 187–197, Miami, Florida, USA, November 2024b. Association for Computational
+Linguistics. URL https://aclanthology.org/2024.emnlp-demo.20.
+14

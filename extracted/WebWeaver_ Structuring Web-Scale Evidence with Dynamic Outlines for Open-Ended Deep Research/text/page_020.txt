@@ -1,0 +1,50 @@
+1. Advancing Motor Symptoms <citation>id_5, id_6, id_18, id_22</citation>
+a. Bilateral tremor and rigidity
+b. Postural deterioration and stooped posture
+c. Balance problems and impaired reflexes
+d. Speech changes (soft, monotone voice)
+e. Swallowing difficulties
+f. Freezing episodes
+2. Emerging Complications <citation>id_16, id_18, id_22</citation>
+a. Medication wearing-off periods
+b. Levodopa-induced dyskinesia
+c. Increased fall risk
+d. Emotional and mood changes
+D. Advanced Stage Warning Signs (Stages 4-5)
+1. Severe Motor Impairment <citation>id_5, id_6, id_9, id_22</citation>
+a. Major mobility loss requiring assistive devices
+b. Severe postural deformities
+c. Inability to live independently
+d. Wheelchair or bed confinement
+2. Complex Non-Motor Complications <citation>id_5, id_16, id_19, id_22</citation>
+a. Cognitive decline and dementia
+b. Hallucinations and delusions
+c. Severe autonomic dysfunction
+d. Chronic pain and sexual dysfunction
+II. Critical Warning Signs Requiring Immediate Medical Intervention
+A. Emergency Situations for Family Members
+1. Respiratory and Swallowing Emergencies <citation>id_25, id_26, id_29, id_31, id_32, id_35,
+id_36</citation>
+a. Sudden choking or difficulty swallowing
+b. Aspiration risk with coughing while eating
+c. Severe voice changes or stridor
+d. Respiratory difficulty or shortness of breath
+2. Neurological Crisis Signs <citation>id_24, id_26, id_28, id_32, id_33, id_35</citation>
+a. Sudden confusion, delirium, or marked cognitive decline
+b. New or worsening hallucinations, delusions, or paranoid thoughts
+c. Abrupt neurological deficits (weakness, speech changes)
+d. Loss of consciousness or seizures
+3. Medication-Related Emergencies <citation>id_24, id_28, id_33</citation>
+a. Abrupt stopping or alteration of medications
+b. Exposure to dopamine-blocking drugs
+c. Missed or delayed essential medication doses
+d. Signs of serotonin syndrome
+B. Cardiovascular and Autonomic Emergencies
+1. Circulatory Complications <citation>id_26, id_28, id_31, id_32, id_34, id_36</citation>
+a. Severe orthostatic hypotension causing fainting
+b. Chest pain or cardiac symptoms
+c. Signs of blood clots (leg swelling, pain, redness)
+d. Marked dehydration
+2. Infection and Systemic Issues <citation>id_24, id_26, id_32, id_35</citation>
+a. Sudden fever with respiratory or urinary symptoms
+20

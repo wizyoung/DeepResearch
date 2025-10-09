@@ -1,0 +1,36 @@
+C
+Implementation Details
+In this section, we elaborate on the implementation details of all inference paradigms, and RL training
+configurations.
+C.1
+Implementation of Inference Paradigms
+For our experimented agents, WebSailor-series, all are constrained by a context window of 32k tokens.
+We adpot the following settings for each inference paradigm. Note that for all inference paradigms, the
+maximum tool calling budget is 60 for a single query, and the LLM hyper-parameters are uniformly set
+with a temperature of 0.6 and top_p of 0.95.
+• ReAct: Appending every thought, action, and observation into the conversation history. At each
+step, we detect the conversation window and terminate as failure if the agent has reached the
+context window without outputting the answer.
+• Recent History: Whenever the context window has reached the limit, we truncate the conver-
+sation by only preserving the recent 22k tokens of messages, in this way, we can restart the
+conversation as well as preserving extra space for possible exploration.
+• ReSum: We consistently set the trigger for summarization as reaching the context limit, and then
+invoke ReSumTool-30B for conversation compression unless specifically stated.
+In our current implementation of ReSum, we use a rule-based mechanism for summary triggering, i.e.,
+reaching the token budget, which has the benefits of simple implementation and high efficiency, e.g.,
+avoiding repeated summarization.
+C.2
+RL Training Configuration
+We implement both GRPO and ReSum-GRPO for training web agents based on the rLLM framework (Tan
+et al., 2025). For both RL algorithms, all tool invocation results are excluded from loss calculation to
+prevent bias towards tool outputs.
+Shared Hyper-parameters: For both RL algorithms, we consistently adopt a batch_size of 64, group
+size of 8, learning_rate of 2e −6, and 4 epochs due to the limited 1K training samples. Such consistent
+parameter settings ensure a fair comparison between algorithms.
+Algorithm-specific Settings: For GRPO, the maximum number of tool calls is set to 40, with a total
+token limit of 32k, where 2k tokens are allocated for the query prompt and 30k for responses, including
+thoughts, actions, and responses of tool calls. For ReSum-GRPO, the maximum number of tool calls is
+increased to 60, with 4k tokens allocated for the query prompt and 28k for responses. When the token
+limit is reached, the system invokes ReSumTool-30B to summarize the context, restart the conversation,
+and collect segmented trajectories from the prior process.
+17

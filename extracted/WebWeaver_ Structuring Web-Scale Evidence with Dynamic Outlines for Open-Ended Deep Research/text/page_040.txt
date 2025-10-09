@@ -1,0 +1,40 @@
+Tianle Li, Ge Zhang, Quy Duc Do, Xiang Yue, and Wenhu Chen. Long-context llms struggle with long
+in-context learning. arXiv preprint arXiv:2404.02060, 2024.
+Aixin Liu, Bei Feng, Bing Xue, Bingxuan Wang, Bochao Wu, Chengda Lu, Chenggang Zhao, Chengqi
+Deng, Chenyu Zhang, Chong Ruan, et al. DeepSeek-V3 technical report. arXiv preprint arXiv:2412.19437,
+2024.
+Nelson F Liu, Kevin Lin, John Hewitt, Ashwin Paranjape, Michele Bevilacqua, Fabio Petroni, and Percy
+Liang. Lost in the middle: How language models use long contexts. arXiv preprint arXiv:2307.03172,
+2023.
+Siyi Liu, Kishaloy Halder, Zheng Qi, Wei Xiao, Nikolaos Pappas, Phu Mon Htut, Neha Anna John, Yassine
+Benajiba, and Dan Roth. Towards long context hallucination detection. arXiv preprint arXiv:2504.19457,
+2025.
+Grégoire Mialon, Clémentine Fourrier, Thomas Wolf, Yann LeCun, and Thomas Scialom. Gaia: a
+benchmark for general ai assistants. In The Twelfth International Conference on Learning Representations,
+2023.
+OpenAI. Deep research system card, 2025a. URL https://cdn.openai.com/deep-research-system-c
+ard.pdf.
+OpenAI. Introducing openai o3 and o4-mini, 2025b. URL https://openai.com/index/introducing-o
+3-and-o4-mini/.
+Zile Qiao, Guoxin Chen, Xuanzhong Chen, Donglei Yu, Wenbiao Yin, Xinyu Wang, Zhen Zhang, Baixuan
+Li, Huifeng Yin, Kuan Li, Rui Min, Minpeng Liao, Yong Jiang, Pengjun Xie, Fei Huang, and Jingren
+Zhou. WebResearcher: Unleashing unbounded reasoning capability in Long-Horizon Agents, 2025.
+Qwen Team. QwQ-32B: Embracing the power of reinforcement learning, March 2025. URL https:
+//qwenlm.github.io/blog/qwq-32b/.
+Doubao Deep Research. Doubao deep research. 2025a. URL https://www.doubao.com/chat/.
+Gemini Research. Gemini research. 2025b. URL https://gemini.google/overview/deep-research/.
+GPT Research. Gpt research. 2025c. URL https://github.com/assafelovic/gpt-researcher.
+Kimi Deep Research. Kimi deep research. 2025d. URL https://www.kimi.com/.
+Open Deep Research. Open deep research. 2025e. URL https://github.com/langchain-ai/open_dee
+p_research.
+Corby Rosset, Ho-Lam Chung, Guanghui Qin, Ethan C. Chau, Zhuo Feng, Ahmed Awadallah, Jennifer
+Neville, and Nikhil Rao. Researchy questions: A dataset of multi-perspective, decompositional
+questions for LLM web agents. CoRR, abs/2402.17896, 2024. doi: 10.48550/ARXIV.2402.17896. URL
+https://doi.org/10.48550/arXiv.2402.17896.
+Aymeric Roucher, Albert Villanova del Moral, merve, Thomas Wolf, and Clémentine Fourrier. Open-
+source deepresearch – freeing our search agents. 2025. URL https://huggingface.co/blog/open-d
+eep-research.
+Liangcai Su, Zhen Zhang, Guangyu Li, Zhuo Chen, Chenxi Wang, Maojia Song, Xinyu Wang, Kuan Li,
+Jialong Wu, Xuanzhong Chen, Zile Qiao, Zhongwang Zhang, Huifeng Yin, Shihao Cai, Runnan Fang,
+Zhengwei Tao, Wenbiao Yin, et al. Scaling agents via continual pre-training, 2025.
+40

@@ -1,0 +1,49 @@
+that have been trained for hundreds of steps on 10K+ samples, our ReSum-GRPO trained with only 1K+
+samples enables the base agent to achieve comparable performance, e.g., WebSailor-30B achieves 33.3%
+on BrowseComp-zh, surpassing ASearcher-32B (15.6%) (Gao et al., 2025), MiroThinker-32B (17.0%) (Team,
+2025a) and WebExplorer-8B (32.0%) (Liu et al., 2025).
+Fine-grained Analysis: For training efficiency, ReSum-GRPO modifies only long trajectories by invoking
+summaries and restarting the conversation when the context window exceeds 32k tokens, which would
+otherwise lead to termination in GRPO. A comparison of training costs between the two algorithms
+is shown in Table 3 in the Appendix, where ReSum-GRPO requires approximately 1.5x the training
+time of GRPO, an acceptable increase. For inference efficiency, we compare performance and resource
+consumption, including average token costs and tool call numbers, across different paradigms. As shown
+in Figure 5 in the Appendix, ReSum paradigms achieve superior performance with reasonable resource
+utilization. For qualitative analysis (Appendix D.3), we present the full trajectories of three test cases
+on WebSailor-30B after ReSum-GRPO training, i.e., WebResummer-30B. In one case, the agent directly
+derives the answer without using summaries, while in the other two, it employs summaries to generate
+the final answer. These examples demonstrate that ReSum-GRPO training not only familiarizes the agent
+with ReSum but also preserves its ability to directly derive answers within a few tool calls.
+5
+Related Works
+Web Agents: Both proprietary and open-source communities have made significant strides in web
+agent development. Proprietary systems like DeepResearch (OpenAI) excel in complex web tasks
+but are hindered by closed architectures and inaccessible training data, limiting reproducibility and
+collaborative research. Open-source efforts, on the other hand, mainly focus on: data synthesis (e.g.,
+data fuzzing in WebSailor and ASearcher), RL infrastructure, and algorithmic optimization (e.g., the
+specialized ARPO (Dong et al., 2025)). These progresses have advanced systems from basic multi-hop
+QA to tackling complex benchmarks like BrowseComp, with notable releases such as WebSailor (Li et al.,
+2025a), WebShaper (Tao et al., 2025), ASearcher-QwQ-32B (Gao et al., 2025), and WebExplorer-8B (Liu
+et al., 2025). Despite these achievements, open-source agents remain fundamentally constrained by the
+limited exploration capabilities of ReAct (Yao et al., 2023), underscoring the need for new paradigms.
+Context Management: The most widely used approach for context management in LLM-based agents is
+ReAct’s append-all-history strategy. While simple, this method leads to unbounded context growth and
+context exhaustion, especially for complex queries. To address these issues, some methods incorporate
+external components such as RAG modules, e.g., A-Mem (Xu et al., 2025) and MemOS (Li et al., 2025d),
+to structure context more effectively. However, these solutions add significant computational overhead,
+increase system complexity, and integrate loosely with the agent’s policy. More recent approaches, such
+as Mem1 (Zhou et al., 2025b) and MemAgent (Yu et al., 2025a), allow agents to manage context internally
+through RL. While effective, these methods rely on specialized rollouts and costly training procedures,
+complicating their integration with existing systems. In contrast, ReSum offers a lightweight modification
+to ReAct by summarizing when necessary. This design retains the simplicity and efficiency of ReAct
+while ensuring seamless compatibility with existing agents.
+6
+Conclusion
+In this paper, we address context limitations to enable long-horizon search capabilities for web agents.
+We introduce ReSum, a novel inference paradigm that periodically invokes summary tools for context
+compression and restarts conversations, enabling unbounded exploration. The tailored ReSum-GRPO
+algorithm further adapts agents to this paradigm through self-evolution. Extensive experiments demon-
+strate the effectiveness of both ReSum paradigm and ReSum-GRPO training. Future work will focus on
+enabling agents to intelligently self-initiate summary calls and eliminate reliance on rule-based summary
+invocation.
+10

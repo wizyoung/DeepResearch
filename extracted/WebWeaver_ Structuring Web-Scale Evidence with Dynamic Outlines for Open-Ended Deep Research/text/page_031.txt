@@ -1,0 +1,50 @@
+life.
+</takeaway>
+Parkinson’s Disease: Health Warning Signs, Family Alert Systems, and Post-DBS Care Strategies
+I. Understanding Parkinson’s Disease Progression and Warning Signs
+A. Disease Staging Systems
+Understanding Parkinson’s disease progression requires familiarity with established staging
+systems that provide frameworks for recognizing symptom evolution and functional decline.
+These systems serve as critical tools for families to understand what to expect and when to seek
+medical intervention.
+1. Hoehn and Yahr Scale Classifications
+The Hoehn and Yahr scale, originally published in 1967, remains the most widely used system for
+staging Parkinson’s disease progression. <cite id="id_14,id_17">This scale distinguishes between
+five stages of Parkinson’s Disease, from unilateral impairment (Stage 1) to bilateral impairment,
+without postural control difficulties (Stage 2), to postural instability (Stage 3), to loss of physical
+independence (Stage 4) and finally, to wheelchair-bound or bed-bound (Stage 5)</cite>. The
+modified version includes intermediate stages that capture more nuanced progression patterns.
+<table>
+<caption>Hoehn and Yahr Scale Progression and Warning Signs</caption>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Primary Characteristics</th>
+<th>Functional Impact</th>
+<th>Key Warning Signs for Families</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage 0</td>
+<td><cite id="id_12,id_21">No signs of disease</cite></td>
+<td>Normal function</td>
+<td>Baseline monitoring period</td>
+</tr>
+<tr>
+<td>Stage 1.0</td>
+<td><cite id="id_15,id_20">Unilateral tremor, rigidity, reduced arm swing, and slowness present
+only on one side</cite></td>
+<td><cite id="id_2,id_6">Minimal interference with daily activities</cite></td>
+<td>Subtle tremor in one finger, asymmetric arm swing</td>
+</tr>
+<tr>
+<td>Stage 1.5</td>
+<td><cite id="id_15,id_21">Unilateral involvement with axial symptoms like reduced facial
+expression, stooped posture, or reduced arm swing on both sides</cite></td>
+<td>Slight postural changes</td>
+<td>Facial masking, posture changes visible to family</td>
+</tr>
+<tr>
+<td>Stage 2.0</td>
+31

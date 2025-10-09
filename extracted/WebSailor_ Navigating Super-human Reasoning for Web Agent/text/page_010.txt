@@ -1,0 +1,100 @@
+Achieving Parity with Proprietary Systems
+Perhaps the most significant finding is that WebSailor
+closes the gap between open-source and leading proprietary systems. On BrowseComp-zh, WebSailor-
+72B achieves performance on par with Doubao, a top-tier proprietary agent. While the SOTA system
+DeepResearch still holds a lead, WebSailor’s performance represents a major milestone, demonstrating
+that with sophisticated data synthesis and targeted training strategies like DUPO, open-source models
+can be elevated to a level of capability previously exclusive to closed, proprietary systems.
+5.3
+Analysis
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+Number of Tool Calls
+0.00
+0.02
+0.04
+0.06
+0.08
+0.10
+Sample Proportion
+SailorFog-QA
+BrowseComp-en
+(a) Comparison with BrowseComp-en
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+Number of Tool Calls
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+Sample Proportion
+SailorFog-QA
+WebDancer-QA
+(b) Comparison with WebDancer
+Figure 3: A comparison of the number of tool calls in our training set with those in the training sets of
+WebDancer and BrowseComp-en.
+Complexity of SailorFog-QA
+Figure 3 provides a quantitative analysis of task complexity by plotting
+the distribution of tool call counts for our expert-generated training data against both the BrowseComp-en
+benchmark and the WebDancer training set. We use the number of tool calls as a proxy for problem
+difficulty. This analysis is based on unfiltered but correct trajectories from rejection sampling. The
+WebDancer dataset is heavily skewed towards simplicity, with over 50% of its trajectories requiring
+only two tool calls and virtually none exceeding ten. In sharp contrast, our synthesized data exhibits
+a long-tail distribution, with a significant concentration of samples requiring more than five tool calls
+and extending to trajectories with over twenty interactions. Crucially, this distribution closely mirrors
+the complexity profile of the BrowseComp-en benchmark itself. It is important to note that the figure
+displays our data before our final filtering stage, where we retain only trajectories with more than five
+tool calls. This strategic data construction ensures that our model is trained on problems that are not only
+complex but also structurally representative of the hard reasoning tasks, thereby equipping it with the
+robust, multi-step reasoning capabilities necessary for success.
+Table 2: The pass@1 accuracy of the SailorFog-QA,
+the WebDancer training set, and BrowseComp-en
+under the ReAct framework.
+Backbone
+SailorFog-QA
+WebDancer-QA
+BrowseComp-en
+o4-mini
+47.3
+90.2
+26.3
+DeepSeek-R1
+38.9
+84.4
+9.5
+Pass rate of SailorFog-QA
+To further under-
+stand the difficulty of our synthetic data, Table 2
+presents the pass@1 accuracy of SailorFog-QA
+before filtering.
+DeepSeek-R1 and o4-mini are
+equipped with browsing tools and ReAct frame-
+work. We observe that, before filtering, our data is
+significantly more difficult than the WebDancer
+training set.
+Although the difficulty is lower
+than BrowseComp-en, it is worth noting that
+BrowseComp-en filters out simple cases (Wei et al., 2025). Upon manual inspection, we find that
+the low accuracy in our data is partly due to its inherent difficulty, but also because there may not always
+be a unique answer. Ambiguity in the information can result in multiple intersections of conditions that
+do not yield a single definitive answer—this is similar to the situation in BrowseComp-en. However, we
+10

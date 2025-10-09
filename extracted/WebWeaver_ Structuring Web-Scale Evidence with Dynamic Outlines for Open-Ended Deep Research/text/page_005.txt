@@ -1,0 +1,125 @@
+Think
+Search
+Memory Bank
+Summary
+Write
+Outline
+Round 1: Outline
+1. Construction and
+Application…
+1.1 I. Introduction…
+1.1.1 A. Definition 
+<citation>id_1</citation> 
+1.1.2 B. Role of Multimodal Data 
+Fusion 
+Round 2: Outline
+1. Construction and Application…
+1.1 I. Introduction…
+1.1.1 A. Definition 
+<citation>id_1</citation> 
+1.1.2 B. Evolution from Traditional 
+Sports …<citation>id_2</citation>
+1.1.3 C. Role of Multimodal Data 
+Fusion <citation>id_3</citation>
+Query
+Please conduct a study and prepare a report on the 'Construction and Application of a Sports Intelligent 
+Tutoring and Learning Guidance System Driven by Multimodal Data Fusion’.
+Optimize
+Think for searching:
+1. I need to conduct a compre-
+hensive study on "Construction 
+and Application …”
+2. …
+{"query": [
+"sports intelligent 
+tutoring system multimodal 
+data fusion", 
+…
+]}
+Think for writing:
+From the materials, 
+we obtain ... 
+<ID_1>
+Summary:  The 
+article offers a …
+Evidence: …
+<ID_2>
+Summary:  The 
+article offers a …
+Evidence: …
+…
+Summary:  The article 
+offers a …
+Think for retrieving
+1. I need to start writing a 
+comprehensive report …”
+2. I should begin with 
+retrieving…
+{
+"retrieve_id ": [
+"id_1", "id_2", "id_3”
+]
+}
+Evidence:  
+<id_1>
+A sports news web page…
+Round 1: Write Section 1
+1. Construction and
+Application…
+1.1 Introduction…
+1.1.1 Definition: Sports Intelligent 
+Tutoring Systems (Sports ITS)
+<citation>id_1</citation> 
+…
+Round 2: Write Section 2
+2. Theoretical Foundations
+2.1 Intelligent Tutoring Systems 
+(ITS) Framework
+2.1.1 Core Components and 
+Architecture
+The theoretical foundation of 
+Sports Intelligent… 
+Terminate
+Actions
+Outline
+Observations 
+Think
+Retrieve
+Evidence
+Write
+Terminate
+Actions
+Section
+Observations
+Report
+Outline
+Figure 3: The workflow of WeaWeaver. Left: The planner first iteratively collects evidence via the
+search tool and optimizes the outline until outputting a comprehensive and citation-grounded outline.
+Right: The writer performs hierarchical and attentional writing by retrieving relevant evidence with the
+grounded citation in the outline.
+acquisition with outline optimization. Unlike static approaches, our planner continuously adapts its
+strategy based on emergent findings. For each step, the planner selects one of the three actions: search,
+outline optimization, and terminate.
+Evidence acquisition. When there is still insufficient evidence or knowledge to make a comprehensive
+outline to answer the open-ended question, the planner will continue collecting evidence by executing
+the search action. Given any search queries, the planner begins by querying a web search engine, which
+returns the results that contain the raw URLs with corresponding snippets and titles. To combat the
+contextual noise and processing overhead from raw URLs, it employs a two-stage filtering process. First,
+we prompt LLMs to select only the relevant URLs based on titles and snippets. Then, for each parsed
+page of the selected URLs, we perform two critical actions: leveraging LLMs to (1) distill a query-relevant
+summary, which is fed back into the planner’s context to inform subsequent search iterations, and (2)
+extract verifiable, detailed evidence (e.g., quotes, data points), which is stored in a structured memory
+bank for the subsequent writing.
+Outline optimization. After acquiring some evidence, the planner revisits the report’s outline. This is not
+a one-time generation step but a process of continuous refinement and optimization. The planner uses
+the newly acquired information to expand sections, add new subsections, or even restructure the entire
+outline to better reflect a comprehensive understanding of the topic. Crucially, it populates the outline
+with citations, mapping each section to the specific evidence IDs in the memory bank. This citation
+mechanism is vital for ensuring source-groundedness and enabling the hierarchical writing process in
+the next stage. This iterative loop continues until the planner outputs a terminate action with a tag
+“<terminate>” when the outline is sufficiently comprehensive and well-supported by evidence.
+3.3
+Memory-Grounded Synthesis: Hierarchical Retrieval and Writing
+A pivotal challenge in generating long-form reports is not just information access but attentional man-
+agement. The prevailing approach of feeding all gathered evidence into a single context window for
+5

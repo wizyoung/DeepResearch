@@ -1,0 +1,48 @@
+one-shot generation is fundamentally flawed. This brute-force method saturates the model’s attentional
+capacity, leading to some long-context issues like “loss in the middle (Liu et al., 2023)”, where crucial
+details are overlooked, and “contextual bleeding (Liu et al., 2025)”, where information from one section
+incorrectly influences the synthesis of another. We argue that a successful synthesis process must mirror
+human cognition by breaking down the complex task of long-context, one-step writing into manageable
+subtasks of attentional writing with only relevant evidence. Therefore, we adopt a hierarchical, divide-
+and-conquer strategy, where the report is constructed sequentially, with the model’s focus constrained to
+only the most relevant evidence at each step.
+Upon completion of the planning phase, the writer is provided with the structured, source-grounded
+outline and access to the evidence memory bank. The composition of each section is not a single,
+monolithic action but a deliberate, intra-sectional reasoning cycle designed to ensure both accuracy and
+coherence. This cycle unfolds as follows:
+First, the writer identifies its immediate subtask, such as “Let’s write the first section.” It then executes a
+targeted retrieval action, pulling only the relevant evidence from the memory bank as indicated by the
+outline’s citations. Upon receiving the evidence, the writer enters a crucial internal reasoning phase with
+a think action. In this thinking step, it analyzes the retrieved content, synthesizes key insights, selects the
+most compelling pieces of evidence, and formulates a coherent narrative structure for the section. This
+internal monologue is critical for moving beyond simple summarization to genuine synthesis.
+Only after this internal synthesis plan is formed does the writer proceed to the writing action, composing
+the prose and encapsulating it within “<write>” tags. Once a section is complete, its corresponding source
+materials are explicitly pruned from the context window and replaced with a placeholder message. This
+dynamic retrieval-and-pruning mechanism is the cornerstone of our approach: it ensures the writer’s
+context remains highly relevant for the next cycle, mitigates context overflow, and prevents cross-sectional
+interference. This entire process repeats hierarchically for all sections until the writer outputs a final
+“<terminate>” token, signaling the completion of the full report.
+4
+Experiments
+In this section, we first evaluate WebWeaver on three recent and challenging benchmarks. Detailed
+discussion is then produced to demonstrate the effectiveness of outline optimization and memory-
+grounded synthesis. Furthermore, we curate a high-quality SFT dataset to improve the capabilities of
+thinking, searching, and writing for a smaller model to achieve expert-level performance.
+4.1
+Setup
+Benchmarks.
+To evaluate the performance of Deep Research systems, we use three open-ended bench-
+mark datasets:
+• DeepResearch Bench (Du et al., 2025) comprises 100 PhD-level complex research tasks metic-
+ulously formulated by domain experts across 22 distinct fields, such as Science & Technology,
+Finance & Business, Software Engineering, and Art & Design.
+• DeepConsult (Consult, 2025) is a specialized collection of prompts tailored for in-depth research
+within the business and consulting domains. The query set encompasses a wide range of topics,
+including marketing strategy, financial analysis, emerging technology trends, and business
+planning.
+• DeepResearchGym (Coelho et al., 2025) is used to assess performance on real-world, complex
+queries. This dataset contains 100 queries sampled from the extensive Researchy Questions
+dataset (Rosset et al., 2024), which includes approximately 96,000 authentic information-seeking
+queries.
+6

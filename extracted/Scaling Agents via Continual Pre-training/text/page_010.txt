@@ -1,0 +1,42 @@
+• Commercial deep research agents: Kimi-Researcher (Team et al., 2025), OpenAI-o3 (OpenAI,
+2025a), OpenAI Deep Research (OpenAI, 2025b), Grok Deeper Search (x.ai, 2025), Perplexity
+Deep Research (Perplexity AI, 2025), Gemini Deep Research (Google, 2025).
+• Open-source deep research agents: WebThinker-32B-RL (Li et al., 2025e), ASearcher-Web-QwQ
+(Gao et al., 2025), WebSailor-72B (Li et al., 2025b), WebShaper-72B (Tao et al., 2025), AFM-32B-RL
+(Li et al., 2025c), MiroThinker-32B-DPOv0.2 (Team, 2025a), DeepDiver-V2-38B (Team, 2025b),
+WebExplorer-8B (Liu et al., 2025), DeepDive-32B (Lu et al., 2025), Kimi-K2-Instruct (Team et al.,
+2025), GLM-4.5 (Zeng et al., 2025), and DeepSeek-V3.1 (DeepSeek-AI, 2025).
+We prioritize official results reported by model providers or benchmark organizers, or scores reported by
+other published works, and evaluate remaining models under our standardized setup. If a work provides
+multiple agent models, we report only the strongest one.
+3.1.3
+Benchmarks
+We evaluate across two categories of benchmarks to comprehensively assess agent capabilities:
+General web search benchmarks: BrowseComp-en (Wei et al., 2025), BrowseComp-zh (Zhou et al., 2025b),
+GAIA3 (Mialon et al., 2023), Xbench-DeepSearch (Xbench-Team, 2025) and WebWalkerQA (Wu et al., 2025b),
+targeting general-purpose browsing, search and reasoning tasks.
+Scenario-targeted web search benchmarks: This category encompasses specialized evaluations designed
+for realistic task settings across diverse domains.
+• DeepResearch Bench (Du et al., 2025) assesses comprehensive research report generation through
+expert-level tasks across multiple academic fields.
+• SEAL-0 (Pham et al., 2025) evaluates model robustness when facing conflicting or misleading
+search results.
+• Frames (Krishna et al., 2024) evaluates a model’s ability to conduct multi-perspective reasoning
+and role-based information synthesis, requiring consistent integration of evidence across different
+contextual frames.
+• HLE (Humanity’s Last Exam) (Phan et al., 2025) evaluates models on expert-level questions
+across diverse subjects.
+• Academic Browse (Zhou et al., 2025a) focuses on scholarly research capabilities such as literature
+navigation and knowledge synthesis.
+3.1.4
+Evaluation Protocol
+Tools. By default, evaluated models are equipped with five core tools: Search (web search with result
+ranking), Visit (webpage content extraction), Google Scholar (academic literature access), Python
+Interpreter (code execution), and File Parser (document processing). More details are presented in
+Appendix A.1.
+Hyper-Parameters. When evaluating our AgentFounder models, we employ specific inference parameters
+to ensure stable and reproducible results: temperature 0.85, repetition penalty 1.1, and top-p 0.95. These
+settings are recommended based on extensive empirical validation to optimize the balance between
+creativity and consistency in agentic reasoning tasks. We set a maximum tool usage limit of 128 calls per
+task and constrain the context length to 128K tokens.
+10

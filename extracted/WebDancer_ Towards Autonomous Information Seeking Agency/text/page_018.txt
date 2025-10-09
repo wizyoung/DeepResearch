@@ -1,0 +1,66 @@
+C.1
+Concurrent Work
+Comparison with the Training-based Methods
+We primarily compare our approach with two training-
+based methods: WebThinker and SimpleDeepSearcher, highlighting the key differences. WebThinker
+also adopts an SFT followed by RL setup, but employs an off-policy RL algorithm Rafailov et al. (2023).
+Furthermore, WebThinker triggers actions and observations within the <thinking_content>, whereas
+our approach adopts a native ReAct style architecture, executing each action after completing its cor-
+responding reasoning step. In contrast, Simple DeepSearcher relies solely on supervised fine-tuning
+over a carefully curated dataset. Our approach similarly follows an SFT-then-RL paradigm, but crucially
+leverages on-policy RL via DAPO. Our core contribution lies in building a scalable end-to-end pipeline,
+from data construction to algorithmic design, that supports native ReAct reasoning. This framework
+is compatible with both instruction LLMs and LRMs, enabling seamless integration and improved
+generalization.
+Comparison with the Prompting-based Methods
+Recent efforts in the community have explored
+building more autonomous and general-purpose agent systems, such as OWL Hu et al. (2025); Li et al.
+(2023), and OpenManus Liang et al. (2025), by leveraging foundation models with strong native agentic
+capabilities, such as Claude anthropic (2025). These systems typically rely on carefully engineered
+agent frameworks and prompting workflows, often involving multi-step tool usage and human-curated
+task structures. In contrast, we advocate for open-source models with emergent agency, crucial for
+democratizing agentic AI and advancing fundamental understanding of how agency can arise and scale
+in open systems. Our native RAct framework embraces simplicity, embodying the principle that less is
+more. Training native agentic models is fundamentally valuable.
+C.2
+Post-train Agentic Models
+Agentic models refer to foundation models that natively support reasoning, decision-making, and
+multi-step tool use in interactive environments. They exhibit emergent capabilities such as planning, self-
+reflection, and action execution through structured prompting alone. Recent systems like DeepSearch and
+Deep Research illustrate how powerful foundation models can serve as agentic cores, enabling autonomous
+web interaction through native support for tool invocation and iterative reasoning. However, since web
+environments are inherently dynamic and partially observable, reinforcement learning plays a crucial
+role in improving the agent’s adaptability and robustness. In this work, we aim to elicit autonomous
+agency in open-source models through targeted post-training.
+D
+Training Dataset
+Table 4: Statistics of training datasets. The
+thinking length is the average of the tok-
+enized length of the thoughts.
+CoT Type
+Num.
+Action Count
+Thinking Length
+Short
+7,678
+4.56
+510.03
+Long
+6,550
+2.31
+1599.39
+We collect 40K samples of E2HQA and 60K samples of
+CRAWLQA. These data samples are used to generate trajec-
+tories via either QwQ or GPT-4o, followed by a multi-stage
+filtering process to ensure quality, as described in Sec. 2.2.
+Table 4 separately reports the statistics for SFT data gener-
+ated using Long-CoT and Short-CoT reasoning. We plan to
+scale this high-quality dataset further to investigate whether
+increasing the data volume leads to significant performance
+gains in future work.
+Filtering Criterion: Regarding the trajectory filter employed in Sec. 2.2, it is important to note that,
+during the quality assessment phase, we mitigate the presence of repetitive patterns by identifying and
+constraining the maximum occurrence of n-grams (n=10) within each trajectory to a threshold of 4. The
+purpose of this is to prevent the model from internalizing detrimental patterns, thereby safeguarding the
+integrity of the inference process.
+18

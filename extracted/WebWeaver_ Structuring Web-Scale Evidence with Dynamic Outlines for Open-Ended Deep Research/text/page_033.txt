@@ -1,0 +1,52 @@
+information about MDS-UPDRS assessment system, disease progression timeline, and transition
+indicators between stages"}}
+</tool_call>
+<tool_response>
+The page content for the previous section has been masked for saving the space.
+</tool_response>
+Step 4
+<think>
+The tool response provides valuable information about the MDS-UPDRS system, disease
+progression timeline, and the critical transition point at Stage 3. I can see that:
+1. MDS-UPDRS has replaced the older Hoehn-Yahr system as the main assessment tool
+2.
+The progression timeline shows median transition times between stages (20-26 months
+typically)
+3. Stage 3 (HY > 3) represents a critical threshold marking advanced disease with increased
+disability, medication-refractory features, and cognitive decline
+4. There’s important information about non-motor symptoms appearing years before motor
+symptoms
+5. Specific progression warning signs are detailed
+I should continue writing about the MDS-UPDRS system and progression timeline, then move on
+to early stage warning signs.
+</think>
+<tool_call>
+{"name": "search", "arguments": ["DBS patient daily living support family caregivers", "Parkinson
+DBS lifestyle modifications comfort strategies", "DBS programming adjustment patient family
+guide"], "goal": "Find specific daily life support strategies, comfort measures, and family guidance
+for caring for Parkinson’s patients who have undergone DBS surgery"}}
+</tool_call>
+<write>
+<write> 2. Movement Disorder Society-Unified Parkinson’s Disease Rating Scale (MDS-UPDRS)
+While the Hoehn and Yahr scale remains valuable for understanding disease progression,
+<cite id="id_3">the Movement Disorder Society-Unified Parkinson’s Disease Rating Scale
+(MDS-UPDRS) is healthcare providers’ main tool to classify this disease. The MDS-UPDRS
+examines four different areas of how Parkinson’s disease affects you</cite>. This comprehensive
+assessment tool provides a more nuanced evaluation of both motor and non-motor symptoms,
+addressing the limitations of purely stage-based approaches.
+**The significance of this shift toward individualized assessment cannot be overstated**. Rather
+than simply categorizing patients into stages, the MDS-UPDRS recognizes that Parkinson’s
+disease affects each person differently, requiring personalized treatment approaches.
+This
+evolution in assessment methodology reflects our growing understanding that the disease’s
+impact extends far beyond motor symptoms.
+3. Disease Progression Timeline and Transition Indicators
+Understanding the temporal aspects of Parkinson’s progression helps families prepare for
+changing care needs. <cite id="id_17">Median transition times between stages show Stage
+2 progression occurring around 20 months, with subsequent stages progressing every 24-26
+months</cite>. However, <cite id="id_16">for some people, it can take as long as 20 years
+to move through all the stages</cite>, emphasizing the highly variable nature of disease
+progression.
+**The transition to Stage 3 represents a critical threshold** in Parkinson’s disease progression.
+<cite id="id_19">Transitions from scores of ≤2.5 to scores of ≥3 on the modified HY scale
+33

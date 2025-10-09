@@ -1,0 +1,35 @@
+Figure 3: Multi-Style Question-Answer Generation Based on Scalable Information Sources.
+Beyond the standard pipeline, we fundamentally redesign the training paradigm by integrating Agentic
+Continual Pre-Training as an additional stage between pre-training and post-training, as illustrated
+in Figure 2. Starting from Qwen’s pre-trained foundation models (e.g., Qwen3-30B-A3B-Base2), our
+enhanced training pipeline consists of:
+• Agentic CPT Stage 1: We process approximately 200B tokens of agent data and knowledge
+reasoning corpora with 32K context length, following the same next-token prediction paradigm
+as Eq. 1. This stage enables the preliminary acquisition of agentic behaviors including tool
+invocation patterns and multi-step reasoning chains.
+• Agentic CPT Stage 2: We further refine these capabilities using 100B tokens of carefully curated,
+high-quality agent data with extended 128K context windows, allowing the LLM to develop a
+sophisticated understanding of complex action spaces and long-horizon planning strategies.
+2.2
+First-order Action Synthesis with Zero Supervisory Signal
+In this section, we present an agentic data synthesis methodology, First-order Action Synthesis (FAS),
+which operates without supervisory signals and relies solely on diverse data sources. FAS consists of
+contextual scenario construction and two types of action synthesis: planning actions and reasoning
+actions.
+2.2.1
+Scaling Training Contexts via Knowledge-to-Question Transformation
+Conventional continual pre-training focuses on knowledge adaptation, particularly domain-specific
+knowledge acquisition (Shi et al., 2024). In contrast, Agentic CPT targets the adaptation of agentic
+capabilities, which are domain-agnostic abilities that transcend specific domains and enable universal
+tool utilization and multi-step reasoning. Since these abilities must function effectively across diverse
+application scenarios, this capability adaptation necessitates training data spanning multiple domains to
+ensure broad transferability and applicability of the acquired skills.
+To achieve this scale and diversity, we collect multiple data types: discarded trajectories from post-training
+datasets, historical tool invocation results (e.g., search queries and responses), and publicly available
+corpora (e.g., CommonCrawl (Common Crawl, 2025)). These sources provide continuous scalability while
+maintaining comprehensive domain coverage. For instance, search results can be persistently extracted
+from trajectories generated during multiple rollouts in the reinforcement learning process.
+However, while trajectory data directly demonstrates agentic behavior, the remaining sources primarily
+contain static knowledge. To maximize the utility of this static knowledge for agentic capability training,
+2https://huggingface.co/Qwen/Qwen3-30B-A3B-Base
+4

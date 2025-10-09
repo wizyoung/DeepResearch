@@ -1,0 +1,100 @@
+• For quality assessment, we first apply rules to filter out trajectories with more than two actions,
+ensuring that there are no hallucinations and no severe repetitions. Subsequently, we filter the
+trajectories based on prompting to retain those that meet the following three criteria: Information
+Non-redundancy, Goal Alignment, and Logical Reasoning and Accuracy.
+The QA pairs that are not present in the SFT dataset can be utilized during the reinforcement learning
+stage effectively. 1
+3
+Multi-Step Multi-Tool Agent Learning
+After obtaining high-quality trajectories in ReAct format, we seamlessly incorporate them into our agent
+SFT training stage. Specifically, Thought segments are closed by <think> and </think> , Action segments
+by <tool_call> and </tool_call> , Observation segments by <tool_response> and </tool_response> . The final Action
+segment corresponds to the final answer, enclosed by <answer> and </answer> . In addition, the QA data
+without trajectories, which those filtered during earlier stages, can be effectively leveraged during the
+RL phase. We first train a policy model πθ via agent SFT for cold start, followed by agent RL for
+generalization. The overall training framework is illustrated in Figure 2.
+…
+Rollout
+Reward
+Calculation
+Reference
+Model
+KL
+…
+Reward
+Group
+Computation
+…
+Advantage
+y1
+y2
+yG
+r1
+𝑟2
+𝑟G
+(I)SFT
+(II)RL
+Task input
+Long CoT
+Short CoT
+Question
+Which game ranked 
+fourth in the 
+Godot XR Game Jam 
+February 2025...? 
+LLM Policy
+Tool Call
+<think>To answer...</think>
+<tool_call>
+{"name": "search", "arguments"...
+</tool_call>
+<tool_response> 
+A Google search for 'Godot XR...
+</tool_response>
+Output Rollout
+<think>Emm...</think>
+<tool_call>
+{"name": "search", "arguments"...
+</tool_call>
+<tool_response>...</tool_response>
+<think>The first search...</think>
+<tool_call>
+{"name": "visit", "arguments"...
+</tool_call>
+<tool_response>...</tool_response>
+...
+<answer>The game that...</answer>
+thought
+𝑄𝑠, 𝑇𝑠, 𝐴𝑠
+𝑄𝑓, 𝐴𝑓
+<think>thought</think>
+<answer>answer</answer>
+*K
+<think>thought</think>
+<tool_call>action</tool_call>
+<tool_response>obs</tool_response>
+CRAWLQA
+E2HQA
+LLM Policy
+Tool Call
+𝐴1
+𝐴2
+𝐴G
+SFT Model
+Base Model
+Figure 2: The overview of training framework. (I) The SFT stage for cold start utilizes the reformatted
+ReAct datasets, where the thought includes both short and long CoT, respectively. (II) The RL stage
+performs rollouts with the tool calls on the QA pairs that are not utilized during the SFT stage, and
+optimizes the policy using the DAPO algorithm.
+3.1
+Agent Supervised Fine Tuning
+To capture complete agentic trajectories, we train the policy model θ via supervised fine-tuning on
+obtained decision-making trajectories. The cold start enhances the model’s capability to couple multiple
+reasoning and action steps, teaching it a behavioral paradigm of alternating reasoning with action, while
+preserving its original reasoning capabilities as much as possible. Following the empirical findings of
+Chen et al. (2023; 2025); Zhang et al. (2025e), to avoid interference from external feedback during learning,
+we mask out loss contributions from observation in the agentic world modelling task, which has been
+shown to generally improve performance and robustness. Given the task context tc and the complete
+agentic execution trajectory H = (x0, x1, ..., xn−1, xn), where each xi ∈{τ, α, o}, the loss function L is
+1The details of training datasets and are shown in App. D.
+5

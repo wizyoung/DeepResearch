@@ -1,0 +1,42 @@
+Junteng Liu, Yunji Li, Chi Zhang, Jingyang Li, Aili Chen, Ke Ji, Weiyu Cheng, Zijia Wu, Chengyu Du, Qidi
+Xu, Jiayuan Song, Zhengmao Zhu, Wenhu Chen, Pengyu Zhao, and Junxian He. Webexplorer: Explore
+and evolve for training long-horizon web agents, 2025. URL https://arxiv.org/abs/2509.06501.
+Grégoire Mialon, Clémentine Fourrier, Thomas Wolf, Yann LeCun, and Thomas Scialom. Gaia: a
+benchmark for general ai assistants. In The Twelfth International Conference on Learning Representations,
+2023.
+OpenAI. Openai deep research. https://openai.com/index/introducing-deep-research/.
+OpenAI. gpt-oss-120b & gpt-oss-20b model card, 2025a. URL https://cdn.openai.com/pdf/419b690
+6-9da6-406c-a19d-1bb078ac7637/oai_gpt-oss_model_card.pdf.
+OpenAI. Introducing openai o3 and o4-mini, 2025b. URL https://openai.com/index/introducing-o
+3-and-o4-mini/.
+Yujia Qin, Yining Ye, Junjie Fang, Haoming Wang, Shihao Liang, Shizuo Tian, Junda Zhang, Jiahao Li,
+Yunxin Li, Shijue Huang, et al. Ui-tars: Pioneering automated gui interaction with native agents. arXiv
+preprint arXiv:2501.12326, 2025.
+John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, and Oleg Klimov. Proximal policy
+optimization algorithms. CoRR, abs/1707.06347, 2017.
+Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan
+Zhang, YK Li, Y Wu, et al. Deepseekmath: Pushing the limits of mathematical reasoning in open
+language models. arXiv preprint arXiv:2402.03300, 2024.
+Sijun Tan, Michael Luo, Colin Cai, Tarun Venkat, Kyle Montgomery, Aaron Hao, Tianhao Wu, Arnav
+Balyan, Manan Roongta, Chenguang Wang, Li Erran Li, Raluca Ada Popa, and Ion Stoica. rllm: A
+framework for post-training language agents. https://pretty-radio-b75.notion.site/rLLM-A
+-Framework-for-Post-Training-Language-Agents-21b81902c146819db63cd98a54ba5f31, 2025.
+Notion Blog.
+Zhengwei Tao, Jialong Wu, Wenbiao Yin, Junkai Zhang, Baixuan Li, Haiyang Shen, Kuan Li, Liwen
+Zhang, Xinyu Wang, Yong Jiang, Pengjun Xie, Fei Huang, and Jingren Zhou. Webshaper: Agentically
+data synthesizing via information-seeking formalization. arXiv preprint arXiv:2507.15061, 2025.
+Kimi Team, Yifan Bai, Yiping Bao, Guanduo Chen, Jiahao Chen, Ningxin Chen, Ruijue Chen, Yanru
+Chen, Yuankun Chen, Yutian Chen, Zhuofu Chen, Jialei Cui, Hao Ding, Mengnan Dong, Angang Du,
+Chenzhuang Du, Dikang Du, Yulun Du, Yu Fan, Yichen Feng, Kelin Fu, Bofei Gao, Hongcheng Gao,
+Peizhong Gao, and et al. Kimi k2: Open agentic intelligence, 2025. URL https://arxiv.org/abs/25
+07.20534.
+MiroMind AI Team. Mirothinker: An open-source agentic model series trained for deep research and
+complex, long-horizon problem solving. https://github.com/MiroMindAI/MiroThinker, 2025a.
+Qwen Team. Qwen3 technical report, 2025b. URL https://arxiv.org/abs/2505.09388.
+Lei Wang, Chen Ma, Xueyang Feng, Zeyu Zhang, Hao Yang, Jingsen Zhang, Zhiyuan Chen, Jiakai Tang,
+Xu Chen, Yankai Lin, et al. A survey on large language model based autonomous agents. Frontiers of
+Computer Science, 18(6):186345, 2024.
+Jason Wei, Nguyen Karina, Hyung Won Chung, Yunxin Joy Jiao, Spencer Papay, Amelia Glaese, John
+Schulman, and William Fedus. Measuring short-form factuality in large language models, 2024. URL
+https://arxiv.org/abs/2411.04368.
+12

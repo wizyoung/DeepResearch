@@ -1,0 +1,47 @@
+examples proves effective. The RL training of agents for such tasks is extremely slow due to multi-turn
+reasoning and heavy tool use. To address this, we propose Duplicating Sampling Policy Optimization
+(DUPO), which incorporates two dynamic sampling strategies—one before training and one during
+training—to improve both effectiveness and efficiency.
+Our family of WebSailor models (3B, 7B, 32B, and 72B) outperform all open-source models and agentic
+methods on BrowseComp-en/zh, and also surpass proprietary LRMs such as Grok-3 (x.ai, 2025) and
+DouBao (Doubao, 2025) when they are combined with browsing capabilities, as shown in Fig. 1. Addi-
+tionally, we find that post-training based on complex, uncertainty-driven reasoning patterns exhibits
+downward compatibility, achieving promising performance on simpler tasks such as GAIA (Mialon et al.,
+2023), XBench-DeepSearch (Xbench-Team, 2025), and SimpleQA (OpenAI, 2025d).
+2
+Problem Definition
+We adopt the ReAct (Yao et al., 2023) as the agent’s framework. Upon receiving a question, the agent
+performs several iterations of Thought-Action-Observation. Specifically, in each iteration, based on the
+existing context, the LLM generates a Thought and executes a parsable Action (tool call), then awaits
+the environment to return an Observation. In WebTraverseX, the action space consists of generating
+final answer and two tools, search and visit, which correspond to invoking a search engine with several
+queries and accessing several webpages via URLs to retrieve their content, respectively. The details of
+these two tools are provided in the Appendix A.1 The observation returned by the search action consists
+of 10 titles, snippets, and their corresponding URLs for each search query. In contrast, the observation of
+the visit action is a summary of the webpages, tailored to the "goal" specified in the LLM’s action. The
+iteration terminates when the LLM selects "final answer" as the action. A complete trajectory with T
+iterations can be defined as:
+HT = (τ0, a0, o0, . . . , τi, ai, oi, . . . , τT, aT),
+(1)
+where τi, ai, oi represent thought, action, and observation in the i-th round, respectively. At step t, the
+thought τt and at are sampled from a policy based on all previous context, i.e., π(a, t|Ht−1).
+Completing multi-hop QA (Yang et al., 2018; Ho et al., 2020) typically requires only one or two rounds
+of ReAct, as the actions at each step are quite clear and do not involve much strategic planning. In
+stark contrast, BrowseComp immerses the agent in a vast, unstructured information space where the
+solution path is not predefined. A naive, brute-force search is computationally infeasible, potentially
+requiring thousands of tool calls that would overwhelm the context window of any modern LLM. Success,
+therefore, hinges not on following a simple script, but on executing a highly adaptive search strategy.
+The agent must dynamically synthesize partial information, prune unpromising exploratory paths, and
+integrate disparate facts to converge on a solution. Compressing this combinatorially vast search space
+into a tractable trajectory of a few dozen steps requires a sophisticated chain of thought (Wei et al., 2022).
+It is precisely this process of strategic navigation and synthesis that exemplifies the complex, superhuman
+reasoning patterns this work seeks to elicit and model.
+3
+Large-scale Training Data Synthesis for Complex Reasoning
+In this section, we present our training data construction from two perspectives: QA construction and
+reasoning trajectory generation.
+3.1
+SailorFog-QA: Scalable Graph-Synthesized QA
+The reasoning patterns required to answer a question are dictated by its intrinsic uncertainty and the
+complexity of reducing that uncertainty. As shown in Fig. 2, we classify information-seeking QAs into
+3
